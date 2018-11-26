@@ -7,6 +7,16 @@
 \setlength{\parindent}{0cm}
 \graphicspath{{Images/}}
 %\underline{\smash{\beta}} makes underlining at the same distance
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks,
+  allcolors=.,
+  urlcolor=blue,
+}
+\usepackage{color}
+\urlstyle{same}
+
 
 %Definition of margins (DO NOT ALTER!)+
 
@@ -32,20 +42,20 @@
 \maketitle
 
 \section{Setup}
-\input{setup}
+\input{Chapters/setup}
 
 
 \section{Charts}\label{sec: charts}
-\input{charts}
+\input{Chapters/charts}
 
 \section{Transformation}
-\input{transformation}
+\input{Chapters/transformation}
 
 \section{Blow-ups in our System}\label{sec: VDP Blowup}
-\input{blowup}
+\input{Chapters/blowup.tex}
 
 \section{Canard Points}
-\input{canards}
+\input{Chapters/canards.tex}
 \newpage
 \appendix
 \section{Dynamics in \texorpdfstring{$K_2$}{K2}}
