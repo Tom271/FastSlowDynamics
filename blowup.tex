@@ -1,0 +1,54 @@
+
+We first need to transform our system in a new coordinate and time system. This is because we are considering our point as a circle with radius zero. By doing this we are then able to consider a localised flow within our system which is a most on the boundary of our point ($r=0$). To do this we need to consider varying powers of $r$ in each of our variables \st we have the system shown in Equation \ref{sys: blow up trans}.  
+\begin{subequations}
+    \begin{align}
+        &x=\Bar{r}\Bar{x}  \label{sys: blow up trans x}\\
+        &y=\Bar{r}^2\Bar{y} \label{sys: blow up trans y}\\ 
+        &\epsilon=\bar{r}^3\bar{\epsilon} \label{sys: blow up trans z}
+    \end{align}  
+    \label{sys: blow up trans}
+\end{subequations}
+Now that we have this transformation we are then able to consider our charts (see Section \ref{sec: charts}) in our system.
+
+\subsection{Charts}
+We note that our system will have three charts $ K_1,K_2,K_3 $, where we have $ \bar{y}=1, \ \bar{\epsilon}=1, \ \bar{x}=1 $. By inserting these into Equations \ref{sys: blow up trans x}, \ref{sys: blow up trans y} and \ref{sys: blow up trans z} respectively to give, 
+\begin{subequations}
+	\begin{align}
+	&x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^3\epsilon_1,\\
+	&x=r_2x_2, \ y=r_2^2y_2, \ \epsilon=r_2^3 \label{sys: K2}\\
+	&x=r_3, \ y=r_3^2y_3, \ \epsilon=r_3^3\epsilon_3\label{sys:K3}
+	\end{align}
+\end{subequations}
+where $ (x_i,r_i,\epsilon_i)\in\Re^3 $ for $ i=1,2,3 $ \citep{krupa2001}. Now that we have done this we can consider the individual charts explicitly. We start with chart two ($K_2$) for a simple reason. This is because we area able to glean the most information out of this chart. We will see that we then find that we can define the mappings from chart one to two and two to three, further simplifying our analysis in the future.
+
+\subsection{Dynamics in \texorpdfstring{$K_2$}{K2}} \label{sec: VDP K_2}
+To be able to consider chart $ K_2 $ %Ask Nikola why he starts with K_2
+we will use the transformation - shown in Equation \ref{sys: K2} - in our canonical system. We also need to use a time rescaling ($ t_2=r_2t $) to be able to desingularise the system. Now substituting this into Equation \ref{eq: canonical} yields,
+\begin{align}
+&\od{}{t}(r_2x_2)=r_2^2\od{x_2}{t}=-y_2+x_2^2-\dfrac{x_2^3r_2}{3},\\
+&r^3_2y'_2=r^3_2(-1+r_2x),\\
+&r'_2=0,
+\end{align}
+noting that $ \od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t} $ and we are taking the equations to $ O(r_2) $. Now dividing through by $ r^2_2 $ and $ r^3_2 $ respectively for each equation we get,
+
+\begin{equation}
+	\begin{aligned}
+		&x'_2=x^2_2-y_2+O(r_2),\\
+		&y'_2=-1+O(r_2),\\
+		&r'_2=0,
+	\end{aligned}
+\end{equation}
+which are then able to evaluate as a layer problem. Now we know that this is the Riccati Equation - see \citet{Riccati}.
+%+++++ Riccati equations not the ones above but the ones that satisfy r_2=0++++++++++++++++++++++
+
+\subsection{Dynamics in \texorpdfstring{$K_1$}{K1}}
+
+\subsection{Dynamics in \texorpdfstring{$K_3$}{K3}}
+Similarly to $K_1$ and $K_2$, the system can be transformed using Equation \ref{sys:K3}.
+\begin{align*}
+\od{r_3}{t_3}&=r_3F(r_3,y_3,\epsilon_3)\\
+\od{y_3}{t_3}&=\epsilon_3(r_3-1)-2y_3F(r_3,y_3,\epsilon_3)\\
+\od{\epsilon_3}{t_3}&=-3\epsilon_3F(r_3,y_3,\epsilon_3)
+\end{align*}
+where $F(r_3,y_3,\epsilon_3)=\left(1-y_3-\frac{r_3}{3}\right)$
+\newpage
