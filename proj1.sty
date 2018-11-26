@@ -24,14 +24,14 @@
 %Theorem-like environments
 \let\oldref\ref
 \renewcommand{\ref}[1]{(\oldref{#1})}
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{cor}[thm]{Corollary}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
 \newtheorem*{lemma}{Lemma}
-\newtheorem{prop}[thm]{Proposition}
+\newtheorem{prop}[theorem]{Proposition}
 \theoremstyle{definition}
 \newtheorem*{note}{Note}
-\newtheorem{defn}[thm]{Definition}
-\newtheorem{ex}[thm]{Exercise}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{ex}[theorem]{Exercise}
 
 \newenvironment{solution}{\renewcommand\qedsymbol{$\square$}\begin{proof}[Solution]}{\end{proof}}
 
