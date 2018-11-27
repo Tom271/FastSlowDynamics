@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{proj1}
+\usepackage{natbib}
+
+%set spacing between lines (DO NOT CHANGE SPACING)
+\linespread{1.25} %normally 1.25
+\setlength{\parindent}{0cm}
+\graphicspath{{Images/}}
+%\underline{\smash{\beta}} makes underlining at the same distance
+<<<<<<< HEAD
+
+\usepackage{hyperref}
+=======
+>>>>>>> 0df1312db1f37ab3010ad6b232aafb9fb71dbb87
+
+\hypersetup{
+	colorlinks,
+	allcolors=.,
+	urlcolor=blue,
+}
+\usepackage{color}
+\urlstyle{same}
+%Definition of margins (DO NOT ALTER!)+
+
+%\usepackage[a4paper, top=1in, left=1.0in, right=1.0in, bottom=1in, includehead, includefoot]{geometry} %Usually have top as 1in
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% +++ ... +++ denotes something to be changed
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Commands
+\newcommand{\PDEsmall}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PDE}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\folds}{(x_0,y_0)}
+\newcommand{\st}{such that }
+\newcommand{\wrt}{with respect to }
+\newcommand{\vdp}{Van der Pol }
+%%%%%%%%%%%%%%%%%%%%
+\title{Fast Slow Dynamics - the van der Pol Oscillator}
+\author{}
+\date{October 2018}
+
+
+\begin{document}
+
+\maketitle
+
+<<<<<<< HEAD
+\section{Setup}
+\input{setup}
+=======
+\section{Fast-Slow Systems} \label{Intro}
+\input{Chapters/intro.tex}
+
+\section{Singularities and Fold Points}
+\input{Chapters/singfoldpoints}
+>>>>>>> 0df1312db1f37ab3010ad6b232aafb9fb71dbb87
+
+\section{The Van Der Pol Equation}
+\input{Chapters/vanderpol}
+
+\section{Charts}\label{sec: charts}
+<<<<<<< HEAD
+\input{charts}
+
+\section{Transformation}
+\input{transformation}
+=======
+\input{Chapters/charts.tex}
+
+\section{Transformation}
+\input{Chapters/transformation.tex}
+>>>>>>> 0df1312db1f37ab3010ad6b232aafb9fb71dbb87
+
+\section{Blow-ups in our System}\label{sec: VDP Blowup}
+\input{blowup}
+
+\section{Canard Points}
+\input{canards}
+\newpage
+\appendix
+\section{Dynamics in \texorpdfstring{$K_2$}{K2}}
+
+\newpage
+\bibliography{FastSlow.bib}
+\bibliographystyle{agsm}
+\nocite{strogatz2007nonlinear}
+\appendix
+\section{Log}
+\end{document}
