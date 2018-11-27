@@ -23,7 +23,7 @@ and letting \(y=\frac{w}{\mu}\) results in
  \[\begin{cases} \dot{x}=\mu\left(y-F(x)\right)\\
  \dot{y}=-\frac{x}{\mu}.\end{cases}\]
 
-Now, using a rescaling of time $ \tilde{t} = \mu \tau$ and setting $ \frac{1}{\mu^2} = \epsilon$ results in the system:
+Now, using a rescaling of time $ \tilde{t} = \mu \tau$ and setting $ \frac{1}{\mu^2} = \epsilon$ results in the system: \\
 +++$ \tilde{t}$ is the original variable, we transform into the slow system but state the fast system first because thats the order we always have them in. slightly confusing. ideas? Also. Need to define $\lambda$ as either zero or 1 depending on where to mention it...++++++++
 \begin{equation}\label{fastsystem}
     \begin{cases} x'=y-\frac{x^3}{3}+x\\
@@ -122,39 +122,51 @@ Now using the proposed mapping $(x,y)\to (1-\Tilde{x},\Tilde{y}-\frac{2}{3})$ we
     \label{eq: Fast System}
 \end{equation}
 where the tilde has been dropped on $x \ \text{and} \ y$ for convenience. The slow system (\ref{slowsystem}) is redefined as
-\begin{equation}
+\begin{equation}\label{eq: Slow System}
     \begin{cases}
         \epsilon x'=-y+x^2-\dfrac{(x)^3}{3}\\
         y'=(x-1),
     \end{cases}
-    \label{eq: Slow System}
 \end{equation}
 using the normal rescaling of time.
 These two systems will be used throughout the following analysis of the generic fold point.
 \\
-It is readily checked that the coordinate transfomation is correct by evaluating (\ref{FoldConditions}). It is clear to see that $\folds=(0,0)$, and differentiation of $f$ yields $\pd[2]{f}{x}(0,0,0)=2>0$ and $\pd[1]{f}{y}(0,0,0)=-1<0$. Furthermore, $g(0,0,0) = -1 <0$. Therefore, the new system of equations posesses the required qualities.
+It is readily checked that the coordinate transfomation is correct by evaluating (\ref{FoldConditions}) for the transformed system. It is clear to see that $\folds=(0,0)$, and differentiation of $f$ yields $\pd[2]{f}{x}(0,0,0)=2>0$ and $\pd[1]{f}{y}(0,0,0)=-1<0$. Furthermore, $g(0,0,0) = -1 <0$. Therefore, the new system of equations posesses the required qualities.
 
 \subsection{Reduced Dynamics}
 
-In order to determine the reduced dynamics on the critical manifold $S$, Equation \ref{slowsystem} in the limit $\epsilon\to 0$ is considered which yields the following system,
-\begin{subequations}
-    \begin{align}
+In order to determine the reduced dynamics on the critical manifold $S$, equation (\ref{eq: Slow System}) in the limit $\epsilon\to 0$ is considered which yields the following system,
+\begin{align}
+\begin{cases}
     &0=f(x,y,0)=-y+x^2-\dfrac{x^3}{3}\\
         &\dot{y}=g(x,y,0)=0 \label{eq: reduced g}
-    \end{align}
-\end{subequations}
-which is known as the slow subsystem \citep{Bible}. We are then able to compute the reduced flow by computing  \citep{krupa2001},
+\end{cases}
+\end{align}
+
+which is the reduced problem \citep{Bible}. 
+The critical manifold is then defined as 
+\begin{align}
+S= \{ (x,y) : f(x,y,0)=0 \} = \left\{ (x,y) : y = x^2-\dfrac{x^3}{3}\right \},
+\end{align}
+which is an S-shaped curve. 
+Since the flow on $S$ is determined by $\dot{y}$, it can be seen that since the sign of $g$ is negative in the neighbourhood of the fold point $(0,0)$, the slow flow on $S$ is directed towards the fold point.
+
+The two  fold points $(x_0^\pm,y_0^\pm)$ coincide with the extrema of the cubic function  $ \phi(x) = y = x^2-\dfrac{x^3}{3}$.
+Then using the chain rule, the second equation of (\ref{eq: reduced g}) is  \citep{krupa2001},
 \begin{equation}
-    \phi_x(x)\dot{x}=g(x,\phi(x),0),\text{ for }y=\phi(x).
+    \phi_x(x)\dot{x}=g(x,\phi(x),0).
     \label{eq: general reduced}
 \end{equation}
-We find that $\phi(x)=x^2-\dfrac{x^3}{3}$ where the derivative \wrt $x$ gives $\phi_x(x)=2x-x^2$. Now it is clear that we will have a singularity at $x=0$, by Equation \ref{eq: general reduced}, thus we will find that our system blows up ($\dot{x}\to\infty$) which motivates the process that will follow. \\ \\
-%note that the sign g(0,0,0) determines the flow direction 
-%g(0,0,0)<0 as expected in our example.
-After finding our reduced system we are able to determine the way in which it flows by considering the sign of $g(0,0,0)$. We see from Equation \ref{eq: reduced g} that $g<0$ then we have that our flow is directed towards the fold points $(0,0)$. To continue with our analysis we first need to define Fenichel's theorems.
+Rearranging this gives an expression for the dynamics in $x$ on $S$.
+We find that $\phi(x)=x^2-\dfrac{x^3}{3}$, where the derivative \wrt $x$ gives $\phi_x(x)=2x-x^2$.
+Therefore (\ref{eq: general reduced}) becomes 
+\begin{align*}
+	\dot{x} = \frac{g(x,\phi(x),0)}{ \phi_x(x)} = \frac{ x-1}{2x-x^2} =\frac{ x-1}{x(2-x)}.
+\end{align*}
+This calculation confirms that the fold points at $x=0$ and $x=2$ are singularities of the reduced system. Therefore, no conclusions about the dynamics of $x$ can be made at the fold points. 
+Therefore, alternative methods have to be employed to describe the dynamics on the fold points in the singular limit and furthermore to be able to conclude the dynamics of the full system at the fold points from this analysis.
+The method considered for analysis is called the Blow-Up Method and is considered in the following section.
 
-\subsection{Fenichel and Standard Theory}
-\textbf{THEOREM}
 
 \subsection{Extended System}
 Now that we have established the above theorems then we need to consider the extended system \st $\epsilon'=0$, thus $\epsilon=\text{\textit{const}}$. By considering this system we will be able to consider a blow up (magnification) around our fold point in three dimensions.  
