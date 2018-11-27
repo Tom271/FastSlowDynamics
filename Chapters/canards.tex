@@ -1,4 +1,3 @@
-
 During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. 
 \begin{figure}[h!]
 	\centering
@@ -154,16 +153,25 @@ which clearly has three zero eigenvalues and one non-zero eigenvalue $\lambda=\p
 
 \textbf{Discuss splitting on the manifold}
 
-\subsection{Effect of the Canard Point}
-Now that we have shown that there must exist a flow around our fold point we should now consider the global effect of the canard point. We can see by considering the  system of Equations \ref{canard: system of equations} that our equilibriums are at $ (x,y)=(\lambda,\lambda^2[\frac{1-\lambda}{3}]) $ and eigenvalues of, 
+\subsection{Effect of the Canard Point}\label{sec:effect-of-the-canard-point}
+Now that we have shown that there must exist a flow around our fold point we should now consider the global effect of the canard point. We can see by considering the  system of Equations \ref{canard: system of equations} that our equilibriums are at $ (x,y)=(\lambda,\lambda^2[\frac{1-\lambda}{3}]) $ and find the eigenvalues from the matrix, 
 \begin{equation}
-\begin{bmatrix}
+A-\mu I=\begin{bmatrix}
 2x-x^2-\mu&-1&0&0\\
 0&-\mu&0&0\\
 0&0&-\mu&0\\
 0&0&0&-\mu
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation}
+\textbf{Then our eigenvalues are, $ \mu=(2-x)x \ \text{and} \ \mu=0 $, noting that we have an upper triangular matrix. Then we can note that we have a complex eignevalue which causes a Hopf bifurcation, as shown below:}%wrong maths
+
+From the following Figures we can see the pregression of our flow over the system,
+\begin{figure}[h!]\centering
+	\includegraphics[]{}
+	\caption{Development of the Hopf Bifurcation.}
+\end{figure}
+which we can see that we have an unstable periodic solution within our canard system. \textbf{We can also further deduce from this calculation that we have an amplitude of $ O() $} \citep{krupa2001}.
 
 
-. 
+\subsubsection{Singular Hopf Bifurcation}
+In this section we will further expand on our Hopf Bifurcation of the previous section (Section \ref{sec:effect-of-the-canard-point}). We note that we get a singular bifurcation iff our system is equivalent to \ref{eq: Fast System}
