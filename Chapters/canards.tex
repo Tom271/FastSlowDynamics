@@ -1,3 +1,4 @@
+
 During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. 
 \begin{figure}[h!]
 	\centering
@@ -169,9 +170,22 @@ From the following Figures we can see the pregression of our flow over the syste
 \begin{figure}[h!]\centering
 	\includegraphics[]{}
 	\caption{Development of the Hopf Bifurcation.}
-\end{figure}
+	\label{fig: Hopf}
+\end{figure}, 
 which we can see that we have an unstable periodic solution within our canard system. \textbf{We can also further deduce from this calculation that we have an amplitude of $ O() $} \citep{krupa2001}.
 
 
 \subsubsection{Singular Hopf Bifurcation}
-In this section we will further expand on our Hopf Bifurcation of the previous section (Section \ref{sec:effect-of-the-canard-point}). We note that we get a singular bifurcation iff our system is equivalent to \ref{eq: Fast System}
+In this section we will further expand on our Hopf Bifurcation of the previous section (Section \ref{sec:effect-of-the-canard-point}). We note that we get a singular bifurcation iff our system is equivalent to Equation \ref{eq: Fast System}, \st $ \lambda=1 $. \citet{Eckhaus} discusses that our bifuraction will only exist within a small range of $ O(\epsilon) $. Then to model this behaviour we need to consider a small perturbation along the slow flow where we will have, from Equation \ref{eq: canard system},
+\begin{equation}
+\dot{y}=\lambda-x+\nu y,
+\end{equation}
+where $ \nu $ is of order $ O(\epsilon) $, thus small. We can immediately see that when $ \nu=0 $ that we have our orignal flow at our equilbrium but we are now able to perturb our flow over a small domain, which are described in Figures \ref{fig: Hopf}. We can also see how our system behaves when our $ \nu $ is of larger order than $ O(\epsilon) $,
+
+\begin{figure}[h!]\centering
+	\includegraphics[height=6cm,width=10cm]{Images/CanardPointcircle}
+	\caption{The flow within our canard system \citep{krupa2001}.}
+	\label{fig: canard flow circle}
+\end{figure}\newpage
+where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $, our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
+
