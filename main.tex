@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{proj1}
 \usepackage{natbib}
-
+\usepackage{fancyhdr}  %headers and footers
 %set spacing between lines (DO NOT CHANGE SPACING)
 \linespread{1.25} %normally 1.25
 \setlength{\parindent}{0cm}
@@ -37,18 +37,35 @@
 \author{}
 \date{October 2018}
 
-
+\pagenumbering{Roman} % Start roman numbering
 \begin{document}
 
 \maketitle
 
+\tableofcontents
+\newpage
+\listoffigures
 
-\section{Fast-Slow Systems} \label{Intro}
+%\listoftables
+\newpage
+%\lstlistoflistings%\lstlistlistingname
+%\newpage
+\pagenumbering{arabic} % Switch to normal numbers
+\pagestyle{fancy}
+
+\begin{abstract}
+	\input{Chapters/abstract.tex}
+\end{abstract}
+
+
+\section{Geometric Singular Pertubation Theory} \label{GSPT}
 \input{Chapters/intro.tex}
 
-\section{Singularities and Fold Points}
+\section{Singularities and Fold Points}\label{sec:singularities-and-fold-points}
 \input{Chapters/singfoldpoints}
 
+\subsection{Folded Singularities in a Three Dimensional System}
+\input{Chapters/FoldedSingularities.tex}
 
 \section{The Van Der Pol Equation}
 \input{Chapters/vanderpol}
