@@ -21,7 +21,23 @@ as our fold point now can take multiple locations within our system. From here w
 &\pd{}{x}f(p_*,\lambda,0)=0,\\
 &\pd{^2}{x^2}f(p_*,\lambda,0)\neq 0,\\
 &D_{(y,z)}f(p_*,\lambda,0) \ \text{has full rank one},
-\end{aligned}	
+\end{aligned}
+\label{eq: non-degeneracy 3d system}	
 \end{equation}
-where we denote $ p_*=(x_*,y_*,z_*)\in F $ as our fold points and $ D_{(y,z)} $ as our Jacobian \wrt $ y \ \text{and}\ z $ \citep{MMO}. In addition to this we can see from Figure \ref{fig: 3d folded singularity} that we have some interesting flows within our system. These flows do not follow the standard pattern as we saw in Figure \ref{fig: vdp flow diagram}
-
+where we denote $ p_*=(x_*,y_*,z_*)\in F $ as our fold points and $ D_{(y,z)} $ as our Jacobian \wrt $ y \ \text{and}\ z $ \citep{MMO}. In addition to this we can see from Figure \ref{fig: 3d folded singularity} that we have some interesting flows within our system. These flows do not follow the standard pattern as we saw in Figure \ref{fig: vdp flow diagram}, instead the slow flow switches its orientation when the flow hits the fold point and continue to flow in that direction, as a desingularised flow - these are called isolated singularities \citep{MMO}. %dot in diagram
+As a result we are able to express these flows in the following manner, using Equation \ref{eq: non-degeneracy 3d system}, 
+\begin{equation}
+\begin{cases}
+\dot{x}&=g_1\pd{f}{y}+g_2\pd{f}{z}\\
+\dot{y}&=-g_1\pd{f}{x},\\
+\dot{z}&=-g_2\pd{f}{x},
+\end{cases}
+\end{equation}
+where we can then define a folded singularity if $ g_1(p_*,\lambda,0)\pd{}{y}f(p_*,\lambda,0)+g_2(p_*,\lambda,0)\pd{}{z}f(p_*,\lambda,0)=0 $, for our flow on branches ($ S $) \citep{MMO}. Next we need to consider the stability of our fold points. We do this by constructing the Jacobian of our system, 
+\begin{equation}
+J=\begin{bmatrix}
+\pd{\dot{x}}{x}&\pd{\dot{x}}{y}&\pd{\dot{x}}{z}&\pd{\dot{x}}{\lambda}&\pd{\dot{x}}{\epsilon}\\
+\pd{\dot{y}}{x}&\pd{\dot{y}}{y}&\pd{\dot{y}}{z}&\pd{\dot{y}}{\lambda}&\pd{\dot{y}}{\epsilon}\\
+\pd{\dot{z}}{x}&\pd{\dot{z}}{y}&\pd{\dot{z}}{z}&\pd{\dot{z}}{\lambda}&\pd{\dot{z}}{\epsilon}\\
+\end{bmatrix}
+\end{equation}
