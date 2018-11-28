@@ -60,8 +60,8 @@ Now that we have established the transformation we can then define our transform
 Since we have established why we need only consider two charts we can our transformations,
 \begin{subequations}
 	\begin{align}
-	&x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \label{eq: coordiante K_1}\\ 
-	&x=r_2x_2, \ y=r_2^2y_2, \ \epsilon=r^2_2, \ \lambda=r_2\lambda_2 \label{eq: coordinate K_2}
+	&x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \label{eq: coordiante K1}\\ 
+	&x=r_2x_2, \ y=r_2^2y_2, \ \epsilon=r^2_2, \ \lambda=r_2\lambda_2 \label{eq: coordinate K2}
 	\end{align}
 \end{subequations}
 Since these transformations have been defined we should consider our charts. We will first consider chart 2, for analogous reasoning to Section \ref{sec: VDP K_2}. 
@@ -77,9 +77,9 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 	% \begin{equation}
 	%     \begin{aligned}
 	r^3_2y_2'-3r_2^2y_2r_2'&=r^2_2(r_2x_2h_4-r_2\lambda_2h_5),\notag\\
-	\implies y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2), \label{eq: K_2 y trans}
+	\implies y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2), \label{eq: K2 y trans}
 	\end{align}
-	\label{eq: reduced canard k_2}
+	\label{eq: reduced canard k2}
 \end{subequations}
 where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$. We should also recall that $r_2'=\lambda_2'=0$. Notice that we have included an additional term in Equation \ref{eq: K_2 y trans} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$ which we can easily verify \citep{krupa2001} using the following equations,
 \begin{align*}
@@ -108,7 +108,7 @@ x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \tag{\re
 \end{equation}
 to find the relevant pathways of our flows. Now if we first consider the $r_1$ component, 
 \begin{align}
-2r_1^2r_1'=r_1^2\epsilon(r_1x_1-r_1\lambda_1), \label{canard: r_1}
+2r_1^2r_1'=r_1^2\epsilon(r_1x_1-r_1\lambda_1), \label{canard: r1}
 \end{align}
 where we can call $F=F(x,y,\epsilon,\lambda)=x_1-\lambda_1+O(r_1(r_1+\lambda_1)$. Now we will see the motivation with starting with $y=r_1$ when we transform our other coordinates. Now if we consider $x=r_1x_1$,
 \begin{align*}
@@ -117,11 +117,11 @@ x_1'&=-1+x_1^2-\frac{x_1r_1'}{r_1},
 \end{align*}
 where we can use Equation \ref{canard: r_1} to simplify this further - Equation \ref{eq: canard x_1}.
 \begin{align}
-x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right) \label{eq: canard x_1}
+x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right) \label{eq: canard x1}
 \end{align}
 We now consider our $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation \ref{canard: r_1} to simplify to,
 \begin{align}
-\epsilon'=-\epsilon_1^2F. \label{canard: epsilon k_1}
+\epsilon'=-\epsilon_1^2F. \label{canard: epsilon k1}
 \end{align}
 Our last transformation is for our new coordinate $\lambda=r_1\lambda$, noting that $\lambda'=0$. Similarly to the above we find $r_1^2\lambda_1'+r_1\lambda_1r_1'=0$ then, 
 \begin{equation}
@@ -131,7 +131,7 @@ which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k_1}. 
 \begin{subequations}
 	\begin{align}
 	r_1'&=\frac{\epsilon}{2}(r_1x_1-r_1\lambda_1), \\
-	% \label{canard: r_1}
+	% \label{canard: r1}
 	x_1'&=-1+x_1^2-\frac{x_1\epsilon_1F}{2},\\
 	\epsilon'&=-\epsilon_1^2F,\\
 	\lambda'_1&=-\frac{\lambda_1\epsilon_1F}{2}.
@@ -176,7 +176,7 @@ A-\mu I=\begin{bmatrix}
 
 From the following Figures we can see the pregression of our flow over the system,
 \begin{figure}[h!]\centering
-	\includegraphics[]{}
+%	\includegraphics[]{}
 	\caption{Development of the Hopf Bifurcation.}
 	\label{fig: Hopf}
 \end{figure}, 
