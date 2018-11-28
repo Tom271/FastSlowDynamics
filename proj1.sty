@@ -19,11 +19,20 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{subcaption}
 \RequirePackage{hyperref}
+
 \setlength{\headheight}{14.5pt} 
 
 %Theorem-like environments
 \let\oldref\ref
+
 \renewcommand{\ref}[1]{(\oldref{#1})}
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+
+\theoremstyle{break}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem*{lemma}{Lemma}

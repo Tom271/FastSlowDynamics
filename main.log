@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.9.18)  28 NOV 2018 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.9.18)  28 NOV 2018 15:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,7 +463,7 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 \sectionRuleOffset@mlpr=\skip61
 \toks@mlpr=\toks33
 )
-Package Listings Info: Made " a short reference for \lstinline on input line 69
+Package Listings Info: Made " a short reference for \lstinline on input line 78
 .
 )
 (c:/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
@@ -639,14 +639,14 @@ File: Images/foldednodesetc.png Graphic file (type png)
 <use Images/foldednodesetc.png>
 Package pdftex.def Info: Images/foldednodesetc.png used on input line 54.
 (pdftex.def)             Requested size: 341.43633pt x 341.44258pt.
-) (./Chapters/vanderpol.tex [5 <./Images/foldednodesetc.png>] [6] [7] [8]) [9] 
-(./Chapters/charts.tex)
-(./Chapters/transformation.tex
+ [5 <./Images/foldednodesetc.png>])
+(./Chapters/vanderpol.tex [6] [7] [8] [9]) (./Chapters/charts.tex)
+(./Chapters/transformation.tex [10]
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 60--65
 
  []
@@ -656,9 +656,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--65
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.81 \end{equation}
-                   ]) (./Chapters/blowup.tex [12] [13]) (./Chapters/canards.tex
-<Images/Canard_Point.png, id=453, 919.7562pt x 373.395pt>
+l.78 \begin{equation}
+                     ]) (./Chapters/blowup.tex [12] [13])
+(./Chapters/canards.tex
+<Images/Canard_Point.png, id=461, 919.7562pt x 373.395pt>
 File: Images/Canard_Point.png Graphic file (type png)
 
 <use Images/Canard_Point.png>
@@ -678,7 +679,7 @@ stination with the same identifier (name{equation.8.50}) has been already used,
                                                   \fi \fi 
 l.117 \end{align*}
                   ] [17]
-<Images/CanardPointcircle.png, id=556, 796.13565pt x 451.10468pt>
+<Images/CanardPointcircle.png, id=564, 796.13565pt x 451.10468pt>
 File: Images/CanardPointcircle.png Graphic file (type png)
 
 <use Images/CanardPointcircle.png>
@@ -713,13 +714,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
  ) 
 Here is how much of TeX's memory you used:
- 11034 strings out of 492995
- 161620 string characters out of 6136402
- 278464 words of memory out of 5000000
- 14244 multiletter control sequences out of 15000+600000
+ 11038 strings out of 492995
+ 161686 string characters out of 6136402
+ 278671 words of memory out of 5000000
+ 14247 multiletter control sequences out of 15000+600000
  16353 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,15n,56p,809b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,15n,56p,809b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2017/texmf-dis
@@ -727,20 +728,23 @@ t/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2017/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmmi12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2017/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr9.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10
-.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (24 pages, 557502 bytes).
+mmi5.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
+pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2017/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2017/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (24 pages, 573360 bytes).
 PDF statistics:
- 681 PDF objects out of 1000 (max. 8388607)
- 619 compressed objects within 7 object streams
- 160 named destinations out of 1000 (max. 500000)
+ 698 PDF objects out of 1000 (max. 8388607)
+ 633 compressed objects within 7 object streams
+ 161 named destinations out of 1000 (max. 500000)
  280 words of extra memory for PDF output out of 10000 (max. 10000000)
 
