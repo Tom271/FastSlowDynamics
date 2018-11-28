@@ -67,7 +67,7 @@ Since we have established why we need only consider two charts we can our transf
 Since these transformations have been defined we should consider our charts. We will first consider chart 2, for analogous reasoning to Section \ref{sec: VDP K_2}. 
 
 \subsubsection{Dynamics in \texorpdfstring{$K_2$}{K2}}
-We start by noting that we are considering our invariant plane at $r_2=0$ which will significantly simplify our system for $K_2$. Further we should note that we are taking a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, as well as in our coordinates. Then if we substitute our time transformation and Equation  \ref{eq: coordinate K_2} into our system of Equations \ref{eq: canard system} we find, 
+We start by noting that we are considering our invariant plane at $r_2=0$ which will significantly simplify our system for $K_2$. Further we should note that we are taking a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, as well as in our coordinates. Then if we substitute our time transformation and Equation  \ref{eq: coordinate K2} into our system of Equations \ref{eq: canard system} we find, 
 \begin{subequations}
 	\begin{align}
 	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2h_1+r^2_2x^2_2h_2,\notag\\
@@ -81,13 +81,13 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 	\end{align}
 	\label{eq: reduced canard k2}
 \end{subequations}
-where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$. We should also recall that $r_2'=\lambda_2'=0$. Notice that we have included an additional term in Equation \ref{eq: K_2 y trans} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$ which we can easily verify \citep{krupa2001} using the following equations,
+where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$. We should also recall that $r_2'=\lambda_2'=0$. Notice that we have included an additional term in Equation \ref{eq: K2 y trans} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$ which we can easily verify \citep{krupa2001} using the following equations,
 \begin{align*}
 x'_2&=e^{2y_2}\pd{H}{y_2}(x_2,y_2),\\
 y_2'&=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
 \end{align*}
 Further to this we can see, when we consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$.
-considering the reduced system (Equation \ref{eq: reduced canard k_2}) we find from $ H(x_2,y_2)=0 $ that,
+considering the reduced system (Equation \ref{eq: reduced canard k2}) we find from $ H(x_2,y_2)=0 $ that,
 \begin{subequations}
 	\begin{align}
 	x_2'&=\frac{1}{2}\ \	\implies x_2=\frac{t_2}{2}+A, \label{canard: trajectory x}\\
@@ -104,7 +104,7 @@ Now that we have established that we must have a flow on our second chart, then 
 \subsection{Dynamics in \texorpdfstring{$K_1$}{K1}}
 For $K_1$ we follow a similar approach to the above. We will use the transformations, 
 \begin{equation}
-x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \tag{\ref{eq: coordiante K_1}},
+x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \tag{\ref{eq: coordiante K1}},
 \end{equation}
 to find the relevant pathways of our flows. Now if we first consider the $r_1$ component, 
 \begin{align}
@@ -115,11 +115,11 @@ where we can call $F=F(x,y,\epsilon,\lambda)=x_1-\lambda_1+O(r_1(r_1+\lambda_1)$
 r_1r_1'x_1+r_1^2x_1'&=-r_1^2+r_1^2x_1^2,\\
 x_1'&=-1+x_1^2-\frac{x_1r_1'}{r_1},
 \end{align*}
-where we can use Equation \ref{canard: r_1} to simplify this further - Equation \ref{eq: canard x_1}.
+where we can use Equation \ref{canard: r1} to simplify this further - Equation \ref{eq: canard x1}.
 \begin{align}
 x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right) \label{eq: canard x1}
 \end{align}
-We now consider our $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation \ref{canard: r_1} to simplify to,
+We now consider our $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation \ref{canard: r1} to simplify to,
 \begin{align}
 \epsilon'=-\epsilon_1^2F. \label{canard: epsilon k1}
 \end{align}
@@ -127,7 +127,7 @@ Our last transformation is for our new coordinate $\lambda=r_1\lambda$, noting t
 \begin{equation}
 \lambda'_1=-\frac{\lambda_1\epsilon_1F}{2}, 
 \end{equation}
-which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k_1}. Now if we combine the above we find that our transformed system is of the following form,
+which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k1}. Now if we combine the above we find that our transformed system is of the following form,
 \begin{subequations}
 	\begin{align}
 	r_1'&=\frac{\epsilon}{2}(r_1x_1-r_1\lambda_1), \\
