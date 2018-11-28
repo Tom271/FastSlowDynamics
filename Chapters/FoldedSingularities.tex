@@ -39,5 +39,20 @@ J=\begin{bmatrix}
 \pd{\dot{x}}{x}&\pd{\dot{x}}{y}&\pd{\dot{x}}{z}&\pd{\dot{x}}{\lambda}&\pd{\dot{x}}{\epsilon}\\
 \pd{\dot{y}}{x}&\pd{\dot{y}}{y}&\pd{\dot{y}}{z}&\pd{\dot{y}}{\lambda}&\pd{\dot{y}}{\epsilon}\\
 \pd{\dot{z}}{x}&\pd{\dot{z}}{y}&\pd{\dot{z}}{z}&\pd{\dot{z}}{\lambda}&\pd{\dot{z}}{\epsilon}\\
-\end{bmatrix}
+\end{bmatrix},
 \end{equation}
+which we can easily find the eigenvalues, by taking the determinant. The result of this analysis gives that we have three eigenvalues, $ \sigma_i $ for $ i=1,2,3 $ \citep{MMO}. \Wlg we can choose $ \sigma_3=0 $ because we know that at least one of our eigenvalues must be zero to account for our fold point in our system, as the \textbf{Poincar\'e diagram describes}. Then we know from standard stability theory that, at our folded singularity we will have three types of phase portrait in the form of,
+\begin{equation}
+\begin{cases}
+Saddle \ \sigma_1\sigma_2<0: \sigma_i\in\Re,\\
+Node \ \sigma_1\sigma_2>0: \sigma_i\in\Re,\\
+Focus \ \sigma_1\sigma_2>0: \Im(\sigma_i)\neq 0,
+\end{cases}
+\end{equation}
+where we can note that only our focus will have imaginary parts \citep{MMO}. \citet{MMO} illustrates this in the following Figure, 
+\begin{figure}[h!]\centering
+	\includegraphics[height=12cm,width=12cm]{Images/foldednodesetc}
+	\caption{Phase portraits of our three dimensional system where a) is a folded saddle, b) folded node, c) and d) are desingularised flows \citep{MMO}.}
+	\label{fig: folded singularities}
+\end{figure}
+where we can see the effect of the varying eigenvalues above. A question which is prudent to consider is, why hasn't \citep{MMO} illustrated the singular canard case for a folded focus. This is easily answered as we know that a singular canard is only present if the node or saddle connect our two connecting branches ($ S^r $ and $ S^a $) whereas we find that for the focus \textbf{this is not the case due to its imaginary parts?} \citep{MMO}.

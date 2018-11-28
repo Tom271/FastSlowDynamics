@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.7.28)  28 NOV 2018 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.7.28)  28 NOV 2018 12:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -471,7 +471,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 18.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \protect 
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -483,7 +483,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -491,7 +491,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <recently read> \Hy@colorlink 
                               
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -502,7 +502,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \close@pdflink ->\Hy@endcolorlink 
                                   \Hy@VerboseLinkStop \pdfendlink 
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -513,14 +513,14 @@ and I'll forget about whatever was undefined.
 ! Extra \endcsname.
 \@ifundefined ...dafter \ifx \csname #1\endcsname 
                                                   \relax \expandafter \@firs...
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \protect 
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -528,7 +528,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@namedef ...xpandafter \def \csname #1\endcsname 
                                                   
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -553,34 +553,34 @@ LaTeX Warning: Label `eq: canonical' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 43.
  (c:/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    ... okay on input line 43.
 
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (c:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-Overfull \hbox (203.6867pt too wide) in paragraph at lines 57--13
-[][]\OT1/cmr/m/n/10 .1Flows in our Van der Pol sys-tem.figure.caption.3[]))36Fl
-ows in our Van der Pol sys-tem.figure.caption.5                                
+Overfull \hbox (203.6867pt too wide) in paragraph at lines 67--13
+[][]\OT1/cmr/m/n/10 .1Flows in our Van der Pol sys-tem.figure.caption.3[]))47Fl
+ows in our Van der Pol sys-tem.figure.caption.6                                
                                                                                
    
  []
@@ -653,7 +653,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 41.
+Package hyperref Info: Link coloring ON on input line 43.
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -662,9 +662,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count135
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
-LaTeX Info: Redefining \nameref on input line 41.
+LaTeX Info: Redefining \ref on input line 43.
+LaTeX Info: Redefining \pageref on input line 43.
+LaTeX Info: Redefining \nameref on input line 43.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
@@ -674,11 +674,11 @@ LaTeX Info: Redefining \nameref on input line 41.
  [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 44.
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
  (c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 44.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
 
 (c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -689,8 +689,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [3] (./main.lof
 
+Package natbib Warning: Citation `MMO' on page IV undefined on input line 3.
+
+
 Package natbib Warning: Citation `krupa2001' on page IV undefined on input line
- 10.
+ 11.
 
 )
 \tf@lof=\write5
@@ -757,7 +760,36 @@ Package natbib Warning: Citation `MMO' on page 4 undefined on input line 27.
 
 Package natbib Warning: Citation `MMO' on page 4 undefined on input line 36.
 
-) (./Chapters/vanderpol.tex [4] [5]
+
+Package natbib Warning: Citation `MMO' on page 4 undefined on input line 44.
+
+[4]
+
+Package natbib Warning: Citation `MMO' on page 5 undefined on input line 52.
+
+
+Package natbib Warning: Citation `MMO' on page 5 undefined on input line 52.
+
+<Images/foldednodesetc.png, id=281, 594.89621pt x 541.68086pt>
+File: Images/foldednodesetc.png Graphic file (type png)
+<use Images/foldednodesetc.png>
+Package pdftex.def Info: Images/foldednodesetc.png  used on input line 54. on i
+nput line 54.
+Package pdftex.def Info: Requested size: 341.43633pt x 341.44258pt on input lin
+e 54.
+
+Package natbib Warning: Citation `MMO' on page 5 undefined on input line 55.
+
+
+Package natbib Warning: Citation `MMO' on page 5 undefined on input line 55.
+
+
+Package natbib Warning: Citation `MMO' on page 5 undefined on input line 58.
+
+
+Package natbib Warning: Citation `MMO' on page 5 undefined on input line 58.
+
+) (./Chapters/vanderpol.tex [5 <./Images/foldednodesetc.png>] [6]
 
 ! LaTeX Error: File `./' not found.
 
@@ -772,41 +804,41 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[6] [7]
+[7] [8]
 
-Package natbib Warning: Citation `Bible' on page 8 undefined on input line 150.
+Package natbib Warning: Citation `Bible' on page 9 undefined on input line 150.
 
 
-
-Package natbib Warning: Citation `krupa2001' on page 8 undefined on input line 
-159.
-
-[8]
 
 Package natbib Warning: Citation `krupa2001' on page 9 undefined on input line 
-196.
+159.
+
+[9]
+
+Package natbib Warning: Citation `krupa2001' on page 10 undefined on input line
+ 196.
 
 ) (./Chapters/charts.tex) (./Chapters/transformation.tex
 
-Package natbib Warning: Citation `krupa2001' on page 9 undefined on input line 
-2.
+Package natbib Warning: Citation `krupa2001' on page 10 undefined on input line
+ 2.
 
 
-Package natbib Warning: Citation `krupa2001' on page 9 undefined on input line 
-2.
+Package natbib Warning: Citation `krupa2001' on page 10 undefined on input line
+ 2.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[9]
+[10]
 
-Package natbib Warning: Citation `Bible' on page 10 undefined on input line 56.
+Package natbib Warning: Citation `Bible' on page 11 undefined on input line 56.
 
 
 
-Package natbib Warning: Citation `krupa2001' on page 10 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 11 undefined on input line
  56.
 
 
@@ -817,29 +849,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--65
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10pdfTeX warning (ext4): destination with the same identifier (name{equation.6
-.27}) has been already used, duplicate ignored
+[11pdfTeX warning (ext4): destination with the same identifier (name{equation.6
+.28}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.84 
      ]
 
-Package natbib Warning: Citation `krupa2001' on page 11 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 12 undefined on input line
  95.
 
 ) (./Chapters/blowup.tex
 
-Package natbib Warning: Citation `krupa2001' on page 11 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 12 undefined on input line
  22.
 
-[11]
+[12]
 
-Package natbib Warning: Citation `Riccati' on page 12 undefined on input line 4
+Package natbib Warning: Citation `Riccati' on page 13 undefined on input line 4
 1.
 
-[12]) (./Chapters/canards.tex
-<Images/Canard_Point.png, id=396, 919.7562pt x 373.395pt>
+[13]) (./Chapters/canards.tex
+<Images/Canard_Point.png, id=407, 919.7562pt x 373.395pt>
 File: Images/Canard_Point.png Graphic file (type png)
 <use Images/Canard_Point.png>
 Package pdftex.def Info: Images/Canard_Point.png  used on input line 5. on inpu
@@ -848,68 +880,68 @@ Package pdftex.def Info: Requested size: 227.62282pt x 142.26192pt on input lin
 e 5.
 
 
-Package natbib Warning: Citation `krupa2001' on page 13 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
  19.
 
 
-Package natbib Warning: Citation `krupa2001' on page 13 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
  19.
 
 
-Package natbib Warning: Citation `krupa2001' on page 13 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
  29.
 
 
-Package natbib Warning: Citation `krupa2001' on page 13 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
  39.
 
 
-Package natbib Warning: Citation `krupa2001' on page 13 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
  39.
 
-[13pdfTeX warning (ext4): destination with the same identifier (name{equation.8
-.37}) has been already used, duplicate ignored
+[14pdfTeX warning (ext4): destination with the same identifier (name{equation.8
+.38}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.40 \begin{equation}
                       <./Images/Canard_Point.png>]
 
-Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 15 undefined on input line
  43.
 
 
-Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 15 undefined on input line
  47.
 
 
-Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 15 undefined on input line
  84.
 
 
-Package natbib Warning: Citation `krupa2001' on page 14 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 15 undefined on input line
  84.
 
-[14] [15pdfTeX warning (ext4): destination with the same identifier (name{equat
-ion.8.49}) has been already used, duplicate ignored
+[15] [16pdfTeX warning (ext4): destination with the same identifier (name{equat
+ion.8.50}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.129 \end{equation}
                     ]
 
-Package natbib Warning: Citation `krupa2001' on page 16 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 17 undefined on input line
  142.
 
 
-Package natbib Warning: Citation `krupa2001' on page 16 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 17 undefined on input line
  142.
 
 
-Package natbib Warning: Citation `krupa2001' on page 16 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 17 undefined on input line
  142.
 
-[16]
+[17]
 
 ! LaTeX Error: File `' not found.
 
@@ -925,14 +957,14 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `krupa2001' on page 17 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 18 undefined on input line
  183.
 
 
-Package natbib Warning: Citation `Eckhaus' on page 17 undefined on input line 1
+Package natbib Warning: Citation `Eckhaus' on page 18 undefined on input line 1
 87.
 
-<Images/CanardPointcircle.png, id=470, 796.13565pt x 451.10468pt>
+<Images/CanardPointcircle.png, id=480, 796.13565pt x 451.10468pt>
 File: Images/CanardPointcircle.png Graphic file (type png)
 <use Images/CanardPointcircle.png>
 Package pdftex.def Info: Images/CanardPointcircle.png  used on input line 194. 
@@ -940,36 +972,36 @@ on input line 194.
 Package pdftex.def Info: Requested size: 284.51915pt x 170.71945pt on input lin
 e 194.
 
-Package natbib Warning: Citation `krupa2001' on page 17 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 18 undefined on input line
  195.
 
 
-Package natbib Warning: Citation `krupa2001' on page 17 undefined on input line
+Package natbib Warning: Citation `krupa2001' on page 18 undefined on input line
  195.
 
-[17 <./Images/CanardPointcircle.png>]) [18] [19]
+[18 <./Images/CanardPointcircle.png>]) [19] [20]
 No file main.bbl.
 
 Package natbib Warning: Citation `strogatz2007nonlinear' undefined on input lin
-e 93.
+e 95.
 
 pdfTeX warning (ext4): destination with the same identifier (name{appendix.A}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 \section{Log}
+l.97 \section{Log}
                   
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-[20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
+[21]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
  (./main.aux
 ! Missing \endcsname inserted.
 <to be read again> 
                    \protect 
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -977,14 +1009,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
                                                   \reserved@a \else \@tempsw...
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Use of \hyper@link@ doesn't match its definition.
 \@newl@bel ...e #1@#2\endcsname \reserved@a \else 
                                                   \@tempswatrue \fi 
-l.57 ... \vdp system.\relax }{figure.caption.5}{}}
+l.67 ... \vdp system.\relax }{figure.caption.6}{}}
                                                   
 If you say, e.g., `\def\a1{...}', then you must always
 put `1' after `\a', since control sequence names are
@@ -992,8 +1024,8 @@ made up of letters only. The macro here has not been
 followed by the required stuff, so I'm ignoring it.
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 620C939516842F123B13C44F79AD1D7F;2266.
 
@@ -1003,13 +1035,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
  ) 
 Here is how much of TeX's memory you used:
- 10959 strings out of 492990
- 160228 string characters out of 6136334
- 273799 words of memory out of 5000000
- 14178 multiletter control sequences out of 15000+600000
+ 10971 strings out of 492990
+ 160443 string characters out of 6136334
+ 274032 words of memory out of 5000000
+ 14186 multiletter control sequences out of 15000+600000
  16353 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,15n,56p,810b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1030,10 +1062,10 @@ s/cm/cmr9.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10
 .pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/
 texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/20
 17/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (24 pages, 431671 bytes).
+Output written on main.pdf (25 pages, 547955 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 531 compressed objects within 6 object streams
- 151 named destinations out of 1000 (max. 500000)
- 275 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 598 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 154 named destinations out of 1000 (max. 500000)
+ 280 words of extra memory for PDF output out of 10000 (max. 10000000)
 
