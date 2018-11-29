@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}Geometric Singular Perturbation Theory}{1}{section.1}
-\contentsline {section}{\numberline {2}Fast-Slow Systems}{2}{section.2}
+\contentsline {section}{\numberline {2}Fast-Slow Systems}{1}{section.2}
 \contentsline {section}{\numberline {3}Singularities and Fold Points}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Folded Singularities in a Three Dimensional System}{4}{subsection.3.1}
 \contentsline {section}{\numberline {4}The Van Der Pol Equation}{6}{section.4}
@@ -27,7 +27,7 @@
 \contentsline {subsubsection}{\numberline {8.1.1}Dynamics in $K_2$}{15}{subsubsection.8.1.1}
 \contentsline {subsection}{\numberline {8.2}Dynamics in $K_1$}{16}{subsection.8.2}
 \contentsline {subsubsection}{\numberline {8.2.1}Separation of the Manifolds}{17}{subsubsection.8.2.1}
-\contentsline {subsection}{\numberline {8.3}Effect of the Canard Point}{18}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.3}Effect of the Canard Point}{17}{subsection.8.3}
 \contentsline {subsubsection}{\numberline {8.3.1}Singular Hopf Bifurcation}{18}{subsubsection.8.3.1}
 \contentsline {section}{\numberline {A}Dynamics in $K_2$}{20}{appendix.A}
 \contentsline {section}{\numberline {A}Log}{21}{appendix.A}
