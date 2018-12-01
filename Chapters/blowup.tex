@@ -1,3 +1,24 @@
+++++Rename chapter: 'The Blow-Up Method'++++++++
+
+In order to apply the Blow-Up Method to the fold point at the origin, we focus on a neighbourhood $U$ around the fold point $(0,0)$. 
+The neigbourhood $U$ is small enough, such that $g(x,y, \epsilon) \neq 0$ in $U$, and we can define sections in $U$, as follows:
+\begin{align*}
+&\Delta ^{in} = \{ (x, \rho^2), x \in I \} \\
+&\Delta ^{out} = \{ (\rho, y), y \in \mathbf{R} \},
+\end{align*}
+where $I \subset \mathbf{R}$. Now $\Delta^{in}$ is traverse to $S^a$, while $\Delta^{out}$ is traverse to the fast flow. This enables us to monitor the incoming trajectories from the attracting branch of $S$ and the trajectories leaving $U$ in the direction of the fast flow.
+Then a function $\pi : \Delta^{in} \to \Delta^{out}$ can be defined, called the transition map, which describes how the trajectories passing through $\Delta^{in}$ are mapped onto the outgoing flow in $\Delta^{out}$.  
+The following theorem describes the behaviour of the flow under $\pi$: ++++last statement not precise+++
+\begin{theorem}%[reference from krupa or original source directly]
+Under the assumptions made in this section, there exists $ \epsilon_0 >0$ such that the following assertions hold for $\epsilon \in (0, \epsilon_0]$:\\
+1. The manifold $S_\epsilon^a$ passes through $\Delta^{out}$ at a point $(\rho, h(\epsilon))$, where $h(\epsilon) = O(\epsilon^{2/3})$.\\
+2. The transition map $\pi$ is a contraction with contraction rate $O(e^{-c/\epsilon})$, where $c$ is a positive constant.
+\end{theorem}
+This means that the trajectories that enter $U$ through $\Delta^{in}$, will be funneled into a smaller section of $\Delta^{out}$. 
+
+
+
+
 
 We first need to transform our system in a new coordinate and time system. This is because we are considering our point as a circle with radius zero. By doing this we are then able to consider a localised flow within our system which is a most on the boundary of our point ($r=0$). To do this we need to consider varying powers of $r$ in each of our variables \st we have the system shown in Equation \ref{sys: blow up trans}.  
 \begin{subequations}
@@ -22,7 +43,7 @@ We note that our system will have three charts $ K_1,K_2,K_3 $, where we have $ 
 where $ (x_i,r_i,\epsilon_i)\in\Re^3 $ for $ i=1,2,3 $ \citep{krupa2001}. Now that we have done this we can consider the individual charts explicitly. We start with chart two ($K_2$) for a simple reason. This is because we area able to glean the most information out of this chart. We will see that we then find that we can define the mappings from chart one to two and two to three, further simplifying our analysis in the future.
 
 \subsection{Dynamics in \texorpdfstring{$K_2$}{K2}} \label{sec: VDP K_2}
-To be able to consider chart $ K_2 $ %Ask Nikola why he starts with K_2
+To be able to consider chart $ K_2 $ 
 we will use the transformation - shown in Equation \ref{sys: K2} - in our canonical system. We also need to use a time rescaling ($ t_2=r_2t $) to be able to desingularise the system. Now substituting this into Equation \ref{eq: canonical} yields,
 \begin{align}
 &\od{}{t}(r_2x_2)=r_2^2\od{x_2}{t}=-y_2+x_2^2-\dfrac{x_2^3r_2}{3},\\
