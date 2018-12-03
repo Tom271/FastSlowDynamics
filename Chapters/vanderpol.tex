@@ -167,25 +167,10 @@ Therefore (\ref{eq: general reduced}) becomes
 \begin{align*}
 	\dot{x} = \frac{g(x,\phi(x),0)}{ \phi_x(x)} = \frac{ x-1}{2x-x^2} =\frac{ x-1}{x(2-x)}.
 \end{align*}
-This calculation confirms that the fold points at $x=0$ and $x=2$ are singularities of the reduced system. Therefore, no conclusions about the dynamics of $x$ can be made at the fold points. 
-Therefore, alternative methods have to be employed to describe the dynamics on the fold points in the singular limit and furthermore to be able to conclude the dynamics of the full system at the fold points from this analysis.
-The method considered for analysis is called the Blow-Up Method and is considered in the following section.
+This calculation confirms that the fold points at $x=0$ and $x=2$ are singularities of the reduced system. Therefore, no conclusions about the dynamics of $x$ can be made at the fold points. Different methods will have to be developed in order to overcome this.
 
-
-\subsection{Extended System}
-Now that we have established the above theorems then we need to consider the extended system \st $\epsilon'=0$, thus $\epsilon=\text{\textit{const}}$. By considering this system we will be able to consider a blow up (magnification) around our fold point in three dimensions.  
-
-From Figure \ref{fig: blow up} we can consider the stability of our fold point. To do this we are able to establish the following determinant,
-\begin{equation} 
-    A=\begin{vmatrix} 2x-x^2-\lambda & -1&0 \\ 0 & -\lambda&0\\0&0&-\lambda \end{vmatrix}=\lambda^2(2x-x^2-\lambda).
-    \label{eq: Eigenvalues}
-\end{equation}
-However, a far easier approach is to note that our matrix is an upper triangular matrix which we can take the eigenvalues directly from Equation \ref{eq: Eigenvalues} \st $(\lambda_1.\lambda_2,\lambda_3)=tr(A)$. Then we can clearly see that for our fold points $\lambda_i=0 \ \text{for} \ i=1,2,3$ and for any $x\neq0$ we have $\lambda_1=x(2-x)$ and $\lambda_2=\lambda_3\equiv0$. As a result we can see that we are forced to blow up our system around our fold point as our steady states are non-hyperbolic whereas outside of this we find that we have one hyperbolic steady state.
-%Now we can see that we have three non-hyperbolic eigen values when we consider our system at (0,0,0), 
-
-
-\subsubsection{Canonical Form}
-Now that we have established our reduced system we are able to rewrite it in canonical form - Equation \ref{eq: canonical}.
+\subsection{Canonical Form}
+In order to simplify the analysis below, it us useful to rewrite the dynamical system in canonical form.
 \begin{equation}
     \begin{aligned}
         &x'=-y+x^2-\frac{x^3}{3}=-y+x^2+h(x) \\
@@ -193,4 +178,61 @@ Now that we have established our reduced system we are able to rewrite it in can
     \end{aligned}
     \label{eq: canonical}
 \end{equation}
-There is ample reasoning for doing this. This is because we find that the canonical form has been studied in great detail allowing us to make comparisons and to avoid excess computation. This then allows us to follow an analogous approach to the many papers associated with this topic - as seen in \citet{krupa2001} paper on Extending Geometric Singular Perturbation Theory.
+There is ample reasoning for doing this. The canonical form has been studied in great detail, allowing us to make comparisons and to avoid excess computation, as seen in \citet{krupa2001} paper on Extending Geometric Singular Perturbation Theory.  Note that the first equation has, locally, the shape of the parabola $y= x^2$, which reflects the consideration of the fold point $(0,0)$, which is locally the minimum of a parabola.
+
+
+\subsection{Extended System}
+The canonical system (\ref{eq: canonical}) is then extended to three dimensions by considering $\epsilon'=0$. 
+\begin{equation}
+    \begin{aligned}
+        &x'=-y+x^2+h(x) \\
+        &y'=\epsilon(x-1)
+        &\epsilon'=0.
+    \end{aligned}
+\end{equation}
+
+
+Analysing the stablility of the three dimensional system, three eigenvalues can be found by considering the Jacobian matrix: 
+\begin{equation} 
+    J=\begin{vmatrix} 2x-x^2 & -1&0 \\ 0 & 0&0\\0&0&0\end{vmatrix}
+    \label{eq: Eigenvalues}
+\end{equation}
+This is an upper triangular matrix and hence $(\lambda_1.\lambda_2,\lambda_3)=tr(J)= (2x-x^2,0,0)$. Therefore, at the fold points, where $x=0$ or $x=2$, $\lambda_i=0 \ \text{for} \ i=1,2,3$ . Therefore, there exists a zero eigenvalue on $S$ at the fold points. At these points $S$ is not normally hyperbolic.
+The critical manifold has to be divided as follows:
+\begin{align*}
+S^a &= \{ (x,y): y = x^2-\frac{x^3}{3}, x< 0 \} \cup  \{ (x,y): y = x^2-\frac{x^3}{3}, x>2 \} \\
+S^r &= \{ (x,y): y = x^2-\frac{x^3}{3}, 0< x< 2 \},
+\end{align*}
+such that $S^a \cup S^r \cup \{0\} \cup \{2\} = S$.
+The manifolds $S^a_0$ and $S^r_0$ are normally hyperbolic everywhere and Fenichel's Theorem (\ref{Fenichel}) can be applied in order to conclude the persistence of the manifold as slow manifolds $S^a_\epsilon$ and $S^r_\epsilon$. At the points $\{0\}$ and $\{2 \}$ the normal hyperbolicity is not given, since the eigenvalue associated to $S$ is zero at these points.
+++++++Note: technically the paper mentions here the centre manifold M, stressing the three dimensionality of the problem. if we want that it can be added+++++++++
+\\
+\\
+The problem that the Van der Pol System provides now is the analysis at the fold points.
+In the analysis of the reduced system it became apparent that the fold points are singularities of the reduced flow on $S_0$, and therefore the dynamics in the singular limit cannot be determined. Furthermore, Fenichel Theory does not apply at the folds because normal hyperbolicity breaks down at these points, as discussed above. Therefore, even if the dynamics around the folds in the singular limit was known, no conclusions could be drawn for the perturbed system with $S_\epsilon$.
+Alternative methods have to be employed to describe the dynamics on the fold points in the singular limit and furthermore to be able to conclude the dynamics of the full system at the fold points from this analysis.
+The method considered for analysis is called the Blow-Up Method and is considered in the following section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
