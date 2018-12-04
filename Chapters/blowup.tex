@@ -39,6 +39,7 @@ In terms of the blown up fold point, a sphere denoted by $B$, charts are project
 We introduce three charts $ K_1,K_2,$ and $K_3 $. Chart $K_2$ is the two dimensional projection covering the upper half plane of $B$. However, as points on the equator of $B$ are approached on $K_1$, we tend to infinity to infinity.
 These regions however, are of immense interest, since they are points of incoming and outgoing trajectories. (better+++)
 Therefore, charts $K_1$ and $K_3$ are introduced, covering the regions of interest on the equator. This is represented in Figure ++++++ (blow up figure)++
+The points that are relevant to the analysis of the dynamics are shown in Figure (+++insert figure 2.2 p,293+++++). (More description potentially)
 
 The charts are defined by setting each of the variables of the extended system to $1$ in turn, giving $ \bar{y}=1, \ \bar{\epsilon}=1, \ \bar{x}=1 $. Substituting these into Equations (\ref{sys: blow up trans x}), (\ref{sys: blow up trans y}) and (\ref{sys: blow up trans z}) respectively gives, 
 \begin{subequations} \label{ sys: K1K2K3}
@@ -53,7 +54,7 @@ With this setup, we can consider the individual charts in turn, analyse the dyna
 We start with $K_2$,  because it holds the most information and the flow is the analysed more readily than in the other two charts. 
 The remaining question is how the transition between the three charts and the connection to the global dynamics is made after finishing the individual analysis.
 This is done via a coordinate change, derived by using equations (\ref{ sys: K1K2K3}) and (\ref{sys: blow up trans}), and the results are summed up in the following Lemma:
-\begin{lemma}
+\begin{lemma} \label{coord. change}
 Let $\kappa_{12}$ denote the change of coordinates from $K_1$ to $K_2$. Then $\kappa_{12}$ is given by \\
 \begin{equation}
 x_2 = x_1 \epsilon_1^{-1/3},  y_2 = \epsilon_1^{-2/3}, r_2= r_1\epsilon_1^{1/3},
@@ -94,7 +95,7 @@ noting that $ \od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t} $ .  Now
 	\end{aligned}
 \end{equation}
 Then, considering $r_2=0$ and neglecting the $O(r_2)$ terms results in:
-\begin{equation}
+\begin{equation} \label{Riccati}
 	\begin{aligned}
 		&x'_2=x^2_2-y_2,\\
 		&y'_2=-1,\\
@@ -104,7 +105,185 @@ which are the well known Riccati equations- see \citet{Riccati}.
 Some known results about the Riccati equations can be summarised as follows:
 
 
-\subsection{Dynamics in \texorpdfstring{$K_1$}{K1}}
+\begin{prop}[\citealp{krupa2001}](++++++++++wrong. other source)\label{Riccati Prop} \\
+The Riccatti equation (\ref{Riccati}) has the following properties:
+\begin{enumerate}
+\item Every orbit has a horizontal asymptote $y=y_r$, where $y_r$ depends on the orbit such that $x \to \infty$ as $y$ approaches $y_r$ from above.
+\item There exists a unique orbit $\gamma_2$, which can be parameterized as $(x,s(x)), x \in \mathbf{R}$ and is asymptotic to the left branch of the parabola $x^2 - y = 0$, for $x \to - \infty$. The orbit $\gamma_2$ has a horizontal asymptote $y= - \Omega_0 <0$, such that $x \to \infty$ as $y$ approaches $-\Omega_0$ from above.
+\item The function $s(x)$ has the asymptotic expansions
+\begin{align*}
+s(x) &= x^2 + \frac{1}{2x} + O\left( \frac{1}{x^4} \right), x \to -\infty,\\
+s(x) &= -\Omega_0 + \frac{1}{x} + O\left( \frac{1}{x^3} \right), x \to \infty.
+\end{align*}
+\item All orbits to the right of $\gamma_2$  are backward asymptotic to the right branch of the parabola $x^2-y=0$.
+\item All orbits to the left of $\gamma_2$ have a horizontal asymptote $y=y_l>y_r$, where $y_l$ depends on the orbit, such that $x \to -\infty$ as $y$ approaches $y_l$ from below.
+\end{enumerate}
+\end{prop}
+
+The solutions to the Riccati equations, described in Proposition \ref{Riccati Prop}, are displayed in Figure. +++++ add riccati figure 2.3 p.294++++
+Note that the equation $x^2 - y=0$ is locally the critical manifold $S$ close to the fold point, under neglegation of $r_2$ terms.+++a bit wavy argument+++
+The orbit $\gamma_2$, corresponds to the global trajectory $\gamma$, of the full system, which is the candidate trajectory connecting the slow flow on $S^a$ entering $U$ through $p_a$ to the fast fibres, exiting $U$ through $q_{out}$. (++++++refer back to figure  2.2 in krupa+++++++++)
+This leads to the conclusion that if we can connect $\gamma_2$ to $p_a$  through $K_1$ and to $q_{out}$ through $K_3$, the global $\gamma$ can be constructed using Lemma \ref{coord. change}.
+This motivates the analysis of $K_1$ and $K_3$.
+In order to connect the dynamics on $K_2$ to that on the other charts, we need to define local inflow and outflow sections, similar to $\Delta^{in}$ and $\Delta^{out}$ in the full system.
+Then we can follow trajectories that get mapped by $\Pi_2$, again analogous to $\pi$ in the full system, from a section $\Sigma^{in}_2$ to $\Sigma^{out}_2$.
+The section are defined as follows. For $\delta>0$, we have:
+\begin{align*}
+\Sigma^{in}_2= \{ (x_2,y_2,r_2): y_2= \delta^{-2/3} \},\\
+\Sigma^{out}_2 = \{ (x_2,y_2,r_2): x_2 = \delta^{-1/3} \}.
+\end{align*}
+Then the transition map $\Pi_2$ can be defined and the results are summarised as follows:
+\begin{prop}[\citealp{krupa2001}]
+The transition map $\Pi_2$ has the following properties:
+\begin{enumerate}
+\item
+\begin{align*}
+\Pi_2(q_0)= (\delta^{-1/3}, - \Omega_0 + \delta^{1/3} + O(\delta), 0)
+\end{align*}
+\item A neighbourhood of $q_0$ is mapped diffeomorphically onto a neighbourhood of $\Pi_2(q_0)$.
+\end{enumerate}
+\end{prop}
+ 
+This is sufficient information to now consider the dynamics on $K_1$.
+
+\subsection{Dynamics in \texorpdfstring{$K_1$}{K1}} 
+The coordinate transformation (\ref{sys: K2}) is applied to the extended system (\ref{extended FS}), and a rescaling of time , $t_1=r_1t$, to get
+\begin{align*}
+\frac{d(r_1x_1)}{dt_1} \frac{dt_1}{dt} = -r_1^2 + r_1^2x_1^2 - \frac{1}{3}r_1^3x_1^3\\
+\frac{dr_1^2}{dt_1}\frac{dt_1}{dt}= 2r_1^2r_1' = r_1^3 \epsilon_1 (-1 +r_1 x_1)\\
+\frac{d(r_1^3 \epsilon_1)}{dt_1}\frac{dt_1}{dt}= (3r_1^2\epsilon_1 + r_1^3 \epsilon_1') r_1 = 0.
+\end{align*}
+Divinding through by $\frac{dt_1}{dt}=r_1$ and replacing the expressions for $\epsilon_1'$ and $r_1'$ with their expressions in terms of the variables, results in the full system in terms of $K-1$. Note that the equation for $\epsilon'$ is found by reaaranging the third equation above. 
+\begin{align*}
+x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 + \left( - \frac{1}{2} \epsilon_1 x_1^2r_1 - \frac{1}{3} x_1^3 \right)\\
+r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + r_1 x_1)\\
+\epsilon_1' &= \frac{3}{2} \epsilon_1^2 ( 1- r_1x_1),
+\end{align*}
+and grouping terms in $r_1$ results in the standard form:
+\begin{align} \label{K1systemfull}
+x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 +O(r_1)\\
+r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + O(r_1))\\
+\epsilon_1' &= \frac{3}{2} \epsilon_1^2 ( 1- O(r_1)).
+\end{align}
+
+The sustem (\ref{K1systemfull}) has two invariant planes, that are somewhat equivalent to the notion of a nullcline. In an invariant plane, one of the parameters do not change their value and here these are $r_1=0$ and $\epsilon_1=0$.
+If we substiture $r_1=0$ or $\epsilon_ =0$ into (\ref{K1systemfull}), the $r_1$ equation, or $\epsilon_1$ equation respectively, vanishes, and there is only a two dimensional system left to consider.
+These two subsoaces of (\ref{K1systemfull}) will be analysed below. Furthermore, the subspace where $r_1=0$ and $\epsilon_1=0$, is one dimensional, an invariant line, where the subspaces $r_1=0$ and $\epsilon_1=0$ cross.
+The following analysis is displayed in Figure ++++ sub in figute 2.4 p.295++++, illustrating the dynamics on $K_1$.
+
+
+The invariant line, satisfying $r_1=0$ and $\epsilon_1=0$ is given by $l_1= -1 +x^2$. 
+From this it is easily deduced that the two equilibrium points are where $l_1=0$, which is at $x=\pm1$. Therefore, the points $p_a$ and $p_r$ are defined as $p_a= (-1,0,0)$ and $p_r=(1,0,0)$.
+The flow on $l_1$ is attracted to $p^a$ and repelled by $p^r$, which is easily observed from the form $l_1$ takes or from a formal stability analysis of the one dimensional system. The eigenvalues of $l_1$ are found  by considering $l'_1 - \lambda = 2x - \lambda= 0 $ which gives that $\lambda = \pm 2$ at the respective equilibria.
+ 
+Then we expect the behaviour of the flow on the two invariant planes to be influenced by the two equilibria and the dynamics on $l_1$.
+Consider the plane $\epsilon_1=0$. The system (\ref{K1systemfull}) becomes
+\begin{align} \label{epsilon0sys}
+x_1' &= -1 +x^2 - \left( \frac{1}{3}r_1x_1^3 \right)\\
+r_1' &= 0.
+\end{align}
+This system has equlilbria at $x= \pm1$, for $r_1=0$, as before, however, for each constant value of $r_1$, we get a different equilibrium of the system (\ref{epsilon0sys}). This forms a curve of equlilbria, which can be recognise as $S^a_1$ connected to $p_a$ and $S^r_1$, connected to $p_r$, the left and right branches of the critical manifold, transformed into $K_1$. This is well illustrated in figure +++ ref chart 2 fig+++
+++++++++++++Note. apparently this follows from IFT we got stuck on this before, i cannot remember :(++++++++++
+The additional eigenvalue, corresponding to the $r_1$ equation, is $\lambda=0$. However, at each of the equilibria of this system, and specifically at $p_a$ and $p_r$ we have normal hyperbolicity, due to the coordinate transformation in $K_1$. ++ go over this. +++
+
+Next we consider the dynamics on the invariant plane $r_1=0$.
+The system (\ref{K1systemfull}) becomes: 
+\begin{align}
+x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 \\
+\epsilon_1' &= \frac{3}{2} \epsilon_1^2 .
+\end{align}
+Again, $x= \pm 1$ are equilibria of the system, and an additional zero eigenvalue is gained due to the $\epsilon$ equation. It can be conluded that one dimensional center manifolds exist, called $N_{a,1}$ and $N_{r,1}$, that are invariant, however, not manifolds of equilibria like $S^a$ and $S^r$ in the $\epsilon=0$ plane. The dynamics on these manifolds is determined mainly by the value of $\epsilon$, since the change in the $\epsilon$ direction is much stronger than the change in the $x$ direction. Therefore, on $N_{a,1}$ and $N_{r,1}$ the flow moves up the $\epsilon$ direction with increasing epsilon.
+
+In order to draw conclusions on the persistence of the dynamics in the full system (+++???+++), as before, sections in the space are defined to monitor incoming and outgoing trajectories.
+Firstly, let the region considered be such that
+$D_1:= \{ (x_1,y_1,\epsilon_1): x_1 \in \mathbf{R}, 0, \leq r_1 \leq \rho, 0, \leq\epsilon_1 \leq \delta\}$.
+Then the relevant sections for the candidate trajectory $\gamma$ are
+\begin{align*}
+\Sigma^{in}_1 := \{ (x_1,r_1, \epsilon_1) \in D_1 : r_1 = \rho \}, \\
+\Sigma^{out}_1 := \{ (x_1,r_1, \epsilon_1) \in D_1 : \epsilon_1=\delta \}.
+\end{align*}
+Note that $\Sigma^{in}_1 = \Delta^{in}$ and $\Sigma^{out}_1=\Sigma^{in}_2$.
+The aim is to find the connection between $p_a$ and $\gamma_2$ in $K_2$. In order to establish this connection, the trajectory $\gamma_2$ has to be mapped onto $K_1$ using Lemma \ref{coord. change}. Recall from Section \ref{sec: VDP K_2} that the form of the candidate trajectory is of the form $(x_2, s(x_2))$.
+Therefore, the trajectory $\gamma_1$ satisfies:
+\begin{align*}
+(x_1, 0, y_1) = \left(x_2 \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right) \right)^{-1/2}, 0, \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right)\right)^{-3/2} \right).
+\end{align*}
+Note that $s(x_2)$ as $x_2 \to - \infty$ is employed, since we consider the left continuation of $\gamma_2$.
+Furthermore, as is intuitively clear from figure +++sub fig K2+++, and can be shown by analysing the form of $\gamma_1$, the trajectory $\gamma_1$ converges to $p_a$ in backward time, which is exactly as expected.
+This establishes the link between the slow flow on $S^a$ and the flow on $K_2$, if we consider the following proposition, which sums up the findings in $K_1$ and employs center manifold theory in order to establish persistence in the full system.(++++ needs more clarity. and CMT or Fenichel. need to sort that out++++)
+\begin{prop}[\citealp{krupa2001}]
+For $\rho, \delta$ sufficiently small the following assertions hold for the system \ref{K1systemfull}:
+\begin{enumerate}
+\item There exists an attracting two-dimensional $C^k$- center manifold $M_{a,1}$ at $p_a$ which contains the line of equilibria $S_1^a$ and the center manifold $N_{a,1}$. In $D_1$ the manifold $M_{a,1}$ is given as a graph $x_1=h_a(r_1,\epsilon_1)$. The branch of $N_{a,1}$ in $r_1=0, \epsilon_1>0$ is unique.
+\item There exists a repelling two-dimensional $C^k$- center manifold $M_{r,1}$ at $p_r$ which contains the line of equilibria $S_1^r$ and the center manifold $N_{r,1}$. In $D_1$ the manifold $M_{r,1}$ is given as a graph $x_1=h_r(r_1,\epsilon_1)$. The branch of $N_{r,1}$ in $r_1=0, \epsilon_1>0$ is not unique.
+\item There exists a stable invariant foliation $F^s$ which base $M_{a,1}$ and one-dimensional fibres. For any $c>-2$ there exists a choice of positive $\rho$ and $\delta$ such that the contraction along $F^s$ during a time interval $[0,T]$ is stronger than $e^{cT}$.
+\item There exists an unstable invariant foliation $F^u$ which base $M_{r,1}$ and one-dimensional fibres. For any $c>-2$ there exists a choice of positive $\rho$ and $\delta$ such that the expansion along $F^u$ during a time interval $[0,T]$ is stronger than $e^{cT}$.
+\item The unique branch $N_{a,1}$ in $r_1=0, \epsilon_1>0$ is equal to $\gamma_1:= \kappa^{-1}_{12}(\gamma_2)$ wherever $\kappa^{-1}_{12}(\gamma_2)$ is defined, i.e. along the part of $\gamma_2$ corresponding to $y_2>0$.
+\end{enumerate}
+\end{prop}
+ 
+In order to find the contraction rate along$F^s$, the transition time $T$ has to be found. This is done by integrating the $\epsilon$ equation of system \ref{K1systemfull}, which is a separable ODE with respect to $t_1$.
+This then results in 
+\begin{align*}
+T= \frac{2}{3} \left(\frac{1}{\epsilon_1} - \frac{1}{\delta} \right) \left( 1 + O(\rho) \right),
+\end{align*}
+where$r_1= \rho$, since we are considering the time taken from $\Sigma^{in}_1$. 
+Therefore, this gives information regarding a transition map $\Pi_1$, since it has to satisfy this condition. For any point $p= (x_1, \rho, \epsilon_1) \in \Sigma^{in}_1$ we have $ \Pi_1(p) \in \Sigma^{out}_1$.
+The follwoing proposition summarises the the findings for $\Pi_1$:
+\begin{prop}
+For $\rho, \delta$ and $\beta_1$ sufficiently small, the transition map $\Pi_1: \Sigma^{in}_1 \to \Sigma^{out}_1$ defined by the flow of system \ref{K1systemfull} has the following properties:
+\begin{enumerate}
+\item $\Pi_1(R-1)$ is a wedge- like region in $\Sigma^{out}_1$. $\Pi_1^{-1}(R_2)$  is a wedge- like region in $\Sigma^{in}_1$.
+\item More precisely, for fixed $c<2$, there exists a constant $K$ depending on the constants $c, \rho, \delta$ and $\beta_1$ such that
+\begin{enumerate}
+\item for $\epsilon_1 \in (0, \delta] $ the map $\Pi_1 |I_a(\epsilon_1)$ is a contraction with coontraction rate bounded by $Ke^{-\frac{2c}{3} \left(\frac{1}{\epsilon_1} - \frac{1}{\delta} \right)}$.
+\item for $r_1 \in (0, \rho] $ the map $\Pi_1 |I_r(\epsilon_1)$ is a contraction with coontraction rate bounded by $Ke^{-\frac{2c}{3} \left(\frac{\rho^3}{r_1^3 \delta} - \frac{1}{\delta} \right)}$.
+\end{enumerate}
+\end{enumerate}
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Dynamics in \texorpdfstring{$K_3$}{K3}}
 Similarly to $K_1$ and $K_2$, the system can be transformed using Equation \ref{sys:K3}.
