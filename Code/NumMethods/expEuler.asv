@@ -1,9 +1,0 @@
-function sol=expEuler(func,z_0,T_0,h,tSpan)
-%EXPEULER solves a given ODE using the explicit Euler method
-%given a time step and end points.
-    n=floor(tSpan/h)+1;
-    t=linspace(T_0,T_0+tSpan,n);
-    z=zeros(1,n);
-    z(1)=z_0
-    for i=1:n
-        z(i+1)=z(i)+h*func(z(i))
