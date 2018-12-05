@@ -80,6 +80,10 @@ for $\epsilon_3>0$.
 Furthermore, transition maps $\Pi_i, i \in 1,2,3$  are defined in each section, describing how the trajectories coming in and out of each chart. These are combined in the final part of this section to give the proof of Theorem \ref{transition map theorem}, and to relate the results of the blow up method back to the original transition map $\pi$.
 
 \subsection{Dynamics in \texorpdfstring{$K_2$}{K2}} \label{sec: VDP K_2}
+\begin{figure}[h!]\centering
+	\includegraphics[height=4cm,width=6cm]{Images/Dynamics_in_Chart_2}
+	\caption{Phase portrait for chart 2 \citep{krupa2001}.}
+\end{figure}
 To be able to consider chart $ K_2$, the transformation presented in Equation (\ref{sys: K2}) is applied to the extended system (\ref{extended FS}). Furthrmore,a time rescaling ($ t_2=r_2t $) is applied to desingularise the system. This results in:
 \begin{align}
 &\od{}{t}(r_2x_2)=r_2^2\od{x_2}{t}=-y_2+x_2^2-\dfrac{x_2^3r_2}{3},\\
@@ -120,9 +124,15 @@ s(x) &= -\Omega_0 + \frac{1}{x} + O\left( \frac{1}{x^3} \right), x \to \infty.
 \end{enumerate}
 \end{prop}
 
-The solutions to the Riccati equations, described in Proposition \ref{Riccati Prop}, are displayed in Figure. +++++ add riccati figure 2.3 p.294++++
-Note that the equation $x^2 - y=0$ is locally the critical manifold $S$ close to the fold point, under neglegation of $r_2$ terms.+++a bit wavy argument+++
-The orbit $\gamma_2$, corresponds to the global trajectory $\gamma$, of the full system, which is the candidate trajectory connecting the slow flow on $S^a$ entering $U$ through $p_a$ to the fast fibres, exiting $U$ through $q_{out}$. (++++++refer back to figure  2.2 in krupa+++++++++)
+The solutions to the Riccati equations, described in Proposition \ref{Riccati Prop}, are displayed in Figure. Note that the equation $x^2 - y=0$ is locally the critical manifold $S$ close to the fold point, under neglegation of $r_2$ terms.+++a bit wavy argument+++
+The orbit $\gamma_2$, corresponds to the global trajectory $\gamma$, of the full system, which is the candidate trajectory connecting the slow flow on $S^a$ entering $U$ through $p_a$ to the fast fibres, exiting $U$ through $q_{out}$ - described by Figure \ref{fig: Ricatti Sol}. 
+\begin{figure}[h!]\centering
+	\includegraphics[height=6cm,width=6cm]{Images/Dynamics_in_K2}
+	\caption{Ricatti solution for chart 2 \citep{krupa2001}.}
+	\label{fig: Ricatti Sol}
+\end{figure}\newpage
+ 
+%(++++++refer back to figure  2.2 in krupa+++++++++)
 This leads to the conclusion that if we can connect $\gamma_2$ to $p_a$  through $K_1$ and to $q_{out}$ through $K_3$, the global $\gamma$ can be constructed using Lemma \ref{coord. change}.
 This motivates the analysis of $K_1$ and $K_3$.
 In order to connect the dynamics on $K_2$ to that on the other charts, we need to define local inflow and outflow sections, similar to $\Delta^{in}$ and $\Delta^{out}$ in the full system.
@@ -297,8 +307,32 @@ where $F(r_3,y_3,\epsilon_3)=\left(1-y_3-\frac{r_3}{3}\right)$ \\
 
 Now if we combine the above three Sections \ref{sec: VDP K_2}-\ref{sec:dynamics-in-texorpdfstringk3k3}, we have now modelled the flow across all of the points in the \vdp system, including at our non-hyperbolic fold point. As a result Figure \ref{fig: vdp flow diagram}
 \begin{figure}[h!]\centering
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{vdPe001-Moment-normal}
+			\caption{The flow on the \vdp for a small $ \epsilon $.} \label{fig: vdp normal}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{vdPe02-Moment-big-e}
+			\caption{The flow on the \vdp for a larger $ \epsilon $.} \label{fig: vdp big e}
+		\end{subfigure}
+		
+%		\vspace{1cm}
+%		\begin{subfigure}[t]{0.45\textwidth}
+%			\centering
+%			\includegraphics[width=.8\linewidth]{vdPhopf-Moment-3.jpg}
+%			\caption{The flow as it intersects with the fold point.} \label{fig:timing3}
+%		\end{subfigure}
+%		\hfill
+%		\begin{subfigure}[t]{0.45\textwidth}\centering
+%			% just an empty subfigure to shift C below A
+%			\includegraphics[width=.8\linewidth]{vdPhopf-Moment-4.jpg}
+%			\caption{The Hopf bifurcation due to the canard point.}\label{fig:timing4}
+%		\end{subfigure}
 	\caption{Flow on the \vdp system.}
-	\label{fig: vdp flow diagram}
+	\label{\ref{fig: vdp flow diagram}}
 \end{figure}\newpage
 describes the nature in which our trajectories flow across the system where we can see a jump at the fold point, as we deduced from our charts. This now can be extended to a Canard Point, which we will move onto next. 
 \newpage
