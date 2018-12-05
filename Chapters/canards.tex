@@ -27,10 +27,12 @@ Now we need to consider Equation \ref{eq: Fast System} in terms our our cananrd 
 \label{eq: canard system}
 \end{equation}
 where the change in $\epsilon$ and $\lambda$ are constant. Now, for the remainder of the section, we follow the method of \citet{krupa2001} for the canard system. If we start by rewriting our canard system into the canonical forms we find,
-\begin{align}
-&x'=-yh_1(x,y,\epsilon,\lambda)+x^2h_2(x,y,\epsilon,\lambda),\\
-&y'=\epsilon(xh_4(x,y,\epsilon,\lambda)-\lambda h_6(x,y,\epsilon,\lambda)),\\
-\end{align}
+\begin{subequations}
+	\begin{align}
+		&x'=-yh_1(x,y,\epsilon,\lambda)+x^2h_2(x,y,\epsilon,\lambda),\\
+		&y'=\epsilon(xh_4(x,y,\epsilon,\lambda)-\lambda h_6(x,y,\epsilon,\lambda)),
+	\end{align}
+\end{subequations}
 Where we note that $h_j(x,y,\epsilon,\lambda)=1+O(x,y,\epsilon,\lambda)$ for $j=1,2,4,5$ and $h_3(x,y,\epsilon,\lambda)=O(x,y,\epsilon,\lambda)$. However, we should note that for the \vdp system our only term that is not solely of leading order is $h_2(x,y,\epsilon,\lambda)=1-\frac{x}{3}$. Now we are able to choose such a $\lambda>0$ that produces an equilibrium on our repelling branch $S_r$ for the reduced flow. By doing this we are then able to define the following conditions for our reduced flow on $h_j$,
 \begin{align}
 &a_3=\pd{}{x}h_2(0,0,0,0)=-\frac{1}{3},\\
