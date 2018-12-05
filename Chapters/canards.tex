@@ -174,13 +174,44 @@ A-\mu I=\begin{bmatrix}
 %\end{equation}
 %\textbf{Then our eigenvalues are, $ \mu=(2-x)x \ \text{and} \ \mu=0 $, noting that we have an upper triangular matrix. Then we can note that we have a complex eignevalue which causes a Hopf bifurcation, as shown below:}%wrong maths
 From this we are about to find the eigenvalues of the system, $ \mu=0 $ and $ \mu=\frac{2x-x^2\pm\sqrt{(x^2-2x)^2-4\epsilon}}{2} $. Then we consider the values at our equilibrium, $ x=\lambda $, to find that we have a Hopf Bifurcation when $ 4\epsilon>(x^2-2x)^2 $ or when $ \lambda=2 \ \text{or} \ 0 $. This then leads to the following trajectories within the flow - Figure \ref{fig: Hopf}.
-%From the following Figures we can see the progression of our flow over the system,
-\begin{figure}[h!]\centering
-%	\includegraphics[]{}
-	\caption{Development of the Hopf Bifurcation. \textbf{Tom can you screenshot the flow in 4 places?}}
-	\label{fig: Hopf}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-1.jpg}
+		\caption{The initial flow within the system.} \label{fig:timing1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-2.jpg}
+		\caption{The flow as it hits the slow manifold.} \label{fig:timing2}
+	\end{subfigure}
+	
+	\vspace{1cm}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-3.jpg}
+		\caption{The flow as it intersects with the fold point.} \label{fig:timing3}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}
+		% just an empty subfigure to shift C below A
+				\includegraphics[width=.8\linewidth]{vdPhopf-Moment-4.jpg}
+				\caption{The Hopf bifurcation due to the canard point.}
+	\end{subfigure}
+	\caption{The trajectories associated with the canards case of the \vdp system.}
+	\label{fig: 4 canard }
 \end{figure}
-Figure \ref{fig: Hopf} shows that we have an unstable periodic solution within our canard system. In addition to this we know that our canard system will only exist within a small region of $ O(\epsilon) $ \citep{Eckhaus}. Moreover, we can see from Figure \ref{fig: Hopf} that our flow follows the expected path, as we saw in 
+From Figure \ref{fig: 4 canard } we can see the progression of our flow over the system,
+%\begin{figure}[h!]\centering
+%%	\includegraphics[]{}
+%	\caption{Development of the Hopf Bifurcation. \textbf{Tom can you screenshot the flow in 4 places?}}
+%	\label{fig: Hopf}
+%\end{figure}
+Figure \ref{fig: Hopf} shows that we have an unstable periodic solution within our canard system. In addition to this we know that our canard system will only exist within a small region of $ O(\epsilon) $ \citep{Eckhaus}. Moreover, we can see from Figure \ref{fig: Hopf} that our flow follows the expected path, as we saw in ++++++++++++++++++++++++\\
+
 Furthermore, in the \vdp we are able to find a singular Hopf Bifurcation when $ \lambda=1 $. Then to model this behaviour we need to consider a small perturbation along the slow flow where we will have, from Equation \ref{eq: canard system},%discuss what the solutions for x is in the paper 
 \begin{equation}
 \dot{y}=\lambda-x+\bar{\nu} y,
