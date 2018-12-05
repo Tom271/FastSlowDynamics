@@ -232,11 +232,11 @@ Note that $\Sigma^{in}_1 = \Delta^{in}$ and $\Sigma^{out}_1=\Sigma^{in}_2$.
 The aim is to find the connection between $p_a$ and $\gamma_2$ in $K_2$. In order to establish this connection, the trajectory $\gamma_2$ has to be mapped onto $K_1$ using Lemma \ref{coord. change}. Recall from Section \ref{sec: VDP K2} that the form of the candidate trajectory is of the form $(x_2, s(x_2))$.
 Therefore, the trajectory $\gamma_1$ satisfies:
 \begin{align*}
-(x_1, 0, y_1) = \left(x_2 \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right) \right)^{-1/2}, 0, \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right)\right)^{-3/2} \right).
+(x_1, 0, \epsilon_1) = \left(x_2 \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right) \right)^{-1/2}, 0, \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right)\right)^{-3/2} \right).
 \end{align*}
 Note that $s(x_2)$ as $x_2 \to - \infty$ is employed, since we consider the left continuation of $\gamma_2$.
 Furthermore, as is intuitively clear from Figure \ref{fig: Ricatti Sol}, and can be shown by analysing the form of $\gamma_1$, the trajectory $\gamma_1$ converges to $p_a$ in backward time, which is exactly as expected.
-This establishes the link between the slow flow on $S^a$ and the flow on $K_2$, if we consider the following proposition, which sums up the findings in $K_1$ and employs center manifold theory in order to establish persistence in the full system.(++++ needs more clarity. and CMT or Fenichel. need to sort that out++++)
+This establishes the link between the slow flow on $S^a$ and the flow on $K_2$, if we consider the following proposition, which sums up the findings in $K_1$ and employs center manifold theory, see Appendix (++++how do i reference that?++++) in order to establish persistence in the full system.
 \begin{prop}[\citealp{krupa2001}]
 For $\rho, \delta$ sufficiently small the following assertions hold for the system \ref{K1systemfull}:
 \begin{enumerate}
@@ -248,22 +248,25 @@ For $\rho, \delta$ sufficiently small the following assertions hold for the syst
 \end{enumerate}
 \end{prop}
  
-In order to find the contraction rate along$F^s$, the transition time $T$ has to be found. This is done by integrating the $\epsilon$ equation of system \ref{K1systemfull}, which is a separable ODE with respect to $t_1$.
+In order to find the lower bound on the contraction rate along $F^s$, the transition time $T$  has to be found, i.e. the time the trajectory takes to travel from a point $p= (x_1, \rho, \epsilon_1)  \in \Sigma^{in}_1$ to a point in $\Pi_1(p)=( x_1, r_1, \delta) \in \Sigma^{out}_1$. This is done by integrating the $\epsilon$ equation of system (\ref{K1systemfull}), which is a separable ODE with respect to $t_1$.
 This then results in 
 \begin{align*}
 T= \frac{2}{3} \left(\frac{1}{\epsilon_1} - \frac{1}{\delta} \right) \left( 1 + O(\rho) \right),
 \end{align*}
-where$r_1= \rho$, since we are considering the time taken from $\Sigma^{in}_1$. 
-Therefore, this gives information regarding a transition map $\Pi_1$, since it has to satisfy this condition. For any point $p= (x_1, \rho, \epsilon_1) \in \Sigma^{in}_1$ we have $ \Pi_1(p) \in \Sigma^{out}_1$.
-The follwoing proposition summarises the the findings for $\Pi_1$:
+where $r_1= \rho \in p$. 
+Therefore, a transition map $\Pi_1: \Sigma^{in}_1 \to \Sigma^{out}_1$ can be defined for small enough paramerter values of $\rho, \delta, \beta_1$ (Why?++++++++++). We are interested specifically in the transition around the center manifolds $M_{a,1}$ and $M_{r,1}$. The following subsections of $\Sigma^{in}_1 $ and $ \Sigma^{out}_1$ can be defined. Let $R_1= \{ (x_1, \rho, \epsilon_1) : |1+ x_1| \leq \beta_1 \}$, a rectangle in the intersection of the manifolds $M_{a,1}$ and  $\Sigma^{in}_1 $, and $R_2= \{ (x_1, r_1, \delta) : |1- x_1| \leq \beta_1 \}$, a rectangle in the intersection of the manifolds $M_{r,1}$ and  $\Sigma^{out}_1 $, with $\beta_1 >0$ sufficiently small. 
+Furthermore, we can define line segments in these rectangles as $I_a(\overline{\epsilon}) \subset R_1$ and $I_r(\overline{r}) \subset R_2$, where $0 \leq \overline{\epsilon} \leq \delta$ and $0 \leq \overline{r} \leq \rho$.
+Then for any $\overline{\epsilon}$, $\Pi_1$ maps the trajectory on a smaller region $\Pi_1 { I_a(\overline{\epsilon})} \in  \Sigma^{out}_1 $. This is called a contraction of the trajectories. Visual understanding of this analysis can be gained by considering Figure \ref{fig:k1chart}.
+++++ contraction in$ I_r$???+++++ 
+The following proposition summarises the the findings for $\Pi_1$:
 \begin{prop}
 For $\rho, \delta$ and $\beta_1$ sufficiently small, the transition map $\Pi_1: \Sigma^{in}_1 \to \Sigma^{out}_1$ defined by the flow of system \ref{K1systemfull} has the following properties:
 \begin{enumerate}
-\item $\Pi_1(R-1)$ is a wedge- like region in $\Sigma^{out}_1$. $\Pi_1^{-1}(R_2)$  is a wedge- like region in $\Sigma^{in}_1$.
+\item $\Pi_1(R_1)$ is a wedge- like region in $\Sigma^{out}_1$. $\Pi_1^{-1}(R_2)$  is a wedge- like region in $\Sigma^{in}_1$.
 \item More precisely, for fixed $c<2$, there exists a constant $K$ depending on the constants $c, \rho, \delta$ and $\beta_1$ such that
 \begin{enumerate}
-\item for $\epsilon_1 \in (0, \delta] $ the map $\Pi_1 |I_a(\epsilon_1)$ is a contraction with coontraction rate bounded by $Ke^{-\frac{2c}{3} \left(\frac{1}{\epsilon_1} - \frac{1}{\delta} \right)}$.
-\item for $r_1 \in (0, \rho] $ the map $\Pi_1 |I_r(\epsilon_1)$ is a contraction with coontraction rate bounded by $Ke^{-\frac{2c}{3} \left(\frac{\rho^3}{r_1^3 \delta} - \frac{1}{\delta} \right)}$.
+\item for $\overline{\epsilon}\in (0, \delta] $ the map $\Pi_1 |I_a(\overline{\epsilon})$ is a contraction with contraction rate bounded by $Ke^{-\frac{2c}{3} \left(\frac{1}{\overline{\epsilon}} - \frac{1}{\delta} \right)}$.
+\item for $\overline{r} \in (0, \rho] $ the map $\Pi_1 |I_r(\overline{r})$ is a contraction with coontraction rate bounded by $Ke^{-\frac{2c}{3} \left(\frac{\rho^3}{r_1^3 \delta} - \frac{1}{\delta} \right)}$.
 \end{enumerate}
 \end{enumerate}
 \end{prop}
