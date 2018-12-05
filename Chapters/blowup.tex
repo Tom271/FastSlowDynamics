@@ -29,17 +29,22 @@ We first need to transform the extended system (\ref{extended FS}) with respect 
     \end{align}  
     \label{sys: blow up trans}
 \end{subequations}
-further analysis of the fold is possible. ++(vague....)++
+we find that we are able to carry out further analysis, as will follow.
 +++++ If time and space permit, an analysis of the space B and coordinate map would be good... p.291 krupa++++
+A reasonable question to consider is why do we note consider spherical polar coordinates. The reasoning behind this is because we are looking to maximise our computational efficiency so we will proceed in cartesian coordinates. 
+%Instead of analysing the sphere in polar coordinates, in order to maximise computational efficiency, the rest of this analysis is done using charts, which are introduced in the next section.
 
-Instead of analysing the sphere in polar coordinates, in order to maximise computational efficiency, the rest of this analysis is done using charts, which are introduced in the next section.
-
-\subsection{Charts} +++++++++++++Include chart picture from book early this section+++++++++++++++++++
+\subsection{Charts} 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=5cm,width=7cm]{Images/charts-ball}
+	\caption{Three charts mapping different sections of our blow up \citep{krupa2001}.}
+\end{figure}
 In terms of the blown up fold point, a sphere denoted by $B$, charts are projections of regions of $B$ onto a two dimensional plane. 
-We introduce three charts $ K_1,K_2,$ and $K_3 $. Chart $K_2$ is the two dimensional projection covering the upper half plane of $B$. However, as points on the equator of $B$ are approached on $K_1$, we tend to infinity to infinity.
-These regions however, are of immense interest, since they are points of incoming and outgoing trajectories. (better+++)
-Therefore, charts $K_1$ and $K_3$ are introduced, covering the regions of interest on the equator. This is represented in Figure ++++++ (blow up figure)++
-The points that are relevant to the analysis of the dynamics are shown in Figure (+++insert figure 2.2 p,293+++++). (More description potentially)
+We introduce three charts $ K_1,K_2,$ and $K_3 $. Chart $K_2$ is the two dimensional projection covering the upper half plane of $B$. However, as points on the equator of $B$ are approached on $K_1$, we tend to infinity.
+These regions however, are of immense interest, since they are points of incoming and outgoing trajectories. As a consequence, charts $K_1$ and $K_3$ are introduced, covering the regions of interest on the equator of the fold point. These charts will be discussed in detail in the sections to follow.
+%This is represented in Figure ++++++ (blow up figure)++
+%The points that are relevant to the analysis of the dynamics are shown in Figure (+++insert figure 2.2 p,293+++++). (More description potentially)
 
 The charts are defined by setting each of the variables of the extended system to $1$ in turn, giving $ \bar{y}=1, \ \bar{\epsilon}=1, \ \bar{x}=1 $. Substituting these into Equations (\ref{sys: blow up trans x}), (\ref{sys: blow up trans y}) and (\ref{sys: blow up trans z}) respectively gives, 
 \begin{subequations} \label{ sys: K1K2K3}
@@ -83,6 +88,7 @@ Furthermore, transition maps $\Pi_i, i \in 1,2,3$  are defined in each section, 
 \begin{figure}[h!]\centering
 	\includegraphics[height=4cm,width=6cm]{Images/Dynamics_in_Chart_2}
 	\caption{Phase portrait for chart 2 \citep{krupa2001}.}
+	\label{fig: chart 2 fig}
 \end{figure}
 To be able to consider chart $ K_2$, the transformation presented in Equation (\ref{sys: K2}) is applied to the extended system (\ref{extended FS}). Furthrmore,a time rescaling ($ t_2=r_2t $) is applied to desingularise the system. This results in:
 \begin{align}
@@ -109,7 +115,7 @@ which are the well known Riccati equations- see \citet{Riccati}.
 Some known results about the Riccati equations can be summarised as follows:
 
 
-\begin{prop}[\citealp{krupa2001}](++++++++++wrong. other source)\label{Riccati Prop} \\
+\begin{prop}[\citealp{krupa2001}]\label{Riccati Prop} \\
 The Riccatti equation (\ref{Riccati}) has the following properties:
 \begin{enumerate}
 \item Every orbit has a horizontal asymptote $y=y_r$, where $y_r$ depends on the orbit such that $x \to \infty$ as $y$ approaches $y_r$ from above.
@@ -179,7 +185,19 @@ r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + O(r_1))\\
 The sustem (\ref{K1systemfull}) has two invariant planes, that are somewhat equivalent to the notion of a nullcline. In an invariant plane, one of the parameters do not change their value and here these are $r_1=0$ and $\epsilon_1=0$.
 If we substiture $r_1=0$ or $\epsilon_ =0$ into (\ref{K1systemfull}), the $r_1$ equation, or $\epsilon_1$ equation respectively, vanishes, and there is only a two dimensional system left to consider.
 These two subsoaces of (\ref{K1systemfull}) will be analysed below. Furthermore, the subspace where $r_1=0$ and $\epsilon_1=0$, is one dimensional, an invariant line, where the subspaces $r_1=0$ and $\epsilon_1=0$ cross.
-The following analysis is displayed in Figure ++++ sub in figute 2.4 p.295++++, illustrating the dynamics on $K_1$.
+The following analysis is displayed in Figure \ref{fig:k1chart}, illustrating the dynamics on $K_1$.
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=7cm, height=7cm]{Images/K1Chart}
+%	\caption{Dynamics in chart 1 \citep{krupa2001}
+%	\label{fig:k1chart}
+%\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=7cm,width=7cm]{Images/K1Chart}
+	\caption{Dynamics in chart 1 \citep{krupa2001}}
+		\label{fig:k1chart}
+\end{figure}\newpage
 
 
 The invariant line, satisfying $r_1=0$ and $\epsilon_1=0$ is given by $l_1= -1 +x^2$. 
@@ -192,8 +210,7 @@ Consider the plane $\epsilon_1=0$. The system (\ref{K1systemfull}) becomes
 x_1' &= -1 +x^2 - \left( \frac{1}{3}r_1x_1^3 \right)\\
 r_1' &= 0.
 \end{align}
-This system has equlilbria at $x= \pm1$, for $r_1=0$, as before, however, for each constant value of $r_1$, we get a different equilibrium of the system (\ref{epsilon0sys}). This forms a curve of equlilbria, which can be recognise as $S^a_1$ connected to $p_a$ and $S^r_1$, connected to $p_r$, the left and right branches of the critical manifold, transformed into $K_1$. This is well illustrated in figure +++ ref chart 2 fig+++
-++++++++++++Note. apparently this follows from IFT we got stuck on this before, i cannot remember :(++++++++++
+This system has equilibria at $x= \pm1$, for $r_1=0$, as before, however, for each constant value of $r_1$, we get a different equilibrium of the system (\ref{epsilon0sys}). This forms a curve of equlilbria, which can be recognise as $S^a_1$ connected to $p_a$ and $S^r_1$, connected to $p_r$, the left and right branches of the critical manifold, transformed into $K_1$. This is well illustrated in figure \ref{fig: chart 2 fig}. Note. apparently this follows from IFT we got stuck on this before, i cannot remember :(++++++++++
 The additional eigenvalue, corresponding to the $r_1$ equation, is $\lambda=0$. However, at each of the equilibria of this system, and specifically at $p_a$ and $p_r$ we have normal hyperbolicity, due to the coordinate transformation in $K_1$. ++ go over this. +++
 
 Next we consider the dynamics on the invariant plane $r_1=0$.
@@ -202,9 +219,9 @@ The system (\ref{K1systemfull}) becomes:
 x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 \\
 \epsilon_1' &= \frac{3}{2} \epsilon_1^2 .
 \end{align}
-Again, $x= \pm 1$ are equilibria of the system, and an additional zero eigenvalue is gained due to the $\epsilon$ equation. It can be conluded that one dimensional center manifolds exist, called $N_{a,1}$ and $N_{r,1}$, that are invariant, however, not manifolds of equilibria like $S^a$ and $S^r$ in the $\epsilon=0$ plane. The dynamics on these manifolds is determined mainly by the value of $\epsilon$, since the change in the $\epsilon$ direction is much stronger than the change in the $x$ direction. Therefore, on $N_{a,1}$ and $N_{r,1}$ the flow moves up the $\epsilon$ direction with increasing epsilon.
+Again, $x= \pm 1$ are equilibria of the system, and an additional zero eigenvalue is gained due to the $\epsilon$ equation. It can be concluded that one dimensional centre manifolds exist, called $N_{a,1}$ and $N_{r,1}$, that are invariant, however, not manifolds of equilibria like $S^a$ and $S^r$ in the $\epsilon=0$ plane. The dynamics on these manifolds is determined mainly by the value of $\epsilon$, since the change in the $\epsilon$ direction is much stronger than the change in the $x$ direction. Therefore, on $N_{a,1}$ and $N_{r,1}$ the flow moves up the $\epsilon$ direction with increasing epsilon.
 
-In order to draw conclusions on the persistence of the dynamics in the full system (+++???+++), as before, sections in the space are defined to monitor incoming and outgoing trajectories.
+In order to draw conclusions on the persistence of the dynamics in the full system (+++???+++) \textbf{What does this mean?}, as before, sections in the space are defined to monitor incoming and outgoing trajectories.
 Firstly, let the region considered be such that
 $D_1:= \{ (x_1,y_1,\epsilon_1): x_1 \in \mathbf{R}, 0, \leq r_1 \leq \rho, 0, \leq\epsilon_1 \leq \delta\}$.
 Then the relevant sections for the candidate trajectory $\gamma$ are
@@ -219,7 +236,7 @@ Therefore, the trajectory $\gamma_1$ satisfies:
 (x_1, 0, y_1) = \left(x_2 \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right) \right)^{-1/2}, 0, \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right)\right)^{-3/2} \right).
 \end{align*}
 Note that $s(x_2)$ as $x_2 \to - \infty$ is employed, since we consider the left continuation of $\gamma_2$.
-Furthermore, as is intuitively clear from figure +++sub fig K2+++, and can be shown by analysing the form of $\gamma_1$, the trajectory $\gamma_1$ converges to $p_a$ in backward time, which is exactly as expected.
+Furthermore, as is intuitively clear from Figure \ref{fig: Ricatti Sol}, and can be shown by analysing the form of $\gamma_1$, the trajectory $\gamma_1$ converges to $p_a$ in backward time, which is exactly as expected.
 This establishes the link between the slow flow on $S^a$ and the flow on $K_2$, if we consider the following proposition, which sums up the findings in $K_1$ and employs center manifold theory in order to establish persistence in the full system.(++++ needs more clarity. and CMT or Fenichel. need to sort that out++++)
 \begin{prop}[\citealp{krupa2001}]
 For $\rho, \delta$ sufficiently small the following assertions hold for the system \ref{K1systemfull}:
