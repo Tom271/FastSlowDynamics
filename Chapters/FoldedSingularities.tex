@@ -35,14 +35,14 @@ As a result we are able to express these flows in the following manner, using Eq
 where we can then define a folded singularity if $ g_1(p_*,\lambda,0)\pd{}{y}f(p_*,\lambda,0)+g_2(p_*,\lambda,0)\pd{}{z}f(p_*,\lambda,0)=0 $, for our flow on branches ($ S $) \citep{MMO}. Next we need to consider the stability of our fold points. We do this by constructing the Jacobian of our system, 
 \begin{equation}
 J=\begin{bmatrix}
-\pd{\dot{x}}{x}&\pd{\dot{x}}{y}&\pd{\dot{x}}{z}&\pd{\dot{x}}{\lambda}&\pd{\dot{x}}{\epsilon}\\
-\pd{\dot{y}}{x}&\pd{\dot{y}}{y}&\pd{\dot{y}}{z}&\pd{\dot{y}}{\lambda}&\pd{\dot{y}}{\epsilon}\\
-\pd{\dot{z}}{x}&\pd{\dot{z}}{y}&\pd{\dot{z}}{z}&\pd{\dot{z}}{\lambda}&\pd{\dot{z}}{\epsilon}\\
+\pd{\dot{x}}{x}&\pd{\dot{x}}{y}&\pd{\dot{x}}{z}\\
+\pd{\dot{y}}{x}&\pd{\dot{y}}{y}&\pd{\dot{y}}{z}\\
+\pd{\dot{z}}{x}&\pd{\dot{z}}{y}&\pd{\dot{z}}{z}\\
 \end{bmatrix},
 \end{equation}
 
-+++Either 5x5 J with last rows zero inj extended system or just 3x3++++
-which we can easily find the eigenvalues, by taking the determinant. The result of this analysis gives that we have three eigenvalues, $ \sigma_i $ for $ i=1,2,3 $ \citep{MMO}. \Wlg we can choose $ \sigma_3=0 $ because we know that at least one of our eigenvalues must be zero to account for our fold point in our system, as the \textbf{Poincar\'e diagram describes}. Then we know from standard stability theory that, at our folded singularity we will have three types of phase portrait in the form of,
+%+++Either 5x5 J with last rows zero inj extended system or just 3x3++++
+which we can easily find the eigenvalues, by taking the determinant. The result of this analysis gives that we have three eigenvalues, $ \sigma_i $ for $ i=1,2,3 $ \citep{MMO}. \Wlg we can choose $ \sigma_3=0 $ because we know that at least one of our eigenvalues must be zero to account for our fold point in our system - see the Poincar\'e diagram for further intuition. Then we know from standard stability theory that, at our folded singularity we will have three types of phase portrait in the form of,
 \begin{equation}
 \begin{cases}
 Saddle \ \sigma_1\sigma_2<0: \sigma_i\in\Re,\\
@@ -56,7 +56,7 @@ where we can note that only our focus will have imaginary parts \citep{MMO}. \ci
 	\caption{Phase portraits of our three dimensional system where a) is a folded saddle, b) folded node, c) and d) are desingularised flows \citep{MMO}.}
 	\label{fig: folded singularities}
 \end{figure}\newpage%arrows switch as we have reversed time
-where we can see the effect of the varying eigenvalues above. A question which is prudent to consider is, why hasn't \citep{MMO} illustrated the singular canard case for a folded focus. This is easily answered as we know that a singular canard is only present if the node or saddle connect our two connecting branches ($ S^r $ and $ S^a $). The idea that our branches are connected allows us to note that our flow is able to pass through from an attracting to a repelling manifold, which is described by Figure \ref{fig: folded singularities} \citep{CanardsinR3}. However, we find that for the focus we are unable to construct branches which connect, preventing the flow from traversing through the fold point. This idea is easily seen as we are able to note, from the imaginary eigenvalues, that there is a spiral present - Figure \ref{fig: spiral}.
+where we can see the effect of the varying eigenvalues above. A question which is prudent to consider is, why has not \citep{MMO} illustrated the singular canard case for a folded focus. This is easily answered as we know that a singular canard is only present if the node or saddle connect our two connecting branches ($ S^r $ and $ S^a $). The idea that our branches are connected allows us to note that our flow is able to pass through from an attracting to a repelling manifold, which is described by Figure \ref{fig: folded singularities} \citep{CanardsinR3}. However, we find that for the focus we are unable to construct branches which connect, preventing the flow from traversing through the fold point. This idea is easily seen as we are able to note, from the imaginary eigenvalues, that there is a spiral present - Figure \ref{fig: spiral}.
 \begin{figure}[h!]\centering
 	\caption{The branches of a spiral}
 	\label{fig: spiral}
