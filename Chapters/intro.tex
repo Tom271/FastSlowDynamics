@@ -43,11 +43,35 @@ S= \left\{ (x,y) : f(x,y,\lambda, 0)=0 \right \},
 \end{align}
 called the critical manifold, where, by definition of $S$, the points $(x,y) \in S$ are equilibria of (\ref{FastS0}). Before we continue, it is useful to have a visual interpretation of these flows, 
 \begin{figure}[h!]\centering
-	%\includegraphics{./}
+
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-1.jpg}
+		\caption{The initial flow within the system starting at $ (x,y)=(1,1) $.} 
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-2.jpg}
+		\caption{The flow as it hits the slow manifold.} 
+	\end{subfigure}
+	
+	\vspace{1cm}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{vdp-jump1}
+		\caption{The flow as it intersects with the fold point and begins the jump.} 
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}\centering
+		% just an empty subfigure to shift C below A
+		\includegraphics[width=.8\linewidth]{vdp-jump2}
+		\caption{The second jump before continuing in a periodic fashion.}
+	\end{subfigure}
 	\caption{Flows in the \vdp system.}
 	\label{fig: vdp flow diagram}
-\end{figure}
-where we can see that the flows will travel towards our fold point, following the relevant branches.
+\end{figure}\newpage
+where we can see that the flows will travel towards our fold point, following the relevant branches. It is worth noting that our flow does not meet the fold point exactly, although this is an `error', it does not directly effect our simulations - as is discussed in Section \ref{sec:matlab-stuff}.
 
 
 \section{Geometric Singular Pertubation Theory} \label{GSPT}
