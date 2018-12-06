@@ -1,11 +1,11 @@
-
-During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[height=5cm,width=8cm]{Canard_Point.png}
-	\caption{The reduced flow of our system for a) $\lambda=0$ and b) $\lambda>0$.}
+	\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$.}
 	\label{fig: Canard Point}
 \end{figure}
+During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. 
+
 To adequately explain the effect that the canard point will have on our system we will first define the following conditions,
 \begin{equation}
 f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing condition}
@@ -50,7 +50,7 @@ Where we note that $h_j(x,y,\epsilon,\lambda)=1+O(x,y,\epsilon,\lambda)$ for $j=
 \end{align}
 where we notice that our other solutions for $a_i=0$ for $i=1,2,4,5$ are trivial. The reason that we consider the constant $A$ is because we will find that this constant is crucial in our canard point analysis iff $A\neq 0$ \citep{krupa2001}. Following this \citep{krupa2001} discusses the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where our two branches $S_r$ and $S_a$ must connect in a smooth fashion. Now from Theorem \ref{Theorem 3.1} we know that we must have a transition map at our critical point,
 \begin{equation}
-\lambda_c(\sqrt{\epsilon})=-\epsilon(\frac{a_1+a_5}{2}+\frac{A}{8})+O(\epsilon^\frac{3}{2}),
+\lambda_c(\sqrt{\epsilon})=-\epsilon\left(\frac{a_1+a_5}{2}+\frac{A}{8}\right)+O(\epsilon^\frac{3}{2}),
 \end{equation}
 which can be written as $\lambda_c(\sqrt{\epsilon})=\frac{\epsilon}{8}+O(\epsilon^\frac{3}{2})$ for the \vdp system \citep{krupa2001}. Consider Canard cycles and center manifolds / Freddy Dumortier, Robert Roussarie. for more details on canards in \vdp.
 
@@ -253,7 +253,7 @@ where it is clear that our Hopf bifurcation is the periodic solution in the cent
 
 
 
-\subsubsection{Separation of the Manifolds}
+\subsubsection{Separation of the Manifolds}\label{sec:separation-of-the-manifolds}
 \begin{figure}[h!]\centering
 	\includegraphics[height=8cm,width=10cm]{Images/Separation}
 	\caption{Separation of $ M_a $ and $ M_r $ \citep{Kuehn}.}
@@ -278,7 +278,7 @@ Continuing on from the singular Hopf bifurcation we might find that the canard p
 \end{prop}
 Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of our domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. As a result of we see a flow similar to Figure \ref{fig: splitting} whereby we find that our flow could either jump off under the fast flow - see Figure \ref{fig: vdp flow diagram e} - or we might find that the flow could be trapped in the canard region and then be repelled back to the attracting manifold, as we see with our connected system - Figure \ref{fig: 4 canard }. 
 
-\textbf{Good to have a figure}
+\textbf{Good to have a figure if possible}
 
 
 
