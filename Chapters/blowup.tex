@@ -39,6 +39,7 @@ A reasonable question to consider is why do we note consider spherical polar coo
 	\centering
 	\includegraphics[height=5cm,width=7cm]{Images/charts-ball}
 	\caption{Three charts mapping different sections of our blow up \citep{krupa2001}.}
+	\label{fig:chartDiagram}
 \end{figure}
 In terms of the blown up fold point, a sphere denoted by $B$, charts are projections of regions of $B$ onto a two dimensional plane. 
 We introduce three charts $ K_1,K_2,$ and $K_3 $. Chart $K_2$ is the two dimensional projection covering the upper half plane of $B$. However, as points on the equator of $B$ are approached on $K_1$, we tend to infinity.
@@ -274,50 +275,8 @@ For $\rho, \delta$ and $\beta_1$ sufficiently small, the transition map $\Pi_1: 
 \end{prop}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \subsection{Dynamics in \texorpdfstring{$K_3$}{K3}}\label{sec:dynamics-in-texorpdfstringk3k3}
-Similarly to $K_1$ and $K_2$, the system can be transformed using Equation \ref{sys:K3}.
+The final chart to study the behaviour of is $K_3$. This chart covers the trajectory as it leaves the fold point at $q_{out}$. The other charts could not do this as $q_{out}$ is close to infinity in both $K_1$ and $K_3$ (cf. Figure \ref{fig:chartDiagram}). Similarly to $K_1$ and $K_2$, the system can be analysed using the blow-up transformation (\ref{sys:K3}).
 \begin{align*}
 \od{r_3}{t_3}&=r_3F(r_3,y_3,\epsilon_3)\\
 \od{y_3}{t_3}&=\epsilon_3(r_3-1)-2y_3F(r_3,y_3,\epsilon_3)\\
@@ -325,7 +284,10 @@ Similarly to $K_1$ and $K_2$, the system can be transformed using Equation \ref{
 \end{align*}
 where $F(r_3,y_3,\epsilon_3)=\left(1-y_3-\frac{r_3}{3}\right)$ \\
  
++++ resonance, $q_{out}$ hyperbolic eq. (no centre manifold). Looking to continue special trajectory $\gamma_2$. Manifold is close to equilibrium at $q_{out}$, must be precise? (Why? To show we don't hit equ? Unstable as $\lambda_1 >0$)  Resonance makes this difficult, no smooth transform linear -> nonlinear (why? check slack link). Intro'd $\Sigma$ slices. Aim is to show that system is equiv to Riccati flow. Removes resonance, linearise using near-id transform. Then Prop2.11 Krupa gives transition map. +++\\
+ 
 
++++Add glue, phase portrait on $S^2$.+++\\
 Now if we combine the above three Sections \ref{sec: VDP K2}-\ref{sec:dynamics-in-texorpdfstringk3k3}, we have now modelled the flow across all of the points in the \vdp system, including at our non-hyperbolic fold point. As a result Figure \ref{fig: vdp flow diagram}
 \begin{figure}[h!]\centering
 		\begin{subfigure}[t]{0.45\textwidth}
