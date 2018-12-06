@@ -1,0 +1,38 @@
+\BOOKMARK [1][-]{section.1}{MATLAB Stuff}{}% 1
+\BOOKMARK [1][-]{section.2}{Fast-Slow Systems}{}% 2
+\BOOKMARK [1][-]{section.3}{Geometric Singular Pertubation Theory}{}% 3
+\BOOKMARK [1][-]{section.4}{Singularities and Fold Points}{}% 4
+\BOOKMARK [1][-]{section.5}{The Van Der Pol Equation}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Derivation of the Van der Pol Fast-Slow System}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{Phase Plane Analysis \(is it?? some part 'singularity analysis'\)}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.3}{Transformation of the Van der Pol System}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.4}{Reduced Dynamics}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.5}{Canonical Form}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.6}{Extended System}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{The Blow-Up Method}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{Coordinate Transformation and Charts}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{Dynamics in K2}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.3}{Dynamics in K1}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.4}{Dynamics in K3}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Canard Points}{}% 17
+\BOOKMARK [2][-]{subsection.7.1}{Canard Blow-up}{section.7}% 18
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Dynamics in K2}{subsection.7.1}% 19
+\BOOKMARK [2][-]{subsection.7.2}{Dynamics in K1}{section.7}% 20
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Separation of the Manifolds}{subsection.7.2}% 21
+\BOOKMARK [2][-]{subsection.7.3}{Effect of the Canard Point}{section.7}% 22
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Singular Hopf Bifurcation}{subsection.7.3}% 23
+\BOOKMARK [1][-]{section.8}{Folded Singularities in a Three Dimensional System}{}% 24
+\BOOKMARK [1][-]{section.9}{MMO}{}% 25
+\BOOKMARK [2][-]{subsection.9.1}{Oscillations}{section.9}% 26
+\BOOKMARK [2][-]{subsection.9.2}{ Folded Nodes}{section.9}% 27
+\BOOKMARK [2][-]{subsection.9.3}{Singular Hopf Bifurcation}{section.9}% 28
+\BOOKMARK [1][-]{appendix.A}{Elements of Dynamical Systems}{}% 29
+\BOOKMARK [2][-]{subsection.A.1}{Stable Manifold Theorem}{appendix.A}% 30
+\BOOKMARK [2][-]{subsection.A.2}{Centre Manifold Theorem}{appendix.A}% 31
+\BOOKMARK [2][-]{subsection.A.3}{Implicit Function Theorem}{appendix.A}% 32
+\BOOKMARK [2][-]{subsection.A.4}{Hartman Grobman Theorem}{appendix.A}% 33
+\BOOKMARK [2][-]{subsection.A.5}{Hopf Bifurcations}{appendix.A}% 34
+\BOOKMARK [1][-]{appendix.B}{Intuitive Examples}{}% 35
+\BOOKMARK [2][-]{subsection.B.1}{Folded Focus}{appendix.B}% 36
+\BOOKMARK [1][-]{appendix.C}{Numerical Simulation}{}% 37
+\BOOKMARK [1][-]{appendix.D}{Dynamics in K2}{}% 38
