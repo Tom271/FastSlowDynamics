@@ -274,18 +274,29 @@ For $\rho, \delta$ and $\beta_1$ sufficiently small, the transition map $\Pi_1: 
 \end{enumerate}
 \end{prop}
 
-
 \subsection{Dynamics in \texorpdfstring{$K_3$}{K3}}\label{sec:dynamics-in-texorpdfstringk3k3}
 The final chart to study the behaviour of is $K_3$. This chart covers the trajectory as it leaves the fold point at $q_{out}$. The other charts could not do this as $q_{out}$ is close to infinity in both $K_1$ and $K_3$ (cf. Figure \ref{fig:chartDiagram}). Similarly to $K_1$ and $K_2$, the system can be analysed using the blow-up transformation (\ref{sys:K3}).
-\begin{align*}
-\od{r_3}{t_3}&=r_3F(r_3,y_3,\epsilon_3)\\
-\od{y_3}{t_3}&=\epsilon_3(r_3-1)-2y_3F(r_3,y_3,\epsilon_3)\\
-\od{\epsilon_3}{t_3}&=-3\epsilon_3F(r_3,y_3,\epsilon_3)
-\end{align*}
+\begin{subequations}
+	\begin{align}
+	\od{r_3}{t_3}&=r_3F(r_3,y_3,\epsilon_3) \\
+	\od{y_3}{t_3}&=\epsilon_3(r_3-1)-2y_3F(r_3,y_3,\epsilon_3)\\
+	\od{\epsilon_3}{t_3}&=-3\epsilon_3F(r_3,y_3,\epsilon_3)
+	\label{sys:K3blowup}
+	\end{align}
+\end{subequations}
 where $F(r_3,y_3,\epsilon_3)=\left(1-y_3-\frac{r_3}{3}\right)$ \\
- 
+Note that as $\epsilon_3$ and $r_3$ appear as a factor in their respective derivatives, the planes $\epsilon_3=0$ and $r_3=0$ are invariant and, by extension, so is the $y_3$ axis.\\
+
+The aim is to continue the special trajectory found in the other two charts and to find the transition map in and out of this chart. We will then be able to construct a phase portrait for the whole point by combining the dynamics in each chart.
+
+\begin{lemma}[\citealt{krupa2001}]
+	Test1
+	
+\end{lemma}
+
+
 +++ resonance, $q_{out}$ hyperbolic eq. (no centre manifold). Looking to continue special trajectory $\gamma_2$. Manifold is close to equilibrium at $q_{out}$, must be precise? (Why? To show we don't hit equ? Unstable as $\lambda_1 >0$)  Resonance makes this difficult, no smooth transform linear -> nonlinear (why? check slack link). Intro'd $\Sigma$ slices. Aim is to show that system is equiv to Riccati flow. Removes resonance, linearise using near-id transform. Then Prop2.11 Krupa gives transition map. +++\\
- 
+
 
 +++Add glue, phase portrait on $S^2$.+++\\
 
@@ -317,5 +328,5 @@ Now if we combine the above three Sections \ref{sec: VDP K2}-\ref{sec:dynamics-i
 %		\end{subfigure}
 	\caption{Flow on the \vdp system.}
 	\label{fig: vdp flow diagram e}
-\end{figure}\newpage
+\end{figure}
 describes the nature in which our trajectories flow across the system where we can see a jump at the fold point, as we deduced from our charts. This now can be extended to a Canard Point, which we will move onto next. 
