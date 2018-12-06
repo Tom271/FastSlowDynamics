@@ -25,11 +25,14 @@ as our fold point now can take multiple locations within our system, denoted by 
 \end{equation}
 where we denote $ p_*=(x_*,y_*,z_*)\in F $ as our fold points and\textbf{ $ D_{(y,z)}=(\pd{f}{y},\pd{f}{z}) $ are linearly independent of one another } \citep{MMO}. In addition to this we can see from Figure \ref{fig: 3d folded singularity} that we have some interesting flows within our system. These flows do not follow the standard pattern as we saw in Figure \ref{fig: vdp flow diagram}, instead the slow flow switches its orientation when the flow hits the fold point and continue to flow in that direction, as a desingularised flow - these are called isolated singularities \citep{MMO}. %dot in diagram
 %As a result we are able to express these flows in the following manner, using Equation \ref{eq: non-degeneracy 3d system}, 
-As a result we are able to write these flows in the following manner, \textbf{using Equations \ref{eq: fs singularity system}, \ref{eq: non-degeneracy 3d system} and noting that $ \pd{f}{t}=0 $,  }
+As a result we are able to write these flows in the following manner, \textbf{using Equations \ref{eq: fs singularity system}, \ref{eq: non-degeneracy 3d system} and noting that $ \pd{f}{t}=0=\pd{f}{x} $,  }
 \begin{equation}
-\dot{x}\pd{f}{x}=-\left(\dot{y}\pd{f}{y}+\dot{z}\pd{f}{z}\right),
+\dot{x}=\dot{y}\pd{f}{y}+\dot{z}\pd{f}{z},
 \end{equation}
 where we can note that $ \dot{y}=g_1 $ and $ \dot{z}=g_2 $\\
+
+
+
 \begin{equation}
 \begin{cases}
 \dot{x}&=g_1\pd{f}{y}+g_2\pd{f}{z}\\
