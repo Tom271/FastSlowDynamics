@@ -362,10 +362,26 @@ We wish to construct an equation for the out variables $(T,\tilde{y}_o,\epsilon_
 r&=r_ie^t &&\epsilon=\delta e^{-3t}
 \end{align}
 Then using $r(T)=\rho$, 
-$$r(T)=\rho=r_ie^-t \implies T=\ln\left(\frac{\rho}{r_i}\right)$$
+$$r(T)=\rho=r_ie^-t \implies T=\ln\left(\frac{\rho}{r_i}\right).$$
+
+For the equation in $y$, a little more work is required. We introduce a new coordinate $z$ as follows, $\tilde{y}=e^{-2t}(\tilde{y}_i-\delta+z)+\delta  e^{-3t}$. Upon first sight, this seems unlikely to be of any use. However, it turns out that this transformation is ideal as it allows many terms to be removed. First rearrange for $z$ and differentiate with respect to $t$.
+\begin{align*}
+&z=e^{2t} (\tilde{y}-\delta e^{-3t})-\tilde{y}_i+\delta\\
+&\od{z}{t}= 2e^{2t}\tilde{y}+e^{2t}\dot{\tilde{y}}+\delta e^{-t}
+\end{align*}
+Substitute $\dot{\tilde{y}}$ from Equation (\ref{sys:K3riccNIy}) and cancel terms. 
+\begin{align*}
+&=e^{2t}(-\epsilon+r\epsilon H(r,\tilde{y},\epsilon))+\delta e^{-t}\\
+&=-\epsilon e^{2t}+e^{2t}r\epsilon  H(r,\tilde{y},\epsilon) + \delta e^{-t}\\
+&=e^{2t}r\epsilon  H(r,\tilde{y},\epsilon)
+\end{align*}
+This final equality follows from the explicit solutions in $r$ and $\epsilon$ above. These equations also show that $r\epsilon e^{2t} = r_i\delta e^{-2t}e^{2t}$. Finally,
+
+$$\dot{z} = r_iH^z(\,r_i,\tilde{y}_i,t)$$
+where$H^z$ is the same as $H$ but under the transformation from $z$, i.e. $H^z(\,r_i,\tilde{y}_i,t) = \delta H(r_ie^t,e^{-2t}(\tilde{y}_i-\delta+z)+\delta e^{-3t}, \delta e^{-3t})$. This has not affected the expression for the passage time $T$. 
 
 \end{proof}
-		
+	
 
 +++ Looking to continue special trajectory $\gamma_2$. Manifold is close to equilibrium at $q_{out}$, must be precise? (Why? To show we don't hit equ? Unstable as $\lambda_1 >0$)  Resonance makes this difficult, no smooth transform linear -> nonlinear (why? check slack link). Intro'd $\Sigma$ slices. Aim is to show that system is equiv to Riccati flow. Removes resonance, linearise using near-id transform. Then Prop2.11 Krupa gives transition map. +++\\
 
