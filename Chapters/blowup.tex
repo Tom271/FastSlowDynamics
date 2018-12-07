@@ -1,4 +1,4 @@
-++++Rename chapter: 'The Blow-Up Method'++++++++
+%++++Rename chapter: 'The Blow-Up Method'++++++++
 
 In order to apply the Blow-Up Method to the fold point at the origin, we focus on a neighbourhood $U$ around the fold point $(0,0)$. 
 The neigbourhood $U$ is small enough, such that $g(x,y, \epsilon) \neq 0$ in $U$, and we can define sections in $U$, as follows:
@@ -40,8 +40,7 @@ Instead of analysing the sphere in polar coordinates, which might seem the most 
 	\label{fig:chartDiagram}
 \end{figure}
 In terms of the blown up fold point, a sphere denoted by $B$, charts are projections of regions of $B$ onto a two dimensional plane. 
-We introduce three charts $ K_1,K_2,$ and $K_3 $. Chart $K_2$ is the two dimensional projection covering the upper half plane of $B$. However, as points on the equator of $B$ are approached on $K_1$, we tend to infinity.
-These regions however, are of immense interest, since they are points of incoming and outgoing trajectories. As a consequence, charts $K_1$ and $K_3$ are introduced, covering the regions of interest on the equator of the fold point. These charts will be discussed in detail in the sections to follow.
+We introduce three charts $ K_1,K_2,$ and $K_3 $. Chart $K_2$ is the two dimensional projection covering the upper half plane of $B$. However, as points on the equator of $B$ are approached on $K_1$, the point tends to infinity.These regions however, are of immense interest, since they are points of incoming and outgoing trajectories. As a consequence, charts $K_1$ and $K_3$ are introduced, covering the regions of interest on the equator of the fold point. These charts will be discussed in detail in the sections to follow.
 %This is represented in Figure ++++++ (blow up figure)++
 %The points that are relevant to the analysis of the dynamics are shown in Figure (+++insert figure 2.2 p,293+++++). (More description potentially)
 
@@ -60,24 +59,24 @@ The remaining question is how the transition between the three charts and the co
 This is done via a coordinate change, derived by using equations (\ref{ sys: K1K2K3}) and (\ref{sys: blow up trans}), and the results are summed up in the following Lemma:
 \begin{lemma} \label{coord. change}
 Let $\kappa_{12}$ denote the change of coordinates from $K_1$ to $K_2$. Then $\kappa_{12}$ is given by \\
-\begin{equation}
+\begin{equation*}
 x_2 = x_1 \epsilon_1^{-1/3},  y_2 = \epsilon_1^{-2/3}, r_2= r_1\epsilon_1^{1/3},
-\end{equation}
+\end{equation*}
 for $\epsilon_1 >0$,
 and $\kappa_{12}^{-1}$ is given by
-\begin{equation}
+\begin{equation*}
 x_1 = x_2y_2^{-1/2}, r_1 = r_2 y_2^{1/2}, \epsilon_1= y_2^{-3/2},
-\end{equation}
+\end{equation*}
 for $y_2>0$.
 Let $\kappa_{23}$ denote the change of coordinates from $K_2$ to $K_3$. Then $\kappa_{23}$ is given by
-\begin{equation}
+\begin{equation*}
 r_3 = r_2x_2, y_3= y_2x_2^{-2}, \epsilon_3 = x_2^{-3}, \label{eq:kappa23}
-\end{equation}
+\end{equation*}
 for $x_2>0,$
 and $\kappa_{23}^{-1}$  is given by
-\begin{equation}
+\begin{equation*}
 x_2 = \epsilon_3^{-1/3}, y_2 = y_3\epsilon_3^{-2/3}, r_2= r_3 \epsilon_3^{1/3},
-\end{equation}
+\end{equation*}
 for $\epsilon_3>0$.
 \end{lemma}
 
@@ -90,11 +89,13 @@ Furthermore, transition maps $\Pi_i, i \in 1,2,3$  are defined in each section, 
 	\label{fig: chart 2 fig}
 \end{figure}
 To be able to consider chart $ K_2$, the transformation presented in Equation (\ref{sys: K2}) is applied to the extended system (\ref{extended FS}). Furthrmore,a time rescaling ($ t_2=r_2t $) is applied to desingularise the system. This results in:
-\begin{align}
-&\od{}{t}(r_2x_2)=r_2^2\od{x_2}{t}=-y_2+x_2^2-\dfrac{x_2^3r_2}{3},\\
-&r^3_2y'_2=r^3_2(-1+r_2x),\\
-&r'_2=0,
-\end{align}
+\begin{equation}
+	\begin{aligned}
+		&\od{}{t}(r_2x_2)=r_2^2\od{x_2}{t}=-y_2+x_2^2-\dfrac{x_2^3r_2}{3},\\
+		&r^3_2y'_2=r^3_2(-1+r_2x),\\
+		&r'_2=0,
+	\end{aligned}
+\end{equation}
 noting that $ \od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t} $ .  Now dividing through by $ r^2_2 $ and $ r^3_2 $ respectively for each equation and grouping $O(r_2)$ terms we get,
 \begin{equation}
 	\begin{aligned}
@@ -175,11 +176,13 @@ r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + r_1 x_1)\\
 \epsilon_1' &= \frac{3}{2} \epsilon_1^2 ( 1- r_1x_1),
 \end{align*}
 and grouping terms in $r_1$ results in the standard form:
-\begin{align} \label{K1systemfull}
+\begin{equation}
+\begin{aligned} \label{K1systemfull}
 x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 +O(r_1)\\
 r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + O(r_1))\\
 \epsilon_1' &= \frac{3}{2} \epsilon_1^2 ( 1- O(r_1)).
-\end{align}
+\end{aligned}
+\end{equation}
 
 The system (\ref{K1systemfull}) has two invariant planes, that are somewhat equivalent to the notion of a nullcline. In an invariant plane, one of the parameters do not change their value and here these are $r_1=0$ and $\epsilon_1=0$.
 If we substitute $r_1=0$ or $\epsilon_1=0$ into (\ref{K1systemfull}), the $r_1$ equation, or $\epsilon_1$ equation respectively, vanishes, and there is only a two dimensional system left to consider. These two subspaces of (\ref{K1systemfull}) will be analysed below. Furthermore, the subspace where $r_1=0$ and $\epsilon_1=0$, is one dimensional, an invariant line, where the subspaces $r_1=0$ and $\epsilon_1=0$ cross.
@@ -198,25 +201,27 @@ The following analysis is displayed in Figure \ref{fig:k1chart}, illustrating th
 \end{figure}\newpage
 
 
-The invariant line, satisfying $r_1=0$ and $\epsilon_1=0$ is given by $l_1= -1 +x^2$. 
-From this it is easily deduced that the two equilibrium points are where $l_1=0$, which is at $x=\pm1$. Therefore, the points $p_a$ and $p_r$ are defined as $p_a= (-1,0,0)$ and $p_r=(1,0,0)$.
-The flow on $l_1$ is attracted to $p^a$ and repelled by $p^r$, which is easily observed from the form $l_1$ takes or from a formal stability analysis of the one dimensional system. The eigenvalues of $l_1$ are found  by considering $l'_1 - \lambda = 2x - \lambda= 0 $ which gives that $\lambda = \pm 2$ at the respective equilibria.
+The invariant line, satisfying $r_1=0$ and $\epsilon_1=0$ is given by $l_1= -1 +x^2$. From this it is easily deduced that the two equilibrium points are where $l_1=0$, which is at $x=\pm1$. Therefore, the points $p_a$ and $p_r$ are defined as $p_a= (-1,0,0)$ and $p_r=(1,0,0)$. The flow on $l_1$ is attracted to $p^a$ and repelled by $p^r$, which is easily observed from the form $l_1$ takes or from a formal stability analysis of the one dimensional system. The eigenvalues of $l_1$ are found  by considering $l'_1 - \lambda = 2x - \lambda= 0 $ which gives that $\lambda = \pm 2$ at the respective equilibria.
  
 Then we expect the behaviour of the flow on the two invariant planes to be influenced by the two equilibria and the dynamics on $l_1$.
-Consider the plane $\epsilon_1=0$. The system (\ref{K1systemfull}) becomes
-\begin{align} \label{epsilon0sys}
+Consider the plane $\epsilon_1=0$. The system (Equation \ref{K1systemfull}) becomes
+\begin{equation}
+\begin{aligned} \label{epsilon0sys}
 x_1' &= -1 +x^2 - \left( \frac{1}{3}r_1x_1^3 \right)\\
 r_1' &= 0.
-\end{align}
+\end{aligned}
+\end{equation}
 This system has equilibria at $x= \pm1$, for $r_1=0$, as before, however, for each constant value of $r_1$, we get a different equilibrium of the system (\ref{epsilon0sys}). This forms a curve of equlilbria, which can be recognise as $S^a_1$ connected to $p_a$ and $S^r_1$, connected to $p_r$, the left and right branches of the critical manifold, transformed into $K_1$. This is well illustrated in figure \ref{fig: chart 2 fig}. Note. apparently this follows from IFT we got stuck on this before, i cannot remember :(++++++++++
 The additional eigenvalue, corresponding to the $r_1$ equation, is $\lambda=0$. However, at each of the equilibria of this system, and specifically at $p_a$ and $p_r$ we have normal hyperbolicity, due to the coordinate transformation in $K_1$. ++ go over this. +++
 
 Next we consider the dynamics on the invariant plane $r_1=0$.
-The system (\ref{K1systemfull}) becomes: 
-\begin{align}
+The system (Equation \ref{K1systemfull}) becomes: 
+\begin{equation}
+\begin{aligned}
 x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 \\
 \epsilon_1' &= \frac{3}{2} \epsilon_1^2 .
-\end{align}
+\end{aligned}
+\end{equation}
 Again, $x= \pm 1$ are equilibria of the system, and an additional zero eigenvalue is gained due to the $\epsilon$ equation. It can be concluded that one dimensional centre manifolds exist, called $N_{a,1}$ and $N_{r,1}$, that are invariant, however, not manifolds of equilibria like $S^a$ and $S^r$ in the $\epsilon=0$ plane. The dynamics on these manifolds is determined mainly by the value of $\epsilon$, since the change in the $\epsilon$ direction is much stronger than the change in the $x$ direction. Therefore, on $N_{a,1}$ and $N_{r,1}$ the flow moves up the $\epsilon$ direction with increasing epsilon.
 
 In order to draw conclusions on the persistence of the dynamics in the full system (+++???+++) \textbf{What does this mean?}, as before, sections in the space are defined to monitor incoming and outgoing trajectories.
@@ -391,7 +396,7 @@ We now have an expression for each of the out variables in terms of the initial 
 +++ Looking to continue special trajectory $\gamma_2$. Manifold is close to equilibrium at $q_{out}$, must be precise? (Why? To show we don't hit equ? Unstable as $\lambda_1 >0$)  Resonance makes this difficult, no smooth transform linear -> nonlinear (why? check slack link). Intro'd $\Sigma$ slices. Aim is to show that system is equiv to Riccati flow. Removes resonance, linearise using near-id transform. Then Prop2.11 Krupa gives transition map. +++\\
 
 
-+++Add glue, phase portrait on $S^2$.+++\\
+%+++Add glue, phase portrait on $S^2$.+++\\
 
 Now if we combine the above three Sections \ref{sec: VDP K2}-\ref{sec:dynamics-in-texorpdfstringk3k3}, we have now modelled the flow across all of the points in the \vdp system, including at our non-hyperbolic fold point. As a result Figure \ref{fig: vdp flow diagram}
 \begin{figure}[h!]\centering

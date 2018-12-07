@@ -4,9 +4,7 @@
 	\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$.}
 	\label{fig: Canard Point}
 \end{figure}
-During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. 
-
-To adequately explain the effect that the canard point will have on our system we will first define the following conditions,
+During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. To adequately explain the effect that the canard point will have on our system we will first define the following conditions,
 \begin{equation}
 f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing condition}
 \end{equation}
@@ -44,11 +42,13 @@ where the change in $\epsilon$ and $\lambda$ are constant. Now, for the remainde
 	\end{align}
 \end{subequations}
 Where we note that $h_j(x,y,\epsilon,\lambda)=1+O(x,y,\epsilon,\lambda)$ for $j=1,2,4,5$ and $h_3(x,y,\epsilon,\lambda)=O(x,y,\epsilon,\lambda)$. However, we should note that for the \vdp system our only term that is not solely of leading order is $h_2(x,y,\epsilon,\lambda)=1-\frac{x}{3}$. Now we are able to choose such a $\lambda>0$ that produces an equilibrium on our repelling branch $S_r$ for the reduced flow. By doing this we are then able to define the following conditions for our reduced flow on $h_j$,
-\begin{align}
-&a_3=\pd{}{x}h_2(0,0,0,0)=-\frac{1}{3},\\
-&A=-a_2+3a_3-(2a_4+2a_5)=-1,
-\end{align}
-where we notice that our other solutions for $a_i=0$ for $i=1,2,4,5$ are trivial. The reason that we consider the constant $A$ is because we will find that this constant is crucial in our canard point analysis iff $A\neq 0$ \citep{krupa2001}. Following this \citep{krupa2001} discusses the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where our two branches $S_r$ and $S_a$ must connect in a smooth fashion. Now from Theorem \ref{Theorem 3.1} we know that we must have a transition map at our critical point,
+\begin{subequations}
+		\begin{align}
+		&a_3=\pd{}{x}h_2(0,0,0,0)=-\frac{1}{3},\\
+		&A=-a_2+3a_3-(2a_4+2a_5)=-1,
+		\end{align}
+\end{subequations}
+where we notice that our other solutions for $a_i=0$ for $i=1,2,4,5$ are trivial. The reason that we consider the constant $A$ is because we will find that this constant is crucial in our canard point analysis iff $A\neq 0$ \citep{krupa2001}. Following this \citet{krupa2001} discuss the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where our two branches $S_r$ and $S_a$ must connect in a smooth fashion. Now from Theorem \ref{Theorem 3.1} we know that we must have a transition map at our critical point,
 \begin{equation}
 \lambda_c(\sqrt{\epsilon})=-\epsilon\left(\frac{a_1+a_5}{2}+\frac{A}{8}\right)+O(\epsilon^\frac{3}{2}),
 \end{equation}
@@ -56,11 +56,11 @@ which can be written as $\lambda_c(\sqrt{\epsilon})=\frac{\epsilon}{8}+O(\epsilo
 
 
 \subsection{Canard Blow-up}
-Now similarly to Section \ref{sec: VDP Blowup} we consider various transformations of our coordinate system to be able to be able to consider the non-hyperbolic equilibrium induced by our canard point. However, as we would expect with our new system we should consider a new set of transformations \citep{krupa2001}.
+Now similarly to Section \ref{sec: VDP Blowup} we consider various transformations of our coordinate system to be able to consider the non-hyperbolic equilibrium induced by our canard point. However, as we would expect with our new system we should consider a new set of transformations \citep{krupa2001}.
 \begin{equation}
 x=\bar{r}\bar{x}, \ y=\bar{r}^2y, \ \epsilon=\bar{r}^2\bar{\epsilon}, \ \lambda=\bar{r}\bar{\lambda}
 \end{equation}
-Now that we have established the transformation we can then define our transformations for $K_1$ and $K_2$ but it is not necessary to consider the third chart ($K_3$). This is because we find that the attracting slow manifold connects to the repelling slow manifold. As a result of this we find that our flow will `bend back' from $K_2$ into $K_1$ instead of flowing out into the fast flow, which is described by $K_3$. This concept can be described by the Figure \ref{fig: flow in canard},
+Now that we have established these transformation we can then define our transformations for $K_1$ and $K_2$ but it is not necessary to consider the third chart ($K_3$). This is because we find that the attracting slow manifold connects to the repelling slow manifold. As a result of this we find that our flow will `bend back' from $K_2$ into $K_1$ instead of flowing out into the fast flow, which is described by $K_3$. This concept can be described by the Figure \ref{fig: flow in canard},
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=8cm, height=6cm]{Images/vdPhopf-Moment-bendback}

@@ -1,6 +1,5 @@
 
-One fast-slow system that contains generic fold points and therefore displays relaxation oscillations is called the Van der Pol System. This can be derived from the Van der Pol Oscillator, which is a well-studied second order ODE that is used to model a variety of physical and biological phenomena. It was developed by the dutch physicist and electrical engineer Balthasar Van der Pol, who conducted research on electrical circuits, in which he observed stable oscillations, later named relaxation oscillations.
-The derivation of the Van der Pol fast-slow system of the form (\ref{FastS}) is presented in the following section.
+One fast-slow system that contains generic fold points and therefore displays relaxation oscillations is called the Van der Pol System. This can be derived from the Van der Pol Oscillator, which is a well-studied second order ODE that is used to model a variety of physical and biological phenomena. It was developed by the Dutch physicist and electrical engineer Balthasar Van der Pol, who conducted research on electrical circuits, in which he observed stable oscillations, later named relaxation oscillations. The derivation of the Van der Pol Fast-Slow system is presented in the following section, in the form shown in Equation\ref{FastS} .
 
 \subsection{Derivation of the Van der Pol Fast-Slow System}
 
@@ -8,15 +7,15 @@ The Van der Pol Oscillator describes the evolution of the position coordinate \(
 \begin{equation} \label{eq:vdP}
 \ddot{x}(t)-\mu\left(1-x^2(t)\right)\dot{x}(t)+x(t)=0,   
 \end{equation}
-where \(\mu \gg 1\) is a scalar constant. \par  
+where \(\mu \gg 1\) is a scalar constant. \\
 
-A new variable\(w=\dot{x}+\mu F(x)\) is introduced, where \(F(x)=\frac{x^3}{3}-x\). $F$ is chosen such that  \(F'(x)=-(1-x^2)\) is the nonlinear term in Equation \ref{eq:vdP}. Differentiating \(w\) we obtain
+A new variable \(w=\dot{x}+\mu F(x)\) is introduced, where \(F(x)=\frac{x^3}{3}-x\). $F$ is chosen such that  \(F'(x)=-(1-x^2)\) is the nonlinear term in Equation \ref{eq:vdP}. Differentiating \(w\) we obtain
 \begin{align*}
     \dot{w}&=\ddot{x}+\mu\od{}{x}\left(\frac{x^3}{3}-x\right)\od{x}{t}\\
     & =\ddot{x}+\mu(x^2-1)\dot{x}\\
     &= -x
 \end{align*}
-Here, the last equality follows from rearranging (\ref{eq:vdP}). We now have a two dimensional system:
+Here, the last equality follows from rearranging Equation \ref{eq:vdP}. We now have a two dimensional system:
 \[\begin{cases} \dot{x}=w-\mu F(x)\\
  \dot{w}=-x\end{cases}\]
 and letting \(y=\frac{w}{\mu}\) results in
@@ -36,29 +35,28 @@ which is of the form (\ref{FastS}), the fast system, and the rescaling of time $
     \dot{y}=-x,
     \end{cases}
 \end{equation}
-which is in the form of (\ref{SlowS}), the slow system.
+which is in the form of Equation \ref{SlowS}, the slow system.
 
-As in Sechtion \ref{Intro} the fast and slow system can be analysed by considering the limiting case $\epsilon \to 0$.
-The two systems then become
+As in Section \ref{Intro} the fast and slow system can be analysed by considering the limiting case $\epsilon \to 0$. The two systems then become,
 \begin{equation}\label{fastsystem0}
-    \begin{cases} x'=y-\frac{x^3}{3}+x\\
+    \begin{cases} x'=y-\frac{x^3}{3}+x,\\
     y'=0,
     \end{cases}
 \end{equation}
 which is of the form (\ref{FastS0}), the layer problem, and the reduced problem 
 \begin{equation}\label{slowsystem0}
-    \begin{cases} 0=y-\frac{x^3}{3}+x:=f\\
+    \begin{cases} 0=y-\frac{x^3}{3}+x:=f,\\
     \dot{y}=-x.
     \end{cases}
 \end{equation}
 
-\subsection{Phase Plane Analysis (is it?? some part 'singularity analysis')}
+\subsection{Phase Plane Analysis}
 \begin{figure}[h]\centering
 %	\includegraphics{}
 %	\caption{Flows in our \vdp system.}
 %	\label{\ref{fig: vdp flow diagram}}
 \end{figure}
-Considering (\ref{fastsystem0}), it can be observed that the flow is dominated by the dynamics in $x$ which is cubically depending on $x$.
+Considering Equation \ref{fastsystem0}, it can be observed that the flow is dominated by the dynamics in $x$ which is cubically depending on $x$.
 Furthermore, it is clear that in the layer problem the dynamics in $y$ are constant and therefore the flow is horizontal and is only influenced by $y$ as a constant parameter. Then $x$ is called the fast variable.
 This is immediately obvious when comparing this to the reduced problem (\ref{slowsystem0}), where the flow is restricted to $f=0$, which is in the form of a cubic function. This defines a critical manifold. Restricted to this manifold, the flow is dominated by the dynamics in $y$, which linearly depends on $x$, which is much slower than the cubic dependence in the layer problem. Therefore, this is called the slow flow and $y$ is the slow variable. \\
 
@@ -66,11 +64,9 @@ This is immediately obvious when comparing this to the reduced problem (\ref{slo
 The aim of this analysis is to be able to analyse the system in the singular limit $\epsilon \to 0$ and apply appropriate theory to conclude the persistence of the dynamic for $\epsilon > 0$. 
 Section \ref{GSPT} introduced one instance where this persistence can be concluded.
 The main requirement for the theory in Section \ref{GSPT} is normal hyperbolicity of the critical manifold.
-Considering the manifold $C_0= \{ (x,y) : 0=y-\frac{x^3}{3}+x:=f \}$,the Jakobian $\frac{ \partial f}{\partial x}(x,y,0) = -x^2 + 1$, which has a zero real part at $x_0= \pm 1$. Together with the corresponding $y_0$ are singularities of the system.
+Considering the manifold $C_0= \{ (x,y) : 0=y-\frac{x^3}{3}+x:=f \}$, the Jacobian $\frac{ \partial f}{\partial x}(x,y,0) = -x^2 + 1$, which has a zero real part at $x_0= \pm 1$. Together with the corresponding $y_0$ are singularities of the system.
 Further analysis has to be done below in order to conclude that they are generic fold points.
-The points of interest are $(x_0^+,y_0^+)=(1,-\dfrac{2}{3})$ and $(x_0^-,y_0^-)=(-1,\dfrac{2}{3})$.
-
-By Definition \ref{FoldDef}, there is only one eigenvalue with zero real part at $(x_0,y_0)$. Evaluating the Jakobian at each of the points in turn shows:
+The points of interest are $(x_0^+,y_0^+)=(1,-\dfrac{2}{3})$ and $(x_0^-,y_0^-)=(-1,\dfrac{2}{3})$. By Definition \ref{FoldDef}, there is only one eigenvalue with zero real part at $(x_0,y_0)$. Evaluating the Jacobian at each of the points in turn shows:
 \begin{align*}
 \begin{cases}
  \frac{ \partial f}{\partial x}(x_0^+,y_0^+,0) = -1^2 + 1 =0 \\
@@ -79,7 +75,7 @@ By Definition \ref{FoldDef}, there is only one eigenvalue with zero real part at
 \end{align*}
 where each of the zeros are simple.
 Therefore $(x_0^+,y_0^+)$ and $(x_0^-,y_0^-)$ are fold points.
-These points are nondegenerate if the non-degeneracy assumptions (\ref{NonDeg}) hold:
+These points are nondegenerate if the non-degeneracy assumptions (Equation \ref{NonDeg}) hold:
 \begin{align*}
 \begin{cases}
 \frac{ \partial ^2 f}{ \partial x^2} (x_0^+,y_0^+, \lambda, 0) = -2 x_0^+ = -2 \neq 0 \\
@@ -116,11 +112,11 @@ In order to analyse a fold point it is convenient to transform the Van der Pol s
 
 \subsection{Transformation of the Van der Pol System}\label{sex: mapping} 
 In order to analyse the system at the fold points, one fold point at $(x_0^+,y_0^+)=(1,-\dfrac{2}{3})$ is considered, and the further analysis is identical for the second fold point $(x_0^-,y_0^-)$ with a slightly different coordinate transformation. 
-The aim is to find a coordinate transformation that satisfies the conditions in (\ref{FoldConditions}). The proposed transformation is $(x,y)\to (1-\tilde{x},\tilde{y}-\frac{2}{3})$, which represents a reflection and a translation of the system \st $(x_0^+,y_0^+)$ is mapped to $(0,0)$ - Figure \ref{fig: Transformed System}. \\
+The aim is to find a coordinate transformation that satisfies the conditions in (\ref{FoldConditions}). The proposed transformation is $(x,y)\to (1-\tilde{x},\tilde{y}-\frac{2}{3})$, which represents a reflection and a translation of the system \st $(x_0^+,y_0^+)$ is mapped to $(0,0)$. \\
 
 
 
-Now using the proposed mapping $(x,y)\to (1-\Tilde{x},\Tilde{y}-\frac{2}{3})$ we are able to redefine the fast system (\ref{fastsystem}) in the following way, 
+Now using the proposed mapping $(x,y)\to (1-\Tilde{x},\Tilde{y}-\frac{2}{3})$ we are able to redefine the fast system (Equation \ref{fastsystem}) in the following way, 
 \begin{equation}
     \begin{cases}
         x'=-y+x^2-\dfrac{(x)^3}{3}\\
@@ -128,21 +124,20 @@ Now using the proposed mapping $(x,y)\to (1-\Tilde{x},\Tilde{y}-\frac{2}{3})$ we
     \end{cases}
     \label{eq: Fast System}
 \end{equation}
-where the tilde has been dropped on $x \ \text{and} \ y$ for convenience. The slow system (\ref{slowsystem}) is redefined as
+where the tilde has been dropped on $x \ \text{and} \ y$ for convenience. The slow system (Equation \ref{slowsystem}) is redefined as
 \begin{equation}\label{eq: Slow System}
     \begin{cases}
-        \epsilon x'=-y+x^2-\dfrac{(x)^3}{3}\\
+        \epsilon x'=-y+x^2-\dfrac{(x)^3}{3},\\
         y'=(x-1),
     \end{cases}
 \end{equation}
-using the normal rescaling of time.
-These two systems will be used throughout the following analysis of the generic fold point. We should note that we have used the general system (Equations \ref{FastS}) to produce the new system where we have chosen $ \lambda=1 $.\\
+using the normal rescaling of time. These two systems will be used throughout the following analysis of the generic fold point. We should note that we have used the general system (Equations \ref{FastS}) to produce the new system where we have chosen $ \lambda=1 $.\\
 
-It is readily checked that the coordinate transfomation is correct by evaluating (\ref{FoldConditions}) for the transformed system. It is clear to see that $\folds=(0,0)$, and differentiation of $f$ yields $\pd[2]{f}{x}(0,0,0)=2>0$ and $\pd[1]{f}{y}(0,0,0)=-1<0$. Furthermore, $g(0,0,0) = -1 <0$. Therefore, the new system of equations posesses the required qualities.
+It is readily checked that the coordinate transformation is correct by evaluating Equation \ref{FoldConditions} for the transformed system. It is clear to see that $\folds=(0,0)$, and differentiation of $f$ yields $\pd[2]{f}{x}(0,0,0)=2>0$ and $\pd{f}{y}(0,0,0)=-1<0$. Furthermore, $g(0,0,0) = -1 <0$. Consequently, the new system of equations possesses the required qualities.
 
 \subsection{Reduced Dynamics}
 
-In order to determine the reduced dynamics on the critical manifold $S$, Equation \ref{eq: Slow System} in the limit $\epsilon\to 0$ is considered which yields the following system,
+In order to determine the reduced dynamics on the critical manifold $S$, Equation \ref{eq: Slow System}, when $\epsilon\to 0$, we consider the following system,
 \begin{align}
 \begin{cases}
     &0=f(x,y,0)=-y+x^2-\dfrac{x^3}{3}\\
@@ -166,7 +161,7 @@ Then using the chain rule, the second Equation of \ref{eq: reduced g} is  \citep
 \end{equation}
 Rearranging this gives an expression for the dynamics in $x$ on $S$.
 We find that $\phi(x)=x^2-\dfrac{x^3}{3}$, where the derivative \wrt $x$ gives $\phi_x(x)=2x-x^2$.
-Therefore (\ref{eq: general reduced}) becomes 
+Therefore Equation \ref{eq: general reduced} becomes 
 \begin{align*}
 	\dot{x} = \frac{g(x,\phi(x),0)}{ \phi_x(x)} = \frac{ x-1}{2x-x^2} =\frac{ x-1}{x(2-x)}.
 \end{align*}
@@ -185,7 +180,7 @@ There is ample reasoning for doing this. The canonical form has been studied in 
 
 
 \subsection{Extended System}
-The canonical system (\ref{eq: canonical}) is then extended to three dimensions by considering $\epsilon'=0$. 
+The canonical system (Equation \ref{eq: canonical}) is then extended to three dimensions by considering $\epsilon'=0$. 
 \begin{equation} \label{extended FS}
     \begin{aligned}
         &x'=-y+x^2+h(x) \\
@@ -200,14 +195,14 @@ Analysing the stability of the three dimensional system, three eigenvalues can b
     J=\begin{vmatrix} 2x-x^2 & -1&0 \\ 0 & 0&0\\0&0&0\end{vmatrix}
     \label{eq: Eigenvalues}
 \end{equation}
-This is an upper triangular matrix and hence $(\lambda_1.\lambda_2,\lambda_3)=tr(J)= (2x-x^2,0,0)$. Therefore, at the fold points, where $x=0$ or $x=2$, $\lambda_i=0 \ \text{for} \ i=1,2,3$ . Therefore, there exists a zero eigenvalue on $S$ at the fold points. At these points $S$ is not normally hyperbolic.
+This is an upper triangular matrix and hence $(\lambda_1.\lambda_2,\lambda_3)=tr(J)= (2x-x^2,0,0)$. Therefore, at the fold points, where $x=0$ or $x=2$, $\lambda_i=0 \ \text{for} \ i=1,2,3$, there exists a zero eigenvalue on $S$s. At these points $S$ is not normally hyperbolic.
 The critical manifold has to be divided as follows:
 \begin{align*}
 S^a &= \{ (x,y): y = x^2-\frac{x^3}{3}, x< 0 \} \cup  \{ (x,y): y = x^2-\frac{x^3}{3}, x>2 \} \\
 S^r &= \{ (x,y): y = x^2-\frac{x^3}{3}, 0< x< 2 \},
 \end{align*}
 such that $S^a \cup S^r \cup \{0\} \cup \{2\} = S$.
-The manifolds $S^a_0$ and $S^r_0$ are normally hyperbolic everywhere and Fenichel's Theorem (\ref{Fenichel}) can be applied in order to conclude the persistence of the manifold as slow manifolds $S^a_\epsilon$ and $S^r_\epsilon$. At the points $\{0\}$ and $\{2 \}$ the normal hyperbolicity is not given, since the eigenvalue associated to $S$ is zero at these points.
+The manifolds $S^a_0$ and $S^r_0$ are normally hyperbolic everywhere and Fenichel's Theorem (Theorem \ref{Fenichel}) can be applied in order to conclude the persistence of the manifold as slow manifolds $S^a_\epsilon$ and $S^r_\epsilon$. At the points $\{0\}$ and $\{2 \}$ the normal hyperbolicity is not given, since the eigenvalue associated to $S$ is zero at these points.
 ++++++Note: technically the paper mentions here the centre manifold M, stressing the three dimensionality of the problem. if we want that it can be added+++++++++
 \\
 \\
