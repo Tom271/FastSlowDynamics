@@ -16,15 +16,15 @@ The cases of MMOs considered here are MMOs associated with folded nodes as well 
 \subsection{Singular Hopf Bifurcation}
 In this section the folded saddle-node of type 2 and the saddle focus are considered for analysis.
 The folded saddle-node o type 2 occurs, when the parameters of the system coinside in such a way that an equilibrium of the full system and a fold point coinside. A saddle-node of type one refers to the case when only an equilibrium of the reduced system crosses a fold, without coinciding with a global equilibrium.
-If a saddle-node type 2 occurs for a specific parameter (also plural...), then a singular hopf bifurcation arises at $O(\epsilon)$ away from the equilibrium. 
+If a saddle-node type 2 occurs for a specific parameter (also plural...), then a singular hopf bifurcation arises at $O(\epsilon)$ away from the equilibrium.
 The equilibrium is focus if the eigenvalues corresponding to it are complex and a node if the eigenvalues are real.
 
 \begin{definition}{\textbf{Singular Hopf Bifurcation}}[\citealp{strogatz2007nonlinear}](but also MMO) \\
-	A singular hopf bifurcation occurs at a certain parameter regime in the system which is $O(\epsilon)$ away from a saddle-node of type 2. There, the eigenvalues of the system cross the imaginary axis, therefore they have a zero real part. Then small oscillations, called limit cycles occur in the system. There are two types of singular Hopf Bifurcation.
-	The supercritical Hopf Bifurcation occurs when a stable limit cycle arises from an unstable equilibrium point, while the subcritical Hopf Bifurcation causes unstable limit cycles to appear around a stable equilibrium.
+A singular hopf bifurcation occurs at a certain parameter regime in the system which is $O(\epsilon)$ away from a saddle-node of type 2. There, the eigenvalues of the system cross the imaginary axis, therefore they have a zero real part. Then small oscillations, called limit cycles occur in the system. There are two types of singular Hopf Bifurcation.
+The supercritical Hopf Bifurcation occurs when a stable limit cycle arises from an unstable equilibrium point, while the subcritical Hopf Bifurcation causes unstable limit cycles to appear around a stable equilibrium.
 \end{definition}
 
-These different orbits caused by a singular Hopf Bifurcation are of interest, because they are SAOs of the fast-slow system in question. Therefore, in this chapter we will give an overview of the different SAOs arising from singular Hopf Bifurcations in different parameter regimes. 
+These different orbits caused by a singular Hopf Bifurcation are of interest, because they are SAOs of the fast-slow system in question. Therefore, in this chapter we will give an overview of the different SAOs arising from singular Hopf Bifurcations in different parameter regimes.
 The starting point of the analysis is the normal form considered for the folded node in section +++toms section+++, which is then modified to a system that displays a singular Hopf Bifurcation and later on a system with a global return mechanism will be derived.
 The first transformation is achieved by adding higher-order terms to the $z$ equation of system (++ toms normal form+++). It then becomes
 \begin{align*}
@@ -33,7 +33,7 @@ The first transformation is achieved by adding higher-order terms to the $z$ equ
 \dot{z} &= - \nu -ax - by - cz,
 \end{align*}
 which is the normal form for a singular Hopf Bifurcation.
-We then consider a coordinate transformation and time rescaling of the form 
+We then consider a coordinate transformation and time rescaling of the form
 \begin{align*}
 x = \epsilon^{1/2}\overline{x}, \ \ \ y= \epsilon \overline{y},  \ \ \ z = \epsilon^{1/2} \overline{z},\ \ \  t= \epsilon^{1/2} \overline{t}.
 \end{align*}
@@ -49,7 +49,7 @@ As described in Section \ref{sec: threedimfolds}, folded singularity is found by
 f(p_*, \nu, \epsilon)&= y- x^2 =0 \\
 \Rightarrow y &= x^2\\
 \pd{}{x}f(p_*,\lambda,0) &= -2x = 0,\\
-\Rightarrow x &= 0\\ 
+\Rightarrow x &= 0\\
 \Rightarrow y &=0\\
 \pd{^2}{x^2}f(p_*,\lambda,0) &= -2 \neq 0,\\
 D_{(y,z)}f(p_*,\lambda,0) &= (1,0)
@@ -89,17 +89,9 @@ This is achieved by modifying system (\ref{sysepsilonenvir}) by adding a cubic t
 
 The expected behaviour of the new system is now to display several SAOs close to the equilibrium, before completing a large amplitude oscillation. This LAO is necessarily of the form of a relaxation oscillation, because there is only one fast variable present in the system. This represents a constraint since the fast subsystem is one dimensional and therefore trajectories are restricted to be monotonic.
 
-There are now many different types of MMOs present, depending on the parameter regimes. 
+There are now many different types of MMOs present, depending on the parameter regimes.
 One example is that for small values of $\nu$, where $\nu=O(\epsilon)$, a stable periodic orbit $\Gamma$ arises from the saddle-focus equilibrium. This orbit is tracing out SAOs close tho the repelling sheet of the critical manifold, before completing a relaxation oscillation and returning to its starting point.
 However, other bifurcations can occur for these periodic orbits for different parameter regimes. These could be of the form of torus bifurcations or period-doubling. Then there is a possibilities of chaotic MMOs exisiting for these parameters. For decreasing values of $\nu$ here, which is already $O(\epsilon)$, large amplitudes are getting smaller until the system only displays chaotic SAOs(++++++not sure if terminology works like this...+++)
 
-Now it is of interest to consider specific parameter regimes for which the SAOs are constrained to the unstable manifold $W^u(p_*)$, which corresponds to the phase space surrounding the equilibrium $p_*$, while being backward asymptotic to it. 
+Now it is of interest to consider specific parameter regimes for which the SAOs are constrained to the unstable manifold $W^u(p_*)$, which corresponds to the phase space surrounding the equilibrium $p_*$, while being backward asymptotic to it.
 For a supercritical Hopf Bifurcation we just observe the stable oscillation, as before. However, there is another type of bifurcation (+++++WHY+++++++) under certain conditions ($W^u$ tangent tp S)
-
-
-
-
-
-
-
-

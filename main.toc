@@ -1,0 +1,38 @@
+\contentsline {section}{\numberline {1}MATLAB Stuff}{1}{section.1}
+\contentsline {section}{\numberline {2}Fast-Slow Systems}{1}{section.2}
+\contentsline {section}{\numberline {3}Geometric Singular Pertubation Theory}{2}{section.3}
+\contentsline {section}{\numberline {4}Singularities and Fold Points}{4}{section.4}
+\contentsline {section}{\numberline {5}The Van Der Pol Equation}{4}{section.5}
+\contentsline {subsection}{\numberline {5.1}Derivation of the Van der Pol Fast-Slow System}{5}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Phase Plane Analysis (is it?? some part 'singularity analysis')}{6}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Transformation of the Van der Pol System}{7}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Reduced Dynamics}{7}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Canonical Form}{8}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Extended System}{8}{subsection.5.6}
+\contentsline {section}{\numberline {6}The Blow-Up Method}{9}{section.6}
+\contentsline {subsection}{\numberline {6.1}Coordinate Transformation and Charts}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Dynamics in $K_2$}{11}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Dynamics in $K_1$}{13}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Dynamics in $K_3$}{17}{subsection.6.4}
+\contentsline {section}{\numberline {7}Canard Points}{17}{section.7}
+\contentsline {subsection}{\numberline {7.1}Canard Blow-up}{19}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Dynamics in $K_2$}{20}{subsubsection.7.1.1}
+\contentsline {subsection}{\numberline {7.2}Dynamics in $K_1$}{21}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Separation of the Manifolds}{22}{subsubsection.7.2.1}
+\contentsline {subsection}{\numberline {7.3}Effect of the Canard Point}{22}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}Singular Hopf Bifurcation}{23}{subsubsection.7.3.1}
+\contentsline {section}{\numberline {8}Folded Singularities in a Three Dimensional System}{23}{section.8}
+\contentsline {section}{\numberline {9}MMO}{27}{section.9}
+\contentsline {subsection}{\numberline {9.1}Oscillations}{27}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2} Folded Nodes}{27}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Singular Hopf Bifurcation}{27}{subsection.9.3}
+\contentsline {section}{\numberline {A}Elements of Dynamical Systems}{31}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Stable Manifold Theorem}{31}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Centre Manifold Theorem}{31}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Implicit Function Theorem}{31}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Hartman Grobman Theorem}{31}{subsection.A.4}
+\contentsline {subsection}{\numberline {A.5}Hopf Bifurcations}{31}{subsection.A.5}
+\contentsline {section}{\numberline {B}Intuitive Examples}{31}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Folded Focus}{31}{subsection.B.1}
+\contentsline {section}{\numberline {C}Numerical Simulation}{32}{appendix.C}
+\contentsline {section}{\numberline {D}Dynamics in $K_2$}{33}{appendix.D}
