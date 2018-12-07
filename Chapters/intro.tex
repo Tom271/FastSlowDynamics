@@ -86,20 +86,21 @@ However, before stating the Theorem, some formal definitions are needed.
 
 Moreover, the points $(x,y) \in M$, $M$ normally hyperbolic, are hyperbolic equilibria of Equation \ref{FastS0} \citep{MMO}.
 A normally hyperbolic submanifold can be classified according to its stability property: If $M$ only has eigenvalues with positive real part it is called repelling, otherwise eigenvalues with negative real part are called attracting and if $M$ is neither attracting nor repelling it is called a saddle-type submanifold \citep{MMO}. \\
+
 Furthermore, stable and unstable manifolds can be defined as $W^s(M)$  and $W^u(M)$, corresponding to the eigenvalues with negative and positive real part, respectively.
 (???? pretty sure there are two different concepts in the last two sentences.. check needed)
 Furthermore, with the following definition it is established which notion of distance is going to be employed throughout this analysis.
 
-\begin{definition}{\textbf{Hausdorff Distance}}\\
+\begin{definition}{\textbf{Hausdorff Distance \citep{Kuehn}}}\\
 	The Hausdorff Distance of two nonempty sets $V,W \subset \mathbf{R}^n$, for some $n \in \mathbf{N}$ 
 	is defined as 
 	\begin{align*}
 	d_H(V,W)= \max \{ \sup_{v \in V} \inf_{w \in W} || v- w ||, \sup_ {w \in W}\inf_{v \in V} || v- w ||\}.
 	\end{align*}
-	(ref: book kuehn)
+%	(ref: book kuehn)
 \end{definition}
 
-Now Fenichel's Theorem can be stated:
+Now combining the above we can state Fenichel's Theorem.
 \begin{theorem}{\textbf{Fenichel's Theorem}} \label{Fenichel}
 	\\
 	Suppose $M=M_0$ is a compact, normally hyperbolic submanifold  (possibly with boundary) of the critical manifold $S$ (\ref{CriticalS}) and  that $f, g \in C^r, r < \infty $. Then for $\epsilon >0$, sufficiently small, the following hold:\\
