@@ -1,12 +1,22 @@
-
-During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[height=5cm,width=8cm]{Canard_Point.png}
-	\caption{The reduced flow of our system for a) $\lambda=0$ and b) $\lambda>0$.}
+	\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$.}
 	\label{fig: Canard Point}
 \end{figure}
-To adequately explain the effect that the canard point will have on our system we will need to consider our system,
+During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. 
+
+To adequately explain the effect that the canard point will have on our system we will first define the following conditions,
+\begin{equation}
+f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing condition}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&\pd{^2}{x^2}f(0,0,0,0)\neq 0, \ \pd{}{y}f(0,0,0,0)\neq 0,\\
+&\pd{}{x}g(0,0,0,0)\neq 0, \ \pd{}{\lambda}g(0,0,0,0)\neq 0 \label{eq: canard non-d condition}
+\end{aligned}
+\end{equation}
+for singularity and non-degeneracy respectively \citep{krupa2001}. Now that the conditions have been defined we can continue onto the \vdp system,
 \begin{equation}
 \begin{aligned}
 &x'=-y+x^2-\dfrac{x^3}{3},\\
@@ -38,9 +48,9 @@ Where we note that $h_j(x,y,\epsilon,\lambda)=1+O(x,y,\epsilon,\lambda)$ for $j=
 &a_3=\pd{}{x}h_2(0,0,0,0)=-\frac{1}{3},\\
 &A=-a_2+3a_3-(2a_4+2a_5)=-1,
 \end{align}
-where we notice that our other solutions for $a_i=0$ for $i=1,2,4,5$ are trivial. The reason that we consider the constant $A$ is because we will find that this constant is crucial in our canard point analysis iff $A\neq 0$ \citep{krupa2001}. Following this \citep{krupa2001} discusses the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where our two branches $S_r$ and $S_a$ must connect in a smooth fashion. Now from \textit{Theorem 3.1} we nkow that we must have a transition map at our critical point,
+where we notice that our other solutions for $a_i=0$ for $i=1,2,4,5$ are trivial. The reason that we consider the constant $A$ is because we will find that this constant is crucial in our canard point analysis iff $A\neq 0$ \citep{krupa2001}. Following this \citep{krupa2001} discusses the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where our two branches $S_r$ and $S_a$ must connect in a smooth fashion. Now from Theorem \ref{Theorem 3.1} we know that we must have a transition map at our critical point,
 \begin{equation}
-\lambda_c(\sqrt{\epsilon})=-\epsilon(\frac{a_1+a_5}{2}+\frac{A}{8})+O(\epsilon^\frac{3}{2}),
+\lambda_c(\sqrt{\epsilon})=-\epsilon\left(\frac{a_1+a_5}{2}+\frac{A}{8}\right)+O(\epsilon^\frac{3}{2}),
 \end{equation}
 which can be written as $\lambda_c(\sqrt{\epsilon})=\frac{\epsilon}{8}+O(\epsilon^\frac{3}{2})$ for the \vdp system \citep{krupa2001}. Consider Canard cycles and center manifolds / Freddy Dumortier, Robert Roussarie. for more details on canards in \vdp.
 
@@ -82,10 +92,12 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 	\label{eq: reduced canard k2}
 \end{subequations}
 where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$. We should also recall that $r_2'=\lambda_2'=0$. Notice that we have included an additional term in Equation \ref{eq: K2 y trans} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$ which we can easily verify \citep{krupa2001} using the following equations,
-\begin{align*}
-x'_2&=e^{2y_2}\pd{H}{y_2}(x_2,y_2),\\
-y_2'&=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
-\end{align*}
+\begin{subequations}
+	\begin{align}
+	x'_2&=e^{2y_2}\pd{H}{y_2}(x_2,y_2),\\
+	y_2'&=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
+	\end{align}
+\end{subequations}
 Further to this we can see, when we consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$.
 considering the reduced system (Equation \ref{eq: reduced canard k2}) we find from $ H(x_2,y_2)=0 $ that,
 \begin{subequations}
@@ -101,7 +113,7 @@ where we have directly integrated Equation \ref{canard: trajectory x} with respe
 Now that we have established that we must have a flow on our second chart, then there must also exist transition maps. Therefore this now enables us to consider the first chart in the following section.
 
 
-\subsection{Dynamics in \texorpdfstring{$K_1$}{K1}}
+\subsection{Dynamics in \texorpdfstring{$K_1$}{K1}}\label{sec:dynamics-in-texorpdfstringk1k1}
 For $K_1$ we follow a similar approach to the above. We will use the transformations, 
 \begin{equation}
 x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \tag{\ref{eq: coordiante K1}},
@@ -150,9 +162,6 @@ J-\lambda I= \begin{bmatrix}
 \end{equation}
 which clearly has three zero eigenvalues and one non-zero eigenvalue $\lambda=\pm 2$. Which further empahsises that our equilibrium point is non-hyperbolic. As a result we intuitively expect that something interesting occurs at this point. In the section following we will be considering what effect these mappings and eigenvalues will have on our system.
 
-\subsubsection{Separation of the Manifolds}
-
-\textbf{Discuss splitting on the manifold}
 
 \subsection{Effect of the Canard Point}\label{sec:effect-of-the-canard-point}
 Now that we have shown that there must exist a flow around our fold point we should now consider the global effect of the canard point. We can see by considering the  system of Equations \ref{canard: system of equations} that our equilibriums are at $ (x,y)=(\lambda,\lambda^2[\frac{1-\lambda}{3}]) $ and find the eigenvalues from the matrix, 
@@ -224,7 +233,7 @@ where $ \nu $ is of order $ O(\epsilon) $, thus small. We can immediately see th
 	\caption{The flow within our canard system \citep{krupa2001}.}
 	\label{fig: canard flow circle}
 \end{figure}
-where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $, our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
+where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $ (for the flow outside of the domain $ O(\epsilon) $),our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
 
 
 %\subsubsection{Singular Hopf Bifurcation}\textbf{Does this section tie in anywhere else?}
@@ -240,6 +249,36 @@ where it is clear that our Hopf bifurcation is the periodic solution in the cent
 %	\label{fig: canard flow circle}
 %\end{figure}\newpage
 %where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $, our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
+
+
+
+
+\subsubsection{Separation of the Manifolds}\label{sec:separation-of-the-manifolds}
+\begin{figure}[h!]\centering
+	\includegraphics[height=8cm,width=10cm]{Images/Separation}
+	\caption{Separation of $ M_a $ and $ M_r $ \citep{Kuehn}.}
+	\label{fig: splitting}
+\end{figure}
+%\textbf{Discuss splitting on the manifold}
+Continuing on from the singular Hopf bifurcation we might find that the canard point forces our branches to split. In other words we are looking for when the attracting and repelling branches are no longer connected, as show in Figure \ref{fig: splitting}. To do this we would use Melnikov Computations to show that our manifolds split - see \textit{Extending Geometric Singular Perturbation Theory to Nonhyperbolic Points - Fold and Canard Points in Two Dimensions} \citep{krupa2001} for direct use. To discover whether we have a splitting between our branches we need to consider our $ y $ coordinates \wrt our second chart \st $ y_{a,2}(0)-y_{r,2}(0) $ is a distance function which can be written as $ D_c(r_2,\lambda_2)=H(0,y_{a,2}(0))-H(0,y_{r,2}(0)) $ as we note that $ \pd{}{y_2}H(0,y_2)\neq 0 $ \citep{krupa2001}. From here we can use the following proposition,
+\begin{prop}
+	[\citealp{krupa2001}]
+	For a small enough $ \rho $ and $ \mu $ the distance function has the expansion
+	\begin{equation*}
+	D_c(r_2,\lambda_2)=d_{r_2}r_2+d_{\lambda_2}\lambda_2+O(2),
+	\end{equation*}
+	where we have defined,
+	\begin{subequations}
+		\begin{align}
+		d_{r_2}&=\int_{-\infty}^{\infty}\text{grad}H(\gamma_{c,2}(t))\cdot G(\gamma_{c,2}(t))dt,\\
+		d_{\lambda_2}&=\int_{-\infty}^{\infty}\text{grad}H(\gamma_{c,2}(t))\cdot (0,-1)^T,
+		\end{align}
+	\end{subequations}
+	and our matrix $ G(\gamma_{c,2}(t)) $ in Section \ref{sec:dynamics-in-texorpdfstringk1k1} with $ \gamma_{c,2} $ as our critical trajectory. 
+\end{prop}
+Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of our domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. As a result of we see a flow similar to Figure \ref{fig: splitting} whereby we find that our flow could either jump off under the fast flow - see Figure \ref{fig: vdp flow diagram e} - or we might find that the flow could be trapped in the canard region and then be repelled back to the attracting manifold, as we see with our connected system - Figure \ref{fig: 4 canard }. 
+
+\textbf{Good to have a figure if possible}
 
 
 

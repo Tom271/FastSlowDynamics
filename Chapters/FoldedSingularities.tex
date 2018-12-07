@@ -1,5 +1,5 @@
 %\section{Folded Singularities in three dimensions}
-Now that we have considered the two dimensional case for a folded singularity we can extend it to a third dimension in our system. This can be done by considering a system of one fast and two slow variables \st, 
+Now that we have considered the two dimensional case for a folded singularity we can extend it to a third dimension in our system. This can be done by considering a system of one fast and two slow variables such that, 
 \begin{equation}
 \begin{cases}
 \epsilon \dot{x}&=f(x,y,z,y,\epsilon),\\
@@ -24,7 +24,15 @@ as our fold point now can take multiple locations within our system, denoted by 
 \label{eq: non-degeneracy 3d system}	
 \end{equation}
 where we denote $ p_*=(x_*,y_*,z_*)\in F $ as our fold points and\textbf{ $ D_{(y,z)}=(\pd{f}{y},\pd{f}{z}) $ are linearly independent of one another } \citep{MMO}. In addition to this we can see from Figure \ref{fig: 3d folded singularity} that we have some interesting flows within our system. These flows do not follow the standard pattern as we saw in Figure \ref{fig: vdp flow diagram}, instead the slow flow switches its orientation when the flow hits the fold point and continue to flow in that direction, as a desingularised flow - these are called isolated singularities \citep{MMO}. %dot in diagram
-As a result we are able to express these flows in the following manner, using Equation \ref{eq: non-degeneracy 3d system}, 
+%As a result we are able to express these flows in the following manner, using Equation \ref{eq: non-degeneracy 3d system}, 
+As a result we are able to write these flows in the following manner, \textbf{using Equations \ref{eq: fs singularity system}, \ref{eq: non-degeneracy 3d system} and noting that $ \od{x}{t}=0=\pd{f}{x} $,  }
+\begin{equation}
+\dot{x}=\dot{y}\pd{f}{y}+\dot{z}\pd{f}{z},
+\end{equation}
+where we can note that $ \dot{y}=g_1 $ and $ \dot{z}=g_2 $. We then \\
+
+%$\frac{\dif x}{\dif t} = \frac{\dif y}{\dif t} \frac{\partial f}{\partial y} +  \frac{\dif z}{\dif t} \frac{\partial f}{\partial z}$
+
 \begin{equation}
 \begin{cases}
 \dot{x}&=g_1\pd{f}{y}+g_2\pd{f}{z}\\
@@ -71,6 +79,6 @@ where we can see that we are unable to produce a system which has a singular
 		\item The primary weak canard of a node undergoes a trancritical bifurcation for odd $ \mu^{-1}\in\mathbb{N} $ and a pitchfork bifurcation for even $ \mu^{-1}\in\mathbb{N} $
 	\end{itemize}
 	\end{theorem}
-From Theorem \ref{thm: canards in R3} we have now defined the existence of a strong and weak eigenvalue \st $ |\sigma_1|>|\sigma_2| \iff |\sigma_s|>|\sigma_w| $. From this theorem we are then able to carry out explicit investigations, as we will see in Section \textbf{Not done yet} noting that a focus is a circle or sprial etc.
+From Theorem \ref{thm: canards in R3} we have now defined the existence of a strong and weak eigenvalue \st $ |\sigma_1|>|\sigma_2| \iff |\sigma_s|>|\sigma_w| $. From this theorem we are then able to carry out explicit investigations, as we will see in Section \textbf{Not done yet} noting that a focus is a circle or spiral etc.
 
 %desingularizing by changing the top half plane for arrows 
