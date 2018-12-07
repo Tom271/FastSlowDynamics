@@ -3,22 +3,22 @@ Fast- Slow systems are systems of differential equations that can be viewed on t
 These systems are generally of the form
 \begin{align} 
 \begin{cases}
-x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon)\\
+x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon),\\
 y' &= \frac{dy}{dt}= \epsilon g( x,y, \lambda, \epsilon),
 \end{cases}\label{FastS}
 \end{align}
-which is called the fast system.
-Using a change of variables, $t = \frac{\tau}{\epsilon} $ this can be rewritten as
+which is known as the fast system.
+Using a scaling for the time, $t = \frac{\tau}{\epsilon} $, we find that this can be rewritten as
 \begin{align}
 \begin{cases}
-\epsilon \dot{x} &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, \epsilon)\\
+\epsilon \dot{x} &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, \epsilon),\\
 \dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda, \epsilon),
 \end{cases}\label{SlowS}
 \end{align}
-called the slow system.
+which is called the slow system.\\
 
-Here $x$ is called the fast variable, while $y$ is the slow variable. $\lambda$ is a parameter, $\epsilon$ is the time scale separation parameter and satisfies $0< \epsilon << 1$. The functions $f$ and $g$ are required to be sufficiently smooth ( depending on literature $C^1, C^\infty, C^{r+1} for C^r$ invariant manifolds. Choose later, maybe $C^r$ considering fenichel theorem)
-It is generally possible to have three or more time scales, separated by additional time scale separation parameters parameters, as well as more state-space variables. 
+Here $x$ is called the fast variable, while $y$ is the slow variable. $\lambda$ is a parameter (see Section \ref{sec:canard-points}), $\epsilon$ is the time scale separation parameter and satisfies $0< \epsilon << 1$. The functions $f$ and $g$ are required to be sufficiently smooth ( depending on literature $C^1, C^\infty, C^{r+1} for C^r$ invariant manifolds. Choose later, maybe $C^r$ considering fenichel theorem)
+It is generally possible to have three or more time scales, separated by additional parameters, as well as more state-space variables. \\
 
 In order to analyse systems (\ref{FastS}) and (\ref{SlowS}) using Geometric Singular Pertubation Theory (GSPT), the singular limit $\epsilon \to 0$ is considered:
 
@@ -28,20 +28,20 @@ x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon)\\
 y' &= 0,
 \end{cases}
 \end{align}
-which is called the layer problem and
+which is called the layer problem, and
 \begin{align}\label{SlowS0}
 \begin{cases}
 0 &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, 0)\\
 \dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda,0),
 \end{cases}
 \end{align}
-called the reduced system.
+called the reduced system.\\
 
-Considering (\ref{SlowS0}), the first equation is $f(x,y,\lambda, 0)=0$ and a manifold can be defined as:
+Now considering Equation \ref{SlowS0}, we can write $f(x,y,\lambda, 0)=0$. Then we are able to define the critical manifold as:,
 \begin{align} \label{CriticalS}
 S= \left\{ (x,y) : f(x,y,\lambda, 0)=0 \right \},
 \end{align}
-called the critical manifold, where, by definition of $S$, the points $(x,y) \in S$ are equilibria of (\ref{FastS0}). Before we continue, it is useful to have a visual interpretation of these flows, 
+where, by definition of $S$, the points $(x,y) \in S$ are equilibria of (\ref{FastS0}). Before we continue, it is useful to have a visual interpretation of these flows, 
 \begin{figure}[h!]\centering
 
 	\begin{subfigure}[t]{0.45\textwidth}
