@@ -17,8 +17,7 @@ Using a scaling for the time, $t = \frac{\tau}{\epsilon} $, we find that this ca
 \end{align}
 which is called the slow system.\\
 
-Here $x$ is called the fast variable, while $y$ is the slow variable. $\lambda$ is a parameter (see Section \ref{sec:canard-points}), $\epsilon$ is the time scale separation parameter and satisfies $0< \epsilon << 1$. The functions $f$ and $g$ are required to be sufficiently smooth ( depending on literature $C^1, C^\infty, C^{r+1} for C^r$ invariant manifolds. Choose later, maybe $C^r$ considering fenichel theorem)
-It is generally possible to have three or more time scales, separated by additional parameters, as well as more state-space variables. \\
+Here $x$ is called the fast variable, while $y$ is the slow variable. $\lambda$ is a parameter (see Section \ref{sec:canard-points}), $\epsilon$ is the time scale separation parameter and satisfies $0< \epsilon << 1$. The functions $f$ and $g$ are required to be sufficiently smooth \st we have $ C^{r+1} $ smoothness, where $ r $ is the number of dimensions present. It is generally possible to have three or more time scales, separated by additional parameters, as well as more state-space variables. \\
 
 In order to analyse systems (\ref{FastS}) and (\ref{SlowS}) using Geometric Singular Pertubation Theory (GSPT), the singular limit $\epsilon \to 0$ is considered:
 
@@ -103,7 +102,7 @@ Furthermore, with the following definition it is established which notion of dis
 Now combining the above we can state Fenichel's Theorem.
 \begin{theorem}{\textbf{Fenichel's Theorem}} \label{Fenichel}
 	\\
-	Suppose $M=M_0$ is a compact, normally hyperbolic submanifold  (possibly with boundary) of the critical manifold $S$ (\ref{CriticalS}) and  that $f, g \in C^r, r < \infty $. Then for $\epsilon >0$, sufficiently small, the following hold:\\
+	Suppose $M=M_0$ is a compact, normally hyperbolic submanifold  (possibly with boundary) of the critical manifold $S$ Equation \ref{CriticalS} and  that $f, g \in C^r, r < \infty $. Then for $\epsilon >0$, sufficiently small, the following holds:\\
 	(F1) There exists a locally invariant manifold $M_{\epsilon}$, diffeomorphic to  $M_0$. Local invariance means that $M_{\epsilon}$ can have boundaries through which trajectories enter or leave.\\
 	(F2) $M_{\epsilon}$ has a Hausdorff distance of $O(\epsilon)$ from $M_0$.\\
 	(F3) The flow on $M_{\epsilon}$  converges to the slow flow as $\epsilon \to 0$.\\
@@ -117,9 +116,9 @@ Now combining the above we can state Fenichel's Theorem.
 	where  $W^s(p)$ and $W^u(p)$ are the local stable and unstable manifolds of $p$ as a hyperbolic equilibrium of the layer equations, respectively. These manifolds also persist for $\epsilon > 0$, sufficiently small: there exist locally stable and unstable manifolds $W^s(M_\epsilon)$ and $W^u(M_\epsilon)$, respectviely, for which conclusions (F1) - (F6) hold if we replace $M_\epsilon$ and $M_0$ by  $W^s(M_\epsilon)$ and $W^s(M_0)$ (or similarly by  $W^u(M_\epsilon)$ and $W^u(M_0)$).
 \end{theorem} +++direct citation needed for theorem (MMO) +++
 
-Fenichel's Theorem establishes that the submanifold $M_0$ of the critical manifold $S_0$ persists as slow manifold $M_\epsilon$ as $\epsilon >0$, given it is compact and normally hyperbolic. The theorem furthermore establishes that the stable and unstable manifolds persist as well as the individual fibres of these manifolds, namely $W^s(p)$ and $W^u(p)$, that are associated to each base point $p \in M_0$.
-Therefore, under the assumptions of the theorem, the flow of the fast-slow system (\ref{FastS})/(\ref{SlowS}) remains $O(\epsilon)$ close to the flow of the system (\ref{FastS0})/(\ref{SlowS0}) in the singular limit $\epsilon \to 0$.
-\\
+Fenichel's Theorem establishes that the submanifold, $M_0$, of the critical manifold, $S_0$, persists as slow manifold $M_\epsilon$ as $\epsilon >0$, given it is compact and normally hyperbolic. The theorem furthermore establishes that the stable and unstable manifolds persist as well as the individual fibres, namely $W^s(p)$ and $W^u(p)$, that are associated to each base point $p \in M_0$.
+Therefore, under the assumptions of the theorem, the flow of the Fast-Slow system remains $O(\epsilon)$ close to the flow of the system in the singular limit $\epsilon \to 0$.\\
+
 The importance of this result lies in the fact that the behaviour of the full system can be analysed by looking at the system in the singular limit instead, which is often more practical.
 
 
