@@ -376,10 +376,17 @@ Substitute $\dot{\tilde{y}}$ from Equation (\ref{sys:K3riccNIy}) and cancel term
 &=e^{2t}r\epsilon  H(r,\tilde{y},\epsilon)
 \end{align*}
 This final equality follows from the explicit solutions in $r$ and $\epsilon$ above. These equations also show that $r\epsilon e^{2t} = r_i\delta e^{-2t}e^{2t}$. Finally,
-
 $$\dot{z} = r_iH^z(\,r_i,\tilde{y}_i,t)$$
-where$H^z$ is the same as $H$ but under the transformation from $z$, i.e. $H^z(\,r_i,\tilde{y}_i,t) = \delta H(r_ie^t,e^{-2t}(\tilde{y}_i-\delta+z)+\delta e^{-3t}, \delta e^{-3t})$. This has not affected the expression for the passage time $T$. 
+where $H^z$ is the same as $H$ but under the transformation from $z$, i.e. $H^z(\,r_i,\tilde{y}_i,t) = \delta H(r_ie^t,e^{-2t}(\tilde{y}_i-\delta+z)+\delta e^{-3t}, \delta e^{-3t})$. This has not affected the expression for the passage time $T$. +++Uniform boundedness of H implies?+++ Hence $z(T)=r_iO(T)=O(r_i\ln (\frac{\rho}{r_i}))$
+Using the initial definition of $z$, we recover an expression for $\tilde{y}(T)$.
+\begin{align*}
+\tilde{y}(T)&=e^{-2T}\left(\tilde{y}_i-\delta+O\left(r_i\ln\left(\frac{\rho}{r_i}\right)\right)\right)+\delta e^{-3T}\\
+&=(\tilde{y}_i-\delta)e^{-2\ln\frac{\rho}{r_i}}+e^{-2\ln\frac{\rho}{r_i}}O\left(r_i\ln\frac{\rho}{r_i}\right)+\delta e^{-3T}\\
+&=(\tilde{y}_i-\delta)\frac{r_i^2}{\rho^2}+O\left(\frac{r_i^3}{\rho^2}\ln\frac{\rho}{r_i}\right)
+\end{align*}
+We now have an expression for each of the out variables in terms of the initial conditions, albeit under a near-identity transformation. All that remains is to undo this transformation using the inverse map $\tilde{\psi}$.
 
++++Undo transformation, explain $r$ and $\epsilon$ coordinates in prop. ThenDONE!+++
 \end{proof}
 	
 
