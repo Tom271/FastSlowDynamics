@@ -1,0 +1,150 @@
+% My own style file 
+% 
+% (c) TM Hodgson 2018
+%
+%% This program can be redistributed and/or modified under the terms
+%% of the LaTeX Project Public License Distributed from CTAN archives
+%% in directory macros/latex/base/lppl.txt.
+% 
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{proj1}[My First Style File]
+
+%Standard packages
+\RequirePackage[utf8x]{inputenc}
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}\RequirePackage{graphicx}
+\RequirePackage[left=2.5cm,right=2cm,bottom=2.5cm,top=2.5cm]{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage{subcaption}
+\RequirePackage{hyperref}
+
+\setlength{\headheight}{14.5pt} 
+
+%Theorem-like environments
+\let\oldref\ref
+
+\renewcommand{\ref}[1]{(\oldref{#1})}
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+
+\theoremstyle{break}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem*{note}{Note}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{ex}[theorem]{Exercise}
+
+\newenvironment{solution}{\renewcommand\qedsymbol{$\square$}\begin{proof}[Solution]}{\end{proof}}
+
+
+
+%Set header and footer
+%\pagestyle{fancy}
+%\fancyhf{}
+%\rhead{9447240 }
+%\lhead{T.M. Hodgson}
+
+%I like footnotes to be superscript letters rather than numbers
+\renewcommand{\thefootnote}{\alph{footnote}}    
+
+%Default title layout
+\newcommand{\mytitle}[1]{\begin{center} {\Large \textbf{\underline{\smash{#1}}}}\\
+		\vspace{0.1cm}
+		Thomas M. Hodgson\footnote{\url{T.M.Hodgson@sms.ed.ac.uk}}\\
+		\vspace{0.1cm}
+		\today
+	\end{center}
+	\vspace{0.2cm}}
+
+%Define new commands for typesetting here
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\L}{\mathcal{L}}  %\L usually does an L with a diagonal line through it (Hungarian?)
+
+%Swap bullets for long dash in itemize
+\renewcommand\labelitemi{---}
+\renewcommand\qedsymbol{\(\blacksquare\)}
+
+%Make MATLAB code nice, swap for other Listings language (maybe Python?)
+\RequirePackage[numbered,framed]{matlab-prettifier}
+\let\ph\mlplaceholder % shorter macro
+\lstMakeShortInline"
+\lstset{
+	style              = Matlab-editor,
+	basicstyle         = \mlttfamily,
+	escapechar         = ",
+	mlshowsectionrules = true,
+}
+
+%Typesets derivatives nicely using roman d. Adapts size automatically. Stolen from https://tex.stackexchange.com/questions/135944/commath-and-ifinner/135985#135985 
+% \od{y}{X} is ordinary derivative, \pd{f}{x} is partial derivative. See commath documentation for others
+
+\RequirePackage{amsmath}
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+\newcommand{\Dif}{\mathop{}\!\mathrm{D}}
+
+\makeatletter
+\newcommand{\spx}[1]{%
+  \if\relax\detokenize{#1}\relax
+    \expandafter\@gobble
+  \else
+    \expandafter\@firstofone
+  \fi
+  {^{#1}}%
+}
+\makeatother
+
+\newcommand\pd[3][]{\frac{\partial\spx{#1}#2}{\partial#3\spx{#1}}}
+\newcommand\tpd[3][]{\tfrac{\partial\spx{#1}#2}{\partial#3\spx{#1}}}
+\newcommand\dpd[3][]{\dfrac{\partial\spx{#1}#2}{\partial#3\spx{#1}}}
+
+\newcommand{\md}[6]{\frac{\partial\spx{#2}#1}{\partial#3\spx{#4}\partial#5\spx{#6}}}
+\newcommand{\tmd}[6]{\tfrac{\partial\spx{#2}#1}{\partial#3\spx{#4}\partial#5\spx{#6}}}
+\newcommand{\dmd}[6]{\dfrac{\partial\spx{#2}#1}{\partial#3\spx{#4}\partial#5\spx{#6}}}
+
+\newcommand{\od}[3][]{\frac{\dif\spx{#1}#2}{\dif#3\spx{#1}}}
+\newcommand{\tod}[3][]{\tfrac{\dif\spx{#1}#2}{\dif#3\spx{#1}}}
+\newcommand{\dod}[3][]{\dfrac{\dif\spx{#1}#2}{\dif#3\spx{#1}}}
+
+\newcommand{\genericdel}[4]{%
+  \ifcase#3\relax
+  \ifx#1.\else#1\fi#4\ifx#2.\else#2\fi\or
+  \bigl#1#4\bigr#2\or
+  \Bigl#1#4\Bigr#2\or
+  \biggl#1#4\biggr#2\or
+  \Biggl#1#4\Biggr#2\else
+  \left#1#4\right#2\fi
+}
+\newcommand{\del}[2][-1]{\genericdel(){#1}{#2}}
+\newcommand{\set}[2][-1]{\genericdel\{\}{#1}{#2}}
+\let\cbr\set
+\newcommand{\sbr}[2][-1]{\genericdel[]{#1}{#2}}
+\let\intoo\del
+\let\intcc\sbr
+\newcommand{\intoc}[2][-1]{\genericdel(]{#1}{#2}}
+\newcommand{\intco}[2][-1]{\genericdel[){#1}{#2}}
+\newcommand{\eval}[2][-1]{\genericdel.|{#1}{#2}}
+\newcommand{\envert}[2][-1]{\genericdel||{#1}{#2}}
+\let\abs\envert
+\newcommand{\sVert}[1][0]{%
+  \ifcase#1\relax
+  \rvert\or\bigr|\or\Bigr|\or\biggr|\or\Biggr
+  \fi
+}
+\newcommand{\enVert}[2][-1]{\genericdel\|\|{#1}{#2}}
+\let\norm\enVert
+\newcommand{\fullfunction}[5]{%
+  \begin{array}{@{}r@{}r@{}c@{}l@{}}
+  #1 \colon & #2 & {}\longrightarrow{} & #3 \\
+            & #4 & {}\longmapsto{}     & #5
+  \end{array}
+}
+
+\endinput

@@ -77,7 +77,15 @@ Therefore, the location of the singular equilibrium, depends on the parameter va
 Since $a, b$ and $c$ are all multiplied by a factor of $\epsilon^{1/2}$ or $\epsilon$ in system (\ref{sysepsilonenvir}), we need $\nu$ to be of $O(\epsilon^{1/2})$ or smaller in order to observe a singular hopf bifurcation.
 If $\nu=O(1)$, then the factors of $\epsilon$ in system (\ref{sysepsilonenvir}) do not really contribute to the system and are merely a pertubation of the normal form (++++toms normal form++++).
 If $\nu \leq O(\epsilon^{1/2})$, then a singular hopf bifurcation occurs at a distance $\nu =O(\epsilon)$ in parameter space away from the equilibrium.
-
+The eigenvalues of the system (\ref{sysepsilonenvir}) can be found by considering the following Jacobian matrix associated to it:
+\begin{equation}
+J=\begin{bmatrix}
+2x & 1 & 0 \\
+-1 & 0 & 1 \\
+-\epsilon^{1/2} a & - \epsilon b & - \epsilon^{1/2} c\\
+\end{bmatrix}.
+\end{equation}
+Using a computer package, such as Maple, to solve for the eigenvalues confirms that there exist two complex eigenvalues for the equilibrium where $x=0$.
 Since the eigenvalues of the system are complex, the equilibrium is a saddle-focus, which has not been discussed in the analysis of canard trajectories. (+++++loop back to 3dim singularities and why we dont have canards)+++++++
 The research of the dynamics, and specifically MMOs, close to a singular Hopf Bifurcation is still ongoing. Here we only consider a few specific cases, where $\nu$ is treated as the main parameter of interest. Furthermore, since the critical manifold in system (\ref{sysepsilonenvir}) is in the shape of a quadratic function, by the geometrical nature of the problem, there is no global return mechanism for the system. Trajectories that leave the close proximity of the equilibrium do not return. In order to get MMOs, additionally to the SAOs a global return mechanism is needed.
 This is achieved by modifying system (\ref{sysepsilonenvir}) by adding a cubic term to the $x$ equation. This will change the shape of the critical manifold to an S shaped curve and therefore allow for a global return mechanism. The new system is then the following:
