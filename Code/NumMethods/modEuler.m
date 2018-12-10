@@ -10,6 +10,6 @@ function [z,t]=modEuler(func,z_0,T_0,h,tSpan)
     z(1)=z_0;
     
     for i=1:(length(z)-1)
-        z(i+1)=z(i)+h*func(z(i)+(1/2)*func(z(i)));
+        z(i+1)=z(i)+h*(func(z(i)+(1/2)*func(z(i))));
     end
     
