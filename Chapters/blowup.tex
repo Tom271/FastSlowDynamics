@@ -305,30 +305,30 @@ y_3 \\
 \epsilon_3
 \end{pmatrix} 
 \end{align*}
-As the matrix is upper triangular, its eigenvalues are trivially  $\lbrace 1,-2,-3\rbrace$ with corresponding eigenvectors $\lbrace (1,0,0),(0,1,0),(0,1,1)\rbrace$. This presents an issue as there is additive resonance i.e. $\lambda_2-(\lambda_1+\lambda_3)=0$.  This means the Poincar\'e-Dulac theorem?? does not hold and the vector field is not linearisable, there is no smooth transformation between the nonlinear and linear flow. Despite this, progress can still be made as the form of the equations allow a near identity transformation and yields the lowest order approximation to the flow. Note that $q_{out}$ is also  a hyperbolic equilibrium of the system. +++Mention $\bar{M}_a$, the locally invariant perturbation of the center manifold $M_a$? Why does this mean we need to be precise if it is near $q_{out}$+++\\
+As the matrix is upper triangular, its eigenvalues are trivially  $\lbrace 1,-2,-3\rbrace$ with corresponding eigenvectors $\lbrace (1,0,0),(0,1,0),(0,1,1)\rbrace$. This presents an issue as there is additive resonance i.e. $\lambda_2-(\lambda_1+\lambda_3)=0$.  This means the Poincar\'e-Dulac theorem does not hold and the vector field is not linearisable, there is no smooth transformation between the nonlinear and linear flow. The nonlinear terms in the expansion will be of the same order as the linear terms, and thus they cannot be disregarded. Despite this, progress can still be made as the form of the equations allow a near identity transformation and yields the lowest order approximation to the flow. Note that $q_{out}$ is also  a hyperbolic equilibrium of the system.  +++Mention $\bar{M}_a$, the locally invariant perturbation of the center manifold $M_a$? Passes near the delicate equilibrium point $q_{out}$ so behaviour very much depends on how we pass this point. +++\\
 
 The special orbit, $\gamma_2$, can be mapped into this chart using the change of coordinates $\kappa_{23}$ of Equation (\ref{eq:kappa23}).
 $$\gamma_3=\kappa_{23}(\gamma_2)$$
 In fact, $\gamma_3$ lies in the plane $r_3=0$ and converges to $q_{out}$ as $\epsilon \to 0$. To find the flow in a neighbourhood of $q_out$ we use sections similar to those introduced in $K_2$.
 
 \begin{align*} \Sigma_3^{in} =\lbrace(r_3,y_3,\epsilon_3) &: r_3\in[0,\rho], y_3 \in [-\beta_3,\beta_3], \epsilon_3=\delta\rbrace,\\
- \Sigma_3^{out} =\lbrace(r_3,y_3,\epsilon_3) &: r_3=\rho, y_3 \in [-\beta_3,\beta_3], \epsilon_3\in[0,\delta]\rbrace
+\Sigma_3^{out} =\lbrace(r_3,y_3,\epsilon_3) &: r_3=\rho, y_3 \in [-\beta_3,\beta_3], \epsilon_3\in[0,\delta]\rbrace
 \end{align*}
 
 We now wish to find the transition map $\Pi_3$ between these two charts. That is, given that the trajectory enters somewhere in $\Sigma_3^{in}$, how will it behave until it reaches $\Sigma_3^{out}$? To do this, the system \ref{sys:K3blowup} will be studied after some simplification. The system is in fact equivalent to the Riccati equation. Observe that $F(r_3,y_3,\epsilon_3)\big|_{q_{out}} = 1-y_3 + O(r_3)\big|_{q_{out}} \approx 1 $. Thus dividing (\ref{sys:K3blowup}) through by $F$ yields
 \begin{subequations}
-\begin{align}
-\dot{r}_3&=r_3\\
-\dot{y}_3&=-2y_3 - \frac{\epsilon_3}{1-y_3}+r_3\epsilon_3 G(r_3,y_3,\epsilon_3)\\
-\dot{\epsilon}_3 &= -3\epsilon_3
-\end{align}
-\label{eq:K3ricc}
+	\begin{align}
+	\dot{r}_3&=r_3\\
+	\dot{y}_3&=-2y_3 - \frac{\epsilon_3}{1-y_3}+r_3\epsilon_3 G(r_3,y_3,\epsilon_3)\\
+	\dot{\epsilon}_3 &= -3\epsilon_3
+	\end{align}
+	\label{eq:K3ricc}
 \end{subequations}
 
-+++ Motivation for letting $r_3=x=0$? Other than for comparison with Riccati flow+++ Letting $r_3=0$ gives us the Riccati equation mapped onto $K_3$.
+In the invariant plane $r_3=0$, the system becomes the Riccati equation (cf. ()\ref{Riccati}) transformed into the chart $K_3$ and with a rescaling of time.
 \begin{align*}
-	y'_3 &= -2y_3-\frac{\epsilon_3}{1-y_3}\\
-	\epsilon'_3 &= -3\epsilon_3
+y'_3 &= -2y_3-\frac{\epsilon_3}{1-y_3}\\
+\epsilon'_3 &= -3\epsilon_3
 \end{align*}
 This system has eigenvalues $\lbrace -2,-3\rbrace$ and the issue of additive resonance has been avoided so we are able to linearise the system using a near-identity transformation. This transformation allows the elimination of awkward higher order terms (in this case, $\frac{1}{1-y_3}$). Let
 $$y_3=\psi(\tilde{y}_3,\epsilon_3)=\tilde{y}_3+O(\tilde{y}_3\epsilon_3).$$
@@ -349,55 +349,48 @@ Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions
 		\begin{align}
 		\dot{r} &= r,\label{sys:K3riccNIr}\\
 		\dot{\tilde{y}}&=-2\tilde{y}+\epsilon+r\epsilon H(r,\tilde{y},\epsilon)\label{sys:K3riccNIy}\\
-		\epsilon &= -3\epsilon
+		\dot{\epsilon} &= -3\epsilon
 		\label{sys:K3riccNIeps}
 		\end{align}
 	\end{subequations}
-Let the subscript $i$ denote the value of a variable at its entry into the chart, and likewise $o$ for out. Then $(r_i,y_i,\epsilon_i)\in \Sigma^{in}$, and $(r_o,y_o,\epsilon_o)\in \Sigma^{out}$. Thus 
-$$\begin{array}{c c c}
-r(0)=r_i & &r(T)=r_o=\rho\\
-y(0)=y_i & &y(T)=y_o\\
-\epsilon(0)=\epsilon_i=\delta& & \epsilon(T)=\epsilon_o
-\end{array}
-$$
-We wish to construct an equation for the out variables $(T,\tilde{y}_o,\epsilon_o)$ in terms of the in variables $ (r_i,\tilde{y}_i) $, that is the transition map. The $r$ and $\epsilon$ equations are easily solved:
-\begin{align}
-r&=r_ie^t &&\epsilon=\delta e^{-3t}
-\end{align}
-Then using $r(T)=\rho$, 
-$$r(T)=\rho=r_ie^-t \implies T=\ln\left(\frac{\rho}{r_i}\right).$$
-
-For the equation in $y$, a little more work is required. We introduce a new coordinate $z$ as follows, $\tilde{y}=e^{-2t}(\tilde{y}_i-\delta+z)+\delta  e^{-3t}$. Upon first sight, this seems unlikely to be of any use. However, it turns out that this transformation is ideal as it allows many terms to be removed. First rearrange for $z$ and differentiate with respect to $t$.
-\begin{align*}
-&z=e^{2t} (\tilde{y}-\delta e^{-3t})-\tilde{y}_i+\delta\\
-&\od{z}{t}= 2e^{2t}\tilde{y}+e^{2t}\dot{\tilde{y}}+\delta e^{-t}
-\end{align*}
-Substitute $\dot{\tilde{y}}$ from Equation (\ref{sys:K3riccNIy}) and cancel terms. 
-\begin{align*}
-&=e^{2t}(-\epsilon+r\epsilon H(r,\tilde{y},\epsilon))+\delta e^{-t}\\
-&=-\epsilon e^{2t}+e^{2t}r\epsilon  H(r,\tilde{y},\epsilon) + \delta e^{-t}\\
-&=e^{2t}r\epsilon  H(r,\tilde{y},\epsilon)
-\end{align*}
-This final equality follows from the explicit solutions in $r$ and $\epsilon$ above. These equations also show that $r\epsilon e^{2t} = r_i\delta e^{-2t}e^{2t}$. Finally,
-$$\dot{z} = r_iH^z(\,r_i,\tilde{y}_i,t)$$
-where $H^z$ is the same as $H$ but under the transformation from $z$, i.e. $H^z(\,r_i,\tilde{y}_i,t) = \delta H(r_ie^t,e^{-2t}(\tilde{y}_i-\delta+z)+\delta e^{-3t}, \delta e^{-3t})$. This has not affected the expression for the passage time $T$. +++Uniform boundedness of H implies?+++ Hence $z(T)=r_iO(T)=O(r_i\ln (\frac{\rho}{r_i}))$
-Using the initial definition of $z$, we recover an expression for $\tilde{y}(T)$.
-\begin{align*}
-\tilde{y}(T)&=e^{-2T}\left(\tilde{y}_i-\delta+O\left(r_i\ln\left(\frac{\rho}{r_i}\right)\right)\right)+\delta e^{-3T}\\
-&=(\tilde{y}_i-\delta)e^{-2\ln\frac{\rho}{r_i}}+e^{-2\ln\frac{\rho}{r_i}}O\left(r_i\ln\frac{\rho}{r_i}\right)+\delta e^{-3T}\\
-&=(\tilde{y}_i-\delta)\frac{r_i^2}{\rho^2}+O\left(\frac{r_i^3}{\rho^2}\ln\frac{\rho}{r_i}\right)
-\end{align*}
-We now have an expression for each of the out variables in terms of the initial conditions, albeit under a near-identity transformation. All that remains is to undo this transformation using the inverse map $\tilde{\psi}$.
-
-+++Undo transformation, explain $r$ and $\epsilon$ coordinates in prop. ThenDONE!+++
-\end{proof}
+	Let the subscript $i$ denote the value of a variable at its entry into the chart, and likewise $o$ for out. Then $(r_i,y_i,\epsilon_i)\in \Sigma^{in}$, and $(r_o,y_o,\epsilon_o)\in \Sigma^{out}$. Thus 
+	$$\begin{array}{c c c}
+	r(0)=r_i & &r(T)=r_o=\rho\\
+	y(0)=y_i & &y(T)=y_o\\
+	\epsilon(0)=\epsilon_i=\delta& & \epsilon(T)=\epsilon_o
+	\end{array}
+	$$
+	We wish to construct an equation for the out variables $(T,\tilde{y}_o,\epsilon_o)$ in terms of the in variables $ (r_i,\tilde{y}_i) $, that is the transition map. The $r$ and $\epsilon$ equations are easily solved:
+	\begin{align}
+	r&=r_ie^t &&\epsilon=\delta e^{-3t}
+	\end{align}
+	Then using $r(T)=\rho$, 
+	$$r(T)=\rho=r_ie^-t \implies T=\ln\left(\frac{\rho}{r_i}\right).$$
 	
-
-+++ Looking to continue special trajectory $\gamma_2$. Manifold is close to equilibrium at $q_{out}$, must be precise? (Why? To show we don't hit equ? Unstable as $\lambda_1 >0$)  Resonance makes this difficult, no smooth transform linear -> nonlinear (why? check slack link). Intro'd $\Sigma$ slices. Aim is to show that system is equiv to Riccati flow. Removes resonance, linearise using near-id transform. Then Prop2.11 Krupa gives transition map. +++\\
-
-
-%+++Add glue, phase portrait on $S^2$.+++\\
-
+	For the equation in $y$, a little more work is required. We introduce a new coordinate $z$ as follows, $\tilde{y}=e^{-2t}(\tilde{y}_i-\delta+z)+\delta  e^{-3t}$. Upon first sight, this seems unlikely to be of any use. However, it turns out that this transformation is ideal as it allows many terms to be removed. First rearrange for $z$ and differentiate with respect to $t$.
+	\begin{align*}
+	&z=e^{2t} (\tilde{y}-\delta e^{-3t})-\tilde{y}_i+\delta\\
+	&\od{z}{t}= 2e^{2t}\tilde{y}+e^{2t}\dot{\tilde{y}}+\delta e^{-t}
+	\end{align*}
+	Substitute $\dot{\tilde{y}}$ from Equation (\ref{sys:K3riccNIy}) and cancel terms. 
+	\begin{align*}
+	&=e^{2t}(-\epsilon+r\epsilon H(r,\tilde{y},\epsilon))+\delta e^{-t}\\
+	&=-\epsilon e^{2t}+e^{2t}r\epsilon  H(r,\tilde{y},\epsilon) + \delta e^{-t}\\
+	&=e^{2t}r\epsilon  H(r,\tilde{y},\epsilon)
+	\end{align*}
+	This final equality follows from the explicit solutions in $r$ and $\epsilon$ above. These equations also show that $r\epsilon e^{2t} = r_i\delta e^{-2t}e^{2t}$. Finally,
+	$$\dot{z} = r_iH^z(\,r_i,\tilde{y}_i,t)$$
+	where $H^z$ is the same as $H$ but under the transformation from $z$, i.e. $H^z(\,r_i,\tilde{y}_i,t) = \delta H(r_ie^t,e^{-2t}(\tilde{y}_i-\delta+z)+\delta e^{-3t}, \delta e^{-3t})$. This has not affected the expression for the passage time $T$. +++Uniform boundedness of H implies?+++ Hence $z(T)=r_iO(T)=O(r_i\ln (\frac{\rho}{r_i}))$
+	Using the initial definition of $z$, we recover an expression for $\tilde{y}(T)$.
+	\begin{align*}
+	\tilde{y}(T)&=e^{-2T}\left(\tilde{y}_i-\delta+O\left(r_i\ln\left(\frac{\rho}{r_i}\right)\right)\right)+\delta e^{-3T}\\
+	&=(\tilde{y}_i-\delta)e^{-2\ln\frac{\rho}{r_i}}+e^{-2\ln\frac{\rho}{r_i}}O\left(r_i\ln\frac{\rho}{r_i}\right)+\delta \frac{r_i^3}{\rho^3}\\
+	&=(\tilde{y}_i-\delta)\frac{r_i^2}{\rho^2}+O\left(\frac{r_i^3}{\rho^2}\ln\frac{\rho}{r_i}\right)
+	\end{align*}
+	We now have an expression for each of the out variables in terms of the initial conditions, albeit under a near-identity transformation. All that remains is to undo this transformation using the inverse map $\tilde{\psi}$.
+	
+	+++Undo transformation, explain $r$ and $\epsilon$ coordinates in prop. ThenDONE!+++
+\end{proof}
 
 \subsection{The Full Solution}
 The analysis of the three charts, discussed in the Sections \ref{sec: VDP K2}-\ref{sec:dynamics-in-texorpdfstringk3k3}, provided a descripition of the dynamics on each of the charts, as well as theory to conclude the persistence of the dynamics in the full system.
