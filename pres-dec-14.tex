@@ -408,7 +408,7 @@ Singularities at $x=0,x=2$.
 		%\begin{itemize}
 		%\item  $G(x_2,y_2)=(-\frac{x^2_2}{3},0)^T$
 		%\end{itemize}
-		\item Trajectories 
+		\item Trajectories - \textbf{Scrap $ K_1 $ stuff?}
 		\begin{itemize}
 			\item Hopf Bifurcation
 			\item Jumps
@@ -528,85 +528,93 @@ Singularities at $x=0,x=2$.
 \begin{figure}
     
 \includegraphics[height=5cm,width=7cm]{Images/Separation}
-    \caption{Separation of $ M_a $ and $ M_r $ \citep{Kuehn}.}
+    \caption{Separation of $ M_a $ and $ M_r $ (Kuehn, Multiple Time Scale Dynamics).}
 
-\end{figure}\column{0.5\textwidth}
+\end{figure}\column{0.4\textwidth}
 \begin{itemize}
 %\item The maps $\Pi_1, \Pi_2, \Pi_3$ can be combined into a global map $\Pi$ using the variable transformations.
-\item $\Pi$ describes the global transition of trajectories.
-\begin{itemize}
-    \item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
-\end{itemize}
-% \item Riccati flow at $\bar{\gamma}.$
-\item What does $q_{out}$ do?
-% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
+\item Hopf Bifurcation
+\item Splitting 
+
+%\begin{itemize}
+%    \item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
+%\end{itemize}
+%% \item Riccati flow at $\bar{\gamma}.$
+%\item What does $q_{out}$ do?
+%% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
 \end{itemize}
 \end{columns}
 \end{frame}
 
-\begin{frame}{Canard Points and Future Work}
-\begin{onlyenv}<1>
-\begin{equation*} 
-        \begin{cases}
-        \epsilon\frac{\dif x}{\dif \tau} &= -y + x^2 - \frac{x^3}{3}\\ 
-        \frac{\dif y}{\dif \tau}&= (-1+x)
-        \end{cases}
-        \end{equation*}
-\end{onlyenv}
-
-\begin{onlyenv}<2>
-    \begin{equation*}
-         \begin{cases}
-        \epsilon\frac{\dif x}{\dif \tau} &= -y + x^2 - \frac{x^3}{3}\\ 
-        \frac{\dif y}{\dif \tau}&= (-\lambda+x)
-        \end{cases}
-        \end{equation*}
-\end{onlyenv}
-
-\begin{onlyenv}<3>
+\begin{frame}{Mixed Mode Oscillations (MMO's)}
+%\begin{frame}{Effects of a Canard}
 \begin{columns}
-\column{0.5\textwidth}
-\begin{figure}
-    \centering
-\includemedia[width=1\linewidth,height=1\linewidth,activate=pageopen,
-passcontext,
-transparent,
-addresource=vdPhopf.mp4,
-flashvars={source=vdPhopf.mp4}
-]{}{VPlayer.swf}
-
-\end{figure}
-\column{0.5\textwidth}
-\begin{figure}
-    \centering
-\includemedia[width=1\linewidth,height=1\linewidth,activate=pageopen,
-passcontext,
-transparent,
-addresource=vdPe001.mp4,
-flashvars={source=vdPe001.mp4}
-]{}{VPlayer.swf}
-    %\caption{Phase Plane of the Van der Pol Equations}
-\end{figure}
- 
-
+	\column{0.5\textwidth}
+	\begin{figure}
+		
+		\includegraphics[height=5cm,width=7cm]{Images/phase-MMO}
+		\caption{Phase portrait of an MMO (Desroches et al - Mixed Mode Oscillation with Multiple Time Scales)}
+		
+	\end{figure}\column{0.4\textwidth}
+	\begin{itemize}
+		%\item The maps $\Pi_1, \Pi_2, \Pi_3$ can be combined into a global map $\Pi$ using the variable transformations.
+		\item What are MMO's?
+		\item Why are they useful?
+		\begin{itemize}
+			\item Applications? 
+			\item 
+		\end{itemize}
+		
+		%\begin{itemize}
+		%    \item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
+		%\end{itemize}
+		%% \item Riccati flow at $\bar{\gamma}.$
+		%\item What does $q_{out}$ do?
+		%% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
+	\end{itemize}
 \end{columns}
-\begin{equation*} 
-        \begin{cases}
-        \epsilon\frac{\dif x}{\dif \tau} &= -y + x^2 - \frac{x^3}{3}\\ 
-        \frac{\dif y}{\dif \tau}&= (-\lambda+x)
-        \end{cases}
-        \end{equation*}
-\end{onlyenv}
+\end{frame}
+
+
+\begin{frame}{Mixed Mode Oscillations (MMO's)}
+%\begin{frame}{Effects of a Canard}
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{figure}
+		
+		\includegraphics[height=5cm,width=6cm]{Images/MMO-spirals}
+		\caption{Oscillations in the canonical form system (Desroches et al - Mixed Mode Oscillation with Multiple Time Scales)}
+		
+	\end{figure}\column{0.4\textwidth}
+	\begin{itemize}
+		\item Canonical System:
+		\begin{equation*}
+			 \begin{cases}
+			\dot{x}&=y-x^2\\
+			\dot{y}&=z-x\\
+			\dot{z}&=-\nu
+			\end{cases} 
+		\end{equation*}
+		\item Small Amplitude Oscillations (SAO's)
+		\item Large Amplitude Oscillations (LAO's)
+		
+		%\begin{itemize}
+		%    \item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
+		%\end{itemize}
+		%% \item Riccati flow at $\bar{\gamma}.$
+		%\item What does $q_{out}$ do?
+		%% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
+	\end{itemize}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Conclusion}
 \begin{itemize}
-    \item Lotka-Volterra 
     \item Van der Pol 
-    \item Blow ups 
     \item Canard Point
+    \item MMO's
 \end{itemize}
 \end{frame}
 
-\bibliographystyle{agsm}
+
 \end{document}
