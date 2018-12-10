@@ -2,9 +2,9 @@
 Now that we have considered the two dimensional case for a folded singularity we can extend it to a third dimension in our system. This can be done by considering a system of one fast and two slow variables such that, 
 \begin{equation}
 \begin{cases}
-\epsilon \dot{x}&=f(x,y,z,y,\epsilon),\\
-\dot{y}&=g_1(x,y,z,y,\epsilon),\\
-\dot{z}&=g_2(x,y,z,y,\epsilon),
+\epsilon x'&=f(x,y,z,y,\epsilon),\\
+y'&=g_1(x,y,z,y,\epsilon),\\
+z'&=g_2(x,y,z,y,\epsilon),
 \end{cases}\label{eq: fs singularity system}
 \end{equation}
 which we can see is an extension of our original form - Equation \ref{SlowS} \citep{MMO}. Furthermore, \citet{MMO} also discusses that the addition of an extra slow variable causes issues with respect to the existence of a canard solution. This is because our existence ranges increases from $ O(\epsilon) $ to $ O(1) $, noting that $ \epsilon\ll 1 $ \citep{MMO}. Then for this system we are able to make similar assumptions to the previous case, Section \ref{sec:singularitiesandfoldpoints}, but it is obvious we now must have more than one fold point. We can see that this is the case in Figure \ref{fig: 3d folded singularity},
@@ -25,22 +25,22 @@ as our fold point now can take multiple locations within our system, denoted by 
 \end{equation}
 where we denote $ p_*=(x_*,y_*,z_*)\in F $ as our fold points and\textbf{ $ D_{(y,z)}=(\pd{f}{y},\pd{f}{z}) $ are linearly independent of one another } \citep{MMO}. In addition to this we can see from Figure \ref{fig: 3d folded singularity} that we have some interesting flows within our system. These flows do not follow the standard pattern as we saw in Figure \ref{fig: vdp flow diagram}, instead the slow flow switches its orientation when the flow hits the fold point and continue to flow in that direction, as a desingularised flow - these are called isolated singularities \citep{MMO}. %dot in diagram
 %As a result we are able to express these flows in the following manner, using Equation \ref{eq: non-degeneracy 3d system}, 
-As a result we are able to write these flows in the following manner, \textbf{using Equations \ref{eq: fs singularity system}, \ref{eq: non-degeneracy 3d system} and noting that $ \od{x}{t}=0=\pd{f}{x} $,  }
+As a result we are able to write these flows in the following manner, using Equations \ref{eq: fs singularity system}, \ref{eq: non-degeneracy 3d system} and noting that $ \od{x}{t}=0=\pd{f}{x} $,  
 \begin{equation}
-\dot{x}=\dot{y}\pd{f}{y}+\dot{z}\pd{f}{z},
+-\pd{f}{x}x'=y'\pd{f}{y}+z'\pd{f}{z},
 \end{equation}
-where we can note that $ \dot{y}=g_1 $ and $ \dot{z}=g_2 $. We then \\
+where we can note that $ y'=g_1 $ and $ z'=g_2 $. We then make a scaling in time \st $ t=-\pd{f}{x} $ wto give the system in the desired form,\\
 
 %$\frac{\dif x}{\dif t} = \frac{\dif y}{\dif t} \frac{\partial f}{\partial y} +  \frac{\dif z}{\dif t} \frac{\partial f}{\partial z}$
 
 \begin{equation}
 \begin{cases}
-\dot{x}&=g_1\pd{f}{y}+g_2\pd{f}{z}\\
+\dot{x}&=g_1\pd{f}{y}+g_2\pd{f}{z},\\
 \dot{y}&=-g_1\pd{f}{x},\\
-\dot{z}&=-g_2\pd{f}{x},
+\dot{z}&=-g_2\pd{f}{x}.
 \end{cases}
 \end{equation}
-where we can then define a folded singularity if $ g_1(p_*,\lambda,0)\pd{}{y}f(p_*,\lambda,0)+g_2(p_*,\lambda,0)\pd{}{z}f(p_*,\lambda,0)=0 $, for our flow on branches ($ S $) \citep{MMO}. Next we need to consider the stability of our fold points. We do this by constructing the Jacobian of our system, 
+From here we can then define a folded singularity if $ g_1(p_*,\lambda,0)\pd{}{y}f(p_*,\lambda,0)+g_2(p_*,\lambda,0)\pd{}{z}f(p_*,\lambda,0)=0 $, for our flow on branches ($ S $) \citep{MMO}. Next we need to consider the stability of our fold points. We do this by constructing the Jacobian of our system, 
 \begin{equation}
 J=\begin{bmatrix}
 \pd{\dot{x}}{x}&\pd{\dot{x}}{y}&\pd{\dot{x}}{z}\\

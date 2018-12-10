@@ -202,23 +202,23 @@ which clearly has three zero eigenvalues and one non-zero eigenvalue $\lambda=\p
 \subsection{Effect of the Canard Point}\label{sec:effect-of-the-canard-point}
 Now that we have shown that there must exist a flow around our fold point we should now consider the global effect of the canard point. We can see by considering the  system of Equations \ref{canard: system of equations} that our equilibriums are at $ (x,y)=(\lambda,\lambda^2[\frac{1-\lambda}{3}]) $ and find the eigenvalues from the matrix, 
 \begin{equation}
-A-\mu I=\begin{bmatrix}
-2x-x^2-\mu&-1&0&0\\
-\epsilon&-\mu&x-\lambda&-\epsilon\\
-0&0&-\mu&0\\
-0&0&0&-\mu
-\end{bmatrix}=\mu^2(\mu^2+\mu(x^2-2x)+\epsilon).
+A-\sigma I=\begin{bmatrix}
+2x-x^2-\sigma&-1&0&0\\
+\epsilon&-\sigma&x-\lambda&-\epsilon\\
+0&0&-\sigma&0\\
+0&0&0&-\sigma
+\end{bmatrix}=\sigma^2(\sigma^2+\sigma(x^2-2x)+\epsilon).
 \end{equation}
 %\begin{equation}
-%A-\mu I=\begin{bmatrix}
-%2\lambda-\lambda^2-\mu&-1&0&0\\
-%\epsilon&-\mu&0&-\epsilon\\
-%0&0&-\mu&0\\
-%0&0&0&-\mu
+%A-\sigma I=\begin{bmatrix}
+%2\lambda-\lambda^2-\sigma&-1&0&0\\
+%\epsilon&-\sigma&0&-\epsilon\\
+%0&0&-\sigma&0\\
+%0&0&0&-\sigma
 %\end{bmatrix}.
 %\end{equation}
-%\textbf{Then our eigenvalues are, $ \mu=(2-x)x \ \text{and} \ \mu=0 $, noting that we have an upper triangular matrix. Then we can note that we have a complex eignevalue which causes a Hopf bifurcation, as shown below:}%wrong maths
-From this we are about to find the eigenvalues of the system, $ \mu=0 $ and $ \mu=\frac{2x-x^2\pm\sqrt{(x^2-2x)^2-4\epsilon}}{2} $. Then we consider the values at our equilibrium, $ x=\lambda $, to find that we have a Hopf Bifurcation when $ 4\epsilon>(x^2-2x)^2 $ or when $ \lambda=2 \ \text{or} \ 0 $. This then leads to the following trajectories within the flow - Figure \ref{fig: 4 canard }.
+%\textbf{Then our eigenvalues are, $ \sigma=(2-x)x \ \text{and} \ \sigma=0 $, noting that we have an upper triangular matrix. Then we can note that we have a complex eignevalue which causes a Hopf bifurcation, as shown below:}%wrong maths
+From this we are about to find the eigenvalues of the system, $ \sigma=0 $ and $ \sigma=\frac{2x-x^2\pm\sqrt{(x^2-2x)^2-4\epsilon}}{2} $. Then we consider the values at our equilibrium, $ x=\lambda $, to find that we have a Hopf Bifurcation when $ 4\epsilon>(x^2-2x)^2 $ or when $ \lambda=2 \ \text{or} \ 0 $. This then leads to the following trajectories within the flow - Figure \ref{fig: 4 canard }.
 
 \begin{figure}[h!]
 	\centering
