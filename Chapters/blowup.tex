@@ -398,7 +398,22 @@ We now have an expression for each of the out variables in terms of the initial 
 
 %+++Add glue, phase portrait on $S^2$.+++\\
 
-Now if we combine the above three Sections \ref{sec: VDP K2}-\ref{sec:dynamics-in-texorpdfstringk3k3}, we have now modelled the flow across all of the points in the \vdp system, including at our non-hyperbolic fold point. As a result Figure \ref{fig: vdp flow diagram}
+
+\subsection{The Full Solution}
+The analysis of the three charts, discussed in the Sections \ref{sec: VDP K2}-\ref{sec:dynamics-in-texorpdfstringk3k3}, provided a descripition of the dynamics on each of the charts, as well as theory to conclude the persistence of the dynamics in the full system.
+The special trajectory $\gamma$ has been traced through all charts and in chart 1 it has been linked to the slow flow of $S^a$, while in chart 3 the connection to the fast flow has been made. Therefore, the fold point is indeed a jump point, or transition point, which connects the slow and fast dynamic.
+These transition points can also be seen in the case of singular canards, which are treated in the following section.
+The remaining issue is the transition of this special trajectory through the charts in order to have a solution of the full system. 
+This is equivalent to finding the transition map $\pi$ from Theorem \ref{transition map theorem}.
+Let $\Pi: \Sigma^{in}_1 \to \Sigma^{out}_3$ be the full transition map of the Blow-Up Transformation. Then it satisfies
+\begin{align*}
+\Pi := \Pi_3 \circ \kappa_{23} \circ \Pi_2 \circ \kappa_{12} \circ \Pi_1,
+\end{align*}
+where $\kappa$ is the change of coordinates defined in Lemma \ref{coord. change} and $\Pi_1, \Pi_2, \Pi_3$ are the transition maps in each chart.
+Finally, reversing the blow up transformation gives the full transition map $\pi$ and therefore there exists a trajectory $\gamma$ in the blow down vector field connecting slow and fast flow.
+With this analysis at hand we are now able to describe the full dynamics of the Van der Pol system when $\epsilon>0$ by analysing the singular limit $\epsilon \to 0$. 
+
+The full result is visualised in Figure \ref{fig: vdp flow diagram}.
 \begin{figure}[h!]\centering
 		\begin{subfigure}[t]{0.45\textwidth}
 			\centering
@@ -427,4 +442,28 @@ Now if we combine the above three Sections \ref{sec: VDP K2}-\ref{sec:dynamics-i
 	\caption{Flow on the \vdp system.}
 	\label{fig: vdp flow diagram e}
 \end{figure}
-describes the nature in which our trajectories flow across the system where we can see a jump at the fold point, as we deduced from our charts. This now can be extended to a Canard Point, which we will move onto next. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,17 +4,53 @@
 	\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$.}
 	\label{fig: Canard Point}
 \end{figure}
-During this section we will be considering a canard point. This is when our fold point is shifted along the manifold - Figure \ref{fig: Canard Point}. To adequately explain the effect that the canard point will have on our system we will first define the following conditions,
+
+
+
+Considering the Van der Pol System as before:
+\begin{equation}
+\begin{aligned}
+&x'=-y+x^2-\dfrac{x^3}{3},\\
+&y'=\epsilon(x-1),\\
+\end{aligned}
+\tag{\ref{eq: Fast System}}
+\end{equation}
+we notice that the equilibrium of the system depends on the two nullclines $ x'=0$ and $y'=0$. These are in the shape of a cubic funcion and in the shape of a vertical line at $x=1$. 
+The idea in this section is to replace the nullcline $x=1$ by $x = \lambda$. This can be seen as shifting the equilibrium of the system along the critical manifold $S$ by varying the parameter $\lambda$.
+This gives rise to a generalised Van der Pol system:
+\begin{equation}
+\begin{aligned}
+&x'=-y+x^2-\dfrac{x^3}{3},\\
+&y'=\epsilon(x-\lambda).\\
+\end{aligned}
+\label{eq: canard system}
+\end{equation}
+In this section, the dynamics in system \ref{eq: canard system} is analysed. In order to do so, we need the definition of a canard.
+\begin{definition}{\textbf{ Canard}}[\citealp{Kuehn}]
+A trajectory of a fast-slow system is called a canard if it stays within $O(\epsilon)$ close to the repelling branch $S^r$ of the slow manifold $S$, for some time of $O(1)$ on the slow time scale $\tau = \epsilon t$.
+\end{definition}
+Furthermore, the following definition turns out to be useful as well:
+\begin{definition}{\textbf{Maximal Canard}}[\citealp{Kuehn}]
+If the equilibrium coincides with a fold point of a fast-slow system, that is, at the intersection of $S^a$ and $S^r$,the trajectory passing through this point is called a maximal canard. 
+\end{definition}
+The intuition of the canard problem close to a fold point is given in Figure \ref{fig: Canard Point}.
+
+Equivalently to the analysis of the fold point in Section \ref{sec:the-van-der-pol-equation}, some nondegeneracy conditions are defined.
+These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$.
+The nondegeneracy and transversality conditions for the canard case are:
 \begin{equation}
 f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing condition}
 \end{equation}
 \begin{equation}
 \begin{aligned}
 &\pd{^2}{x^2}f(0,0,0,0)\neq 0, \ \pd{}{y}f(0,0,0,0)\neq 0,\\
-&\pd{}{x}g(0,0,0,0)\neq 0, \ \pd{}{\lambda}g(0,0,0,0)\neq 0 \label{eq: canard non-d condition}
+&\pd{}{x}g(0,0,0,0)\neq 0, \ \pd{}{\lambda}g(0,0,0,0)\neq 0. \label{eq: canard non-d condition}
 \end{aligned}
 \end{equation}
-for singularity and non-degeneracy respectively \citep{krupa2001}. Now that the conditions have been defined we can continue onto the \vdp system,
+ \citep{krupa2001}. 
+
+
+Now that the conditions have been defined we can continue onto the \vdp system,
 \begin{equation}
 \begin{aligned}
 &x'=-y+x^2-\dfrac{x^3}{3},\\
