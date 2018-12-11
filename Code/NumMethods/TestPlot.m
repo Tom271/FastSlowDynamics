@@ -1,5 +1,5 @@
 close all; clear all;
-epsilon=0.001;
+epsilon=0.000001;
 initialData=[1,1];
 h=0.01;
 

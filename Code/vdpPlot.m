@@ -4,7 +4,7 @@ function vdpPlot= vdpPlot(epsilon,lambda,tSpan,initialValue,xyPlot,tPlot)
 % tSpan] from the point initialValue in the x-y plane.
 close all
     assert(epsilon>=0, 'm must be greater than zero')
-    tolerance=1/10;
+    tolerance=1;
     if(epsilon<tolerance)
         [t,x]=ode15s(@(t,x) vdp(t,x,epsilon,lambda),[0 tSpan],initialValue);
     end
@@ -76,6 +76,7 @@ close all
     end
     
 end
+
 function vdp =vdp(t,x,epsilon,lambda)
     vdp=[-x(2)-x(1).^3/3+x(1).^2;epsilon*(-lambda+x(1))];
 end 
