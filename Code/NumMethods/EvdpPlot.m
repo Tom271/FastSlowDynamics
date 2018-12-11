@@ -19,12 +19,15 @@ function [t,x]= EvdpPlot(epsilon,nu,a,b,c,tSpan,initialValue)
     zlabel('z')
     
     [X,Z]=meshgrid(-1:0.01:0.4,-0.08:0.001:0.04);
-	s=surf(X,X.^3-X.^2,Z);
+	s=surf(X,X.^3+X.^2,Z);
     s.EdgeColor='none';
     s.FaceColor='c';
     s.FaceAlpha=0.25;
     plot(X,X.^3-X.^2,'k','LineWidth',10)
-
+    xlim([-1,0.4])
+    ylim([-0.01, 0.21])
+    zlim([-0.08,0.04])
+    
 end
     
     
