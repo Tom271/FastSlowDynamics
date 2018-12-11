@@ -6,10 +6,11 @@ function [z,t]=modEuler(func,z_0,T_0,h,tSpan)
     assert(tSpan>=0 & h>0);
     
     t=T_0:h:(T_0+tSpan);
-    z=zeros(size(t));
-    z(1)=z_0;
+    z=zeros(length(z_0),length(t));
+    z(:,1)=z_0;
     
-    for i=1:(length(z)-1)
-        z(i+1)=z(i)+h*(func(z(i)+(1/2)*func(z(i))));
+    for i=1:(length(t)-1)
+        z(:,i+1)=z(:,i)+h*func(t(i), (z(:,i)+(h/2).*func(t(i),z(:,i))) );
     end
+end
     
