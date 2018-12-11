@@ -30,13 +30,13 @@ In this section, the dynamics in system \ref{eq: canard system} is analysed. In 
 A trajectory of a fast-slow system is called a canard if it stays within $O(\epsilon)$ close to the repelling branch $S^r$ of the slow manifold $S$, for some time of $O(1)$ on the slow time scale $\tau = \epsilon t$.
 \end{definition}
 Furthermore, the following definition turns out to be useful as well:
-\begin{definition}{\textbf{Maximal Canard}}[\citealp{Kuehn}]
-If the equilibrium coincides with a fold point of a fast-slow system, that is, at the intersection of $S^a$ and $S^r$,the trajectory passing through this point is called a maximal canard. 
+\begin{definition}{\textbf{Maximal Canard}}[\citealp{Kuehn}] \label{maxcanard}
+The trajectory passing through the intersection of $S^a$ and $S^r$ is called a maximal canard. 
 \end{definition}
 The intuition of the canard problem close to a fold point is given in Figure \ref{fig: Canard Point}.
 
 Equivalently to the analysis of the fold point in Section \ref{sec:the-van-der-pol-equation}, some nondegeneracy conditions are defined.
-These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$.
+These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$. The fact that $g_x(0,0,0) \neq 0$ guarantees the existence of transversal intersection of the two nullclines, which is crucial in order to conclude persistence of the dynamics later on \citep{kuehn}. ++ $g_\lambda$ gives nonzero speed condition (why is that a condition?)+++
 The nondegeneracy and transversality conditions for the canard case are:
 \begin{equation}
 f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing condition}
@@ -50,17 +50,7 @@ f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing con
  \citep{krupa2001}. 
 
 
-Now that the conditions have been defined we can continue onto the \vdp system,
-\begin{equation}
-\begin{aligned}
-&x'=-y+x^2-\dfrac{x^3}{3},\\
-&y'=\epsilon(x-1),\\
-&\epsilon'=0.\\
-% &\lambda'=0,\\
-\end{aligned}
-\tag{\ref{eq: Fast System}}
-\end{equation}
-Now we need to consider Equation \ref{eq: Fast System} in terms our our cananrd system. To do this we rewrite our system with an extra parameter $\lambda$, where $\lambda$ is our perturbation of our fold point \citep{krupa2001}. \citet{krupa2001} discusses generally how we should continue with computing our canard system. If we apply his theory to the \vdp system we find,
+Now that these conditions have been defined we can consider, equivalent to the argument in Section \ref{sec: extended sys blowup}, the extended \vdp system,
 \begin{equation}
 \begin{aligned}
 &x'=-y+x^2-\dfrac{x^3}{3},\\
@@ -70,64 +60,145 @@ Now we need to consider Equation \ref{eq: Fast System} in terms our our cananrd 
 \end{aligned}
 \label{eq: canard system}
 \end{equation}
-where the change in $\epsilon$ and $\lambda$ are constant. Now, for the remainder of the section, we follow the method of \citet{krupa2001} for the canard system. If we start by rewriting our canard system into the canonical forms we find,
-\begin{subequations}
-	\begin{align}
-		&x'=-yh_1(x,y,\epsilon,\lambda)+x^2h_2(x,y,\epsilon,\lambda),\\
-		&y'=\epsilon(xh_4(x,y,\epsilon,\lambda)-\lambda h_6(x,y,\epsilon,\lambda)),
-	\end{align}
-\end{subequations}
-Where we note that $h_j(x,y,\epsilon,\lambda)=1+O(x,y,\epsilon,\lambda)$ for $j=1,2,4,5$ and $h_3(x,y,\epsilon,\lambda)=O(x,y,\epsilon,\lambda)$. However, we should note that for the \vdp system our only term that is not solely of leading order is $h_2(x,y,\epsilon,\lambda)=1-\frac{x}{3}$. Now we are able to choose such a $\lambda>0$ that produces an equilibrium on our repelling branch $S_r$ for the reduced flow. By doing this we are then able to define the following conditions for our reduced flow on $h_j$,
-\begin{subequations}
-		\begin{align}
-		&a_3=\pd{}{x}h_2(0,0,0,0)=-\frac{1}{3},\\
-		&A=-a_2+3a_3-(2a_4+2a_5)=-1,
-		\end{align}
-\end{subequations}
-where we notice that our other solutions for $a_i=0$ for $i=1,2,4,5$ are trivial. The reason that we consider the constant $A$ is because we will find that this constant is crucial in our canard point analysis iff $A\neq 0$ \citep{krupa2001}. Following this \citet{krupa2001} discuss the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where our two branches $S_r$ and $S_a$ must connect in a smooth fashion. Now from Theorem \ref{Theorem 3.1} we know that we must have a transition map at our critical point,
-\begin{equation}
-\lambda_c(\sqrt{\epsilon})=-\epsilon\left(\frac{a_1+a_5}{2}+\frac{A}{8}\right)+O(\epsilon^\frac{3}{2}),
+where the change in $\epsilon$ and $\lambda$ are constant. 
+Now, for the remainder of the section, we apply the method of \citet{krupa2001} to the Van der Pol System. The canonical form for the Canard System is:
+\begin{equation} \label{canardysy2var}
+	\begin{aligned}
+		x'&=-yh_1(x,y,\epsilon,\lambda)+x^2h_2(x,y,\epsilon,\lambda) + \epsilon h_3(x,y,\lambda,\epsilon)\\
+                        &= -y + x^2 \left( 1- \frac{x}{3} \right),\\
+		y'&=\epsilon(xh_4(x,y,\epsilon,\lambda)-\lambda h_5(x,y,\epsilon,\lambda) + y h_6(x,y,\lambda,\epsilon)) \\
+                        &= \epsilon( x- \lambda).
+	\end{aligned}
 \end{equation}
-which can be written as $\lambda_c(\sqrt{\epsilon})=\frac{\epsilon}{8}+O(\epsilon^\frac{3}{2})$ for the \vdp system \citep{krupa2001}. Consider Canard cycles and center manifolds / Freddy Dumortier, Robert Roussarie. for more details on canards in \vdp.
+It follows that $h_1 = 1$, $h_2 = 1-\frac{x}{3}$, $h_3=0$, $h_4 =1$, $h_5=1$ and $h_6=0$.
+It is possible to find a $\lambda>0$, for which an equilibrium on the repelling branch $S_r$ exists for the reduced dynamics.
+The following definition can be made in order to simplify the following computations:
+
+\begin{align*}
+a_1=\pd{}{x}h_3(0,0,0,0)=& 0 \ \ \
+a_2=\pd{}{x}h_1(0,0,0,0)= 0\ \ \ 
+a_3=\pd{}{x}h_2(0,0,0,0)=-\frac{1}{3}\\
+a_4&=\pd{}{x}h_4(0,0,0,0)=0\ \ \
+a_5=h_6(0,0,0,0)=0.
+\end{align*}
+Furthermore, we can define the quantity:
+\begin{align*}
+A=-a_2+3a_3-(2a_4+2a_5)=-1,
+\end{align*}
+which is important in the following analysis, in particular for $A \neq 0$ \citep{krupa2001}. 
+Similar to the procedure in Section \ref{sec: VDP Blowup}, sections of the dynamical system can be defined, in order to monitor the in- and outgoing trajectories. In this case we are interested in two sections of the neighbourhood $U$, defined as in Section \ref{sec: VDP Blowup}, that monitor $S^a$ and $S^r$ close to the fold point.
+Let $ \Delta_a = \{ (x,\rho^2), x \in  I_a \}$ and $\Delta_r= \{ (x,\rho^2), x \in  I_r \}$, where $I_a,I_r$ are intervals on the real line and $\rho$ is sufficiently small.
+Futhermore, define $q_a$ to be the point on $\Delta_a$ that belongs to the attracting branch $S^a$, while $q_r$ is equivalently defined as the point on $\Delta_r$ that corresponds to $S^r$.
+Finally, we are in the position to define the transition map $\pi: \Delta^a \to \Delta^r$, compare to Section \ref{sec: VDP Blowup}.
+
+Following this, \citet{krupa2001} discuss the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where the two branches $S_r$ and $S_a$ must connect in a smooth fashion.  
+The transition map $\pi$ has to map the point $q_a$ to $q_r$, if the branches are connected, and the trajectory passing through the fold point is called the maximal canard, see Definition \ref{maxcanard}
+The following theorem describes the technical details involved, and some of the results are derived by the following analysis.
+\begin{theorem}[\cite{krupa2001}]
+	Assume that system (3.1) satisfies the defining non-degeneracy conditions (Equations \ref{eq: canard sing condition} and \ref{eq: canard non-d condition}) of a canard point. Assume that the solution $ x_0(t) $ of the reduced problem connects $ S_a $ to $ S_r $. Then there exists $ \epsilon_0 > 0 $ and a smooth function $\lambda_c(\sqrt{\epsilon})$ defined on $ [0, \epsilon_0] $ such that for $\epsilon \in (0, \epsilon_0)$ the following assertions hold:
+	\begin{itemize}
+		\item $ \pi(q_{a,\epsilon})=q_{r,\epsilon} $ iff $ \lambda=\lambda_c(\sqrt{\epsilon}) $.\\
+		\item The function $ \lambda_c $ has the expansion
+		 \begin{equation*}
+			\lambda_c(\sqrt{\epsilon})=-\epsilon(\frac{a_1+a_5}{2}+\frac{A}{8})+O(\epsilon^\frac{3}{2}).
+			\end{equation*}
+			\item The transition map $\pi$ is defined only for $\lambda$ in an interval around $ \lambda_c(\sqrt{\epsilon}) $ of width $ O(\exp(-\frac{c}{\epsilon})) $ fo some $ c>0 $.
+			$$ \pd{}{\lambda}(\pi(q_{a,\epsilon})-q_{r,\epsilon})|_{\lambda=\lambda_c(\sqrt{\epsilon})}>0  $$
+		
+	\end{itemize}
+\label{Theorem 3.1}
+\end{theorem}
+Consider Canard cycles and center manifolds / Freddy Dumortier, Robert Roussarie. for more details on canards in \vdp. ++++++Kieran, what do you mean here+++++
+
+
 
 
 \subsection{Canard Blow-up}
-Now similarly to Section \ref{sec: VDP Blowup} we consider various transformations of our coordinate system to be able to consider the non-hyperbolic equilibrium induced by our canard point. However, as we would expect with our new system we should consider a new set of transformations \citep{krupa2001}.
+Now similarly to Section \ref{sec: VDP Blowup}, we consider a transformations of the coordinate system in order to analyse the dynamics in the neighbourhood of the non-hyperbolic equilibrium induced by the canard point (++++++ is the eq. induced by lambda??++++). The transformations are taken from \citep{krupa2001} and are:
 \begin{equation}
-x=\bar{r}\bar{x}, \ y=\bar{r}^2y, \ \epsilon=\bar{r}^2\bar{\epsilon}, \ \lambda=\bar{r}\bar{\lambda}
+x=\bar{r}\bar{x}, \ y=\bar{r}^2y, \ \epsilon=\bar{r}^2\bar{\epsilon}, \ \lambda=\bar{r}\bar{\lambda}.
 \end{equation}
-Now that we have established these transformation we can then define our transformations for $K_1$ and $K_2$ but it is not necessary to consider the third chart ($K_3$). This is because we find that the attracting slow manifold connects to the repelling slow manifold. As a result of this we find that our flow will `bend back' from $K_2$ into $K_1$ instead of flowing out into the fast flow, which is described by $K_3$. This concept can be described by the Figure \ref{fig: flow in canard},
+Now that we have established these transformation, the charts $K_1$ and $K_2$ can be introduced,  but it is not necessary to consider the third chart, $K_3$. Since the attracting slow manifold connects to the repelling slow manifold, the flow will `bend back' from $K_2$ into $K_1$ instead of leaving the neighbourhood $U$ in the direction of the fast flow, which was described by $K_3$ in Section \ref{sec: VDP Blowup}. 
+This pheonomenon can be observed in Figure \ref{fig: flow in canard}, where the trajectory stays close to $S^r$ after passing the fold point.
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=8cm, height=6cm]{Images/vdPhopf-Moment-bendback}
 	\caption{The \vdp system for the canard case.}
 	\label{fig: flow in canard}
 \end{figure}\newpage
-where we can clearly see that our flow need not enter chart $ K_3 $ as it `bends back' on itself in the chart $ K_2 $ - see Section \ref{sec:matlab-stuff} for a discussion on why $ \epsilon\neq0 $. Since we have established why we need only consider two charts we can our transformations,
+Again, equivalently to the procedure in Section \ref{sec: VDP Blowup}, we can define the coordinate transformation for the charts. Note, that in contrast to the generic Blow-Up in Section \ref{sec: VDP Blowup}, the coordinate system is now in $\mathbf{R}^4$, and not in $\mathbf{R}^3$. In chart $K_1$, $y_1=1$, while in $K_2$, $\epsilon_1=1$ and then:
 \begin{subequations}
 	\begin{align}
 	&x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \label{eq: coordiante K1}\\ 
-	&x=r_2x_2, \ y=r_2^2y_2, \ \epsilon=r^2_2, \ \lambda=r_2\lambda_2 \label{eq: coordinate K2}
+	&x=r_2x_2, \ y=r_2^2y_2, \ \epsilon=r^2_2, \ \lambda=r_2\lambda_2 \label{eq: coordinate K2}.
 	\end{align}
 \end{subequations}
-Since these transformations have been defined we should consider our charts. We will first consider chart 2, for analogous reasoning to Section \ref{sec: VDP K_2}. 
+Furthermore, we can define the coordinate change between the two charts as follows:
+\begin{lemma}
+Let $\kappa_{12}$ denote the change of coordinates from $K_1$ to $K_2$. Then $\kappa_{12}$ is given by
+\begin{align*}
+x_2 = x_1 \epsilon_1^{-1/2}, \ \ \ y_2 = \epsilon_1^{-1}, \ \ \ r_2 = r_1 \epsilon_1^{1/2}, \ \ \ \lambda_2 = \epsilon_1^{-1/2} \lambda_1,
+\end{align*}
+for $\epsilon_1 >0$.
+Similarly $\kappa_{21}=\kappa_{12}^{-1}$ is given by
+\begin{align*}
+x_1 = x_2 y_2 ^{-1/2}, \ \ \ r_1 = r_2 y_2 ^{1/2}, \ \ \ \epsilon_1 = y_2^{-1}, \ \ \ \lambda_1 = \lambda_2 y_2^{-1/2},
+\end{align*}
+for $y_2 >0$.
+\end{lemma}
+
+We are now in the position to begin with the analysis in the charts, and will first consider chart $K_2$, since, as in Section \ref{sec: VDP Blowup}, $K_2$ holds the most information. 
 
 \subsubsection{Dynamics in \texorpdfstring{$K_2$}{K2}}
-We start by noting that we are considering our invariant plane at $r_2=0$ which will significantly simplify our system for $K_2$. Further we should note that we are taking a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, as well as in our coordinates. Then if we substitute our time transformation and Equation  \ref{eq: coordinate K2} into our system of Equations \ref{eq: canard system} we find, 
-\begin{subequations}
-	\begin{align}
-	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2h_1+r^2_2x^2_2h_2,\notag\\
-	\implies x'_2&=-y_2+x_2^2-r_2G_2(x_2,y_2),\\
-	%     \end{aligned}
-	% \end{equation*}
-	% \begin{equation}
-	%     \begin{aligned}
-	r^3_2y_2'-3r_2^2y_2r_2'&=r^2_2(r_2x_2h_4-r_2\lambda_2h_5),\notag\\
-	\implies y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2), \label{eq: K2 y trans}
-	\end{align}
-	\label{eq: reduced canard k2}
-\end{subequations}
-where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$. We should also recall that $r_2'=\lambda_2'=0$. Notice that we have included an additional term in Equation \ref{eq: K2 y trans} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$ which we can easily verify \citep{krupa2001} using the following equations,
+The transformations \ref{eq: coordinate K2}, as well as a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, is applied to system (\ref{canardysy2var}), which results in 
+\begin{align*}
+	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2+r^2_2x^2_2\left( 1 - \frac{x}{2} \right),\notag\\
+	r^3_2y_2'-3r_2^2y_2r_2'&=r^2_2(r_2x_2-r_2\lambda_2).\notag\\
+\end{align*}
+Since $r'=0, \lambda'=0$, from the extended system, the resulting system is:
+\begin{align}
+ x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\\
+y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2)= x_2-\lambda_2. %\label{eq: K2 y trans}
+\label{eq: reduced canard k2}
+\end{align}
+Then, in vector form  $G(x_2,y_2)$ is defined in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. This quantity will become relevant at a later point, when the Melnikov computation is considered.
+ \citet{krupa2001} discusses that for $r_2=\lambda_2=0$ the system is integrable.
+The system (\ref{eq: reduced canard k2}) reduces to:
+\begin{align*}
+x_2' &= -y_2 +x_2^2 \\
+y_2' &= x_2.
+\end{align*}
+Since this system is integrable, a constant of motion $H$ can be found in the following way.
+Firstly, expand each of the equations by the factor $e^{2y_2}e^{-2_2}=1$, and define parts of the equations as partial derivatives of $H$, which results in:
+\begin{align*}
+x_2' &=e^{2y_2}e^{-2y_2}( -y_2 +x_2^2 ) =e^{2y_2}\pd{H}{y_2}(x_2,y_2) \\
+y_2' &= - e^{2y_2}e^{-2y_2}(-  x_2)=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
+\end{align*}
+Then, the partial derivatives in $H$ are integrated as follows:
+\begin{align*}
+&\pd{H}{x_2}(x_2,y_2) = -e^{-2y_2} x_2 \\
+&\Rightarrow H(x_2,y_2) = \int -e^{-2y_2} x_2 dx\\
+&\Rightarrow H(x_2,y_2) = - \frac{1}{2} x^2 e^{-2y_2} + C(y),
+\end{align*}
+where $C(y)$ is the constant of integration, which could depend on $y$.
+Then, by taking the derivative with respect to $y$ and setting it equal to the expression $\pd{H}{y_2}(x_2,y_2)=e^{-2y_2}( -y_2 +x_2^2 )$, defined above, we can find the value for $C(y)$ as follows: 
+\begin{align*}
+\pd{H}{y_2}(x_2,y_2)&= x^2 e^{-2y_2} + C'(y)\\
+&= e^{-2y_2}( -y_2 +x_2^2 )\\
+\Rightarrow C'(y) &= - y_2 e^{-2y_2}
+\end{align*}
+In a last step, we can integrate $C'(y)$ in order to find an explicit expression for $H$:
+\begin{align*}
+C(y) = \int - y_2 e^{-2y_2} dy = \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c,
+\end{align*}
+using integration by parts, and where $c$ is the constant of integration.
+Then, the final expression for the constant of motion is:
+\begin{align*}
+H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c\\
+&= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c.
+\end{align*}
+Note that without loss of generality $c=0$, because we are interested in the level curves of $H$, $H=h$, and therefore an additional constant just represents a shift of the level curve. Then the expression for $H$ is comparable with the result in \citet{krupa}.
+,
 \begin{subequations}
 	\begin{align}
 	x'_2&=e^{2y_2}\pd{H}{y_2}(x_2,y_2),\\
