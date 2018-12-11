@@ -38,15 +38,15 @@ close all
             plot(ones(1,length(null2y)),null2y,'--','LineWidth',1.5,'Color',1/255*[150,150,150])
             plot(x(:,1),x(:,2),'Color','r');
             hold off
-%         for j = 1:length(x(:,1))
+%         ld2(1),fold2(2),'g-s','MarkerFaceColor','g','MarkerSize',10)
+%          for j = 1:length(x(:,1))
 %             hold on
 %             title(sprintf('Epsilon= %.3f, Initial point =(%d,%d)',epsilon,initialValue))
 %             axis( [-1,3, -1,3] )
 %             quiver(quivx,quivy,dquivx,dquivy,'Color','b')
 %             plot(nullx,nully,'color','black','LineWidth',1.5)
 %             plot(fold1(1),fold1(2),'g-s','MarkerFaceColor','g','MarkerSize',10)
-%             plot(fold2(1),fold2(2),'g-s','MarkerFaceColor','g','MarkerSize',10)
-%             plot(equil(1),equil(2),'b-s','MarkerFaceColor','b','MarkerSize',10)
+%             plot(fo   plot(equil(1),equil(2),'b-s','MarkerFaceColor','b','MarkerSize',10)
 %             plot(ones(1,length(null2y)),null2y,'--','LineWidth',1.5,'Color',1/255*[150,150,150])
 %             plot(x(1:j,1),x(1:j,2),'-o','Color','r','MarkerIndices',1:(j-1):j);
 %             hold off
