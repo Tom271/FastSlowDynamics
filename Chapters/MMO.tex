@@ -12,40 +12,73 @@ The cases of MMOs considered here are MMOs associated with folded nodes as well 
 +++++++++++needs better intro.++++++++++++
 
 \subsection{ Folded Nodes}
-
+The singularity considered in this section has the form of a folded node in the reduced system.
 The normal form considered for analysing the folded node singularity is in terms of the space variables $(u,v,w)$, and given by:
 
 \begin{align*}
-\epsilon \dot{u} &= v - w^2\\
+\epsilon \dot{u} &= v - u^2\\
 \dot{v} &= w-u\\
 \dot{w} &= - \nu
 \end{align*}
 
 Then the system can be transformed using the following coordinate and time transformation:
 \begin{align*}
-x= (1+ \mu)^{1/2} u, \ \ \ y&= (1 + \mu) v, \ \ \  z = - (1+\mu)^{3/2} w \\
+u= \frac{x}{(1+ \mu)^{1/2}}, \ \ \ v &= \frac{y}{(1 + \mu)}, \ \ \  w= -\frac{z}{ (1+\mu)^{3/2}}  \\
 \tau &= \frac{\tau_1}{\sqrt{1 + \mu}},
 \end{align*}
 where $\tau_1$ is the original time variable and $\tau$ is the transformed time variable.
-Then the transformed system is:
+Then $\frac{d \tau}{d \tau_1} = \frac{1}{\sqrt{1+ \mu}}$, and the system becomes:
 \begin{align*}
 \epsilon \dot{x} &= y - x^2\\
-\dot{y} &= -(\mu +1)x - z\\
-\dot{z} &= - \frac{1}{2} \mu,
+\dot{y} &=- z -(\mu +1)x \\
+\dot{z} &= \nu (1 + \mu)^2
 \end{align*}
 where $\mu$ is the eigenvalue ratio from before.
+This is nearly in the form presented in \citet{MMO}, however, the $z$ equation there is witten purely in terms of $\mu$ as $\dot{z} = \frac{1}{2} \mu$.
+Equating these two representations yields a relationship between $\mu$ and $\nu$:
+\begin{align*}
+&\nu (1 + \mu)^2 = \frac{1}{2} \mu \\
+&\Rightarrow \nu = \frac{\mu}{ 2 (1+ \mu)^2},
+\end{align*}
+and this is equivalent to 
+\begin{align*}
+\mu = \frac{ -1 + \sqrt{1 - 8\nu}}{-1 - \sqrt{ 1- 8 \nu}},
+\end{align*}
+since $0< \mu < 1$ and $\mu \in \mathbf{R}$. (++++ unsure about reasoning+++)
 
 
 
 
 
-\begin{theorem}
-Consider system (\ref{somegenericthreedim}) with the following assumptions:
-\begin{itemize}
-\item
-\end{itemize}
+\begin{theorem}[\textbf{Width of Rotational Sectors}][\citealp{MMO}]
+Consider system (\ref{somegenericthreedim})and assume it has a folded-node singularity. At an $O(1)$ distance from the fold curve, all secondary canards are in an $O(\epsilon^{(1- \mu)/2)})$ neighbourhood of the primary strong canard. Hence, the width of the  rotational sectors $I_i, 1 \leq i \leq k$, is $O(\epsilon^{(1- \mu)/2)})$ and the width of sector $I_{k+1}$ is $O(1)$.
 \end{theorem}
 
+
+
++++++++++++Return Mechanism++++++
+
+
+\begin{theorem}[\textbf{Generic $1^{k+1}$ MMOs}][\citealp{MMO}] \label{MMOsigk1}
+Consider system (\ref{somegenericthreedim}) with the following assumptions:
+\begin{enumerate}
+\item Assume that $ 0 < \epsilon \ll 1$ is sufficiently small, $\epsilon^{1/2} \ll \mu$, and $k \in \mathbf{N}$ is such that $2k + 1 < \mu^{-1} < 2k + 3$.
+\item The critical manifold $S$ is (locally) a folded surface.
+\item The corresponding reduced problem possesses a folded-node singularity.
+\item There exists a candidate periodic orbit, which consists of fast fibres of the layer problem, a global return segment, and a segment on $S^a$ within the funnel that starts at distance $\delta$ from $\overline{\gamma_s}$ ( as measured at a distance $O(1)$ away from the fold $F$).
+\item An appropriate transversality hypotheses is satisfied.
+\end{enumerate}
+Then there exists a stable MMO with signature $1^{k+1}$.
+\end{theorem}
+
+\begin{theorem}[Stable MMOs with signature $1^i$][\citealp{MMO}]
+Suppose system (\ref{somegenericthreedim}) satisfies assumptions 1. - 4. of Theorem \ref{MMOsigk1} and, the following additional assumption:
+\begin{itemize}
+\item For $\delta = 0$, the global return point is on the singular strong canard $\overline{\gamma_s}$ and as $\delta$ passes through zero the return point crosses $\overline{\gamma_s}$ with nonzero speed.
+\end{itemize}
+Suppose now that $\delta= O(\epsilon ^{(1-\mu)/2})>0$. Then, for sufficiently small $0 < \epsilon \ll 1$ and $k \in \mathbf{N}$ such that $2k+1 < \mu^{-1} < 2k+ 3$, the following holds.
+For each $i, 1 \leq i \leq k$, there exist subsectors $\overline{I}_i \subset I_i$ with the corresponding distance intervals $(\delta_i^-, \delta_i^+)$ of widths $O(\epsilon^{(1-\mu)/2})$, which have the property that if $\delta \in (\delta_i^-, \delta_i^+)$, then there exists a stable MMO with signature $1^i$.
+\end{theorem}
 
 
 
