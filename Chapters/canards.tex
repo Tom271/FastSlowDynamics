@@ -36,7 +36,7 @@ The trajectory passing through the intersection of $S^a$ and $S^r$ is called a m
 The intuition of the canard problem close to a fold point is given in Figure \ref{fig: Canard Point}.
 
 Equivalently to the analysis of the fold point in Section \ref{sec:the-van-der-pol-equation}, some nondegeneracy conditions are defined.
-These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$. The fact that $g_x(0,0,0) \neq 0$ guarantees the existence of transversal intersection of the two nullclines, which is crucial in order to conclude persistence of the dynamics later on \citep{kuehn}. ++ $g_\lambda$ gives nonzero speed condition (why is that a condition?)+++
+These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$. The fact that $g_x(0,0,0) \neq 0$ guarantees the existence of transversal intersection of the two null clines, which is crucial in order to conclude persistence of the dynamics later on \citep{Kuehn}. ++ $g_\lambda$ gives nonzero speed condition (why is that a condition?)+++
 The nondegeneracy and transversality conditions for the canard case are:
 \begin{equation}
 f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing condition}
@@ -134,7 +134,7 @@ Again, equivalently to the procedure in Section \ref{sec: VDP Blowup}, we can de
 	\end{align}
 \end{subequations}
 Furthermore, we can define the coordinate change between the two charts as follows:
-\begin{lemma}[\citealp{krupa}]
+\begin{lemma}[\citealp{krupa2001}]
 Let $\kappa_{12}$ denote the change of coordinates from $K_1$ to $K_2$. Then $\kappa_{12}$ is given by
 \begin{align*}
 x_2 = x_1 \epsilon_1^{-1/2}, \ \ \ y_2 = \epsilon_1^{-1}, \ \ \ r_2 = r_1 \epsilon_1^{1/2}, \ \ \ \lambda_2 = \epsilon_1^{-1/2} \lambda_1,
@@ -197,7 +197,7 @@ Then, the final expression for the constant of motion is:
 H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c\\
 &= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c.
 \end{align*}
-Note that without loss of generality $c=0$, because we are interested in the level curves of $H$, $H=h$, and therefore an additional constant just represents a shift of the level curve. Then the expression for $H$ is comparable with the result in \citet{krupa}.
+Note that without loss of generality $c=0$, because we are interested in the level curves of $H$, $H=h$, and therefore an additional constant just represents a shift of the level curve. Then the expression for $H$ is comparable with the result in \citet{krupa2001}.
 ,
 \begin{subequations}
 	\begin{align}

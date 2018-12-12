@@ -17,7 +17,7 @@ Using a scaling for the time, $t = \frac{\tau}{\epsilon} $, we find that this ca
 \end{align}
 which is called the slow system.\\
 
-Here $x$ is called the fast variable, while $y$ is the slow variable. $\lambda$ is a parameter (see Section \ref{sec:canard-points}), $\epsilon$ is the time scale separation parameter and satisfies $0< \epsilon << 1$. The functions $f$ and $g$ are required to be sufficiently smooth \st we have $ C^{r+1} $ smoothness, where $ r $ is the number of dimensions present. It is generally possible to have three or more time scales, separated by additional parameters, as well as more state-space variables. \\
+Here $x$ is called the fast variable, while $y$ is the slow variable. $\lambda$ is a parameter (see Section \ref{sec:canard-points}), $\epsilon$ is the time scale separation parameter and satisfies $0< \epsilon \ll 1$. The functions $f$ and $g$ are required to be sufficiently smooth \st we have $ C^{r+1} $ smoothness, where $ r $ is the number of dimensions present. It is generally possible to have three or more time scales, separated by additional parameters, as well as more state-space variables. \\
 
 In order to analyse systems (\ref{FastS}) and (\ref{SlowS}) using Geometric Singular Pertubation Theory (GSPT), the singular limit $\epsilon \to 0$ is considered:
 
@@ -70,10 +70,10 @@ where, by definition of $S$, the points $(x,y) \in S$ are equilibria of (\ref{Fa
 	\caption{Flows in the \vdp system.}
 	\label{fig: vdp flow diagram}
 \end{figure}\newline
-where we can see that the flows will travel towards our fold point, following the relevant branches. It is worth noting that our flow does not meet the fold point exactly, although this is an `error', it does not directly effect our simulations - as is discussed in Section \ref{sec:matlab-stuff}.
+where we can see that the flows will travel towards our fold point, following the relevant branches. It is worth noting that our flow does not meet the fold point exactly, although this is an `error', it does not directly affect our simulations - as is discussed in Section \ref{app:NumSim}
 
 
-\section{Geometric Singular Pertubation Theory} \label{GSPT}
+\section{Geometric Singular Perturbation Theory} \label{GSPT}
 
 The main idea of GSPT is the following: Under certain conditions it can be concluded that the critical manifold $S=S_0$, where $\epsilon \to 0$ persists as an invariant manifold $S_{\epsilon}$ under a small pertubation $\epsilon >0$, if $\epsilon$ is sufficiently small. In higher than 2 dimensions the idea of transversality of the flow of the stable and unstable manifolds is essential for analysis, while in 2 dimensions this is rather trivial \citep{MMO}. The main contribution to GSPT comes from Fenichel Theory and his three Theorems can be summed up in one, according to \citep{MMO}.
 However, before stating the Theorem, some formal definitions are needed.
