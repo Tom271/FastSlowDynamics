@@ -1,8 +1,9 @@
 \subsection{Oscillations}\label{sec: MMO Oscilaltions} %Need this to reference the oscilatory behavious of the system
 In this section we consider Mixed Mode Oscillations (MMOs) in fast-slow systems.
+++++ add that we consider the work from the \citet{MMO} paper unless indicated otherwise
 
 \begin{definition}{Mixed Mode Oscillations}
-	+++ working on it... not good yet+++
+	+++ working on it... not good yet+++ \citet{MMO} \citet{kuehn}
 	A mixed mode oscillation is an orbit $\gamma$, which traces out small amplitude oscillations (SAOs) as well as large scale oscillations (LAOs).
 	The large and small amplitude oscillations are clearly separated in the time series and their reoccurence can be periodic.
 	The signiture of an MMO is expressed as $L_1^{s_1}L_2^{s_2}...$ expressing that $L_1$ number of LAOs are followed by $s_1$ SAOs.
@@ -12,7 +13,7 @@ The cases of MMOs considered here are MMOs associated with folded nodes as well 
 +++++++++++needs better intro.++++++++++++
 
 \subsection{ Folded Nodes}
-The singularity considered in this section has the form of a folded node in the reduced system.
+The singularity considered in this section is a folded node, which is an equilibrium of the reduced system. Note that it is only defined on $S$, the critical manifold and only for the slow flow. There is no global equilibrium, wich will become apparent in this section.
 The normal form considered for analysing the folded node singularity is in terms of the space variables $(u,v,w)$, and given by:
 
 \begin{align*}
@@ -22,17 +23,17 @@ The normal form considered for analysing the folded node singularity is in terms
 \end{align*}
 
 Then the system can be transformed using the following coordinate and time transformation:
-\begin{align*}
+\begin{align}\label{normalform1}
 u= \frac{x}{(1+ \mu)^{1/2}}, \ \ \ v &= \frac{y}{(1 + \mu)}, \ \ \  w= -\frac{z}{ (1+\mu)^{3/2}}  \\
 \tau &= \frac{\tau_1}{\sqrt{1 + \mu}},
-\end{align*}
+\end{align}
 where $\tau_1$ is the original time variable and $\tau$ is the transformed time variable.
 Then $\frac{d \tau}{d \tau_1} = \frac{1}{\sqrt{1+ \mu}}$, and the system becomes:
-\begin{align*}
+\begin{align}\label{normalform2}
 \epsilon \dot{x} &= y - x^2\\
 \dot{y} &=- z -(\mu +1)x \\
 \dot{z} &= \nu (1 + \mu)^2
-\end{align*}
+\end{align}
 where $\mu$ is the eigenvalue ratio from before.
 This is nearly in the form presented in \citet{MMO}, however, the $z$ equation there is witten purely in terms of $\mu$ as $\dot{z} = \frac{1}{2} \mu$.
 Equating these two representations yields a relationship between $\mu$ and $\nu$:
@@ -45,6 +46,66 @@ and this is equivalent to
 \mu = \frac{ -1 + \sqrt{1 - 8\nu}}{-1 - \sqrt{ 1- 8 \nu}},
 \end{align*}
 since $0< \mu < 1$ and $\mu \in \mathbf{R}$. (++++ unsure about reasoning+++)
+
+Note here that the reason that no global equilibrium exists is because \ref{normalform1} can only have an equilibrium if $\dot{w} =0$. This would imply that $\nu=0$, however, as the previous calculations have shown, $\nu$ is dependent on the eigenvalue ratio $\mu$. Since $\mu \neq 0$ for the folded node, as will be demonstrated below, $\nu$ cannot be zero.
+It is now of interest to verify the location of the folded singularity at the origin, and therefore derive the reduced system as well as the eigenvalues for the reduced problem.
+Consider equation (\ref{normalform2}) and define $\dot{x}:=f$ as before. The reduced problem, as $\epsilon \to 0$ becomes $f= y-x^2 =0$, and therefore the critical manifold is defined as $S:= \{ (x,y,z) : y=x^2\}$, which is an S shaped two dimensional plane.
+Now that $f$ is defined explicitly, we can check the nondeceneracy conditions for a folded singularity, as presented in (\ref{eq: non-degeneracy 3d system}) and get the follwing results:
+\begin{align*}
+&f(x,y,z,,\mu, \epsilon) = 0\\
+&\Rightarrow y=x^2\\
+\\
+&\frac{\partial f}{\partial x} (x,y,z,\mu,\epsilon) = 2x = 0\\
+&\Rightarrow x=0 \Rightarrow y=0 \\ 
+&\frac{\partial^2 f}{\partial x^2}(x,y,z,\mu,\epsilon)  = 2 \neq 0\\
+&D_{(y,z)}f= (1,0) \textrm{ full rank one}.
+\end{align*}
+This shows that there exists a fold line $L:=(0,0,z)$ on the slow manifold $S$.
+In order to determine at which value of $z$ the folded node singularity is located, we have to consider the reduced system of (\ref{normalform2}), where we replace $\nu (1 + \mu)^2$ with $\frac{1}{2} \mu$ for convenience. The aim is to find an equilibrium of the reduced problem, since we know from the theory discussed that the folded singularity is an equilibrium of the slow flow.
+The reduced problem is:
+\begin{align}\label{normalform2red}
+0 &= y - x^2 :=f\\
+\dot{y} &=- z -(\mu +1)x \\
+\dot{z} &=\frac{1}{2} \mu 
+\end{align}
+Therefore, the slow flow is derived, analogous to Section (I+++ i guess VDP but also after that+++). 
+First, the equation $f=0$ is considered and it is noted that we can take the derivative with respect to the time variable to get 
+\begin{align} \label{yxderivrel}
+\dot{y} = 2x \dot{x},
+\end{align}
+ and this can be rearranged to give an expression for the dynamics in $x$ on the slow manifold:
+\begin{align*}
+\dot{x}= \frac{\dot{y}}{2x},
+\end{align*}
+which is singular for $x=0$, which coinsides with the fold line.
+This expression can be desingularised by rescaling time in the whole reduced system by a factor of $2x$. This results in
+\begin{align*}
+\dot{x} = -(\mu+1)x - z\\
+\dot{y} = - 2x (\mu +1) -2xz\\
+\dot{z} = x \mu,
+\end{align*}
+however, it can be noted that the equation for $y$ can be ommited, since the change in $y$ is directly related to the change in $x$ by a factor of $2x$ as stated in equation (\ref{yxderivrel})(+++mention CMT?+++). Therefore, the reduced dynamics can be sufficiently described by
+\begin{align*}
+\dot{x} = -(\mu+1)x - z\\
+\dot{z} = x \mu.
+\end{align*}
+Now, following the theory for folded singularities, the folded node has to satisfy the condition (+++add name of the condition and generalized statement of it+++)
+\begin{align*}
+& -(\mu+1)x - z=0 |_{(0,0,z)}\\
+&\Rightarrow z=0,
+\end{align*}
+which leads to the conclusion that the folded singularity, defined on the slow manifold for $\epsilon \to 0$, is given by $(0,0,0)$, as expected.
+The next step of the analysis is to verify that the folded singularity at the origin is indeed a folded node.
+As discussed in Section \ref{sec: threedimfolds}, the classification of the singularities is determined by the eigenvalues of the reduced system. Therefore, the next step is calculating these eigenvalues.
+
+
+
+
+
+
+
+
+
 
 
 
