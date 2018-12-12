@@ -134,7 +134,7 @@ Again, equivalently to the procedure in Section \ref{sec: VDP Blowup}, we can de
 	\end{align}
 \end{subequations}
 Furthermore, we can define the coordinate change between the two charts as follows:
-\begin{lemma}[\citealp{krupa}]
+\begin{lemma}
 Let $\kappa_{12}$ denote the change of coordinates from $K_1$ to $K_2$. Then $\kappa_{12}$ is given by
 \begin{align*}
 x_2 = x_1 \epsilon_1^{-1/2}, \ \ \ y_2 = \epsilon_1^{-1}, \ \ \ r_2 = r_1 \epsilon_1^{1/2}, \ \ \ \lambda_2 = \epsilon_1^{-1/2} \lambda_1,
@@ -150,6 +150,23 @@ for $y_2 >0$.
 We are now in the position to begin with the analysis in the charts, and will first consider chart $K_2$, since, as in Section \ref{sec: VDP Blowup}, $K_2$ holds the most information. 
 
 \subsubsection{Dynamics in \texorpdfstring{$K_2$}{K2}}
+<<<<<<< HEAD
+We start by noting that we are considering our invariant plane at $r_2=0$ which will significantly simplify our system for $K_2$. Further we should note that we are taking a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, as well as in our coordinates. Then if we substitute our time transformation and Equation  \ref{eq: coordinate K2} into our system of Equations \ref{eq: canard system} we find, 
+\begin{subequations}
+	\begin{align}
+	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2h_1+r^2_2x^2_2h_2,\notag\\
+	\implies x'_2&=-y_2+x_2^2-r_2G_2(x_2,y_2),\\
+	%     \end{aligned}
+	% \end{equation*}
+	% \begin{equation}
+	%     \begin{aligned}
+	r^3_2y_2'-3r_2^2y_2r_2'&=r^2_2(r_2x_2h_4-r_2\lambda_2h_5),\notag\\
+	\implies y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2), \label{eq: K2 y trans}
+	\end{align}
+	\label{eq: reduced canard k2}
+\end{subequations}
+where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$. We should also recall that $r_2'=\lambda_2'=0$. Notice that we have included an additional term in Equation \ref{eq: K2 y trans} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$ which we can easily verify \citep{krupa2001} using the following equations,
+=======
 The transformations \ref{eq: coordinate K2}, as well as a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, is applied to system (\ref{canardysy2var}), which results in 
 \begin{align*}
 	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2+r^2_2x^2_2\left( 1 - \frac{x}{2} \right),\notag\\
@@ -199,6 +216,7 @@ H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2
 \end{align*}
 Note that without loss of generality $c=0$, because we are interested in the level curves of $H$, $H=h$, and therefore an additional constant just represents a shift of the level curve. Then the expression for $H$ is comparable with the result in \citet{krupa}.
 ,
+>>>>>>> fc965573a42105f0cc649fd2b72dfeb929fc097a
 \begin{subequations}
 	\begin{align}
 	x'_2&=e^{2y_2}\pd{H}{y_2}(x_2,y_2),\\
