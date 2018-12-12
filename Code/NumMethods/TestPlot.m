@@ -63,5 +63,5 @@ ylabel('x')
 set(gcf,'Units','inches');
 pos = get(gcf,'Position');
 set(gcf,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
-print(gcf,'C:\Users\s1415551\Documents\GitHub\FastSlowDynamics\Images\TestEqSim','-dpdf','-r0')
+print(gcf,'C:\Users\s1415551\Documents\GitHub\FastSlowDynamics\Code\NumMethods\testPlot.pdf','-dpdf','-r0')
 
