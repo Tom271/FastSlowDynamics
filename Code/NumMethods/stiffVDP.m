@@ -67,7 +67,7 @@ ylabel('x')
 subplot(2,2,4)
 hold on
 %plot(ode15t,exp(-ode15t/epsilon),'b','LineWidth',1.5)
-plot(ode15t,ode15z(:,1),'r','LineWidth',1.5)
+plot(ode15z(:,1),ode15z(:,1),'r','LineWidth',1.5)
 xlim([0, tSpan])
 title('ode15s')
 xlabel('Time')
