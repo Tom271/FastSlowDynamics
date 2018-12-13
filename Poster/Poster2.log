@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.9.18)  9 DEC 2018 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.9.18)  13 DEC 2018 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./PosterTest.tex
-(./PosterTest.tex
+**./Poster2.tex
+(./Poster2.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (c:/texlive/2017/texmf-dist/tex/latex/tikzposter/tikzposter.cls
@@ -560,7 +560,11 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 \TP@noteheight=\dimen288
 \TP@notebox=\box65
 \notelinewidth=\dimen289
- (c:/texlive/2017/texmf-dist/tex/latex/extsizes/extarticle.cls
+
+
+Package tikzposter Warning: Unknown Option 15pt. on input line 204.
+
+(c:/texlive/2017/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
 (c:/texlive/2017/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -1040,8 +1044,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks35
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) (./PosterTest.aux)
-\openout1 = `PosterTest.aux'.
+)
+
+LaTeX Warning: Unused global option(s):
+    [15pt].
+
+(./Poster2.aux
+
+LaTeX Warning: Label `FastS' multiply defined.
+
+)
+\openout1 = `Poster2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -1055,8 +1068,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
-
-ABD: EveryShipout initializing macros
+ ABD: EveryShipout initializing macros
 (c:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count149
@@ -1155,36 +1167,64 @@ Missing character: There is no = in font nullfont!
 Missing character: There is no 1 in font nullfont!
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <29.86> not available
-(Font)              size <24.88> substituted on input line 39.
+(Font)              size <24.88> substituted on input line 32.
+
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 51--51
+ [] 
+ []
 
 <Posterpic1.jpg, id=31, 843.15pt x 632.3625pt>
 File: Posterpic1.jpg Graphic file (type jpg)
  <use Posterpic1.jpg>
 Package pdftex.def Info: Posterpic1.jpg used on input line 83.
-(pdftex.def)             Requested size: 739.78717pt x 569.09206pt.
+(pdftex.def)             Requested size: 369.89359pt x 284.53156pt.
 
-<Posterpic2.jpg, id=32, 843.15pt x 632.3625pt>
+<../Code/behaviourswitch.jpg, id=32, 1927.2pt x 876.27374pt>
+File: ../Code/behaviourswitch.jpg Graphic file (type jpg)
+
+<use ../Code/behaviourswitch.jpg>
+Package pdftex.def Info: ../Code/behaviourswitch.jpg used on input line 109.
+(pdftex.def)             Requested size: 369.87704pt x 284.53154pt.
+File: Posterpic1.jpg Graphic file (type jpg)
+ <use Posterpic1.jpg>
+Package pdftex.def Info: Posterpic1.jpg used on input line 149.
+(pdftex.def)             Requested size: 369.89359pt x 284.53156pt.
+
+<Posterpic2.jpg, id=33, 843.15pt x 632.3625pt>
 File: Posterpic2.jpg Graphic file (type jpg)
  <use Posterpic2.jpg>
-Package pdftex.def Info: Posterpic2.jpg used on input line 91.
-(pdftex.def)             Requested size: 739.78717pt x 569.09206pt.
+Package pdftex.def Info: Posterpic2.jpg used on input line 158.
+(pdftex.def)             Requested size: 369.89359pt x 284.53156pt.
+File: Posterpic1.jpg Graphic file (type jpg)
+
+<use Posterpic1.jpg>
+Package pdftex.def Info: Posterpic1.jpg used on input line 183.
+(pdftex.def)             Requested size: 369.89359pt x 284.53156pt.
+File: Posterpic2.jpg Graphic file (type jpg)
+ <use Posterpic2.jpg>
+Package pdftex.def Info: Posterpic2.jpg used on input line 192.
+(pdftex.def)             Requested size: 369.89359pt x 284.53156pt.
  [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Posterpic1.jp
-g> <./Posterpic2.jpg>] (./PosterTest.aux)
+g> <../Code/behaviourswitch.jpg> <./Posterpic2.jpg>] (./Poster2.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.98pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 17945 strings out of 492995
- 380398 string characters out of 6136402
- 517408 words of memory out of 5000000
- 21057 multiletter control sequences out of 15000+600000
- 47361 words of font info for 96 fonts, out of 8000000 for 9000
+ 17953 strings out of 492995
+ 380555 string characters out of 6136402
+ 570361 words of memory out of 5000000
+ 21063 multiletter control sequences out of 15000+600000
+ 48641 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,19n,84p,822b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,21n,84p,819b,1025s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/201
 7/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-d
@@ -1193,10 +1233,10 @@ ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2017/texmf-dist/fonts
 lic/amsfonts/cm/cmr17.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb>
-Output written on PosterTest.pdf (1 page, 1497225 bytes).
+Output written on Poster2.pdf (1 page, 1642810 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
