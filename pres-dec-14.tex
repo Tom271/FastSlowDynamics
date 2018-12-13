@@ -244,7 +244,7 @@ Singularities at $x=0,x=2$.
 \end{columns}
 \end{frame}
 
-\begin{frame}{Canard Points in the \vdp}
+
 %\begin{onlyenv}<1>
 %	\begin{equation*} 
 %	\begin{cases}
@@ -264,112 +264,76 @@ Singularities at $x=0,x=2$.
 %\end{onlyenv}
 %
 %\begin{onlyenv}<3>
-	\begin{columns}
-		\column{0.5\textwidth}
-		\begin{figure}
-			\centering
-			\includemedia[width=1\linewidth,height=1\linewidth,activate=pageopen,
-			passcontext,
-			transparent,
-			addresource=vdPhopf.mp4,
-			flashvars={source=vdPhopf.mp4}
-			]{}{VPlayer.swf}
-			
-		\end{figure}
-		\column{0.5\textwidth}
-		\begin{figure}
-			\centering
-			\includemedia[width=1\linewidth,height=1\linewidth,activate=pageopen,
-			passcontext,
-			transparent,
-			addresource=vdPe001.mp4,
-			flashvars={source=vdPe001.mp4}
-			]{}{VPlayer.swf}
-			%\caption{Phase Plane of the Van der Pol Equations}
-		\end{figure}
 	
-	\end{columns}
-	\begin{equation*} 
-	\begin{cases}
-	\epsilon\frac{\dif x}{\dif \tau} &= -y + x^2 - \frac{x^3}{3}\\ 
-	\frac{\dif y}{\dif \tau}&= (-\lambda+x)
-	\end{cases}
-	\end{equation*}
-\end{frame}
 
 \begin{frame}{The Blow-up}
 \begin{columns}
-\column{0.5\textwidth}
-\begin{figure}
-    \centering
-    \includegraphics[height=5cm, width=5cm]{Blow_up.png}
-    \caption{Blow up of our fold point (Kuehn, Multiple Time Scale Dynamics)}
-\end{figure}\column{0.5\textwidth}
-
-\begin{itemize}
-
-\item The radius $r=0$
-\item Coordinate transformation
-\begin{itemize}
-    \item $x=r_ix_i, \ y=r_i^2y_i, \ \epsilon=r_i^3\epsilon_i, \ \lambda=r_i\lambda_i$\\
-\end{itemize}
-%\item Letting $r$ go to zero to describe flow on surface of blown up point $(x_1*,y_1*)$.
-\item Analysing our blow up
-\end{itemize}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[height=5cm, width=5cm]{Blow_up.png}
+		\caption{Blow up of our fold point (Kuehn, Multiple Time Scale Dynamics)}
+	\end{figure}\column{0.5\textwidth}
+	\begin{itemize}
+		
+		\item The radius $r=0$
+		\item Coordinate transformation
+		\begin{itemize}
+			\item $x=r_ix_i, \ y=r_i^2y_i, \ \epsilon=r_i^3\epsilon_i$\\
+		\end{itemize}
+		%\item Letting $r$ go to zero to describe flow on surface of blown up point $(x_1*,y_1*)$.
+		\item Analysing our blow up
+	\end{itemize}
 \end{columns}
 \end{frame}
 
 \begin{frame}{Charts Motivation}
-    \begin{columns}
-     \column{0.5\textwidth}
-    \begin{figure}
-        \centering
-	\includegraphics[height=5cm,width=6cm]{Images/canard-ball}
-        \caption{Sketch of the coordinate charts (Kuehn, Multiple Time Scale Dynamics)}
-    \end{figure}    \column{0.5\textwidth}
-        \begin{itemize}
-            \item What are charts?
-            \item Why use charts?
-            \begin{itemize}
-                \item Simplifies our singularity
-                \item Magnifies our flow 
-            \end{itemize}
-            \item Transition Maps $\Pi_1\to \Pi_2\to \Pi_1$
-        \end{itemize}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm,width=6cm]{Charts.png}
+	\caption{Sketch of the coordinate charts (Kuehn, Multiple Time Scale Dynamics)}
+\end{figure}    \column{0.5\textwidth}
+\begin{itemize}
+	\item What are charts?
+	\item Why use charts?
+	\begin{itemize}
+		\item Simplifies our singularity
+		\item Magnifies our flow 
+	\end{itemize}
+	\item Transition Maps $\Pi_1\to \Pi_2\to \Pi_3$
+\end{itemize}
 
-    \end{columns}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Dynamics on $K_2$}
 \begin{columns}
-\column{0.35\textwidth}
+\column{0.5\textwidth}
 \begin{figure}
-    \centering
-\includegraphics[height=4cm,width=5cm]{Images/pres-cancard}
-	\caption{Trajectories in the blow up (Kuehn, Multiple Time Scale Dynamics)}
-\end{figure}\column{0.65\textwidth}
+\centering
+\includegraphics[height=4cm,width=6cm]{Dynamics_in_K2.png}
+\caption{Phase portrait for $\bar{\epsilon}=0$ (Kuehn, Multiple Time Scale Dynamics)}
+
+\end{figure}\column{0.5\textwidth}
 \begin{itemize}
 \item Transformed Van der Pol equations on $ \epsilon=1$:
 \begin{equation*}
-    \begin{cases}
-        x'_2&=-y_2+x_2^2\\
-         y_2'&=x_2-\lambda_2\\
-        r'_2&=0\\
-        \lambda'_2&=0\\
-    \end{cases}
-%     G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T
+\begin{cases}
+x_2' &= x_2^2-y_2+O(r_2)\\
+y_2' &= -1+O(r_2)\\
+r'_2&=0
+\end{cases}
 \end{equation*}
 %\item $ x_2' = x_2^2-y_2$
 %\item $y_2' = -1$
 %\item $r'_2=0$
-%\item Matrix of high order terms.
-%\begin{itemize}
-%\item  $G(x_2,y_2)=(-\frac{x^2_2}{3},0)^T$
-%\end{itemize}
-\item Constant of Motion in $ K_2 $
+\item Riccati Equations.
 \begin{itemize}
-	\item $H(x_2,y_2)=\frac{1}{2}e^{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$
+	\item Asymptotic solution.
 \end{itemize}
+\item Transition map, $\Pi_2$, exists
 %\begin{itemize}
 %\item Mapping trajectories coming from K1 onto trajectories going to K3.
 %\item Trajectories follow a Riccati solution on K2.
@@ -379,72 +343,204 @@ Singularities at $x=0,x=2$.
 \end{columns}
 \end{frame}
 
-\begin{frame}{Global Solution}
+\begin{frame}{Dynamics on $K_1$ and $K_3$}
 \begin{columns}
-	\column{0.5\textwidth}
-	\begin{figure}
-		\centering
-\includegraphics[height=4cm,width=6cm]{Images/pres-cancard}
-		\caption{Trajectories in the blow up (Kuehn, Multiple Time Scale Dynamics)}
-		
-	\end{figure}\column{0.5\textwidth}
-	\begin{itemize}
-%		\item Transformed Van der Pol equations on $ \epsilon=1$:
-%		\begin{equation*}
-%		\begin{cases}
-%			r_1'&=\frac{\epsilon}{2}(r_1x_1-r_1\lambda_1), \\
-%		% \label{canard: r1}
-%		x_1'&=-1+x_1^2-\frac{x_1\epsilon_1F}{2},\\
-%		\epsilon'&=-\epsilon_1^2F,\\
-%		\lambda'_1&=-\frac{\lambda_1\epsilon_1F}{2}.
-%		\end{cases}
-%		%     G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T
-%		\end{equation*}
-%		%\item $ x_2' = x_2^2-y_2$
-%		%\item $y_2' = -1$
-%		%\item $r'_2=0$
-%		%\item Matrix of high order terms.
-%		%\begin{itemize}
-%		%\item  $G(x_2,y_2)=(-\frac{x^2_2}{3},0)^T$
-%		%\end{itemize}
-		\item Trajectories
-		\begin{itemize}
-			\item Hopf Bifurcation
-			\item Jumps
-		\end{itemize}
-		%\begin{itemize}
-		%\item Mapping trajectories coming from K1 onto trajectories going to K3.
-		%\item Trajectories follow a Riccati solution on K2.
-		
-		%\end{itemize}
-	\end{itemize}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[height=4cm,width=6cm]{charts-ball}
+\caption{The attracting branch connecting to the blow up.}
+\end{figure}\column{0.5\textwidth}
+\begin{itemize}
+\item Dynamics on $K_1$:
+% \begin{equation*}
+%     \begin{aligned}
+%         &  x_2' = x_2^2-y_2+O(r_2)\\
+%          &y_2' = -1+O(r_2)\\
+%         &r'_2=0
+%     \end{aligned}
+% \end{equation*}
+%\item $ x_2' = x_2^2-y_2$
+%\item $y_2' = -1$
+%\item $r'_2=0$
+\begin{itemize}
+\item Centre Manifold Theorem
+
+% \item Finding equilibria, eigenvalues and eigenvectors
+\end{itemize}
+% \item Existence of $\Pi$ connecting $S^a \ \text{and} \ K_2$.
+\item Dynamics in $K_3$
+\begin{itemize}
+%\item Mapping trajectories coming from K1 onto trajectories going to K3.
+%\item Trajectories follow a Riccati solution on K2.
+\item Resonance
+\end{itemize}
+\end{itemize}
 \end{columns}
 \end{frame}
 
 
 
-\begin{frame}{Effects of a Canard}
+\begin{frame}{Global Solution}
 \begin{columns}
 \column{0.5\textwidth}
 \begin{figure}
-    
-\includegraphics[height=5cm,width=7cm]{Images/Separation}
-    \caption{Separation of $ M_a $ and $ M_r $ (Kuehn, Multiple Time Scale Dynamics).}
 
-\end{figure}\column{0.4\textwidth}
+\includegraphics[height=5cm,width=7cm]{Blow_up_fold.png}
+\caption{Global dynamics of the blown up system (Kuehn, Multiple Time Scale Dynamics)}
+
+\end{figure}\column{0.5\textwidth}
 \begin{itemize}
 %\item The maps $\Pi_1, \Pi_2, \Pi_3$ can be combined into a global map $\Pi$ using the variable transformations.
-\item Hopf Bifurcation
-\item Splitting 
-
-%\begin{itemize}
-%    \item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
-%\end{itemize}
-%% \item Riccati flow at $\bar{\gamma}.$
-%\item What does $q_{out}$ do?
-%% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
+\item $\Pi$ describes the global transition of trajectories.
+\begin{itemize}
+\item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
+\end{itemize}
+% \item Riccati flow at $\bar{\gamma}.$
+\item What does $q_{out}$ do?
+% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
 \end{itemize}
 \end{columns}
+\end{frame}%
+%\begin{frame}{Dynamics on $K_2$}
+%\begin{columns}
+%\column{0.35\textwidth}
+%\begin{figure}
+%    \centering
+%\includegraphics[height=4cm,width=5cm]{Images/pres-cancard}
+%	\caption{Trajectories in the blow up (Kuehn, Multiple Time Scale Dynamics)}
+%\end{figure}\column{0.65\textwidth}
+%\begin{itemize}
+%\item Transformed Van der Pol equations on $ \epsilon=1$:
+%\begin{equation*}
+%    \begin{cases}
+%        x'_2&=-y_2+x_2^2\\
+%         y_2'&=x_2-\lambda_2\\
+%        r'_2&=0\\
+%        \lambda'_2&=0\\
+%    \end{cases}
+%%     G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T
+%\end{equation*}
+%%\item $ x_2' = x_2^2-y_2$
+%%\item $y_2' = -1$
+%%\item $r'_2=0$
+%%\item Matrix of high order terms.
+%%\begin{itemize}
+%%\item  $G(x_2,y_2)=(-\frac{x^2_2}{3},0)^T$
+%%\end{itemize}
+%\item Constant of Motion in $ K_2 $
+%\begin{itemize}
+%	\item $H(x_2,y_2)=\frac{1}{2}e^{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$
+%\end{itemize}
+%%\begin{itemize}
+%%\item Mapping trajectories coming from K1 onto trajectories going to K3.
+%%\item Trajectories follow a Riccati solution on K2.
+%
+%%\end{itemize}
+%\end{itemize}
+%\end{columns}
+%\end{frame}
+%
+%\begin{frame}{Global Solution}
+%\begin{columns}
+%	\column{0.5\textwidth}
+%	\begin{figure}
+%		\centering
+%\includegraphics[height=4cm,width=6cm]{Images/pres-cancard}
+%		\caption{Trajectories in the blow up (Kuehn, Multiple Time Scale Dynamics)}
+%		
+%	\end{figure}\column{0.5\textwidth}
+%	\begin{itemize}
+%%		\item Transformed Van der Pol equations on $ \epsilon=1$:
+%%		\begin{equation*}
+%%		\begin{cases}
+%%			r_1'&=\frac{\epsilon}{2}(r_1x_1-r_1\lambda_1), \\
+%%		% \label{canard: r1}
+%%		x_1'&=-1+x_1^2-\frac{x_1\epsilon_1F}{2},\\
+%%		\epsilon'&=-\epsilon_1^2F,\\
+%%		\lambda'_1&=-\frac{\lambda_1\epsilon_1F}{2}.
+%%		\end{cases}
+%%		%     G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^2_2}{3},0)^T
+%%		\end{equation*}
+%%		%\item $ x_2' = x_2^2-y_2$
+%%		%\item $y_2' = -1$
+%%		%\item $r'_2=0$
+%%		%\item Matrix of high order terms.
+%%		%\begin{itemize}
+%%		%\item  $G(x_2,y_2)=(-\frac{x^2_2}{3},0)^T$
+%%		%\end{itemize}
+%		\item Trajectories
+%		\begin{itemize}
+%			\item Hopf Bifurcation
+%			\item Jumps
+%		\end{itemize}
+%		%\begin{itemize}
+%		%\item Mapping trajectories coming from K1 onto trajectories going to K3.
+%		%\item Trajectories follow a Riccati solution on K2.
+%		
+%		%\end{itemize}
+%	\end{itemize}
+%\end{columns}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{Effects of a Canard}
+%\begin{columns}
+%\column{0.5\textwidth}
+%\begin{figure}
+%    
+%\includegraphics[height=5cm,width=7cm]{Images/Separation}
+%    \caption{Separation of $ M_a $ and $ M_r $ (Kuehn, Multiple Time Scale Dynamics).}
+%
+%\end{figure}\column{0.4\textwidth}
+%\begin{itemize}
+%%\item The maps $\Pi_1, \Pi_2, \Pi_3$ can be combined into a global map $\Pi$ using the variable transformations.
+%\item Hopf Bifurcation
+%\item Splitting 
+%
+%%\begin{itemize}
+%%    \item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
+%%\end{itemize}
+%%% \item Riccati flow at $\bar{\gamma}.$
+%%\item What does $q_{out}$ do?
+%%% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
+%\end{itemize}
+%\end{columns}
+%\end{frame}
+%\\
+\begin{frame}{Canard Points in the \vdp}
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\centering
+		\includemedia[width=1\linewidth,height=1\linewidth,activate=pageopen,
+		passcontext,
+		transparent,
+		addresource=vdPhopf.mp4,
+		flashvars={source=vdPhopf.mp4}
+		]{}{VPlayer.swf}
+		
+	\end{figure}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\centering
+		\includemedia[width=1\linewidth,height=1\linewidth,activate=pageopen,
+		passcontext,
+		transparent,
+		addresource=vdPe001.mp4,
+		flashvars={source=vdPe001.mp4}
+		]{}{VPlayer.swf}
+		%\caption{Phase Plane of the Van der Pol Equations}
+	\end{figure}
+	
+\end{columns}
+\begin{equation*} 
+\begin{cases}
+\epsilon\frac{\dif x}{\dif \tau} &= -y + x^2 - \frac{x^3}{3}\\ 
+\frac{\dif y}{\dif \tau}&= (-\lambda+x)
+\end{cases}
+\end{equation*}
 \end{frame}
 
 \begin{frame}{Mixed Mode Oscillations (MMO's)}
