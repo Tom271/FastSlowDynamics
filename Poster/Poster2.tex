@@ -150,24 +150,9 @@ Slow System:
 %%%%%%%%%%%%%%
 \block{~}
 {\textbf{Mixed-Mode Oscillations}\centering
+	In the planar case, canards only occure within $O(\epsilon)$ of the fold point. To get more readily observable canards, another variable is introduced.
 	
-	Fast- Slow systems are systems of differential equations that can be viewed on two different time scales, which are separated by a parameter.
-	These systems are generally of the form
-	\begin{equation*} 
-	\begin{cases}
-	x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon),\\
-	y' &= \frac{dy}{dt}= \epsilon g( x,y, \lambda, \epsilon),
-	\end{cases}\label{FastS}
-	\end{equation*}
-	which is known as the fast system.
-	Using a scaling for the time, $t = \frac{\tau}{\epsilon} $, we find that this can be rewritten as
-	\begin{align*}
-	\begin{cases}
-	\epsilon \dot{x} &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, \epsilon),\\
-	\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda, \epsilon),
-	\end{cases}\label{SlowS}
-	\end{align*}
-	which is called the slow system.
+	\begin{align*} \dot{x} = y-x^2-x^3,\qquad \dot{y} = \epsilon(z-x),\qquad\dot{z}= \epsilon(-\nu-ax-by-cz) \end{align*}
 }
 \begin{columns}
 	\column{0.5}
