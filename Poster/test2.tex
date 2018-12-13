@@ -1,0 +1,75 @@
+\documentclass[15pt, a0paper, portrait]{tikzposter}
+\usepackage[utf8]{inputenc}
+ 
+\title{Fast-Slow Dynamics}
+\author{Jonna, Kieran, Tom }
+\date{14/12/2018}
+%\institute{MIGSAA}
+ 
+\usepackage{blindtext}
+\usepackage{comment}
+\usepackage{amsmath}
+%\usepackage{proj1}
+\usetheme{Board}
+ 
+\begin{document}
+ 
+\maketitle
+ 
+\block{~}
+{
+
+Fast- Slow systems are systems of differential equations that can be viewed on two different time scales, which are separated by a parameter.
+These systems are generally of the form
+\begin{equation*} 
+\begin{cases}
+x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon),\\
+y' &= \frac{dy}{dt}= \epsilon g( x,y, \lambda, \epsilon),
+\end{cases}\label{FastS}
+\end{equation*}
+which is known as the fast system.
+Using a scaling for the time, $t = \frac{\tau}{\epsilon} $, we find that this can be rewritten as
+\begin{align*}
+\begin{cases}
+\epsilon \dot{x} &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, \epsilon),\\
+\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda, \epsilon),
+\end{cases}\label{SlowS}
+\end{align*}
+which is called the slow system.
+}
+     \block{Van der Pol System}
+\begin{tabular}{c|c}
+%    \column{0.5}
+
+%{
+	Fast System:
+\begin{equation*}\label{fastsystem}
+    \begin{cases} x'=y-\frac{x^3}{3}+x\\
+    y'=-\epsilon x,
+    \end{cases}
+\end{equation*}
+Slow System: 
+\begin{equation*}\label{slowsystem}
+    \begin{cases} \epsilon \dot{x}=y-\frac{x^3}{3}+x\\
+    \dot{y}=-x,
+    \end{cases}
+\end{equation*}
+%}
+&
+%   
+%\colorlet{blockbodybgcolor}{green!60}
+%\block{Phase Portrait: Van der Pol System}
+%{
+%\column{0.5}
+	 
+	\begin{tikzfigure}[h!]
+		\centering
+		\includegraphics[height=10cm,width=13cm]{Posterpic1.jpg}
+		%\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$.}
+		%label{fig: Canard Point}
+	\end{tikzfigure}
+%}
+\end{tabular}
+
+
+\end{document}
