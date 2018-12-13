@@ -13,7 +13,8 @@ The cases of MMOs considered here are MMOs associated with folded nodes as well 
 +++++++++++needs better intro.++++++++++++
 
 \subsection{ Folded Nodes}
-The singularity considered in this section is a folded node, which is an equilibrium of the reduced system. Note that it is only defined on $S$, the critical manifold and only for the slow flow. There is no global equilibrium, wich will become apparent in this section.
+In this section the occurence of different SAOs due to a folded node of the reduced system is discussed and conditions for a global return mechanism, which gives rise to MMOs, are presented.
+The folded node singularity is an equilibrium of the reduced system. Note that it is only defined on $S$, the critical manifold and only for the slow flow. There is no global equilibrium, wich will become apparent in this section.
 The normal form considered for analysing the folded node singularity is in terms of the space variables $(u,v,w)$, and given by:
 
 \begin{align*}
@@ -79,47 +80,77 @@ First, the equation $f=0$ is considered and it is noted that we can take the der
 \end{align*}
 which is singular for $x=0$, which coinsides with the fold line.
 This expression can be desingularised by rescaling time in the whole reduced system by a factor of $2x$. This results in
-\begin{align*}
+\begin{align} \label{fullredsysformmo}
 \dot{x} = -(\mu+1)x - z\\
 \dot{y} = - 2x (\mu +1) -2xz\\
 \dot{z} = x \mu,
-\end{align*}
+\end{align}
 however, it can be noted that the equation for $y$ can be ommited, since the change in $y$ is directly related to the change in $x$ by a factor of $2x$ as stated in equation (\ref{yxderivrel})(+++mention CMT?+++). Therefore, the reduced dynamics can be sufficiently described by
 \begin{align*}
-\dot{x} = -(\mu+1)x - z\\
-\dot{z} = x \mu.
+&\dot{x} = -(\mu+1)x - z\\
+&\dot{z} = x \mu.
 \end{align*}
 Now, following the theory for folded singularities, the folded node has to satisfy the condition (+++add name of the condition and generalized statement of it+++)
-\begin{align*}
+\begin{align}\label{twovarxzred}
 & -(\mu+1)x - z=0 |_{(0,0,z)}\\
 &\Rightarrow z=0,
-\end{align*}
+\end{align}
 which leads to the conclusion that the folded singularity, defined on the slow manifold for $\epsilon \to 0$, is given by $(0,0,0)$, as expected.
 The next step of the analysis is to verify that the folded singularity at the origin is indeed a folded node.
 As discussed in Section \ref{sec: threedimfolds}, the classification of the singularities is determined by the eigenvalues of the reduced system. Therefore, the next step is calculating these eigenvalues.
+The Jacobian of the reduced system (\ref{twovarxzred}) is
+\begin{equation}
+J=\begin{bmatrix}
+-(\mu +1) & -1 \\
+\mu & 0 \\
+\end{bmatrix},
+\end{equation}
+and therefore the characteristic equation yields
+\begin{align*}
+\sigma^2 +(\mu +1)\sigma + \mu = 0 \\
+\Rightarrow \sigma_1= -1 \textrm{\ \ \ and \ \ \ } \sigma_2 = -\mu.
+\end{align*}
+Since $\mu$ is the eigenvalue ratio and satisfies $0< \mu < 1$,we can conclude that 
+\begin{align*}
+\sigma_1\sigma_2 = (-1)(-\mu)=\mu >0,
+\end{align*}
+and therefore, by the conditions presented in Section \ref{sec: threedimfolds}, this shows that the folded singularity is in fact a folded node.
+Note that if we had tried to find the eigenvalues for the full three dimensional reduced system (\ref{fullredsysformmo}) instead, an additional eigenvalue $\sigma_3$ would have occured. This is the eigenvalue that corresponds to the loss of hyperbolicity of singularity at the folded node, which is expected to be found at a singular point.
 
+In order to analyse the folded node, the system (\ref{normalform1}) is transformed using the blow up transformation $u= \epsilon^{1/2}\overline{x}, v=\epsilon \overline{y}, w= \epsilon^{1/2} \overline{z}$ and $ \tau_1 = \epsilon^{1/2} \overline{t}$.
+Then, in a neighbourhood $U$ of the folded node the system is represented by
+\begin{align*}
+\dot{\overline{x}}= \overline{y} - \overline{x^2}\\
+\dot{\overline{y}}=\overline{z} - \overline{x} \\
+\dot{\overline{z}}= - \nu.
+\end{align*}
+In the following analysis, the bars will be omitted for readability.
+One important realisation is that the phase portraits for the rescaled system is topologically equivalent to the original normal form. Therefore, the mapping of solutions  found in the blown up system to the original system is straightforward. ++++check if true++++
 
+All the information needed to describe the dynamics near the fold point is now derived and therefore the next step in the analysis is the descripton of the SAOs. The SAOs in the folded node case are candard trajectories that follow a certain pattern.
+These patterns are, as discussed in Theorem \ref{thm: canards in R3}, found by considering the eigenvalue ratio $\mu$.
+In the case of the folded node $\mu$ satisfies $2k+1 < \mu^{-1} < 2k +3 $. Solving for $k \in \mathbf{N}$, gives the number of times the primary strong canard is twisting around the weak canard. This is equivalent to the statement that $k$ is the number of secondary canards that are present in the system. 
+++++++Insert twist definition, refer again to theorem, and then also definition of the different canard terms....++++++
 
-
-
-
-
-
-
-
-
-
-
+These SAOs are happening when trajectories get funneled into the region of the fold and contracted along the direction of $S^a$(+++++?????++++). For different values of $\epsilon$, the funnel gets narrower. For $\epsilon \to 0$, the maximum canard basically coinsides with all of them... or something like that....
+The number of SAOs an incoming trajectory undergoes depends on where the trajectory enters the fold region in the $z$ plane. Different intervals of $z$ can be defined in order to indicate for which values of $z$ a certain amount of SAOs will be observed. The intervals are not 'clear cut', and a mix can happen +++??+++
+The interval for the primary strong canard is significantly larger, so the secondary canards close to it will have a higher amplitude (? reasoning right?) while the number of SAOs is smaller. As the number of SAOs increases, the amplitude of oscillations get smaller (contraction ?) and are not readily visible.
+The result about the width of the intervals is summed up in the following theorem.
 
 \begin{theorem}[\textbf{Width of Rotational Sectors}][\citealp{MMO}]
 Consider system (\ref{somegenericthreedim})and assume it has a folded-node singularity. At an $O(1)$ distance from the fold curve, all secondary canards are in an $O(\epsilon^{(1- \mu)/2)})$ neighbourhood of the primary strong canard. Hence, the width of the  rotational sectors $I_i, 1 \leq i \leq k$, is $O(\epsilon^{(1- \mu)/2)})$ and the width of sector $I_{k+1}$ is $O(1)$.
 \end{theorem}
 
-
+++++++++++Maybe the actual pictures (2-3) would be a good idea++++++ 
 
 +++++++++++Return Mechanism++++++
-
-
+As mentioned above, there are certain criteria that a global return mechanism exists and therefore MMOs can be observed.
+There are two theorems related to this issue, which are stated below.
+The first one is rather technical, stating the existence of the global return under certain circumstances, when the trajectory is in the rotational sector $I_{k+1}$, meaning, close to the weak primary canard and the $k+1$ number of SAOs, is hard to observe. Furthermore, as mentioned above, the width of the sector is much smaller than that of the primary canard, which is why the oscillations happen with fast speed, Therefore, the logical conclusion is to investigate whether a global return mechanism exists for the other $I_i$, for $i \leq k$. The existence of these MMOs is discussed in the second Theorem in this section.
+As introduced in the beginning of Section \ref{sec:MMO},  MMOs are represented in terms of the number of large amplitude oscillations $L_1L_2...$ and the number of small amplitude oscillatons $s^1s^2...$. The signature of the MMO is represented as $L_1^{s^1}L_2^{s^2}....$.
+In the case of the folded node, under the conditions of the theorems, we have a rather straightforward signature. The first theorem states the existence of the signature $1^{k+1}$, where $L_1=1$ and $s^1=k+1$, and equivalently, the second theorem in this chapter discusses MMOs with signature $1^{i}, i<k$.
+The theorems are as follows.
+(++ $K+1$ are maximal MMO signatures++++) something about deltas too++++
 \begin{theorem}[\textbf{Generic $1^{k+1}$ MMOs}][\citealp{MMO}] \label{MMOsigk1}
 Consider system (\ref{somegenericthreedim}) with the following assumptions:
 \begin{enumerate}
@@ -132,7 +163,7 @@ Consider system (\ref{somegenericthreedim}) with the following assumptions:
 Then there exists a stable MMO with signature $1^{k+1}$.
 \end{theorem}
 
-\begin{theorem}[Stable MMOs with signature $1^i$][\citealp{MMO}]
+\begin{theorem}[\textbf{Stable MMOs with signature $1^i$}][\citealp{MMO}]
 Suppose system (\ref{somegenericthreedim}) satisfies assumptions 1. - 4. of Theorem \ref{MMOsigk1} and, the following additional assumption:
 \begin{itemize}
 \item For $\delta = 0$, the global return point is on the singular strong canard $\overline{\gamma_s}$ and as $\delta$ passes through zero the return point crosses $\overline{\gamma_s}$ with nonzero speed.
@@ -141,8 +172,8 @@ Suppose now that $\delta= O(\epsilon ^{(1-\mu)/2})>0$. Then, for sufficiently sm
 For each $i, 1 \leq i \leq k$, there exist subsectors $\overline{I}_i \subset I_i$ with the corresponding distance intervals $(\delta_i^-, \delta_i^+)$ of widths $O(\epsilon^{(1-\mu)/2})$, which have the property that if $\delta \in (\delta_i^-, \delta_i^+)$, then there exists a stable MMO with signature $1^i$.
 \end{theorem}
 
-
-
++++++++i think more talk about funnels and contractions would be good for this chapter+++++++++
+all we need is the trajectory to go back into the funnel region. then we're good :)
 
 
 
