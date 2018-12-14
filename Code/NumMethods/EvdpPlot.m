@@ -4,12 +4,14 @@ function [t,x]= EvdpPlot(epsilon,nu,a,b,c,tSpan,initialValue)
     % tSpan] from the point initialValue in the x-y plane.
     close all
     assert(epsilon>=0, 'm must be greater than zero')
-    options = odeset('Stats','on','OutputFcn',@odeplot) ;
+    options = odeset('Stats','on') ;
     tic
     [t,x]=ode15s(@(t,x) EVdP(t,x,epsilon,nu,a,b,c),tSpan,initialValue,options);
     toc
     figure(2)
+    hold on
     plot(t,x(:,1))
+    plot(t,x(:,2))
     
     figure(3)
     %subplot(2,1,2)
