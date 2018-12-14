@@ -112,11 +112,7 @@ flashvars={source=vdPe02.mp4}
         \frac{\dif y}{\dif \tau}&= (-1+x)
         \end{cases}
         \end{equation*}
-\newline
-\item Equilibrium 
-\begin{itemize}
-\item $(x_0,y_0)=(1,\frac{2}{3}) $
-\end{itemize}
+
 \end{itemize}
 \end{columns}
 \end{frame}
@@ -182,9 +178,9 @@ Reduced System:
         \end{cases}
         \end{equation*}
 \newline
-Nullcline:
+Reduced flow is restricted to:
 \begin{align*}
- &y = x^2 - \frac{x^3}{3}
+&f=0 \Rightarrow \ \ y = x^2 - \frac{x^3}{3} \ \ \ \ \ \ \
 \end{align*}
 \newline
 \newline
@@ -198,6 +194,31 @@ Fold Points:
 
 \end{columns}
 \end{frame}
+
+
+
+
+
+\begin{frame}{The Van der Pol Equations near $(x_1^*,y_1^*)$}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{PPlanecrop.png}
+\end{figure}
+\column{0.5\textwidth}
+Finding $\frac{dx}{d \tau}$ for the reduced system:
+\begin{align*}
+y&= x^2 - \frac{x^3}{3}\\
+\Rightarrow \frac{\dif y}{\dif \tau}  &= \frac{\dif y}{\dif x} \frac{\dif x}{\dif\tau}  = x(2-x)\frac{\dif x}{\dif\tau}\\
+\Rightarrow \frac{\dif x}{\dif\tau}&= \frac{\dif y}{\dif\tau}\frac{1}{(2-x)x}
+\end{align*}
+\newline
+%\vspace{0.5cm}
+Singularities at $x=0,x=2$.
+\end{columns}
+\end{frame}
+
 
 
 \begin{frame}{The Van der Pol Equations near $(x_1^*,y_1^*)$ }
@@ -222,27 +243,7 @@ Fold Point $(x_1^*,y_1^*)= (0,0) $ is non-hyperbolic.
 \end{columns}
 \end{frame}
 
-\begin{frame}{The Van der Pol Equations near $(x_1^*,y_1^*)$}
-\begin{columns}
-\column{0.5\textwidth}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{PPlanecrop.png}
-\end{figure}
-\column{0.5\textwidth}
-Fold Point $(x_1^*,y_1^*)= (0,0) $  
-\newline
-is non-hyperbolic.
-\begin{align*}
-y&= x^2 - \frac{x^3}{3}\\
-\Rightarrow \frac{\dif y}{\dif \tau}  &= \frac{\dif y}{\dif x} \frac{\dif x}{\dif\tau}  = x(2-x)\frac{\dif x}{\dif\tau}\\
-\Rightarrow \frac{\dif x}{\dif\tau}&= \frac{\dif y}{\dif\tau}\frac{1}{(2-x)x}
-\end{align*}
-\newline
-%\vspace{0.5cm}
-Singularities at $x=0,x=2$.
-\end{columns}
-\end{frame}
+
 
 
 %\begin{onlyenv}<1>
