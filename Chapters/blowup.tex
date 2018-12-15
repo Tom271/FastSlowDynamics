@@ -163,10 +163,10 @@ The transition map $\Pi_2$ has the following properties:
 This is sufficient information to now consider the dynamics on $K_1$.
 
 \subsection{Dynamics in \texorpdfstring{$K_1$}{K1}}\label{sec:dynamics-in-texorpdfstringk1k1} 
-The coordinate transformation (\ref{sys: K1}) is applied to the extended system (\ref{extended FS}), and a rescaling of time , $t_1=r_1t$, to get
+The coordinate transformation (\ref{sys: K1}) is applied to the extended system (\ref{extended FS}), 
 \begin{align*}
-\frac{d(r_1x_1)}{dt_1} \frac{dt_1}{dt} = -r_1^2 + r_1^2x_1^2 - \frac{1}{3}r_1^3x_1^3\\
-\frac{dr_1^2}{dt_1}\frac{dt_1}{dt}= 2r_1^2r_1' = r_1^3 \epsilon_1 (-1 +r_1 x_1)\\
+\frac{d(r_1x_1)}{dt_1} \frac{dt_1}{dt} = -r_1^2 + r_1^2x_1^2 - \frac{1}{3}r_1^3x_1^3,\\
+\frac{dr_1^2}{dt_1}\frac{dt_1}{dt}= 2r_1^2r_1' = r_1^3 \epsilon_1 (-1 +r_1 x_1),\\
 \frac{d(r_1^3 \epsilon_1)}{dt_1}\frac{dt_1}{dt}= (3r_1^2\epsilon_1 + r_1^3 \epsilon_1') r_1 = 0.
 \end{align*}
 Dividing through by $\frac{dt_1}{dt}=r_1$ and replacing the expressions for $\epsilon_1'$ and $r_1'$ with their expressions in terms of the variables, results in the full system in terms of $K_1$. Note that the equation for $\epsilon'$ is found by rearranging the third equation above. 
@@ -184,8 +184,7 @@ r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + O(r_1))\\
 \end{aligned}
 \end{equation}
 
-The system (\ref{K1systemfull}) has two invariant planes, that are somewhat equivalent to the notion of a nullcline. In an invariant plane, one of the parameters do not change their value and here these are $r_1=0$ and $\epsilon_1=0$.
-If we substitute $r_1=0$ or $\epsilon_1=0$ into (\ref{K1systemfull}), the $r_1$ equation, or $\epsilon_1$ equation respectively, vanishes, and there is only a two dimensional system left to consider. These two subspaces of (\ref{K1systemfull}) will be analysed below. Furthermore, the subspace where $r_1=0$ and $\epsilon_1=0$, is one dimensional, an invariant line, where the subspaces $r_1=0$ and $\epsilon_1=0$ cross.
+The system (\ref{K1systemfull}) has two invariant planes, that are somewhat equivalent to the notion of a nullcline. This tell us that the rate of change for our confidantes, $ r_1 $ and $ \epsilon_1 $ is constant for r$ _1=0 $ and $\epsilon_1=0$. If we substitute $r_1=0$ or $\epsilon_1=0$ into (\ref{K1systemfull}), the $r_1$ equation, or $\epsilon_1$ equation respectively, vanishes, and there is only a two dimensional system left to consider. These two subspaces of (\ref{K1systemfull}) will be analysed below. Furthermore, the subspace where $r_1=0$ and $\epsilon_1=0$, is one dimensional, an invariant line, where the subspaces $r_1=0$ and $\epsilon_1=0$ cross.
 The following analysis is displayed in Figure \ref{fig:k1chart}, illustrating the dynamics on $K_1$.
 %\begin{figure}[h!]
 %	\centering
@@ -207,12 +206,11 @@ Then we expect the behaviour of the flow on the two invariant planes to be influ
 Consider the plane $\epsilon_1=0$. The system (Equation \ref{K1systemfull}) becomes
 \begin{equation}
 \begin{aligned} \label{epsilon0sys}
-x_1' &= -1 +x^2 - \left( \frac{1}{3}r_1x_1^3 \right)\\
+x_1' &= -1 +x_1^2 - \left( \frac{1}{3}r_1x_1^3 \right)\\
 r_1' &= 0.
 \end{aligned}
 \end{equation}
-This system has equilibria at $x= \pm1$, for $r_1=0$, as before, however, for each constant value of $r_1$, we get a different equilibrium of the system (\ref{epsilon0sys}). This forms a curve of equlilbria, which can be recognise as $S^a_1$ connected to $p_a$ and $S^r_1$, connected to $p_r$, the left and right branches of the critical manifold, transformed into $K_1$. This is well illustrated in figure \ref{fig: chart 2 fig}. Note. apparently this follows from IFT we got stuck on this before, i cannot remember :(++++++++++
-The additional eigenvalue, corresponding to the $r_1$ equation, is $\lambda=0$. However, at each of the equilibria of this system, and specifically at $p_a$ and $p_r$ we have normal hyperbolicity, due to the coordinate transformation in $K_1$. ++ go over this. +++
+This system has equilibria at $x= \pm1$, for $r_1=0$, as before, however, for each constant value of $r_1$, we get a different equilibrium of the system (\ref{epsilon0sys}). This forms a curve of equilibria, which can be recognise as $S^a_1$ connected to $p_a$ and $S^r_1$, connected to $p_r$, the left and right branches of the critical manifold, transformed into $K_1$ - this follows from the Implicit Function Theorem. This is well illustrated in figure \ref{fig: chart 2 fig}. The additional eigenvalue, corresponding to the $r_1$ equation, is $\lambda=0$. However, at each of the equilibria of this system, and specifically at $p_a$ and $p_r$ we have normal hyperbolicity, due to the coordinate transformation in $K_1$. ++ go over this. +++
 
 Next we consider the dynamics on the invariant plane $r_1=0$.
 The system (Equation \ref{K1systemfull}) becomes: 
