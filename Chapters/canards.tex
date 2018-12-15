@@ -334,32 +334,46 @@ From this we are about to find the eigenvalues of the system, $ \sigma=0 $ and $
 		% just an empty subfigure to shift C below A
 		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-4.jpg}
 		\caption{The Hopf bifurcation due to the canard point.}\label{fig:timing4}
+	\end{subfigure}\vspace{1cm}
+	\begin{subfigure}[t]{0.45\textwidth}\centering
+		\includegraphics[height=8cm,width=6cm]{Code/behaviourswitch}
+		\caption{Growth of the Hopf bifrucation leading to the formation of a Canard explosion.}
+		\label{fig: hopf growth}
 	\end{subfigure}
 	\caption{The trajectories associated with the canards case of the \vdp system.}
 	\label{fig: 4 canard }
 \end{figure}
-From Figure \ref{fig: 4 canard } we can see the progression of our flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then from Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. This is because we make note that the canard point is present at $ -\lambda $, which in essence pushes the flow up the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch, starting the oscillation - Figure \ref{fig:timing4}. Moreover, it is worth noting that our Hopf bifurcation only exists when we are in an arbitrarily small region, $ O(\epsilon) $ \cite{Eckhaus} - this idea is further discussed in Section \ref{sec:singular-hopf-bifurcation}.
+From Figure \ref{fig: 4 canard } we can see the progression of our flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then from Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. This is because we make note that the canard point is present at $ -\lambda $, which in essence pushes the flow up the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch, starting the growing oscillations - Figure \ref{fig:timing4}. When the Hopf bifurcation is large we would then expect to see a jump in our solution to an attracting branch - Figure \ref{fig: hopf growth}.
+
+%\begin{figure}[h!]\centering
+%	\includegraphics[height=8cm,width=6cm]{Code/behaviourswitch}
+%	\caption{Growth of the Hopf bifrucation leading to the formation of a Canard explosion.}
+%	\label{fig: hopf growth}
+%\end{figure}\newpage
+%
+%Moreover, it is worth noting that our Hopf bifurcation only exists when we are in an arbitrarily small region, $ O(\epsilon) $, due to the local nature of the theorem \cite{Eckhaus}. 
 %\begin{figure}[h!]\centering
 %%	\includegraphics[]{}
 %	\caption{Development of the Hopf Bifurcation. \textbf{Tom can you screenshot the flow in 4 places?}}
 %	\label{fig: Hopf}
 %\end{figure}
 %Figure \ref{fig: 4 canard } shows that we have an unstable periodic solution within our canard system. In addition to this we know that our canard system will only exist within a small region of $ O(\epsilon) $ \citep{Eckhaus}. Moreover, we can see from Figure \ref{fig: Hopf} that our flow follows the expected path, as we saw in ++++++++++++++++++++++++\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsubsection{Singular Hopf Bifurcation}\label{sec:singular-hopf-bifurcation}
+%Furthermore, in the \vdp we are able to find a singular Hopf Bifurcation when $ \lambda=1 $. Then to model this behaviour we need to consider a small perturbation along the slow flow where we will have, from Equation \ref{eq: canard system},%discuss what the solutions for x is in the paper 
+%\begin{equation}
+%\dot{y}=\lambda-x+\bar{\nu} y,
+%\end{equation}
+%where $ \nu $ is of order $ O(\epsilon) $, thus small. We can immediately see that when $ \bar{\nu}=0 $ that we have our original flow at our equilibrium but we are now able to perturb our flow over a small domain, which are described in Figures \ref{fig: Hopf}. We can also see how our system behaves when our $ \nu $ is of larger order than $ O(\epsilon) $,
+%
+%\begin{figure}[h]\centering
+%	\includegraphics[height=6cm,width=10cm]{Images/CanardPointcircle}
+%	\caption{The flow within our canard system \citep{krupa2001}.}
+%	\label{fig: canard flow circle}
+%\end{figure}\newpage
+%where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $ (for the flow outside of the domain $ O(\epsilon) $),our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
 
-\subsubsection{Singular Hopf Bifurcation}\label{sec:singular-hopf-bifurcation}
-Furthermore, in the \vdp we are able to find a singular Hopf Bifurcation when $ \lambda=1 $. Then to model this behaviour we need to consider a small perturbation along the slow flow where we will have, from Equation \ref{eq: canard system},%discuss what the solutions for x is in the paper 
-\begin{equation}
-\dot{y}=\lambda-x+\bar{\nu} y,
-\end{equation}
-where $ \nu $ is of order $ O(\epsilon) $, thus small. We can immediately see that when $ \bar{\nu}=0 $ that we have our original flow at our equilibrium but we are now able to perturb our flow over a small domain, which are described in Figures \ref{fig: Hopf}. We can also see how our system behaves when our $ \nu $ is of larger order than $ O(\epsilon) $,
-
-\begin{figure}[h]\centering
-	\includegraphics[height=6cm,width=10cm]{Images/CanardPointcircle}
-	\caption{The flow within our canard system \citep{krupa2001}.}
-	\label{fig: canard flow circle}
-\end{figure}\newpage
-where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $ (for the flow outside of the domain $ O(\epsilon) $),our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\subsubsection{Singular Hopf Bifurcation}\textbf{Does this section tie in anywhere else?}
 %In this section we will further expand on our Hopf Bifurcation of the previous section (Section \ref{sec:effect-of-the-canard-point}). We note that we get a singular bifurcation iff our system is equivalent to Equation \ref{eq: Fast System}, \st $ \lambda=1 $. \citet{Eckhaus} discusses that our bifuraction will only exist within a small range of $ O(\epsilon) $. Then to model this behaviour we need to consider a small perturbation along the slow flow where we will have, from Equation \ref{eq: canard system},%discuss what the solutions for x is in the paper 
