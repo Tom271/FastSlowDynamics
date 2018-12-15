@@ -12,7 +12,10 @@ function [t,x]= EvdpPlot(epsilon,nu,a,b,c,tSpan,initialValue)
     hold on
     plot(t,x(:,1))
     plot(t,x(:,2))
-    
+    set(gcf,'Units','inches');
+    pos = get(gcf,'Position');
+    set(gcf,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+    print(gcf,'C:\Users\s1415551\Documents\GitHub\FastSlowDynamics\Code\NumMethods\eVDPts.pdf','-dpdf','-r0')
     figure(3)
     %subplot(2,1,2)
     hold on
@@ -30,6 +33,10 @@ function [t,x]= EvdpPlot(epsilon,nu,a,b,c,tSpan,initialValue)
     xlim([-1,0.4])
     ylim([-0.02, 0.22])
     zlim([-0.08,0.04])
+    set(gcf,'Units','inches');
+    pos = get(gcf,'Position');
+    set(gcf,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
+    print(gcf,'C:\Users\s1415551\Documents\GitHub\FastSlowDynamics\Code\NumMethods\eVDPphase.pdf','-dpdf','-r0')
     
 end
     
