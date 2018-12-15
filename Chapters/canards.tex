@@ -173,42 +173,41 @@ where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$.  Notice th
 	\tag{\ref{eq: K2 y trans}}
 	\end{align}
 \end{subequations}
-recalling that $r_2'=\lambda_2'=0$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each of the equations by the factor $e^{2y_2}e^{-2_2}=1$, and define parts of the equations as partial derivatives of $H$, which results in:
+recalling that $r_2'=\lambda_2'=0$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each equations by, $e^{2y_2}e^{-2_2}=1$, and define sections of each equation as partial derivatives of $H$ \st, 
 \begin{align}
 x_2' &=e^{2y_2}e^{-2y_2}( -y_2 +x_2^2 ) =e^{2y_2}\pd{H}{y_2}(x_2,y_2) \\
 y_2' &= - e^{2y_2}e^{-2y_2}(-  x_2)=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
 \end{align}
-Then, the partial derivatives in $H$ are integrated as follows:
+Then we integrate $ \pd{H}{x_2}(x_2,y_2) = -e^{-2y_2} x_2  $ to give,
 \begin{align*}
-&\pd{H}{x_2}(x_2,y_2) = -e^{-2y_2} x_2 \\
 %&\Rightarrow H(x_2,y_2) = \int -e^{-2y_2} x_2 dx\\
-&\Rightarrow H(x_2,y_2) = - \frac{1}{2} x^2 e^{-2y_2} + C(y),
+ H(x_2,y_2) = - \frac{1}{2} x^2 e^{-2y_2} + C(y),
 \end{align*}
-where $C(y)$ is the constant of integration, which could depend on $y$.
-Then, by taking the derivative with respect to $y$ and setting it equal to the expression $\pd{H}{y_2}(x_2,y_2)=e^{-2y_2}( -y_2 +x_2^2 )$, defined above, we can find the value for $C(y)$ as follows: 
+where $C(y)$ is the constant of integration, which depends on $y$.
+Then, by taking the derivative with respect to $y$ and setting it equal to the expression $\pd{H}{y_2}(x_2,y_2)=e^{-2y_2}( -y_2 +x_2^2 )$, we can find the value for $C(y)$ as follows: 
 \begin{align*}
 \pd{H}{y_2}(x_2,y_2)&= x^2 e^{-2y_2} + C'(y)\\
 %&= e^{-2y_2}( -y_2 +x_2^2 )\\
 \Rightarrow C'(y) &= - y_2 e^{-2y_2}
 \end{align*}
-In a last step, we can integrate $C'(y)$ in order to find an explicit expression for $H$:
+Finally we integrate $C'(y)$ in order to find an explicit expression for $H$,
 \begin{align*}
-C(y) = \int - y_2 e^{-2y_2} dy = \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c,
+C(y) = \int - y_2 e^{-2y_2} dy = \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + const,
 \end{align*}
-using integration by parts, and where $c$ is the constant of integration.
-Then, the final expression for the constant of motion is:
+using integration by parts.
+Then, the final expression is:
 \begin{align*}
 H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c\\
 &= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c.
 \end{align*}
-Note that without loss of generality we can choose $c=0$, because we are interested in the level curves of $H$ and $H=h$. Now that we have shown how the constant of motion is constructed we will consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$. Considering the reduced system (Equation \ref{eq: reduced canard k2}) we have from $ H(x_2,y_2)=0 $ that,
+Note that without loss of generality we can choose $c=0$ because we are interested in the level curves of $H$ and $H=h$. Now that we have shown how the constant of motion is constructed we will consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$. Considering the reduced system (Equation \ref{eq: reduced canard k2}) we have from $ H(x_2,y_2)=0 $ that,
 \begin{subequations}
 	\begin{align}
 	x_2'&=\frac{1}{2}\ \	\implies x_2=\frac{t_2}{2}+A, \label{canard: trajectory x}\\
 	y_2'&=\frac{t_2}{2}\ \implies y_2=\frac{t_2^2}{4}-\frac{1}{2}, \label{canard: trajectory y}
 	\end{align}
 \end{subequations} 
-where we have directly integrated Equation \ref{canard: trajectory x} with respect to our time ($ t_2 $). However, we can note that we are able to choose $ A=0 $, as we are considering an autonomous (time-invariant) system. Then for Equation \ref{canard: trajectory y} we are able to rearrange constant of motion at zero to give, $ y_2=x_2^2-\frac{1}{2} $. Clearly from this analysis we are then able to define our trajectories in terms of $ \gamma_{c,2} $, 
+where we have directly integrated Equation \ref{canard: trajectory x} with respect to our time ($ t_2 $). However, we note that we are able to choose $ A=0 $, as we are considering an autonomous (time-invariant) system. Then for Equation \ref{canard: trajectory y} we are able to rearrange the constant of motion at zero to give, $ y_2=x_2^2-\frac{1}{2} $. Clearly from this analysis we are then able to define our trajectories in terms of $ \gamma_{c,2} $, 
 \begin{equation}
 \gamma_{c,2}(t_2)=(x_{c,2}(t_2),y_{c,2}(t_2))=\left(\frac{t_2}{2},\frac{t^2_2}{4}-\frac{1}{2}\right).   
 \end{equation}
@@ -224,16 +223,16 @@ to find the relevant pathways of our flows. Now if we first consider the $r_1$ c
 \begin{align}
 2r_1^2r_1'=r_1^2\epsilon(r_1x_1-r_1\lambda_1), \label{canard: r1}
 \end{align}
-where we can call $F=F(x,y,\epsilon,\lambda)=x_1-\lambda_1+O(r_1(r_1+\lambda_1)$. Now we will see the motivation with starting with $y=r_1$ when we transform our other coordinates. Now if we consider $x=r_1x_1$,
+where we define $F=F(x,y,\epsilon,\lambda)=x_1-\lambda_1+O(r_1(r_1+\lambda_1)$. Next we consider $x=r_1x_1$,
 \begin{align*}
 r_1r_1'x_1+r_1^2x_1'&=-r_1^2+r_1^2x_1^2,\\
 x_1'&=-1+x_1^2-\frac{x_1r_1'}{r_1},
 \end{align*}
-where we can use Equation \ref{canard: r1} to simplify this further - Equation \ref{eq: canard x1}.
+where we can use Equation \ref{canard: r1} to simplify this further,
 \begin{align}
-x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right) \label{eq: canard x1}
+x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right). \label{eq: canard x1}
 \end{align}
-We now consider our $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation \ref{canard: r1} to simplify to,
+We now consider $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation \ref{canard: r1} to simplify to,
 \begin{align}
 \epsilon'=-\epsilon_1^2F. \label{canard: epsilon k1}
 \end{align}
@@ -252,8 +251,7 @@ which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k1}. N
 	\end{align}
 	\label{canard: system of equations}
 \end{subequations}
-% Unique becuase of exponetial attraction in canard case - note it is the reversal of figure 2.4 for uniqueness
-From this system we are now able to make some deductions. We first can observe that the hyperplanes are along the $r_1=\epsilon_1=\lambda_1=0$ with an invariant line at $l_1=\{(x_1,0,0,0): x_1\in\Re\}$ \citep{krupa2001}. As \citet{krupa2001} discusses the equilibria present at the end of both of our branches - Figure \ref{fig: Canard Point} - which are found at $p_a=(-1,0,0,0) \ \text{and} \ p_r=(1,0,0,0)$ \citep{krupa2001}. Now we can go one step further, we can consider Equation \ref{canard: system of equations} and find the eigenvalues of the system for the invariant planes. We find that, 
+From this system we are now able to make some deductions. We first can observe that the hyperplanes are along the $r_1=\epsilon_1=\lambda_1=0$ with an invariant line at $l_1=\{(x_1,0,0,0): x_1\in\mathbb{R}\}$ \citep{krupa2001}. As \citet{krupa2001} discusses the equilibria present at the end of both of our branches - Figure \ref{fig: Canard Point} - which are found at $p_a=(-1,0,0,0) \ \text{and} \ p_r=(1,0,0,0)$ \citep{krupa2001}. Now we can go one step further, we can consider Equation \ref{canard: system of equations} and find the eigenvalues of the system for the invariant planes. We find that, 
 \begin{equation}
 J-\sigma I= \begin{bmatrix}
 2x-\sigma & 0 & 0 & 0  \\
