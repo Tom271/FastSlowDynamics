@@ -317,7 +317,7 @@ From this we are about to find the eigenvalues of the system, $ \sigma=0 $ and $
 	\end{subfigure}
 	\caption{The trajectories associated with the canards case of the \vdp system.}
 	\label{fig: 4 canard }
-\end{figure}
+\end{figure}\newpage
 From Figure \ref{fig: 4 canard } we can see the progression of our flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then from Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. This is because we make note that the canard point is present at $ -\lambda $, which in essence pushes the flow up the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch, starting the growing oscillations - Figure \ref{fig:timing4}. When the Hopf bifurcation is large we would then expect to see a jump in our solution to an attracting branch - Figure \ref{fig: hopf growth}.
 
 %\begin{figure}[h!]\centering
@@ -364,7 +364,7 @@ From Figure \ref{fig: 4 canard } we can see the progression of our flow over the
 %\end{figure}\newpage
 %where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $, our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
 
-
+%\newpage
 
 
 \subsubsection{Separation of the Manifolds}\label{sec:separation-of-the-manifolds}
@@ -372,7 +372,7 @@ From Figure \ref{fig: 4 canard } we can see the progression of our flow over the
 	\includegraphics[height=8cm,width=10cm]{Images/Separation}
 	\caption{Separation of $ M_a $ and $ M_r $ \citep{Kuehn}.}
 	\label{fig: splitting}
-\end{figure}
+\end{figure}%\newpage
 %\textbf{Discuss splitting on the manifold}
 Continuing on from the singular Hopf bifurcation we might find that the canard point forces our branches to split. In other words we are looking for when the attracting and repelling branches are no longer connected, as show in Figure \ref{fig: splitting}. To do this we would use Melnikov Computations to show that our manifolds split - see \textit{Extending Geometric Singular Perturbation Theory to Nonhyperbolic Points - Fold and Canard Points in Two Dimensions} \citep{krupa2001} for direct use. To discover whether we have a splitting between our branches we need to consider our $ y $ coordinates \wrt our second chart \st $ y_{a,2}(0)-y_{r,2}(0) $ is a distance function which can be written as $ D_c(r_2,\lambda_2)=H(0,y_{a,2}(0))-H(0,y_{r,2}(0)) $ as we note that $ \pd{}{y_2}H(0,y_2)\neq 0 $ \citep{krupa2001}. From here we can use the following proposition,
 \begin{prop}
