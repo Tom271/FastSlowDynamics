@@ -155,7 +155,7 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 \begin{subequations}
 	\begin{align}
 	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2h_1+r^2_2x^2_2h_2,\notag\\
-	\implies x'_2&=-y_2+x_2^2-r_2G_2(x_2,y_2),\\
+	\implies x'_2&=-y_2+x_2^2-r_2G_2(x_2,y_2), \label{eq k2 x trans}\\
 	%     \end{aligned}
 	% \end{equation*}
 	% \begin{equation}
@@ -165,43 +165,30 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 	\end{align}
 	\label{eq: reduced canard k2}
 \end{subequations}
-where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$. We should also recall that $r_2'=\lambda_2'=0$. Notice that we have included an additional term in Equation \ref{eq: K2 y trans} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$ which we can easily verify \citep{krupa2001} using the following equations,
-=======
-The transformations \ref{eq: coordinate K2}, as well as a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, is applied to system (\ref{canardysy2var}), which results in 
-\begin{align*}
-	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2+r^2_2x^2_2\left( 1 - \frac{x}{2} \right),\notag\\
-	r^3_2y_2'-3r_2^2y_2r_2'&=r^2_2(r_2x_2-r_2\lambda_2).\notag\\
-\end{align*}
-Since $r'=0, \lambda'=0$, from the extended system, the resulting system is:
+where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$.  Notice that we have included an additional term in Equation \ref{eq: reduced canard k2} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. Then combing this yields our complete system
+\begin{subequations}
+	\begin{align}
+	x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\tag{\ref{eq k2 x trans}}\\
+	y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2)= x_2-\lambda_2, %\label{eq: K2 y trans}
+	\tag{\ref{eq: K2 y trans}}
+	\end{align}
+\end{subequations}
+recalling that $r_2'=\lambda_2'=0$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each of the equations by the factor $e^{2y_2}e^{-2_2}=1$, and define parts of the equations as partial derivatives of $H$, which results in:
 \begin{align}
- x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\\
-y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2)= x_2-\lambda_2. %\label{eq: K2 y trans}
-\label{eq: reduced canard k2}
-\end{align}
-Then, in vector form  $G(x_2,y_2)$ is defined in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. This quantity will become relevant at a later point, when the Melnikov computation is considered.
- \citet{krupa2001} discusses that for $r_2=\lambda_2=0$ the system is integrable.
-The system (\ref{eq: reduced canard k2}) reduces to:
-\begin{align*}
-x_2' &= -y_2 +x_2^2 \\
-y_2' &= x_2.
-\end{align*}
-Since this system is integrable, a constant of motion $H$ can be found in the following way.
-Firstly, expand each of the equations by the factor $e^{2y_2}e^{-2_2}=1$, and define parts of the equations as partial derivatives of $H$, which results in:
-\begin{align*}
 x_2' &=e^{2y_2}e^{-2y_2}( -y_2 +x_2^2 ) =e^{2y_2}\pd{H}{y_2}(x_2,y_2) \\
 y_2' &= - e^{2y_2}e^{-2y_2}(-  x_2)=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
-\end{align*}
+\end{align}
 Then, the partial derivatives in $H$ are integrated as follows:
 \begin{align*}
 &\pd{H}{x_2}(x_2,y_2) = -e^{-2y_2} x_2 \\
-&\Rightarrow H(x_2,y_2) = \int -e^{-2y_2} x_2 dx\\
+%&\Rightarrow H(x_2,y_2) = \int -e^{-2y_2} x_2 dx\\
 &\Rightarrow H(x_2,y_2) = - \frac{1}{2} x^2 e^{-2y_2} + C(y),
 \end{align*}
 where $C(y)$ is the constant of integration, which could depend on $y$.
 Then, by taking the derivative with respect to $y$ and setting it equal to the expression $\pd{H}{y_2}(x_2,y_2)=e^{-2y_2}( -y_2 +x_2^2 )$, defined above, we can find the value for $C(y)$ as follows: 
 \begin{align*}
 \pd{H}{y_2}(x_2,y_2)&= x^2 e^{-2y_2} + C'(y)\\
-&= e^{-2y_2}( -y_2 +x_2^2 )\\
+%&= e^{-2y_2}( -y_2 +x_2^2 )\\
 \Rightarrow C'(y) &= - y_2 e^{-2y_2}
 \end{align*}
 In a last step, we can integrate $C'(y)$ in order to find an explicit expression for $H$:
@@ -214,24 +201,14 @@ Then, the final expression for the constant of motion is:
 H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c\\
 &= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c.
 \end{align*}
-Note that without loss of generality $c=0$, because we are interested in the level curves of $H$, $H=h$, and therefore an additional constant just represents a shift of the level curve. Then the expression for $H$ is comparable with the result in \citet{krupa}.
-,
->>>>>>> fc965573a42105f0cc649fd2b72dfeb929fc097a
-\begin{subequations}
-	\begin{align}
-	x'_2&=e^{2y_2}\pd{H}{y_2}(x_2,y_2),\\
-	y_2'&=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
-	\end{align}
-\end{subequations}
-Further to this we can see, when we consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$.
-considering the reduced system (Equation \ref{eq: reduced canard k2}) we find from $ H(x_2,y_2)=0 $ that,
+Note that without loss of generality we can choose $c=0$, because we are interested in the level curves of $H$ and $H=h$. Now that we have shown how the constant of motion is constructed we will consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$. Considering the reduced system (Equation \ref{eq: reduced canard k2}) we have from $ H(x_2,y_2)=0 $ that,
 \begin{subequations}
 	\begin{align}
 	x_2'&=\frac{1}{2}\ \	\implies x_2=\frac{t_2}{2}+A, \label{canard: trajectory x}\\
 	y_2'&=\frac{t_2}{2}\ \implies y_2=\frac{t_2^2}{4}-\frac{1}{2}, \label{canard: trajectory y}
 	\end{align}
 \end{subequations} 
-where we have directly integrated Equation \ref{canard: trajectory x} with respect to our time ($ t_2 $). However, we can note that we are able to choose $ A=0 $ as we are considering an autonomous (time-invariant) system. Then for Equation \ref{canard: trajectory y} we are able to rearrange constant of motion at zero to give, $ y_2=x_2^2-\frac{1}{2} $. Clearly from this analysis we are then able to define our trajectories in terms of $ \gamma_{c,2} $, 
+where we have directly integrated Equation \ref{canard: trajectory x} with respect to our time ($ t_2 $). However, we can note that we are able to choose $ A=0 $, as we are considering an autonomous (time-invariant) system. Then for Equation \ref{canard: trajectory y} we are able to rearrange constant of motion at zero to give, $ y_2=x_2^2-\frac{1}{2} $. Clearly from this analysis we are then able to define our trajectories in terms of $ \gamma_{c,2} $, 
 \begin{equation}
 \gamma_{c,2}(t_2)=(x_{c,2}(t_2),y_{c,2}(t_2))=\left(\frac{t_2}{2},\frac{t^2_2}{4}-\frac{1}{2}\right).   
 \end{equation}
@@ -336,7 +313,7 @@ From this we are about to find the eigenvalues of the system, $ \sigma=0 $ and $
 		\caption{The Hopf bifurcation due to the canard point.}\label{fig:timing4}
 	\end{subfigure}\vspace{1cm}
 	\begin{subfigure}[t]{0.45\textwidth}\centering
-		\includegraphics[height=8cm,width=6cm]{Code/behaviourswitch}
+		\includegraphics[width=.8\linewidth, height=6cm]{Code/behaviourswitch-pres}
 		\caption{Growth of the Hopf bifrucation leading to the formation of a Canard explosion.}
 		\label{fig: hopf growth}
 	\end{subfigure}
