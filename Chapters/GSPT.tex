@@ -1,6 +1,6 @@
 
-The main idea of GSPT is the following: Under certain conditions it can be concluded that the critical manifold $S=S_0$, where $\epsilon \to 0$ persists as an invariant manifold $S_{\epsilon}$ under a small pertubation $\epsilon >0$, if $\epsilon$ is sufficiently small. In higher than 2 dimensions the idea of transversality of the flow of the stable and unstable manifolds is essential for analysis, while in 2 dimensions this is rather trivial \citep{MMO}. The main contribution to GSPT comes from Fenichel Theory and his three Theorems can be summed up in one, according to \citep{MMO}.
-However, before stating the Theorem, some formal definitions are needed.
+The main question GSPT aims to answer is the following: under what conditions can it be concluded that the dynamics on the critical manifold $S=S_0$, persist as an invariant manifold $S_{\epsilon}$ under a small perturbation $0<\epsilon\ll 1$? In higher than 2 dimensions the idea of transversality of the flow of the stable and unstable manifolds is essential for analysis, while in 2 dimensions this is rather trivial \citep{MMO}. The main contribution to GSPT comes from \citet{Fenichel}  and his three theorems can be summed up in one, according to \citep{MMO}.
+However, before stating the theorem, some formal definitions are needed.
 
 \begin{definition}{\textbf{Normal Hyperbolicity \citep{firstpaper}}} \label{NormHyp}
 	\\
@@ -21,8 +21,8 @@ A normally hyperbolic submanifold can be classified according to its stability p
 
 Now combining the above we can state Fenichel's Theorem.
 
-\begin{theorem}[\textbf{Fenichel's Theorem} \citep{Kuehn}] \label{Fenichel}	
-	Suppose $M=M_0$ is a compact, normally hyperbolic submanifold  (possibly with boundary) of the critical manifold $S$ Equation \ref{CriticalS} and  that $f, g \in C^r, r < \infty $. Then for $\epsilon >0$, sufficiently small, the following holds:\\
+\begin{theorem}[\textbf{Fenichel's Theorem} \citep{MMO}] \label{Fenichel}	
+	Suppose $M=M_0$ is a compact, normally hyperbolic submanifold  (possibly with boundary) of the critical manifold $S$ Equation \ref{CriticalS} 	and  that $f, g \in C^r, r < \infty $. Then for $\epsilon >0$, sufficiently small, the following holds:\\
 	(F1) There exists a locally invariant manifold $M_{\epsilon}$, diffeomorphic to  $M_0$. Local invariance means that $M_{\epsilon}$ can have boundaries through which trajectories enter or leave.\\
 	(F2) $M_{\epsilon}$ has a Hausdorff distance of $O(\epsilon)$ from $M_0$.\\
 	(F3) The flow on $M_{\epsilon}$  converges to the slow flow as $\epsilon \to 0$.\\
@@ -34,12 +34,11 @@ Now combining the above we can state Fenichel's Theorem.
 	W^s(M_0) =\cup_{p \in M_0} W^s(p) \textrm{\ \ and\ \ } W^u(M_0) =\cup_{p \in M_0} W^u(p),
 	\end{align*}
 	where  $W^s(p)$ and $W^u(p)$ are the local stable and unstable manifolds of $p$ as a hyperbolic equilibrium of the layer equations, respectively. These manifolds also persist for $\epsilon > 0$, sufficiently small: there exist locally stable and unstable manifolds $W^s(M_\epsilon)$ and $W^u(M_\epsilon)$, respectviely, for which conclusions (F1) - (F6) hold if we replace $M_\epsilon$ and $M_0$ by  $W^s(M_\epsilon)$ and $W^s(M_0)$ (or similarly by  $W^u(M_\epsilon)$ and $W^u(M_0)$).
-\end{theorem} +++direct citation needed for theorem (MMO) +++
-
+\end{theorem} 
 Fenichel's Theorem establishes that the submanifold, $M_0$, of the critical manifold, $S_0$, persists as slow manifold $M_\epsilon$ as $\epsilon >0$, given it is compact and normally hyperbolic. The theorem furthermore establishes that the stable and unstable manifolds persist as well as the individual fibres, namely $W^s(p)$ and $W^u(p)$, that are associated to each base point $p \in M_0$.
 Therefore, under the assumptions of the theorem, the flow of the Fast-Slow system remains $O(\epsilon)$ close to the flow of the system in the singular limit $\epsilon \to 0$.\\
 
-The importance of this result lies in the fact that the behaviour of the full system can be analysed by looking at the system in the singular limit instead, which is often more practical.
+The importance of this result lies in the fact that the behaviour of the full system can be analysed by looking at the system in the singular limit instead.
 
 
 ++++++++++++also trajectories can be constructed and tested using fenichel... paper 1++++++++++
