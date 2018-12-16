@@ -39,53 +39,35 @@ where \(\mu \gg 1\) is a scalar constant. This equation can be scaled so that it
 \label{eq: canonical}
 \end{equation}
 
-When presented with any dynamical system, the aim is to fully understand the global dynamics of the system and it is no different here. A numerical simulation is often a good first step. Setting $\lambda=\epsilon=1$ gives the phase plane given in Figure \ref{fig:VDPE1}.
-\begin{figure}[h]
+When presented with any dynamical system, the aim is to fully understand the global dynamics of the system. A numerical simulation is often a good first step. Setting $\lambda=\epsilon=1$ gives the phase plane given in Figure \ref{fig:VDPE1}.
+\begin{figure}[]
 	\includegraphics[width=\textwidth]{VDPbigE}
-	\caption{Phase plane and time series of the \vdp for $\epsilon=\lambda=1$ started from $(1,1)$. The dashed line indicates the null cline in $y$ while that in $x$ is given by the solid black line. The equilibrium is highlighted in blue.}
+	\caption[Van der Pol Dynamics with \texorpdfstring{$\epsilon=1$}{eps=1}]{Phase plane and time series of the \vdp for $\epsilon=\lambda=1$ started from $(1,1)$. The dashed line indicates the null cline in $y$ while that in $x$ is given by the solid black line. The equilibrium is highlighted in blue.}
 	\label{fig:VDPE1}
 \end{figure}
-
-
-
-
-
-
-
-In order to analyse systems (\ref{FastS}) and (\ref{SlowS}) using Geometric Singular Pertubation Theory (GSPT), the singular limit $\epsilon \to 0$ is considered:
-
-\begin{align} \label{FastS0}
-\begin{cases}
-x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon)\\
-y' &= 0,
-\end{cases}
-\end{align}
-which is called the layer problem, and
-\begin{align}\label{SlowS0}
-\begin{cases}
-0 &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, 0)\\
-\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda,0),
-\end{cases}
-\end{align}
-called the reduced system.\\
-
-
-In order to analyse systems (\ref{FastS}) and (\ref{SlowS}) using Geometric Singular Perturbation Theory (GSPT), the singular limit $\epsilon \to 0$ is considered:
+Figure \ref{fig:VDPE1} shows the presence of a large amplitude oscillation, which Van der Pol called \emph{relaxation oscillations}. Setting $\epsilon=1$ means that there is no separation in timescale. Figure \ref shows a more realistic scenario, when $\epsilon=0.01$. Here there is what appears to be an almost instantaneous change in $x$ every 800 time steps. What causes this rapid change? We wish to find a rigorous reason for this jump from slow to fast movement. A natural starting point would be to study what happens when $\epsilon=0$, that is, when this rapid change is in fact instantaneous. Doing so in both the fast and slow system will give two different views of the global dynamics.
+\begin{figure}[]
+	\includegraphics[width=\textwidth]{VDPsmallE}
+	\caption[Van der Pol Dynamics with \texorpdfstring{$\epsilon=0.01$}{eps=0.1}]{Phase plane and time series of the \vdp for $\epsilon=0.01, \lambda=1$ started from $(1,1)$. The dashed line indicates the null cline in $y$ while that in $x$ is given by the solid black line. The equilibrium is highlighted in blue.}
+	\label{fig:VDPE01}
+\end{figure}
+ Taking the limit $\epsilon \to 0$ in the fast system (\ref{FastS}) gives, 
 
 \begin{align} \label{FastS0}
 \begin{cases}
 x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon)\\
-y' &= 0,
+y' &= 0.
 \end{cases}
 \end{align}
-which is called the layer problem, and
+This is known as the \emph{layer problem} as movement is restricted to the layers $y=const.$ and similarly taking the limit in the slow system (\ref{SlowS}) gives
+
 \begin{align}\label{SlowS0}
 \begin{cases}
 0 &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, 0)\\
-\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda,0),
+\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda,0).
 \end{cases}
 \end{align}
-called the reduced system.\\
+This is known as the \emph{reduced problem} as the dynamics are restricted to the \\
 
 Now considering Equation \ref{SlowS0}, we can write $f(x,y,\lambda, 0)=0$. Then we are able to define the critical manifold as:,
 \begin{align} \label{CriticalS}
