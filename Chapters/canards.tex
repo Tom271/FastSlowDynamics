@@ -3,7 +3,7 @@
 	\includegraphics[height=5cm,width=8cm]{Canard_Point.png}
 	\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$.}
 	\label{fig: Canard Point}
-\end{figure}
+\end{figure}\newpage
 
 
 
@@ -34,10 +34,8 @@ Furthermore, the following definition turns out to be useful as well:
 The trajectory passing through the intersection of $S^a$ and $S^r$ is called a maximal canard. 
 \end{definition}
 The intuition of the canard problem close to a fold point is given in Figure \ref{fig: Canard Point}.
-
-Equivalently to the analysis of the fold point in Section \ref{sec:the-van-der-pol-equation}, some nondegeneracy conditions are defined.
-These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$. The fact that $g_x(0,0,0) \neq 0$ guarantees the existence of transversal intersection of the two nullclines, which is crucial in order to conclude persistence of the dynamics later on \citep{kuehn}. ++ $g_\lambda$ gives nonzero speed condition (why is that a condition?)+++
-The nondegeneracy and transversality conditions for the canard case are:
+Equivalently to the analysis of the fold point in Section \ref{sec:the-van-der-pol-equation}, some nondegeneracy conditions are defined. These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$. The fact that $g_x(0,0,0) \neq 0$ guarantees the existence of transversal intersection of the two nullclines, which is crucial in order to conclude persistence of the dynamics later on \citep{kuehn}. 
+The nondegeneracy and transversality conditions for the canard case are  \citep{krupa2001},
 \begin{equation}
 f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing condition}
 \end{equation}
@@ -47,9 +45,6 @@ f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing con
 &\pd{}{x}g(0,0,0,0)\neq 0, \ \pd{}{\lambda}g(0,0,0,0)\neq 0. \label{eq: canard non-d condition}
 \end{aligned}
 \end{equation}
- \citep{krupa2001}. 
-
-
 Now that these conditions have been defined we can consider, equivalent to the argument in Section \ref{sec: extended sys blowup}, the extended \vdp system,
 \begin{equation}
 \begin{aligned}
@@ -88,9 +83,7 @@ A=-a_2+3a_3-(2a_4+2a_5)=-1,
 which is important in the following analysis, in particular for $A \neq 0$ \citep{krupa2001}. 
 Similar to the procedure in Section \ref{sec: VDP Blowup}, sections of the dynamical system can be defined, in order to monitor the in- and outgoing trajectories. In this case we are interested in two sections of the neighbourhood $U$, defined as in Section \ref{sec: VDP Blowup}, that monitor $S^a$ and $S^r$ close to the fold point.
 Let $ \Delta_a = \{ (x,\rho^2), x \in  I_a \}$ and $\Delta_r= \{ (x,\rho^2), x \in  I_r \}$, where $I_a,I_r$ are intervals on the real line and $\rho$ is sufficiently small.
-Futhermore, define $q_a$ to be the point on $\Delta_a$ that belongs to the attracting branch $S^a$, while $q_r$ is equivalently defined as the point on $\Delta_r$ that corresponds to $S^r$.
-Finally, we are in the position to define the transition map $\pi: \Delta^a \to \Delta^r$, compare to Section \ref{sec: VDP Blowup}.
-
+Futhermore, define $q_a$ to be the point on $\Delta_a$ that belongs to the attracting branch $S^a$, while $q_r$ is equivalently defined as the point on $\Delta_r$ that corresponds to $S^r$. Finally, we are in the position to define the transition map $\pi: \Delta^a \to \Delta^r$, compare to Section \ref{sec: VDP Blowup}.
 Following this, \citet{krupa2001} discuss the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where the two branches $S_r$ and $S_a$ must connect in a smooth fashion.  
 The transition map $\pi$ has to map the point $q_a$ to $q_r$, if the branches are connected, and the trajectory passing through the fold point is called the maximal canard, see Definition \ref{maxcanard}
 The following theorem describes the technical details involved, and some of the results are derived by the following analysis.
@@ -108,13 +101,14 @@ The following theorem describes the technical details involved, and some of the 
 	\end{itemize}
 \label{Theorem 3.1}
 \end{theorem}
-Consider Canard cycles and center manifolds / Freddy Dumortier, Robert Roussarie. for more details on canards in \vdp. ++++++Kieran, what do you mean here+++++
-
+%Consider Canard cycles and center manifolds / Freddy Dumortier, Robert Roussarie. for more details on canards in \vdp. ++++++Kieran, what do you mean here+++++
+%
 
 
 
 \subsection{Canard Blow-up}
-Now similarly to Section \ref{sec: VDP Blowup}, we consider a transformations of the coordinate system in order to analyse the dynamics in the neighbourhood of the non-hyperbolic equilibrium induced by the canard point (++++++ is the eq. induced by lambda??++++). The transformations are taken from \citep{krupa2001} and are:
+Now similarly to Section \ref{sec: VDP Blowup}, we consider a transformations of the coordinate system in order to analyse the dynamics in the neighbourhood of the non-hyperbolic equilibrium induced by the canard point. %(++++++ is the eq. induced by lambda??++++).
+ The transformations are taken from \citep{krupa2001} and are,
 \begin{equation}
 x=\bar{r}\bar{x}, \ y=\bar{r}^2y, \ \epsilon=\bar{r}^2\bar{\epsilon}, \ \lambda=\bar{r}\bar{\lambda}.
 \end{equation}
@@ -150,7 +144,7 @@ for $y_2 >0$.
 We are now in the position to begin with the analysis in the charts, and will first consider chart $K_2$, since, as in Section \ref{sec: VDP Blowup}, $K_2$ holds the most information. 
 
 \subsubsection{Dynamics in \texorpdfstring{$K_2$}{K2}}
-<<<<<<< HEAD
+%<<<<<<< HEAD
 We start by noting that we are considering our invariant plane at $r_2=0$ which will significantly simplify our system for $K_2$. Further we should note that we are taking a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, as well as in our coordinates. Then if we substitute our time transformation and Equation  \ref{eq: coordinate K2} into our system of Equations \ref{eq: canard system} we find, 
 \begin{subequations}
 	\begin{align}
@@ -165,7 +159,7 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 	\end{align}
 	\label{eq: reduced canard k2}
 \end{subequations}
-where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$.  Notice that we have included an additional term in Equation \ref{eq: reduced canard k2} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. Then combing this yields our complete system
+\noindent where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$.  Notice that we have included an additional term in Equation \ref{eq: reduced canard k2} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. Then combing this yields our complete system
 \begin{subequations}
 	\begin{align}
 	x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\tag{\ref{eq k2 x trans}}\\
@@ -260,7 +254,7 @@ J-\sigma I= \begin{bmatrix}
 0 & 0 & 0 & -\sigma
 \end{bmatrix},
 \end{equation}
-which clearly has three zero eigenvalues and one non-zero eigenvalue $\lambda=\pm 2$. Which further empahsises that our equilibrium point is non-hyperbolic. As a result we intuitively expect that something interesting occurs at this point. In the section following we will be considering what effect these mappings and eigenvalues will have on our system.
+which clearly has three zero eigenvalues and one non-zero eigenvalue $\sigma=\pm 2$. Which further empahsises that our equilibrium point is non-hyperbolic. As a result we intuitively expect that something interesting occurs at this point. In the section following we will be considering what effect these mappings and eigenvalues will have on our system.
 
 
 \subsection{Effect of the Canard Point}\label{sec:effect-of-the-canard-point}
