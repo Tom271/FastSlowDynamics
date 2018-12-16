@@ -232,7 +232,7 @@ Therefore, the trajectory $\gamma_1$ satisfies:
 \end{align*}
 Note that $s(x_2)$ as $x_2 \to - \infty$ is employed, since we consider the left continuation of $\gamma_2$.
 Furthermore, as is intuitively clear from Figure \ref{fig: Ricatti Sol}, and can be shown by analysing the form of $\gamma_1$, the trajectory $\gamma_1$ converges to $p_a$ in backward time, which is exactly as expected.
-This establishes the link between the slow flow on $S^a$ and the flow on $K_2$, if we consider the following proposition, which sums up the findings in $K_1$ and employs center manifold theory, see Appendix (++++how do i reference that?++++) in order to establish persistence in the full system.
+This establishes the link between the slow flow on $S^a$ and the flow on $K_2$, if we consider the following proposition, which sums up the findings in $K_1$ and employs center manifold theory in order to establish persistence in the full system.
 \begin{prop}[\citealp{krupa2001}]
 For $\rho, \delta$ sufficiently small the following assertions hold for the system \ref{K1systemfull}:
 \begin{enumerate}
@@ -250,18 +250,18 @@ This then results in
 T= \frac{2}{3} \left(\frac{1}{\epsilon_1} - \frac{1}{\delta} \right) \left( 1 + O(\rho) \right),
 \end{align*}
 where $r_1= \rho \in p$. 
-Therefore, a transition map $\Pi_1: \Sigma^{in}_1 \to \Sigma^{out}_1$ can be defined for small enough parameter values of $\rho, \delta, \beta_1$ (Why only for small param.?++++++++++). We are interested specifically in the transition around the center manifolds $M_{a,1}$ and $M_{r,1}$. The following subsections of $\Sigma^{in}_1 $ and $ \Sigma^{out}_1$ can be defined. Let $R_1= \{ (x_1, \rho, \epsilon_1) : |1+ x_1| \leq \beta_1 \}$, a rectangle in the intersection of the manifolds $M_{a,1}$ and  $\Sigma^{in}_1 $, and $R_2= \{ (x_1, r_1, \delta) : |1- x_1| \leq \beta_1 \}$, a rectangle in the intersection of the manifolds $M_{r,1}$ and  $\Sigma^{out}_1 $, with $\beta_1 >0$ sufficiently small. 
+Therefore, a transition map $\Pi_1: \Sigma^{in}_1 \to \Sigma^{out}_1$ can be defined for small enough parameter values of $\rho, \delta, \beta_1$. We are interested specifically in the transition around the center manifolds $M_{a,1}$ and $M_{r,1}$. The following subsections of $\Sigma^{in}_1 $ and $ \Sigma^{out}_1$ can be defined. Let $R_1= \{ (x_1, \rho, \epsilon_1) : |1+ x_1| \leq \beta_1 \}$, a rectangle in the intersection of the manifolds $M_{a,1}$ and  $\Sigma^{in}_1 $, and $R_2= \{ (x_1, r_1, \delta) : |1- x_1| \leq \beta_1 \}$, a rectangle in the intersection of the manifolds $M_{r,1}$ and  $\Sigma^{out}_1 $, with $\beta_1 >0$ sufficiently small. 
 Furthermore, we can define line segments in these rectangles as $I_a(\overline{\epsilon}) \subset R_1$ and $I_r(\overline{r}) \subset R_2$, where $0 \leq \overline{\epsilon} \leq \delta$ and $0 \leq \overline{r} \leq \rho$.
 Then for any $\overline{\epsilon}$, $\Pi_1$ maps the trajectory on a smaller region $\Pi_1 { I_a(\overline{\epsilon})} \in  \Sigma^{out}_1 $. This is called a contraction of the trajectories.
-Considering Theorem \ref{transition map theorem}, which states the dependence of the contraction rate on $\epsilon$, the bounds on the contraction rate can be related to $\epsilon$, the parameter of the original system. Then using the $K_1$ rescaling of $\epsilon= \epsilon_1 r_1^3$, see (\ref{sys: K1}),  the contraction rate for $\Pi_1 |I_r(\overline{r})$ is found by replacing $\epsilon_1$ by $\frac{\delta r^3_1}{\rho^3}$. 
+Considering Theorem \ref{transition map theorem}, which states the dependence of the contraction rate on $\epsilon$, the bounds on the contraction rate can be related to $\epsilon$, the parameter of the original system. Then using the $K_1$ rescaling of $\epsilon= \epsilon_1 r_1^3$, see Equation \ref{sys: K1},  the contraction rate for $\Pi_1 |I_r(\overline{r})$ is found by replacing $\epsilon_1$ by $\frac{\delta r^3_1}{\rho^3}$. 
 Visual understanding of this analysis can be gained by considering Figure \ref{fig:k1chart}.
-++++ contraction in$ I_r$???+++++ 
+%++++ contraction in$ I_r$???+++++ 
 The following proposition summarises the the findings for $\Pi_1$:
 \begin{prop}[\citealp{krupa2001}]
 For $\rho, \delta$ and $\beta_1$ sufficiently small, the transition map $\Pi_1: \Sigma^{in}_1 \to \Sigma^{out}_1$ defined by the flow of system \ref{K1systemfull} has the following properties:
 \begin{enumerate}
 \item $\Pi_1(R_1)$ is a wedge- like region in $\Sigma^{out}_1$. $\Pi_1^{-1}(R_2)$  is a wedge- like region in $\Sigma^{in}_1$.
-\item More precisely, for fixed $c<2$, there exists a constant $K$ depending on the constants $c, \rho, \delta$ and $\beta_1$ such that
+\item More precisely, for fixed $c<2$, there exists a constant $K$ depending on the constants $c, \rho, \delta$ and $\beta_1$ such that:
 \begin{enumerate}
 \item for $\overline{\epsilon}\in (0, \delta] $ the map $\Pi_1 |I_a(\overline{\epsilon})$ is a contraction with contraction rate bounded by $Ke^{-\frac{2c}{3} \left(\frac{1}{\overline{\epsilon}} - \frac{1}{\delta} \right)}$.
 \item for $\overline{r} \in (0, \rho] $ the map $\Pi_1 |I_r(\overline{r})$ is a contraction with coontraction rate bounded by $Ke^{-\frac{2c}{3} \left(\frac{\rho^3}{r_1^3 \delta} - \frac{1}{\delta} \right)}$.
@@ -279,12 +279,8 @@ The final chart to study the behaviour of is $K_3$. This chart covers the trajec
 	\end{align}
 	\label{sys:K3blowup}
 \end{subequations}
-where $F(r_3,y_3,\epsilon_3)=\left(1-y_3-\frac{r_3}{3}\right)$ \\
-Note that as $\epsilon_3$ and $r_3$ appear as a factor in their respective derivatives, the planes $\epsilon_3=0$ and $r_3=0$ are invariant and, by extension, so is the $y_3$ axis.\\
-
-The aim is to continue the special trajectory found in the other two charts and to find the transition map in and out of this chart. We will then be able to construct a phase portrait for the whole space by combining the dynamics in each chart.\\
-
-Linearising the system about $(0,0,0)=q_{out}$ gives 
+where $F(r_3,y_3,\epsilon_3)=\left(1-y_3-\frac{r_3}{3}\right)$. Note that as $\epsilon_3$ and $r_3$ appear as a factor in their respective derivatives, the planes $\epsilon_3=0$ and $r_3=0$ are invariant and, by extension, so is the $y_3$ axis.
+The aim is to continue the special trajectory found in the other two charts and to find the transition map in and out of this chart. We will then be able to construct a phase portrait for the whole space by combining the dynamics in each chart. Linearising the system about $(0,0,0)=q_{out}$ gives 
 
 \begin{align*}
 \begin{pmatrix}\dot{r}_3\\\dot{y}_3\\\dot{\epsilon}_3\end{pmatrix}= \begin{pmatrix}
@@ -297,11 +293,10 @@ y_3 \\
 \epsilon_3
 \end{pmatrix} 
 \end{align*}
-As the matrix is upper triangular, its eigenvalues are trivially  $\lbrace 1,-2,-3\rbrace$ with corresponding eigenvectors $\lbrace (1,0,0),(0,1,0),(0,1,1)\rbrace$. This presents an issue as there is additive resonance i.e. $\lambda_2-(\lambda_1+\lambda_3)=0$.  This means the Poincar\'e-Dulac theorem does not hold and the vector field is not linearisable, there is no smooth transformation between the nonlinear and linear flow. The nonlinear terms in the expansion will be of the same order as the linear terms, and thus they cannot be disregarded. Despite this, progress can still be made as the form of the equations allow a near identity transformation and yields the lowest order approximation to the flow. Note that $q_{out}$ is also  a hyperbolic equilibrium of the system.  +++Mention $\bar{M}_a$, the locally invariant perturbation of the center manifold $M_a$? Passes near the delicate equilibrium point $q_{out}$ so behaviour very much depends on how we pass this point. +++\\
-
-The special orbit, $\gamma_2$, can be mapped into this chart using the change of coordinates $\kappa_{23}$ of Equation (\ref{eq:kappa23}).
+As the matrix is upper triangular, its eigenvalues are trivially  $\lbrace 1,-2,-3\rbrace$ with corresponding eigenvectors $\lbrace (1,0,0),(0,1,0),(0,1,1)\rbrace$. This presents an issue as there is additive resonance i.e. $\lambda_2-(\lambda_1+\lambda_3)=0$.  This means the Poincar\'e-Dulac theorem does not hold and the vector field is not linearisable, there is no smooth transformation between the nonlinear and linear flow. The nonlinear terms in the expansion will be of the same order as the linear terms, and thus they cannot be disregarded. Despite this, progress can still be made as the form of the equations allow a near identity transformation and yields the lowest order approximation to the flow. %Note that $q_{out}$ is also  a hyperbolic equilibrium of the system.  +++Mention $\bar{M}_a$, the locally invariant perturbation of the center manifold $M_a$? Passes near the delicate equilibrium point $q_{out}$ so behaviour very much depends on how we pass this point. +++\\
+The special orbit, $\gamma_2$, can be mapped into this chart using the change of coordinates $\kappa_{23}$ of Equation \ref{eq:kappa23}.
 $$\gamma_3=\kappa_{23}(\gamma_2)$$
-In fact, $\gamma_3$ lies in the plane $r_3=0$ and converges to $q_{out}$ as $\epsilon \to 0$. To find the flow in a neighbourhood of $q_out$ we use sections similar to those introduced in $K_2$.
+In fact, $\gamma_3$ lies in the plane $r_3=0$ and converges to $q_{out}$ as $\epsilon \to 0$. To find the flow in a neighbourhood of $q_{out}$ we use sections similar to those introduced in $K_2$.
 
 \begin{align*} \Sigma_3^{in} =\lbrace(r_3,y_3,\epsilon_3) &: r_3\in[0,\rho], y_3 \in [-\beta_3,\beta_3], \epsilon_3=\delta\rbrace,\\
 \Sigma_3^{out} =\lbrace(r_3,y_3,\epsilon_3) &: r_3=\rho, y_3 \in [-\beta_3,\beta_3], \epsilon_3\in[0,\delta]\rbrace
@@ -317,14 +312,14 @@ We now wish to find the transition map $\Pi_3$ between these two charts. That is
 	\label{eq:K3ricc}
 \end{subequations}
 
-In the invariant plane $r_3=0$, the system becomes the Riccati equation (cf. ()\ref{Riccati}) transformed into the chart $K_3$ and with a rescaling of time.
+In the invariant plane $r_3=0$, the system becomes the\textbf{ Riccati equation (cf. ()\ref{Riccati})} transformed into the chart $K_3$ and with a rescaling of time.
 \begin{align*}
 y'_3 &= -2y_3-\frac{\epsilon_3}{1-y_3}\\
 \epsilon'_3 &= -3\epsilon_3
 \end{align*}
 This system has eigenvalues $\lbrace -2,-3\rbrace$ and the issue of additive resonance has been avoided so we are able to linearise the system using a near-identity transformation. This transformation allows the elimination of awkward higher order terms (in this case, $\frac{1}{1-y_3}$). Let
 $$y_3=\psi(\tilde{y}_3,\epsilon_3)=\tilde{y}_3+O(\tilde{y}_3\epsilon_3).$$
-Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions +++?Why, justify+++. The system (\ref{eq:K3ricc}) can now be linearised and the following proposition gives the transition map.
+Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions. The system (\ref{eq:K3ricc}) can now be linearised and the following proposition gives the transition map.
 
 \begin{prop}[\citealt{krupa2001}]
 	The transition map $\Pi_3$ for the transformed $K_3$ system (\ref{sys:K3blowup}) is
