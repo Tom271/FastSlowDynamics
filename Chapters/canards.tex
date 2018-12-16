@@ -155,7 +155,7 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 \begin{subequations}
 	\begin{align}
 	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2h_1+r^2_2x^2_2h_2,\notag\\
-	\implies x'_2&=-y_2+x_2^2-r_2G_2(x_2,y_2),\\
+	\implies x'_2&=-y_2+x_2^2-r_2G_2(x_2,y_2), \label{eq k2 x trans}\\
 	%     \end{aligned}
 	% \end{equation*}
 	% \begin{equation}
@@ -165,73 +165,49 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 	\end{align}
 	\label{eq: reduced canard k2}
 \end{subequations}
-where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$. We should also recall that $r_2'=\lambda_2'=0$. Notice that we have included an additional term in Equation \ref{eq: K2 y trans} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$ which we can easily verify \citep{krupa2001} using the following equations,
-=======
-The transformations \ref{eq: coordinate K2}, as well as a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, is applied to system (\ref{canardysy2var}), which results in 
-\begin{align*}
-	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2+r^2_2x^2_2\left( 1 - \frac{x}{2} \right),\notag\\
-	r^3_2y_2'-3r_2^2y_2r_2'&=r^2_2(r_2x_2-r_2\lambda_2).\notag\\
-\end{align*}
-Since $r'=0, \lambda'=0$, from the extended system, the resulting system is:
+where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$.  Notice that we have included an additional term in Equation \ref{eq: reduced canard k2} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. Then combing this yields our complete system
+\begin{subequations}
+	\begin{align}
+	x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\tag{\ref{eq k2 x trans}}\\
+	y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2)= x_2-\lambda_2, %\label{eq: K2 y trans}
+	\tag{\ref{eq: K2 y trans}}
+	\end{align}
+\end{subequations}
+recalling that $r_2'=\lambda_2'=0$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each equations by, $e^{2y_2}e^{-2y _2}=1$, and define sections of each equation as partial derivatives of $H$ \st, 
 \begin{align}
- x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\\
-y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2)= x_2-\lambda_2. %\label{eq: K2 y trans}
-\label{eq: reduced canard k2}
-\end{align}
-Then, in vector form  $G(x_2,y_2)$ is defined in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. This quantity will become relevant at a later point, when the Melnikov computation is considered.
- \citet{krupa2001} discusses that for $r_2=\lambda_2=0$ the system is integrable.
-The system (\ref{eq: reduced canard k2}) reduces to:
-\begin{align*}
-x_2' &= -y_2 +x_2^2 \\
-y_2' &= x_2.
-\end{align*}
-Since this system is integrable, a constant of motion $H$ can be found in the following way.
-Firstly, expand each of the equations by the factor $e^{2y_2}e^{-2_2}=1$, and define parts of the equations as partial derivatives of $H$, which results in:
-\begin{align*}
 x_2' &=e^{2y_2}e^{-2y_2}( -y_2 +x_2^2 ) =e^{2y_2}\pd{H}{y_2}(x_2,y_2) \\
 y_2' &= - e^{2y_2}e^{-2y_2}(-  x_2)=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
-\end{align*}
-Then, the partial derivatives in $H$ are integrated as follows:
+\end{align}
+Then we integrate $ \pd{H}{x_2}(x_2,y_2) = -e^{-2y_2} x_2  $ to give,
 \begin{align*}
-&\pd{H}{x_2}(x_2,y_2) = -e^{-2y_2} x_2 \\
-&\Rightarrow H(x_2,y_2) = \int -e^{-2y_2} x_2 dx\\
-&\Rightarrow H(x_2,y_2) = - \frac{1}{2} x^2 e^{-2y_2} + C(y),
+%&\Rightarrow H(x_2,y_2) = \int -e^{-2y_2} x_2 dx\\
+ H(x_2,y_2) = - \frac{1}{2} x^2 e^{-2y_2} + C(y),
 \end{align*}
-where $C(y)$ is the constant of integration, which could depend on $y$.
-Then, by taking the derivative with respect to $y$ and setting it equal to the expression $\pd{H}{y_2}(x_2,y_2)=e^{-2y_2}( -y_2 +x_2^2 )$, defined above, we can find the value for $C(y)$ as follows: 
+where $C(y)$ is the constant of integration, which depends on $y$.
+Then, by taking the derivative with respect to $y$ and setting it equal to the expression $\pd{H}{y_2}(x_2,y_2)=e^{-2y_2}( -y_2 +x_2^2 )$, we can find the value for $C(y)$ as follows: 
 \begin{align*}
 \pd{H}{y_2}(x_2,y_2)&= x^2 e^{-2y_2} + C'(y)\\
-&= e^{-2y_2}( -y_2 +x_2^2 )\\
+%&= e^{-2y_2}( -y_2 +x_2^2 )\\
 \Rightarrow C'(y) &= - y_2 e^{-2y_2}
 \end{align*}
-In a last step, we can integrate $C'(y)$ in order to find an explicit expression for $H$:
+Finally we integrate $C'(y)$ in order to find an explicit expression for $H$,
 \begin{align*}
-C(y) = \int - y_2 e^{-2y_2} dy = \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c,
+C(y) = \int - y_2 e^{-2y_2} dy = \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + const,
 \end{align*}
-using integration by parts, and where $c$ is the constant of integration.
-Then, the final expression for the constant of motion is:
+using integration by parts.
+Then, the final expression is:
 \begin{align*}
 H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c\\
 &= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c.
 \end{align*}
-Note that without loss of generality $c=0$, because we are interested in the level curves of $H$, $H=h$, and therefore an additional constant just represents a shift of the level curve. Then the expression for $H$ is comparable with the result in \citet{krupa}.
-,
->>>>>>> fc965573a42105f0cc649fd2b72dfeb929fc097a
-\begin{subequations}
-	\begin{align}
-	x'_2&=e^{2y_2}\pd{H}{y_2}(x_2,y_2),\\
-	y_2'&=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
-	\end{align}
-\end{subequations}
-Further to this we can see, when we consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$.
-considering the reduced system (Equation \ref{eq: reduced canard k2}) we find from $ H(x_2,y_2)=0 $ that,
+Note that without loss of generality we can choose $c=0$ because we are interested in the level curves of $H$ and $H=h$. Now that we have shown how the constant of motion is constructed we will consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$. Considering the reduced system (Equation \ref{eq: reduced canard k2}) we have from $ H(x_2,y_2)=0 $ that,
 \begin{subequations}
 	\begin{align}
 	x_2'&=\frac{1}{2}\ \	\implies x_2=\frac{t_2}{2}+A, \label{canard: trajectory x}\\
 	y_2'&=\frac{t_2}{2}\ \implies y_2=\frac{t_2^2}{4}-\frac{1}{2}, \label{canard: trajectory y}
 	\end{align}
 \end{subequations} 
-where we have directly integrated Equation \ref{canard: trajectory x} with respect to our time ($ t_2 $). However, we can note that we are able to choose $ A=0 $ as we are considering an autonomous (time-invariant) system. Then for Equation \ref{canard: trajectory y} we are able to rearrange constant of motion at zero to give, $ y_2=x_2^2-\frac{1}{2} $. Clearly from this analysis we are then able to define our trajectories in terms of $ \gamma_{c,2} $, 
+where we have directly integrated Equation \ref{canard: trajectory x} with respect to our time ($ t_2 $). However, we note that we are able to choose $ A=0 $, as we are considering an autonomous (time-invariant) system. Then for Equation \ref{canard: trajectory y} we are able to rearrange the constant of motion at zero to give, $ y_2=x_2^2-\frac{1}{2} $. Clearly from this analysis we are then able to define our trajectories in terms of $ \gamma_{c,2} $, 
 \begin{equation}
 \gamma_{c,2}(t_2)=(x_{c,2}(t_2),y_{c,2}(t_2))=\left(\frac{t_2}{2},\frac{t^2_2}{4}-\frac{1}{2}\right).   
 \end{equation}
@@ -247,16 +223,16 @@ to find the relevant pathways of our flows. Now if we first consider the $r_1$ c
 \begin{align}
 2r_1^2r_1'=r_1^2\epsilon(r_1x_1-r_1\lambda_1), \label{canard: r1}
 \end{align}
-where we can call $F=F(x,y,\epsilon,\lambda)=x_1-\lambda_1+O(r_1(r_1+\lambda_1)$. Now we will see the motivation with starting with $y=r_1$ when we transform our other coordinates. Now if we consider $x=r_1x_1$,
+where we define $F=F(x,y,\epsilon,\lambda)=x_1-\lambda_1+O(r_1(r_1+\lambda_1)$. Next we consider $x=r_1x_1$,
 \begin{align*}
 r_1r_1'x_1+r_1^2x_1'&=-r_1^2+r_1^2x_1^2,\\
 x_1'&=-1+x_1^2-\frac{x_1r_1'}{r_1},
 \end{align*}
-where we can use Equation \ref{canard: r1} to simplify this further - Equation \ref{eq: canard x1}.
+where we can use Equation \ref{canard: r1} to simplify this further,
 \begin{align}
-x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right) \label{eq: canard x1}
+x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right). \label{eq: canard x1}
 \end{align}
-We now consider our $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation \ref{canard: r1} to simplify to,
+We now consider $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation \ref{canard: r1} to simplify to,
 \begin{align}
 \epsilon'=-\epsilon_1^2F. \label{canard: epsilon k1}
 \end{align}
@@ -275,8 +251,7 @@ which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k1}. N
 	\end{align}
 	\label{canard: system of equations}
 \end{subequations}
-% Unique becuase of exponetial attraction in canard case - note it is the reversal of figure 2.4 for uniqueness
-From this system we are now able to make some deductions. We first can observe that the hyperplanes are along the $r_1=\epsilon_1=\lambda_1=0$ with an invariant line at $l_1=\{(x_1,0,0,0): x_1\in\Re\}$ \citep{krupa2001}. As \citet{krupa2001} discusses the equilibria present at the end of both of our branches - Figure \ref{fig: Canard Point} - which are found at $p_a=(-1,0,0,0) \ \text{and} \ p_r=(1,0,0,0)$ \citep{krupa2001}. Now we can go one step further, we can consider Equation \ref{canard: system of equations} and find the eigenvalues of the system for the invariant planes. We find that, 
+From this system we are now able to make some deductions. We first can observe that the hyperplanes are along the $r_1=\epsilon_1=\lambda_1=0$ with an invariant line at $l_1=\{(x_1,0,0,0): x_1\in\mathbb{R}\}$ \citep{krupa2001}. As \citet{krupa2001} discusses the equilibria present at the end of both of our branches - Figure \ref{fig: Canard Point} - which are found at $p_a=(-1,0,0,0) \ \text{and} \ p_r=(1,0,0,0)$ \citep{krupa2001}. Now we can go one step further, we can consider Equation \ref{canard: system of equations} and find the eigenvalues of the system for the invariant planes. We find that, 
 \begin{equation}
 J-\sigma I= \begin{bmatrix}
 2x-\sigma & 0 & 0 & 0  \\
@@ -334,32 +309,46 @@ From this we are about to find the eigenvalues of the system, $ \sigma=0 $ and $
 		% just an empty subfigure to shift C below A
 		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-4.jpg}
 		\caption{The Hopf bifurcation due to the canard point.}\label{fig:timing4}
+	\end{subfigure}\vspace{1cm}
+	\begin{subfigure}[t]{0.45\textwidth}\centering
+		\includegraphics[width=.8\linewidth, height=6cm]{Code/behaviourswitch-pres}
+		\caption{Growth of the Hopf bifrucation leading to the formation of a Canard explosion.}
+		\label{fig: hopf growth}
 	\end{subfigure}
 	\caption{The trajectories associated with the canards case of the \vdp system.}
 	\label{fig: 4 canard }
-\end{figure}
-From Figure \ref{fig: 4 canard } we can see the progression of our flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then from Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. This is because we make note that the canard point is present at $ -\lambda $, which in essence pushes the flow up the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch, starting the oscillation - Figure \ref{fig:timing4}. Moreover, it is worth noting that our Hopf bifurcation only exists when we are in an arbitrarily small region, $ O(\epsilon) $ \cite{Eckhaus} - this idea is further discussed in Section \ref{sec:singular-hopf-bifurcation}.
+\end{figure}\newpage
+From Figure \ref{fig: 4 canard } we can see the progression of our flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then from Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. This is because we make note that the canard point is present at $ -\lambda $, which in essence pushes the flow up the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch, starting the growing oscillations - Figure \ref{fig:timing4}. When the Hopf bifurcation is large we would then expect to see a jump in our solution to an attracting branch - Figure \ref{fig: hopf growth}.
+
+%\begin{figure}[h!]\centering
+%	\includegraphics[height=8cm,width=6cm]{Code/behaviourswitch}
+%	\caption{Growth of the Hopf bifrucation leading to the formation of a Canard explosion.}
+%	\label{fig: hopf growth}
+%\end{figure}\newpage
+%
+%Moreover, it is worth noting that our Hopf bifurcation only exists when we are in an arbitrarily small region, $ O(\epsilon) $, due to the local nature of the theorem \cite{Eckhaus}. 
 %\begin{figure}[h!]\centering
 %%	\includegraphics[]{}
 %	\caption{Development of the Hopf Bifurcation. \textbf{Tom can you screenshot the flow in 4 places?}}
 %	\label{fig: Hopf}
 %\end{figure}
 %Figure \ref{fig: 4 canard } shows that we have an unstable periodic solution within our canard system. In addition to this we know that our canard system will only exist within a small region of $ O(\epsilon) $ \citep{Eckhaus}. Moreover, we can see from Figure \ref{fig: Hopf} that our flow follows the expected path, as we saw in ++++++++++++++++++++++++\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsubsection{Singular Hopf Bifurcation}\label{sec:singular-hopf-bifurcation}
+%Furthermore, in the \vdp we are able to find a singular Hopf Bifurcation when $ \lambda=1 $. Then to model this behaviour we need to consider a small perturbation along the slow flow where we will have, from Equation \ref{eq: canard system},%discuss what the solutions for x is in the paper 
+%\begin{equation}
+%\dot{y}=\lambda-x+\bar{\nu} y,
+%\end{equation}
+%where $ \nu $ is of order $ O(\epsilon) $, thus small. We can immediately see that when $ \bar{\nu}=0 $ that we have our original flow at our equilibrium but we are now able to perturb our flow over a small domain, which are described in Figures \ref{fig: Hopf}. We can also see how our system behaves when our $ \nu $ is of larger order than $ O(\epsilon) $,
+%
+%\begin{figure}[h]\centering
+%	\includegraphics[height=6cm,width=10cm]{Images/CanardPointcircle}
+%	\caption{The flow within our canard system \citep{krupa2001}.}
+%	\label{fig: canard flow circle}
+%\end{figure}\newpage
+%where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $ (for the flow outside of the domain $ O(\epsilon) $),our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
 
-\subsubsection{Singular Hopf Bifurcation}\label{sec:singular-hopf-bifurcation}
-Furthermore, in the \vdp we are able to find a singular Hopf Bifurcation when $ \lambda=1 $. Then to model this behaviour we need to consider a small perturbation along the slow flow where we will have, from Equation \ref{eq: canard system},%discuss what the solutions for x is in the paper 
-\begin{equation}
-\dot{y}=\lambda-x+\bar{\nu} y,
-\end{equation}
-where $ \nu $ is of order $ O(\epsilon) $, thus small. We can immediately see that when $ \bar{\nu}=0 $ that we have our original flow at our equilibrium but we are now able to perturb our flow over a small domain, which are described in Figures \ref{fig: Hopf}. We can also see how our system behaves when our $ \nu $ is of larger order than $ O(\epsilon) $,
-
-\begin{figure}[h]\centering
-	\includegraphics[height=6cm,width=10cm]{Images/CanardPointcircle}
-	\caption{The flow within our canard system \citep{krupa2001}.}
-	\label{fig: canard flow circle}
-\end{figure}\newpage
-where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $ (for the flow outside of the domain $ O(\epsilon) $),our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\subsubsection{Singular Hopf Bifurcation}\textbf{Does this section tie in anywhere else?}
 %In this section we will further expand on our Hopf Bifurcation of the previous section (Section \ref{sec:effect-of-the-canard-point}). We note that we get a singular bifurcation iff our system is equivalent to Equation \ref{eq: Fast System}, \st $ \lambda=1 $. \citet{Eckhaus} discusses that our bifuraction will only exist within a small range of $ O(\epsilon) $. Then to model this behaviour we need to consider a small perturbation along the slow flow where we will have, from Equation \ref{eq: canard system},%discuss what the solutions for x is in the paper 
@@ -375,7 +364,7 @@ where it is clear that our Hopf bifurcation is the periodic solution in the cent
 %\end{figure}\newpage
 %where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $, our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
 
-
+%\newpage
 
 
 \subsubsection{Separation of the Manifolds}\label{sec:separation-of-the-manifolds}
@@ -383,7 +372,7 @@ where it is clear that our Hopf bifurcation is the periodic solution in the cent
 	\includegraphics[height=8cm,width=10cm]{Images/Separation}
 	\caption{Separation of $ M_a $ and $ M_r $ \citep{Kuehn}.}
 	\label{fig: splitting}
-\end{figure}
+\end{figure}%\newpage
 %\textbf{Discuss splitting on the manifold}
 Continuing on from the singular Hopf bifurcation we might find that the canard point forces our branches to split. In other words we are looking for when the attracting and repelling branches are no longer connected, as show in Figure \ref{fig: splitting}. To do this we would use Melnikov Computations to show that our manifolds split - see \textit{Extending Geometric Singular Perturbation Theory to Nonhyperbolic Points - Fold and Canard Points in Two Dimensions} \citep{krupa2001} for direct use. To discover whether we have a splitting between our branches we need to consider our $ y $ coordinates \wrt our second chart \st $ y_{a,2}(0)-y_{r,2}(0) $ is a distance function which can be written as $ D_c(r_2,\lambda_2)=H(0,y_{a,2}(0))-H(0,y_{r,2}(0)) $ as we note that $ \pd{}{y_2}H(0,y_2)\neq 0 $ \citep{krupa2001}. From here we can use the following proposition,
 \begin{prop}

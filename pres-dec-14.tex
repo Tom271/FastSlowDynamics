@@ -63,8 +63,8 @@
 \includemedia[width=1\linewidth,height=1\linewidth,activate=pageopen,
 passcontext,
 transparent,
-addresource=vdPe001.mp4,
-flashvars={source=vdPe001.mp4}
+addresource=vdPbigE.mp4,
+flashvars={source=vdPbigE.mp4}
 ]{}{VPlayer.swf}
 \end{figure}
 \column{0.4\textwidth}
@@ -545,32 +545,21 @@ r'_2&=0
 \end{frame}
 
 \begin{frame}{Mixed Mode Oscillations (MMO's)}
-%\begin{frame}{Effects of a Canard}
 \begin{columns}
-	\column{0.5\textwidth}
+	\column{0.6\linewidth}
 	\begin{figure}
 		
-		\includegraphics[height=5cm,width=7cm]{Images/phase-MMO}
-		\caption{Phase portrait of an MMO (Desroches et al - Mixed Mode Oscillation with Multiple Time Scales)}
+		\includegraphics[width=\textwidth]{Images/chaoticEvdp}
 		
-	\end{figure}\column{0.4\textwidth}
-	\begin{itemize}
-		%\item The maps $\Pi_1, \Pi_2, \Pi_3$ can be combined into a global map $\Pi$ using the variable transformations.
-		\item What are MMO's?
-		\item Why are they useful?
-		\begin{itemize}
-			\item Applications? 
-			\item 
-		\end{itemize}
 		
-		%\begin{itemize}
-		%    \item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
-		%\end{itemize}
-		%% \item Riccati flow at $\bar{\gamma}.$
-		%\item What does $q_{out}$ do?
-		%% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
-	\end{itemize}
+	\end{figure}\column{0.4\linewidth}
+\begin{figure}
+	\includegraphics[width=\textwidth]{Images/eVDPts}
+	
+\end{figure}
+
 \end{columns}
+\begin{center} Phase Portrait and Time Series of chaotic MMO \end{center}
 \end{frame}
 
 
@@ -581,11 +570,11 @@ r'_2&=0
 	\begin{figure}
 		
 		\includegraphics[height=5cm,width=6cm]{Images/MMO-spirals}
-		\caption{Oscillations in the canonical form system (Desroches et al - Mixed Mode Oscillation with Multiple Time Scales)}
+		\caption{Canards in the normal form system (Desroches et al., 2015)}
 		
 	\end{figure}\column{0.4\textwidth}
 	\begin{itemize}
-		\item Canonical System:
+		\item Normal Form:
 		\begin{equation*}
 			 \begin{cases}
 			\dot{x}&=y-x^2\\
@@ -593,21 +582,28 @@ r'_2&=0
 			\dot{z}&=-\nu
 			\end{cases} 
 		\end{equation*}
-		\item Small Amplitude Oscillations (SAO's)
-		\item Large Amplitude Oscillations (LAO's)
-		
-		%\begin{itemize}
-		%    \item $\Pi=\Pi_3\circ\kappa_{23}\circ\Pi_2\circ\kappa_{12}\circ\Pi_1$
-		%\end{itemize}
-		%% \item Riccati flow at $\bar{\gamma}.$
-		%\item What does $q_{out}$ do?
-		%% \item This describes the flow at $(x^*,y^*)=(0,0)$. %(not on but around???)
+		\item MMO due to a Folded Node 
 	\end{itemize}
 \end{columns}
 \end{frame}
 
 \begin{frame}{Conclusion}
-Heart Rates
+\begin{onlyenv}<1>
+\end{onlyenv}
+\begin{onlyenv}<2>
+\begin{columns}
+\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{Images/neuron}
+	\end{figure}%
+\column{0.5\linewidth}
+		\begin{figure}
+		\includegraphics[width=\linewidth]{Images/ECG}
+	\end{figure}%
+\end{columns}
+\end{onlyenv}
+
+
 \end{frame}
 
 
