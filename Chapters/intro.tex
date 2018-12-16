@@ -1,29 +1,31 @@
 +++Motivate motivate motivate+++\\
 Nonlinear evolution equations ubiquitous across the sciences. These typically take the form
-$$ \dot{x}(t) = F\left(x(t)\right)$$ where $x\in \mathbf{R}^n, F\in C^r(\mathbf{R}^n,\mathbf{R}^n)$. We will be interested in systems that occur on different timescales, known as fast-slow systems. These occur naturally in physics, neuroscience and many other biological scenarios. +++ Van der Pol, FitzHugh-Nagumo, other bio ref?+++.\\
-Fast-slow systems are systems of differential equations that can be viewed on two different time scales, which are separated by a parameter.
+$$ \dot{x}(t) = F\left(x(t)\right)$$ where $x\in \mathbf{R}^n, F\in C^r(\mathbf{R}^n,\mathbf{R}^n)$. We will be interested in systems that occur on different timescales, known as fast-slow systems. These occur naturally in physics, neuroscience and many other biological scenarios +++ Van der Pol, FitzHugh-Nagumo, other bio ref?+++. Models of such systems can be written generally in the form given below.
 
-We will first study two dimensional systems, with one fast and one slow variable, with a separation in speed of $\epsilon$.
-These systems are generally of the form
 \begin{align}
 \begin{cases}
-x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon),\\
-y' &= \frac{dy}{dt}= \epsilon g( x,y, \lambda, \epsilon),
+x' &=\frac{dx}{dt}= f(x,y,\epsilon),\\
+y' &= \frac{dy}{dt}= \epsilon g(x,y,  \epsilon),
 \end{cases}\label{FastS}
-\end{align}
-which is known as the fast system.
-If time is `slowed down' using a scaling $t = \frac{\tau}{\epsilon} $, we find that this can be rewritten as
+\end{align} 
+Here, $x \in \R^n, y \in R^m, m,n \geq 1$ and $f,g$ are sufficiently smooth. The separation in timescales is governed by $0<\epsilon \ll 1$, known as the timescale separation parameter. Some systems also act on more than two timescales, in which case there is more than one timescale separation parameter.  In the system above, note that the change in $x$ is $O(1)$, whilst it is $O(\epsilon)$ in $y$. As $\epsilon$ is very small, this means that the change in $x$ is much faster than that of $y$. If we slow down time with the transformation $\tau = \epsilon t$, the system becomes  
 \begin{align}
-\begin{cases}
-\epsilon \dot{x} &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, \epsilon),\\
-\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda, \epsilon),
-\end{cases}\label{SlowS}
-\end{align}
-which is called the slow system.\\
+	\begin{cases}
+	\epsilon \dot{x} &= \epsilon \frac{dx}{d\tau} = f(x,y,\lambda, \epsilon),\\
+	\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda, \epsilon),
+	\end{cases}\label{SlowS}
+\end{align} 
+Represented like this, $\dot{x} = O(\frac{1}{\epsilon})$ whilst $\dot{y} = O(1)$.  The time scale given by $\tau$ is said to be slow so (\ref{SlowS}) is the \emph{slow system} while (\ref{FastS}) is the \emph{fast system}.
 
-Here $x$ is called the fast variable, while $y$ is the slow variable. In our case the parameter $\lambda\in \R $ will control the location of the equilibrium of the system (see Section \ref{sec:canard-points}), although it can also be considered as a constant. The time scale separation parameter, $\epsilon$ is much less than 1. Indeed, if $\epsilon=1$, this system is no longer fast-slow as both variables change on the same timescale. The functions $f$ and $g$ are required to be $r+1$ differentiable \st we have $f,g \in  C^{r+1} $, where $ r $ is the number of dimensions present. There is no restriction on the number of timescales. It is possible to have three or more time scales, separated by additional parameters, as well as more state-space variables (See Section \ref{sec:MMO}). \\
 
-Throughout what follows, the motivating example will be the Van der Pol equation. The Van der Pol oscillator is a well-studied second order ODE that is used to model a variety of physical and biological phenomena. It was developed by the Dutch physicist and electrical engineer Balthasar Van der Pol, who conducted research on electrical circuits. In certain cases, he observed stable oscillations later named relaxation oscillations. This equation can be scaled so that it becomes a fast-slow system of the form shown in Equation\ref{FastS} after a change of variables.
+\begin{figure}[]
+	%\includegraphics[]}
+	\caption{Examples of fast-slow systems in nature (neuron,ECG etc. )}
+	\label{fig:nature}
+\end{figure} 
+
+
+Throughout what follows, the motivating example will be the Van der Pol equation. The Van der Pol oscillator is a well-studied second order ODE that is used to model a variety of physical and biological phenomena. It was developed by the Dutch physicist and electrical engineer Balthasar Van der Pol, who conducted research on electrical circuits. This equation can be scaled so that it becomes a fast-slow system of the form shown in Equation\ref{FastS} after a change of variables.
 
 \subsection{Derivation of the Van der Pol Fast-Slow System}
 
@@ -50,27 +52,8 @@ which is called the layer problem, and
 \end{align}
 called the reduced system.\\
 
-Fast- Slow systems are systems of differential equations that can be viewed on two different time scales, which are separated by a parameter.
-These systems are generally of the form
-\begin{align}
-\begin{cases}
-x' &=\frac{dx}{dt}= f(x,y,\lambda, \epsilon),\\
-y' &= \frac{dy}{dt}= \epsilon g( x,y, \lambda, \epsilon),
-\end{cases}\label{FastS}
-\end{align}
-which is known as the fast system.
-Using a scaling for the time, $t = \frac{\tau}{\epsilon} $, we find that this can be rewritten as
-\begin{align}
-\begin{cases}
-\epsilon \dot{x} &= \epsilon \frac{dx}{d \tau} = f(x,y,\lambda, \epsilon),\\
-\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda, \epsilon),
-\end{cases}\label{SlowS}
-\end{align}
-which is called the slow system.\\
 
-Here $x$ is called the fast variable, while $y$ is the slow variable. $\lambda$ is a parameter (see Section \ref{sec:canard-points}), $\epsilon$ is the time scale separation parameter and satisfies $0< \epsilon << 1$. The functions $f$ and $g$ are required to be sufficiently smooth \st we have $ C^{r+1} $ smoothness, where $ r $ is the number of dimensions present. It is generally possible to have three or more time scales, separated by additional parameters, as well as more state-space variables. \\
-
-In order to analyse systems (\ref{FastS}) and (\ref{SlowS}) using Geometric Singular Pertubation Theory (GSPT), the singular limit $\epsilon \to 0$ is considered:
+In order to analyse systems (\ref{FastS}) and (\ref{SlowS}) using Geometric Singular Perturbation Theory (GSPT), the singular limit $\epsilon \to 0$ is considered:
 
 \begin{align} \label{FastS0}
 \begin{cases}
