@@ -6,21 +6,20 @@ The neigbourhood $U$ is small enough, such that $g(x,y, \epsilon) \neq 0$ in $U$
 &\Delta ^{in} = \{ (x, \rho^2), x \in I \} \\
 &\Delta ^{out} = \{ (\rho, y), y \in \mathbf{R} \},
 \end{align*}
-where $I \subset \mathbf{R}$. Now $\Delta^{in}$ is traverse to $S^a$, while $\Delta^{out}$ is traverse to the fast flow. This enables us to monitor the incoming trajectories from the attracting branch of $S$ and the trajectories leaving $U$ in the direction of the fast flow.
+where $I \subset \mathbf{R}$. Now $\Delta^{in}$ is transverse to $S^a$, while $\Delta^{out}$ is transverse to the fast flow. This enables us to monitor the incoming trajectories from the attracting branch of $S$ and the trajectories leaving $U$ in the direction of the fast flow.
 Then a function $\pi : \Delta^{in} \to \Delta^{out}$ can be defined, called the transition map, which describes how the trajectories passing through $\Delta^{in}$ are mapped onto the outgoing flow in $\Delta^{out}$.  
-The following theorem describes the behaviour of the flow under $\pi$ and a sketch of the proof will be given at the end of this section: ++++last statement not precise+++
+The following theorem describes the behaviour of the flow under $\pi$.
+% and a sketch of the proof will be given at the end of this section: ++++last statement not precise+++
 
 \begin{theorem}[\citealp{krupa2001}] \label{transition map theorem}
 Under the assumptions made in this section, there exists $ \epsilon_0 >0$ such that the following assertions hold for $\epsilon \in (0, \epsilon_0]$:\\
 1. The manifold $S_\epsilon^a$ passes through $\Delta^{out}$ at a point $(\rho, h(\epsilon))$, where $h(\epsilon) = O(\epsilon^{2/3})$.\\
 2. The transition map $\pi$ is a contraction with contraction rate $O(e^{-c/\epsilon})$, where $c$ is a positive constant.
 \end{theorem}
-This means that the trajectories that enter $U$ through $\Delta^{in}$, will be funneled into a smaller section of $\Delta^{out}$ and therefore we are guaranteed to observe the trajectories that enter through $\Delta^{in}$ in $\Delta^{out}$.
-
-Now we are in the position to describe the Method of Blow-Up Transformations in the neighbourhood $U$.
+This means that the trajectories that enter $U$ through $\Delta^{in}$, will be funneled into a smaller section of $\Delta^{out}$ and therefore we are guaranteed to observe the trajectories that enter through $\Delta^{in}$ in $\Delta^{out}$. Now we are in the position to describe the method of Blow-Up Transformations in the neighbourhood $U$.
 
 \subsection{Coordinate Transformation and Charts} \label{sec:transform blowup}
-We first need to transform the extended system (\ref{extended FS}) with respect to the time variable and the space variables. This coordinate transformation is called the Blow-Up Transformation because the degenerate fold point $(0,0)$ (eigenvalue 0, refer to extended system) is regarded as a sphere of radius $r=0$. By rescaling the space variables with respect to different weights of $r$,
+We first need to transform the extended system (\ref{extended FS}) with respect to the time variable and the space variables. This coordinate transformation is called the Blow-Up Transformation because the degenerate fold point $(0,0)$ is regarded as a sphere of radius $r=0$. By rescaling the space variables with respect to different weights of $r$,
 \begin{subequations}
     \begin{align}
         &x=\Bar{r}\Bar{x}  \label{sys: blow up trans x}\\
@@ -30,9 +29,9 @@ We first need to transform the extended system (\ref{extended FS}) with respect 
     \label{sys: blow up trans}
 \end{subequations}
 we find that we are able to carry out further analysis, as will follow.
-+++++ If time and space permit, an analysis of the space B and coordinate map would be good... p.291 krupa++++
+%+++++ If time and space permit, an analysis of the space B and coordinate map would be good... p.291 krupa++++
 %A reasonable question to consider is why do we note consider spherical polar coordinates. The reasoning behind this is because we are looking to maximise our computational efficiency so we will proceed in cartesian coordinates.
-Instead of analysing the sphere in spherical polar coordinates, which might seem the most obvious choice of method,  the rest of this analysis is done using charts, which are introduced in the next section. This method turns out to be a more natural choice for this problem and maximises computational efficiency.
+Instead of analysing the sphere in spherical polar coordinates, which might seem the most obvious choice of method,  the rest of this analysis is done using charts, described below (see \citet{needam} for the construction of charts on a sphere). This method turns out to be a more natural choice for this problem and maximises computational efficiency.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[height=5cm,width=7cm]{Images/charts-ball}
