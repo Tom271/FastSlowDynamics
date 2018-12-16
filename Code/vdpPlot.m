@@ -15,12 +15,13 @@ close all
     
     fold1=[0 0];
     fold2=[2,4/3];
-    equil=[1,2/3]; %%Change if canard
+    equil=[lambda, -lambda.^3/3.+lambda.^2]; %%Change if canard
     if(xyPlot==1)
         nullx=linspace(-1.5,3.1);
         nully=-nullx.^3/3.+nullx.^2;
         null2y=nullx;
         fig=figure(1);
+        subplot(1,2,1)
         set(gcf,'color','white')    
         %'units','normalized','outerposition',[0 0 1 1],
         
@@ -36,9 +37,10 @@ close all
         %plot(fold1(1),fold1(2),'g-s','MarkerFaceColor','g','MarkerSize',10)
         %plot(fold2(1),fold2(2),'g-s','MarkerFaceColor','g','MarkerSize',10)
         plot(equil(1),equil(2),'b-s','MarkerFaceColor','b','MarkerSize',10)
-        plot(zeros(1,length(null2y)),null2y,'--','LineWidth',1.5,'Color',1/255*[150,150,150])
+        plot(equil(1)*ones(1,length(null2y)),null2y,'--','LineWidth',1.5,'Color',1/255*[150,150,150])
         plot(x(:,1),x(:,2),'Color','r');
-        
+        xlabel("x")
+        ylabel("y")
         hold off
 
 %          for j = 1:length(x(:,1))
@@ -72,12 +74,14 @@ close all
 %         
     end
     if(tPlot==1)
-        figure();
+        subplot(1,2,2)
         set(gcf,'color','white')
+        grid on
         plot(t,x(:,1),t,x(:,2))
-        title('Time Plot of the vdP Oscillator')
+        %title('Time Plot of the vdP Oscillator')
+        xlabel("Time")
     end
-    
+
 end
 
 function vdp =vdp(t,x,epsilon,lambda)
