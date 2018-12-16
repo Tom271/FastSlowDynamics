@@ -1,3 +1,47 @@
+\subsection{Phase Plane Analysis}
+\begin{figure}[h]\centering
+	%	\includegraphics{}
+	%	\caption{Flows in our \vdp system.}
+	%	\label{\ref{fig: vdp flow diagram}}
+\end{figure}
+The aim of this analysis is to be able to analyse the system in the singular limit $\epsilon \to 0$ and apply appropriate theory to conclude the persistence of the dynamic for $\epsilon > 0$. 
+Section \ref{GSPT} introduced one instance where this persistence can be concluded.
+The main requirement for the theory in Section \ref{GSPT} is normal hyperbolicity of the critical manifold.
+Considering the manifold $C_0= \{ (x,y) : 0=y-\frac{x^3}{3}+x:=f \}$, the Jacobian $\frac{ \partial f}{\partial x}(x,y,0) = -x^2 + 1$, which has a zero real part at $x_0= \pm 1$ - together with the corresponding $y_0$ are singularities of the system.
+Further analysis has to be done below in order to conclude that they are generic fold points.
+The points of interest are $(x_0^+,y_0^+)=(1,-\dfrac{2}{3})$ and $(x_0^-,y_0^-)=(-1,\dfrac{2}{3})$. By Definition \ref{FoldDef}, there is only one eigenvalue with zero real part at $(x_0,y_0)$. Evaluating the Jacobian at each of the points in turn shows:
+\begin{align*}
+\begin{cases}
+\frac{ \partial f}{\partial x}(x_0^+,y_0^+,0) = -1^2 + 1 =0 \\
+\frac{ \partial f}{\partial x}(x_0^-,y_0^-,0) = -(-1)^2 + 1 =0,
+\end{cases}
+\end{align*}
+where each of the zeros are simple.
+Therefore $(x_0^+,y_0^+)$ and $(x_0^-,y_0^-)$ are fold points.
+These points are nondegenerate if the non-degeneracy assumptions (Equation \ref{NonDeg}) hold:
+\begin{align*}
+\begin{cases}
+\frac{ \partial ^2 f}{ \partial x^2} (x_0^+,y_0^+, \lambda, 0) = -2 x_0^+ = -2 \neq 0 \\
+\frac{\partial f}{\partial y}(x_0^+,y_0^+, \lambda, 0) = 1 \neq 0,
+\end{cases}
+\end{align*}
+and equivalently for the other fold point
+\begin{align*}
+\begin{cases}
+\frac{ \partial ^2 f}{ \partial x^2} (x_0^-,y_0^-, \lambda, 0) = -2 x_0^- = 2 \neq 0 \\
+\frac{\partial f}{\partial y}(x_0^-,y_0^-, \lambda, 0) = 1 \neq 0.
+\end{cases}
+\end{align*}
+Therefore, the two fold points are non-degenerate.
+Futhermore, it can be checked if a fold point is generic. It then has to satisfy the transversality condition $g(x_0,y_0,0) \neq 0$.
+The two fold points considered here are generic, since 
+\begin{align*}
+g(x_0^+,y_0^+,0)= -1 \neq 0 \\
+g(x_0^-,y_0^-,0)= 1 \neq 0.
+\end{align*}
+
+Now we know that the Van der Pol System displays Relaxation Oscillations and that normal hyperbolicity of the system breaks down at the fold points. Fenichel Theory can be applied for regions that are not in the neighbourhood of the fold points. However, a different approach has to be employed for the analysis of the dynamics around the folds.\\
+
 
 One of the requirements of Fenichel's Theorem is normal hyperbolicity \citep{Kuehn}. However, Fast-Slow systems can display singular points where normal hyperbolicity is no longer given and therefore the conclusions of Theorem \ref{Fenichel} no longer hold at these singularities - where trajectories can jump between fast and slow flow. The singularities in the setting of Fast-Slow systems are points $(x_0,y_0)$ on the critical manifold $S_0$, for which the Jacobian ($ J \ \text{at} \ {\partial x}(x_0,y_0, \lambda, 0)$) has one or more eigenvalue with zero real part. Comparing this with Definition \ref{NormHyp} shows that this is a negation of normal hyperbolicity. The simplest of those singularities are called a fold point, which is defined as follows:
 \begin{definition}{\textbf{Fold Point}} \label{FoldDef} \\
@@ -20,3 +64,34 @@ For these generic folds there exists a theorem that states that the slow flow on
 	In the singular limit there exists a trajectory $\gamma_0$, which alternates between fast and slow bits and describes a closed loop in the system. This trajectory $\gamma_0$ persists as $\gamma_\epsilon$ under a small pertubation $\epsilon >0$.
 \end{definition} 
 Systems containing non-generic folds or other types of singularities can display different types of periodic orbits.
+\subsubsection{Extended System} \label{sec: extended sys blowup}
+The canonical system (Equation \ref{eq: canonical}) is then extended to three dimensions by considering $\epsilon'=0$. 
+\begin{equation} \label{extended FS}
+\begin{aligned}
+&x'=-y+x^2+h(x) \\
+&y'=\epsilon(x-1)\\
+&\epsilon'=0.
+\end{aligned}
+\end{equation}
+
+
+Analysing the stability of the three dimensional system, three eigenvalues can be found by considering the Jacobian matrix, in the singular limit $\epsilon=0$: 
+\begin{equation} 
+J=\begin{vmatrix} 2x-x^2 & -1&0 \\ 0 & 0&0\\0&0&0\end{vmatrix}
+\label{eq: Eigenvalues}
+\end{equation}
+This is an upper triangular matrix and hence $(\lambda_1.\lambda_2,\lambda_3)=tr(J)= (2x-x^2,0,0)$. Therefore, at the fold points, where $x=0$ or $x=2$, $\lambda_i=0 \ \text{for} \ i=1,2,3$, there exists a zero eigenvalue on $S$. Note that at these points $S$ is not normally hyperbolic.
+The critical manifold has to be divided as follows:
+\begin{align*}
+S^a &= \{ (x,y): y = x^2-\frac{x^3}{3}, x< 0 \} \cup  \{ (x,y): y = x^2-\frac{x^3}{3}, x>2 \} \\
+S^r &= \{ (x,y): y = x^2-\frac{x^3}{3}, 0< x< 2 \},
+\end{align*}
+such that $S^a \cup S^r \cup \{0\} \cup \{2\} = S$.
+The manifolds $S^a_0$ and $S^r_0$ are normally hyperbolic everywhere and  Theorem \ref{Fenichel} (Fenichel's) can be applied in order to conclude the persistence of the manifold as slow manifolds $S^a_\epsilon$ and $S^r_\epsilon$. At the points $x=0$ and $x=2$ the normal hyperbolicity is not given, since the eigenvalue associated to $S$ is zero at these points.
+%++++++Note: technically the paper mentions here the centre manifold M, stressing the three dimensionality of the problem. if we want that it can be added+++++++++
+\\
+\\
+In the analysis of the reduced system it became apparent that the fold points are singularities of the reduced flow on $S_0$, and therefore the dynamics in the singular limit cannot be determined. Furthermore, Fenichel Theory does not apply at the folds because normal hyperbolicity breaks down at these points, as discussed above. Therefore, even if the dynamics around the folds in the singular limit were known, no conclusions could be drawn for the perturbed system with $S_\epsilon$.
+Alternative methods have to be employed to describe the dynamics on the fold points in the singular limit and furthermore to be able to conclude the dynamics of the full system at the fold points from this analysis.
+The method considered for analysis is called the Blow-Up Method.
+
