@@ -63,13 +63,13 @@ This is known as the \emph{layer problem} as movement is restricted to the layer
 			\dot{y} & = \frac{dy}{d \tau} =  g( x,y, \lambda,0).
 		\end{cases}
 	\end{align}
-This is known as the \emph{reduced problem} as the dynamics are reduced from the whole plane to the line $f=0$. The set $S= \{ (x,y) : f(x,y,0)=0 \} = \left\{ (x,y) : y = x^2-\dfrac{x^3}{3}\right \}$ is called the \emph{critical manifold}. We thus have two separate systems that combine to illustrate the global dynamics when $\epsilon =0$ and $\lambda = 1$. It remains to show that the flow in these limiting cases persists under perturbation to $0<\epsilon \ll 1$ and ascertain whether the behaviour is the same for all $\lambda$. We shall restrict our attention to the jump at $(0,0)$, the case for the point $(2,\frac{4}{3}$ is analogous. The aim is to fully understand the dynamics in a neighbourhood of these jump points for $\epsilon \ll 1$.
+This is known as the \emph{reduced problem} as the dynamics are reduced from the whole plane to the line $f=0$. In the Van der Pol system, $f(x,y,\lambda,\epsilon)=-y+x^2+\dfrac{x^3}{3}$ and $g(x,y,\lambda,\epsilon)=-\lambda+x$. The set $S= \{ (x,y) : f(x,y,0)=0 \} = \left\{ (x,y) : y = x^2-\dfrac{x^3}{3}\right \}$ is called the \emph{critical manifold}. We thus have two separate systems that combine to illustrate the global dynamics when $\epsilon =0$ and $\lambda = 1$. It remains to show that the flow in these limiting cases persists under perturbation to $0<\epsilon \ll 1$ and ascertain whether the behaviour is the same for all $\lambda$. We shall restrict our attention to the jump at $ (x^1_0,y^1_0)=(0,0)$, the case for the point $(x^2_0,y^2_0)=(2,\frac{4}{3})$ is analogous. The aim is to fully understand the dynamics in a neighbourhood of these jump points for $\epsilon \ll 1$.
 
 \subsection{Reduced Dynamics}
-In order to determine the reduced dynamics on the critical manifold $S$, we consider the reduced problem (\ref{SlowS0}). The critical manifold is  an S-shaped curve. Since the flow on $S$ is determined by $\dot{y}$, it can be seen that since the sign of $g$ is negative in the neighbourhood of the point $(0,0)$, the slow flow on $S$ is directed towards this point.
+In order to determine the reduced dynamics on the critical manifold $S$, we consider the reduced problem (\ref{SlowS0}). The critical manifold is  an S-shaped curve. Since the flow on $S$ is determined by $\dot{y}$, it can be seen that since the sign of $g$ is negative in the neighbourhood of the jump point $(0,0)$, the slow flow on $S$ is directed towards this point.
 
-The two  fold points $(x_0^\pm,y_0^\pm)$ coincide with the extrema of the cubic function  $ \phi(x) = y = x^2-\dfrac{x^3}{3}$.
-Then using the chain rule, the second Equation of \ref{eq: reduced g} is  \citep{krupa2001},
+The two jump points $(x_0^{1,2},y_0^{1,2})$ coincide with the extrema of the cubic function  $ \phi(x) = y = x^2-\dfrac{x^3}{3}$.
+Then using the chain rule, we can express the change in $x$ using the second Equation of \ref{SlowS0} as,
 \begin{equation}
 \phi_x(x)\dot{x}=g(x,\phi(x),0).
 \label{eq: general reduced}
@@ -80,47 +80,42 @@ Therefore Equation \ref{eq: general reduced} becomes
 \begin{align*}
 \dot{x} = \frac{g(x,\phi(x),0)}{ \phi_x(x)} = \frac{ x-1}{2x-x^2} =\frac{ x-1}{x(2-x)}.
 \end{align*}
-This calculation confirms that the fold points at $x=0$ and $x=2$ are singularities of the reduced system. Therefore, no conclusions about the dynamics of $x$ can be made at the fold points. 
-
-
-Section \ref{GSPT} gives conditions under which the dynamics persist for small $\epsilon$. Section \ref{sec:singularitiesandfoldpoints} addresses the shortcomings of the previous theory and motivates the introduction of the blow up method which is applied in Section \ref{sec: VDP Blowup}. The case when $\lambda \neq 1$ is considered in Section \ref{sec:canard-points}. Section \ref{sec: threedimfolds} then begins to look at higher dimensional fast-slow systems.
+The reduced dynamics are singular at $x=0$ and $x=2$. Therefore, no conclusions about the dynamics of $x$ can be made at the jump points in this system. \\ 
 
 
 
+The dynamics in the layer problem (\ref{FastS0}) are simpler. In this system, the manifold $S$ contains all the equilibrium points. Whatever the initial data, the position moves horizontally towards $S$ at which point it stops. The issue of reconciling the reduced and layer problems is considered using geometric singular perturbation theory (GSPT) in Section \ref{GSPT}, along with conditions for the persistence of the dynamics under perturbation in $\epsilon$. However, this will not cover the singularities. The reasoning for this is given in Section \ref{sec:singularitiesandfoldpoints}. The blow up method is employed in Section \ref{sec: VDP Blowup} to address the singularities. The case when $\lambda \neq 1$ is considered in Section \ref{sec:canard-points} while  Section \ref{sec: threedimfolds} then begins to look at higher dimensional fast-slow systems.
 
-Now considering Equation \ref{SlowS0}, we can write $f(x,y,\lambda, 0)=0$. Then we are able to define the critical manifold as:,
-	\begin{align} \label{CriticalS}
-		S= \left\{ (x,y) : f(x,y,\lambda, 0)=0 \right \},
-	\end{align}
-where, by definition of $S$, the points $(x,y) \in S$ are equilibria of (\ref{FastS0}). Before we continue, it is useful to have a visual interpretation of these flows,
-\begin{figure}[h!]\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-1.jpg}
-		\caption{The initial flow within the system starting at $ (x,y)=(1,1) $.}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[t]{0.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-2.jpg}
-		\caption{The flow as it hits the slow manifold.}
-	\end{subfigure}
 
-	\vspace{1cm}
-	\begin{subfigure}[t]{0.45\textwidth}
-		\centering
-		\includegraphics[width=.8\linewidth]{vdp-jump1}
-		\caption{The flow as it intersects with the fold point and begins the jump.}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[t]{0.45\textwidth}\centering
-		% just an empty subfigure to shift C below A
-		\includegraphics[width=.8\linewidth]{vdp-jump2}
-		\caption{The second jump before continuing in a periodic fashion.}
-	\end{subfigure}
-	\caption{Flows in the \vdp system.}
-	\label{fig: vdp flow diagram}
-\end{figure}
+
+%\begin{figure}[h!]\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\centering
+%		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-1.jpg}
+%		\caption{The initial flow within the system starting at $ (x,y)=(1,1) $.}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\centering
+%		\includegraphics[width=.8\linewidth]{vdPhopf-Moment-2.jpg}
+%		\caption{The flow as it hits the slow manifold.}
+%	\end{subfigure}
+%
+%	\vspace{1cm}
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\centering
+%		\includegraphics[width=.8\linewidth]{vdp-jump1}
+%		\caption{The flow as it intersects with the fold point and begins the jump.}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[t]{0.45\textwidth}\centering
+%		% just an empty subfigure to shift C below A
+%		\includegraphics[width=.8\linewidth]{vdp-jump2}
+%		\caption{The second jump before continuing in a periodic fashion.}
+%	\end{subfigure}
+%	\caption{Flows in the \vdp system.}
+%	\label{fig: vdp flow diagram}
+%\end{figure}
 
 
 
