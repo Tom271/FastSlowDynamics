@@ -1,8 +1,8 @@
 \label{sec: MMO Oscilaltions} %Need this to reference the oscilatory behavious of the system
 
 Before returning to the case of the folded node, a few technical terms are introduced in order to describe the relevant phenomena discussed in this section.
-This section is based on work done in the review paper by \citep{MMO} unless indicated otherwise.
-The concept that we need to introduce is mixed mode oscillations.
+This section is based on work done in the review paper by \citet{MMO} unless indicated otherwise.
+The first concept that we need to introduce is mixed mode oscillations (MMOs).
 
 \begin{definition}{Mixed Mode Oscillations \citealp{MMO}}\\
 	A mixed mode oscillation is an orbit $\gamma$, which traces out small amplitude oscillations (SAOs) as well as large amplitude oscillations (LAOs).
@@ -39,10 +39,9 @@ For each $i, 1 \leq i \leq k$, there exist subsectors $\bar{I}_i \subset I_i$ wi
 
 
 Theorem \ref{MMOsigk1} is rather technical, stating the existence of the global return under certain circumstances, when the trajectory has entered the rotational sector $I_{k+1}$, meaning, close to the weak primary canard and undergoing $k+1$ SAOs. Since the width of this sector is $O(1)$ and therefore much larger than the width of the other sectors that trajectories can enter into, we would expect more trajectories undergoing $k+1$ SAOs than $i$ SAOs, where $i \in 1,...,k$.
-However, Theorem \ref{MMOsigk1} requires $\epsilon^{1/2} \ll \mu$ and since $\epsilon \ll 1$, we must have $\mu \approx 1$ in order to apply the results in this theorem (as $0<\mu<1$). This is not commonly observed in practice and therefore, the logical conclusion is to investigate whether a global return mechanism exists for the other $I_i$, for $i \leq k$. The existence of these MMOs is discussed in the second Theorem in this section. The $\delta$ introduced in Theorem \ref{theoremsigni} corresponds to the distance between
-$\gamma_s$ and the trajectory that has entered the funnel region.\\
+However, Theorem \ref{MMOsigk1} requires $\epsilon^{1/2} \ll \mu$ and since $\epsilon \ll 1$, we must have $\mu \approx 1$ in order to apply the results in this theorem (as $0<\mu<1$). This is not commonly observed in practice and therefore, the logical conclusion is to investigate whether a global return mechanism exists for the other $I_i$, for $i \leq k$. The existence of these MMOs is discussed in Theorem \ref{theoremsigni}. Theorem \ref{theoremsigni} introduces $\delta$ which corresponds to the distance between $\gamma_s$ and the trajectory that has entered the funnel region.\\
 
-As introduced in the beginning of Section \ref{sec:MMO},  the signatures of MMOs are represented in terms of the number of large amplitude oscillations $L_1L_2...$ and the number of small amplitude oscillations $s_1s_2...$, and the conventional notation is $L_1^{s_1}L_2^{s_2}....$.
+As introduced in the beginning of Section \ref{sec:MMO},  the signatures of MMOs are represented in terms of the number of large amplitude oscillations ($L_1L_2...$) and the number of small amplitude oscillations ($s_1s_2\ldots$), and the conventional notation is ($L_1^{s_1}L_2^{s_2}\ldots$).
 In the case of the folded node, under the conditions of the theorems, we have a rather straightforward signature. The first theorem states the existence of the signature $1^{k+1}$, where $L_1=1$ and $s^1=k+1$, and equivalently, the second theorem in this chapter discusses MMOs with signature $1^{i}, i<k$.
 The dynamics due to a folded node are well understood, however, there exist more complex dynamics for other types of equilibria and singularities.
 To illustrate this, one of these cases is briefly introduced in the next section.
@@ -58,25 +57,50 @@ A singular Hopf bifurcation occurs at a certain parameter regime in the system w
 
 A second equilibrium of focus type can appear and interact with the folded saddle node of type 2.
 Depending on the parameter regime of the system, this gives rise to various different dynamics.
-The normal form which allows for global return mechanisms, due to its S-shaped slow manifold, is the following:
+The normal form which allows for global return mechanisms, due to its S-shaped slow manifold, is the following,
 \begin{align*}
 \epsilon \dot{x} &= y - x^2 - x^3, \\
 \dot{y} &= z - x, \\
 \dot{z} &= -\nu -ax -by -cz.
 \end{align*}
 There exist stable MMOs for some parameter values, where $\nu$ is small and the orbit for a specific choice of such parameters is displayed in Figure \ref{fig: MMo5pic}. Other parameter regimes may give rise to more complex orbits, for example chaotic trajectories that will, with decreasing $\nu$ turn into a small-amplitude chaotic attractor. An example trajectory is displayed in Figure \ref{fig: MMo3pic}, and the time series of this trajectory is displayed in Figure \ref{fig: MMo4pic}. The characterisation of the dynamics of this system for different parameter regimes is still ongoing, and there exist only classifications for certain parameter regimes of $\nu$.
-\begin{figure}[h!]\centering
-	\includegraphics[width= 0.5 \textwidth]{Images/chaoticEvdp}
+%\begin{figure}[h!]\centering
+%	\includegraphics[width= 0.5 \textwidth]{Images/chaoticEvdp}
+%	\caption{Chaotic MMO orbit.}
+%	\label{fig: MMo3pic}
+%\end{figure}
+%\begin{figure}[h!]\centering
+%	\includegraphics[width= 0.5 \textwidth]{Images/eVDPts}
+%	\caption{Time series for the chaotic MMO.}
+%	\label{fig: MMo4pic}
+%\end{figure}
+%\begin{figure}[h!]\centering
+%	\includegraphics[width= \textwidth]{Images/MMO3}
+%	\caption{MMO periodic orbit for $(\nu,a,b,c)= (0.0072168,-0.3872,-0.3251,1.17,0.01)$, \citep{MMO}}
+%	\label{fig: MMo5pic}
+%\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{Images/chaoticEvdp}
 	\caption{Chaotic MMO orbit.}
 	\label{fig: MMo3pic}
-\end{figure}
-\begin{figure}[h!]\centering
-	\includegraphics[width= 0.5 \textwidth]{Images/eVDPts}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=.8\linewidth]{Images/eVDPts}
 	\caption{Time series for the chaotic MMO.}
 	\label{fig: MMo4pic}
-\end{figure}
-\begin{figure}[h!]\centering
-	\includegraphics[width= \textwidth]{Images/MMO3}
-	\caption{MMO periodic orbit for $(\nu,a,b,c)= (0.0072168,-0.3872,-0.3251,1.17,0.01)$, \citep{MMO}}
-	\label{fig: MMo5pic}
-\end{figure}
+	\end{subfigure}
+%	\vspace{1cm}
+%\vfill
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=.8\linewidth]{Images/MMO3}
+		\caption{MMO periodic orbit for $(\nu,a,b,c)= (0.0072168,-0.3872,-0.3251,1.17,0.01)$, \citep{MMO}.}
+		\label{fig: MMo5pic}
+	\end{subfigure}
+	\caption{Orbits associated with mixed mode oscillations \citep{MMO}.}
+\end{figure}\newpage
