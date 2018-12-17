@@ -1,0 +1,22 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Examples of fast-slow systems in nature (neuron,ECG etc. )\relax }}{1}{figure.caption.3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Van der Pol Dynamics with $\epsilon =1$}}{2}{figure.caption.4}
+\contentsline {figure}{\numberline {3}{\ignorespaces Van der Pol Dynamics with $\epsilon =0.01$}}{3}{figure.caption.5}
+\contentsline {figure}{\numberline {4}{\ignorespaces Three charts mapping different sections of our blow up \citep {krupa2001}.\relax }}{8}{figure.caption.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Phase portrait for chart 2 \citep {krupa2001}.\relax }}{10}{figure.caption.7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Ricatti solution for chart 2 \citep {krupa2001}.\relax }}{11}{figure.caption.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces Dynamics in chart 1 \citep {krupa2001}\relax }}{13}{figure.caption.9}
+\contentsline {figure}{\numberline {8}{\ignorespaces Flow on the Van der Pol system.\relax }}{18}{figure.caption.10}
+\contentsline {figure}{\numberline {9}{\ignorespaces The reduced flow where a) $\lambda =0$ and b) $\lambda >0$.\relax }}{19}{figure.caption.11}
+\contentsline {figure}{\numberline {10}{\ignorespaces The Van der Pol system for the canard case.\relax }}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {11}{\ignorespaces The trajectories associated with the canards case of the Van der Pol system.\relax }}{26}{figure.caption.19}
+\contentsline {figure}{\numberline {12}{\ignorespaces Separation of $ M_a $ and $ M_r $ \citep {Kuehn}.\relax }}{27}{figure.caption.20}
+\contentsline {figure}{\numberline {13}{\ignorespaces Three dimensional Van der Pol \citep {3D-VdP}.\relax }}{29}{figure.caption.21}
+\contentsline {figure}{\numberline {14}{\ignorespaces Phase portraits of our three dimensional system where a) is a folded saddle, b) folded node, c) and d) are desingularised flows \citep {MMO}.\relax }}{31}{figure.caption.22}
+\contentsline {figure}{\numberline {15}{\ignorespaces The branches of a spiral \citep {Spiral}.\relax }}{31}{figure.caption.23}
+\contentsline {figure}{\numberline {16}{\ignorespaces Folded Node Region for $\mu \approx 0.0557$. \citep {MMO}.\relax }}{36}{figure.caption.24}
+\contentsline {figure}{\numberline {17}{\ignorespaces Rotational Sectors for $\mu \approx 0.0557$ \citep {MMO}.\relax }}{37}{figure.caption.25}
+\contentsline {figure}{\numberline {18}{\ignorespaces Chaotic MMO orbit.\relax }}{39}{figure.caption.26}
+\contentsline {figure}{\numberline {19}{\ignorespaces Time series for the chaotic MMO.\relax }}{40}{figure.caption.27}
+\contentsline {figure}{\numberline {20}{\ignorespaces MMO periodic orbit for $(\nu ,a,b,c)= (0.0072168,-0.3872,-0.3251,1.17,0.01)$, \citep {MMO}\relax }}{40}{figure.caption.28}
+\contentsline {figure}{\numberline {21}{\ignorespaces Numerical Stability Comparison}}{43}{figure.caption.29}
+\contentsline {figure}{\numberline {22}{\ignorespaces Stiff Solvers}}{44}{figure.caption.30}
