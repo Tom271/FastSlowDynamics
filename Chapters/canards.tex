@@ -5,19 +5,9 @@
 	\label{fig: Canard Point}
 \end{figure}\newpage
 
+We have now found the global dynamics for the Van der Pol system with $\epsilon >0$ for $\lambda =1$. It is now of interest to investigate whether changing $\lambda$ causes a qualitative change in the dynamics of the Van der Pol system.
+Considering the Van der Pol System with $\lambda \neq 1$,
 
-
-Considering the Van der Pol System as before:
-\begin{equation}
-\begin{aligned}
-&x'=-y+x^2-\dfrac{x^3}{3},\\
-&y'=\epsilon(x-1),\\
-\end{aligned}
-\tag{\ref{eq: Fast System}}
-\end{equation}
-we notice that the equilibrium of the system depends on the two nullclines $ x'=0$ and $y'=0$. These are in the shape of a cubic funcion and in the shape of a vertical line at $x=1$. 
-The idea in this section is to replace the nullcline $x=1$ by $x = \lambda$. This can be seen as shifting the equilibrium of the system along the critical manifold $S$ by varying the parameter $\lambda$.
-This gives rise to a generalised Van der Pol system:
 \begin{equation}
 \begin{aligned}
 &x'=-y+x^2-\dfrac{x^3}{3},\\
@@ -25,6 +15,8 @@ This gives rise to a generalised Van der Pol system:
 \end{aligned}
 \label{eq: canard system}
 \end{equation}
+Since the nullcline $\dot{y}=0 \Rightarrow x=\lambda$ depends on $\lambda$, varying $\lambda$ corresponds to a shift of the nullcline along the S shaped  the equilibrium of the system along the critical manifold $S$ by varying the parameter $\lambda$.
+
 In this section, the dynamics in system \ref{eq: canard system} is analysed. In order to do so, we need the definition of a canard.
 \begin{definition}{\textbf{ Canard}}[\citealp{Kuehn}]
 A trajectory of a fast-slow system is called a canard if it stays within $O(\epsilon)$ close to the repelling branch $S^r$ of the slow manifold $S$, for some time of $O(1)$ on the slow time scale $\tau = \epsilon t$.
