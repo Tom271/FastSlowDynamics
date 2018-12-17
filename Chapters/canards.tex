@@ -192,10 +192,10 @@ C(y) = \int - y_2 e^{-2y_2} dy = \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_
 \end{align*}
 using integration by parts.
 Then, the final expression is:
-\begin{align*}
+\begin{align}
 H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c\\
-&= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c.
-\end{align*}
+&= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c. \label{eq: const of motion}
+\end{align}
 Note that without loss of generality we can choose $c=0$ because we are interested in the level curves of $H$ and $H=h$. Now that we have shown how the constant of motion is constructed we will consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$. Considering the reduced system (Equation \ref{eq: reduced canard k2}) we have from $ H(x_2,y_2)=0 $ that,
 \begin{subequations}
 	\begin{align}
@@ -205,7 +205,7 @@ Note that without loss of generality we can choose $c=0$ because we are interest
 \end{subequations} 
 where we have directly integrated Equation \ref{canard: trajectory x} with respect to our time ($ t_2 $). However, we note that we are able to choose $ A=0 $, as we are considering an autonomous (time-invariant) system. Then for Equation \ref{canard: trajectory y} we are able to rearrange the constant of motion at zero to give, $ y_2=x_2^2-\frac{1}{2} $. Clearly from this analysis we are then able to define our trajectories in terms of $ \gamma_{c,2} $, 
 \begin{equation}
-\gamma_{c,2}(t_2)=(x_{c,2}(t_2),y_{c,2}(t_2))=\left(\frac{t_2}{2},\frac{t^2_2}{4}-\frac{1}{2}\right).   
+\gamma_{c,2}(t_2)=(x_{c,2}(t_2),y_{c,2}(t_2))=\left(\frac{t_2}{2},\frac{t^2_2}{4}-\frac{1}{2}\right).   \label{eq: gamma c2}
 \end{equation}
 Now that we have established that we must have a flow on our second chart, then there must also exist transition maps. Therefore this now enables us to consider the first chart in the following section.
 
@@ -380,13 +380,23 @@ Continuing on from the singular Hopf bifurcation we might find that the canard p
 	where we have defined,
 	\begin{subequations}
 		\begin{align}
-		d_{r_2}&=\int_{-\infty}^{\infty}\text{grad}H(\gamma_{c,2}(t))\cdot G(\gamma_{c,2}(t))dt,\\
-		d_{\lambda_2}&=\int_{-\infty}^{\infty}\text{grad}H(\gamma_{c,2}(t))\cdot (0,-1)^T,
+		d_{r_2}&=\int_{-\infty}^{\infty}\text{grad}H(\gamma_{c,2}(t))^T\cdot G(\gamma_{c,2}(t))dt,\\
+		d_{\lambda_2}&=\int_{-\infty}^{\infty}\text{grad}H(\gamma_{c,2}(t))^T\cdot (0,-1)^T,
 		\end{align}
 	\end{subequations}
 	and our matrix $ G(\gamma_{c,2}(t)) $ in Section \ref{sec:dynamics-in-texorpdfstringk1k1} with $ \gamma_{c,2} $ as our critical trajectory. 
 \end{prop}
-Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of our domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. As a result of we see a flow similar to Figure \ref{fig: splitting} whereby we find that our flow could either jump off under the fast flow - see Figure \ref{fig: vdp flow diagram e} - or we might find that the flow could be trapped in the canard region and then be repelled back to the attracting manifold, as we see with our connected system - Figure \ref{fig: 4 canard }. 
+Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of our domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. We can calculate this explicitly for the the \vdp system by using Equations \ref{eq: const of motion}, \ref{eq: gamma c2} and $ G(x_2,y_2)=(-\frac{x_2^3}{3},0)^T $ \st we have,
+\begin{subequations}
+	\begin{align}
+		d_{r_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((-\frac{x_2^3}{3},0)^T\right)|_{\gamma_{c,2}} \text{dt}\\
+%		&=\int_{-\infty}^{\infty}\left(-\frac{\exp\left(-\frac{t^2}{2}+1\right)}{2}.\frac{\exp\left(-\frac{t^2}{2}+1\right)}{2}\left(\frac{t^2}{4}-\frac{1}{2}-\frac{t}{2}\right)\right)
+		&=
+	\end{align}
+\end{subequations}
+
+
+ As a result of we see a flow similar to Figure \ref{fig: splitting} whereby we find that our flow could either jump off under the fast flow - see Figure \ref{fig: vdp flow diagram e} - or we might find that the flow could be trapped in the canard region and then be repelled back to the attracting manifold, as we see with our connected system - Figure \ref{fig: 4 canard }. 
 
 %\textbf{Good to have a figure if possible}
 
