@@ -202,39 +202,40 @@ For $K_1$ we follow a similar approach to the above. We will use the transformat
 \begin{equation}
 x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \tag{\ref{eq: coordiante K1}},
 \end{equation}
-to find the relevant trajectory of our flow, $\gamma_2$ in $K_1$. Now if we first consider the $r_1$ component, 
+to find the relevant trajectory $\gamma_1$ corresponding to $\gamma_2$ in $K_2$. Now if we first consider the $r_1$ component, 
 \begin{align}
-2r_1^2r_1'=r_1^2\epsilon(r_1x_1-r_1\lambda_1), \label{canard: r1}
+2r_1^2r_1'=r_1^2\epsilon_1(r_1x_1-r_1\lambda_1),\\ \label{canard: r1}
+\Rightarrow r_1' = \frac{1}{2} \epsilon_1r_1 (x_1 - \lambda_1) = \frac{1}{2} \epsilon_1r_1F,
 \end{align}
-Define $F=F(x_1,y_1,\epsilon_1,\lambda_1)=x_1-\lambda_1$. Next we consider $x=r_1x_1$,
+where $F=F(x_1,y_1,\epsilon_1,\lambda_1)=x_1-\lambda_1$. Next we consider $x=r_1x_1$,
 \begin{align*}
 r_1r_1'x_1+r_1^2x_1'&=-r_1^2+r_1^2x_1^2,\\
 x_1'&=-1+x_1^2-\frac{x_1r_1'}{r_1},
 \end{align*}
-where we can use Equation \ref{canard: r1} to simplify this further,
+and substituting in the expression for $r_1'$ results in,
 \begin{align}
 x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right). \label{eq: canard x1}
 \end{align}
-We now consider $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation \ref{canard: r1} to simplify to,
+We now consider $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use equation (\ref{canard: r1}) to simplify to,
 \begin{align}
 \epsilon'=-\epsilon_1^2F. \label{canard: epsilon k1}
 \end{align}
-Our last transformation is for our new coordinate $\lambda=r_1\lambda$, noting that $\lambda'=0$. Similarly to the above we find $r_1^2\lambda_1'+r_1\lambda_1r_1'=0$ then, 
+The last transformation is for the new coordinate $\lambda=r_1\lambda$, noting that $\lambda'=0$. Similarly to the above we find $r_1^2\lambda_1'+r_1\lambda_1r_1'=0$ then, 
 \begin{equation}
 \lambda'_1=-\frac{\lambda_1\epsilon_1F}{2}, 
 \end{equation}
-which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k1}. Now if we combine the above we find that our transformed system is of the following form,
+which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k1}. Now if we combine the above we find that the transformed system is of the following form,
 \begin{subequations}
 	\begin{align}
-	r_1'&=\frac{\epsilon}{2}(r_1x_1-r_1\lambda_1), \\
+	r_1'&=\frac{\epsilon}{2}r_1F \\ \notag
 	% \label{canard: r1}
 	x_1'&=-1+x_1^2-\frac{x_1\epsilon_1F}{2},\\
-	\epsilon'&=-\epsilon_1^2F,\\
-	\lambda'_1&=-\frac{\lambda_1\epsilon_1F}{2}.
+	\epsilon'&=-\epsilon_1^2F,\\ \notag
+	\lambda'_1&=-\frac{\lambda_1\epsilon_1F}{2}. \notag
 	\end{align}
 	\label{canard: system of equations}
 \end{subequations}
-From this system we are now able to make some deductions. We first can observe that the hyperplanes are along the $r_1=\epsilon_1=\lambda_1=0$ with an invariant line at $l_1=\{(x_1,0,0,0): x_1\in\mathbb{R}\}$ \citep{krupa2001}. As \citet{krupa2001} discusses the equilibria present at the end of both of our branches - Figure \ref{fig: Canard Point} - which are found at $p_a=(-1,0,0,0) \ \text{and} \ p_r=(1,0,0,0)$ \citep{krupa2001}. Now we can go one step further, we can consider Equation \ref{canard: system of equations} and find the eigenvalues of the system for the invariant planes. We find that, 
+From this system we are now able to make some deductions. We first can observe that the hyperplanes are along the $r_1=\epsilon_1=\lambda_1=0$ which intersect in the invariant line at $l_1=\{(x_1,0,0,0): x_1\in\mathbb{R}\}$ \citep{krupa2001}. As \citet{krupa2001} discusses, the equilibria are located at the end of both branches - Figure \ref{fig: Canard Point} - which are found at $p_a=(-1,0,0,0) \ \text{and} \ p_r=(1,0,0,0)$ \citep{krupa2001}. We can find the eigenvalues of equation (\ref{canard: system of equations}) for the invariant planes. We find that, 
 \begin{equation}
 J-\sigma I= \begin{bmatrix}
 2x-\sigma & 0 & 0 & 0  \\
@@ -243,11 +244,15 @@ J-\sigma I= \begin{bmatrix}
 0 & 0 & 0 & -\sigma
 \end{bmatrix},
 \end{equation}
-which clearly has three zero eigenvalues and one non-zero eigenvalue $\sigma=\pm 2$. Which further empahsises that our equilibrium point is non-hyperbolic. As a result we intuitively expect that something interesting occurs at this point. In the section following we will be considering what effect these mappings and eigenvalues will have on our system.
+which has three zero eigenvalues and one non-zero eigenvalue $\sigma=\pm 2$.This further empahsises that our equilibrium point is non-hyperbolic. 
+The dynamics of $K_1$ is very similar to the analysis of $K_1$ in the generic fold case. The center manifold can be applied in order to conclude the persistence of the dynamics for $\epsilon >0$.
 
+\subsection{Full Solution}
+The analysis of the charts $K_1$ and $K_2$ provided enough hyperbolicity in order to conclude persistence of the special orbit $\gamma$ for $\epsilon >0$. The orbit $\gamma$ connects the attracting and repelling branch of $S$ at $p_a$ and $p_r$. 
+We now would like to understand the effect this connection of manifolds a the fold point has on the global dynamics of the system.
 
 \subsection{Effect of the Canard Point}\label{sec:effect-of-the-canard-point}
-Now that we have shown that there must exist a flow around our fold point we should now consider the global effect of the canard point. We can see by considering the  system of Equations \ref{canard: system of equations} that our equilibriums are at $ (x,y)=(\lambda,\lambda^2[\frac{1-\lambda}{3}]) $ and find the eigenvalues from the matrix, 
+Now that we have shown that there must exist a flow around the fold point we should now consider the global effect of the canard trajectory. We can see by considering the  system of equations (\ref{eq: extended canard system}) that the equilibrium of the system is at $ (x,y)=(\lambda,\lambda^2[\frac{1-\lambda}{3}]) $  and depends on $\lambda$, as expected. We can find the eigenvalues from the matrix, 
 \begin{equation}
 A-\sigma I=\begin{bmatrix}
 2x-x^2-\sigma&-1&0&0\\
@@ -265,7 +270,9 @@ A-\sigma I=\begin{bmatrix}
 %\end{bmatrix}.
 %\end{equation}
 %\textbf{Then our eigenvalues are, $ \sigma=(2-x)x \ \text{and} \ \sigma=0 $, noting that we have an upper triangular matrix. Then we can note that we have a complex eignevalue which causes a Hopf bifurcation, as shown below:}%wrong maths
-From this we are about to find the eigenvalues of the system, $ \sigma=0 $ and $ \sigma=\frac{2x-x^2\pm\sqrt{(x^2-2x)^2-4\epsilon}}{2} $. Then we consider the values at our equilibrium, $ x=\lambda $, to find that we have a Hopf Bifurcation when $ 4\epsilon>(x^2-2x)^2 $ or when $ \lambda=2 \ \text{or} \ 0 $. This then leads to the following trajectories within the flow - Figure \ref{fig: 4 canard }.
+The eigenvalues of the system are $ \sigma=0 $ and $ \sigma=\frac{2x-x^2\pm\sqrt{(x^2-2x)^2-4\epsilon}}{2} $. Then we consider the values at the equilibrium, $ x=\lambda $, to find that we have a Hopf Bifurcation when $ 4\epsilon>(x^2-2x)^2 $ or when $ \lambda=2 \ \text{or} \ 0 $. The Hopf bifurcation is not a surprising occurence since it represents a change in stability of an equilibrium. Since the equilibrium of the reduced system changes from stable to relaxation oscillations at the fold points, some bifurcation can be expected at those point.
+
+ This then leads to the following trajectories within the flow - Figure \ref{fig: 4 canard }.
 
 \begin{figure}[h!]
 	\centering
@@ -301,7 +308,7 @@ From this we are about to find the eigenvalues of the system, $ \sigma=0 $ and $
 	\caption{The trajectories associated with the canards case of the \vdp system.}
 	\label{fig: 4 canard }
 \end{figure}\newpage
-From Figure \ref{fig: 4 canard } we can see the progression of our flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then from Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. This is because we make note that the canard point is present at $ -\lambda $, which in essence pushes the flow up the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch, starting the growing oscillations - Figure \ref{fig:timing4}. When the Hopf bifurcation is large we would then expect to see a jump in our solution to an attracting branch - Figure \ref{fig: hopf growth}.
+From Figure \ref{fig: 4 canard } we can see the progression of our flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then from Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. This is because we make note that the canard point is present at $ -\lambda $, which in essence pushes the flow up the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch, starting the growing oscillations - Figure \ref{fig:timing4}. When the Hopf bifurcation is large we would then expect to see a jump in the solution to an attracting branch - Figure \ref{fig: hopf growth}.
 
 %\begin{figure}[h!]\centering
 %	\includegraphics[height=8cm,width=6cm]{Code/behaviourswitch}
@@ -357,23 +364,23 @@ From Figure \ref{fig: 4 canard } we can see the progression of our flow over the
 	\label{fig: splitting}
 \end{figure}%\newpage
 %\textbf{Discuss splitting on the manifold}
-Continuing on from the singular Hopf bifurcation we might find that the canard point forces our branches to split. In other words we are looking for when the attracting and repelling branches are no longer connected, as show in Figure \ref{fig: splitting}. To do this we would use Melnikov Computations to show that our manifolds split - see \textit{Extending Geometric Singular Perturbation Theory to Nonhyperbolic Points - Fold and Canard Points in Two Dimensions} \citep{krupa2001} for direct use. To discover whether we have a splitting between our branches we need to consider our $ y $ coordinates \wrt our second chart \st $ y_{a,2}(0)-y_{r,2}(0) $ is a distance function which can be written as $ D_c(r_2,\lambda_2)=H(0,y_{a,2}(0))-H(0,y_{r,2}(0)) $ as we note that $ \pd{}{y_2}H(0,y_2)\neq 0 $ \citep{krupa2001}. From here we can use the following proposition,
+Continuing on from the singular Hopf bifurcation we might find that the canard point forces our branches to split. In other words, we are looking for when the attracting and repelling branches are no longer connected, as show in Figure \ref{fig: splitting}. To do this we will apply a Melnikov Computation to show that the manifolds split - see \textit{Extending Geometric Singular Perturbation Theory to Nonhyperbolic Points - Fold and Canard Points in Two Dimensions} \citep{krupa2001} for direct use. To discover whether we have a splitting between the attracting and repelling branches we need to consider the $ y $ coordinates in the second chart \st $ y_{a,2}(0)-y_{r,2}(0) $ is a distance function which can be written as $ D_c(r_2,\lambda_2)=H(0,y_{a,2}(0))-H(0,y_{r,2}(0)) $ as we note that $ \pd{}{y_2}H(0,y_2)\neq 0 $ \citep{krupa2001}. From here we can use the following proposition,
 \begin{prop}
 	[\citealp{krupa2001}]
 	For a small enough $ \rho $ and $ \mu $ the distance function has the expansion
 	\begin{equation*}
 	D_c(r_2,\lambda_2)=d_{r_2}r_2+d_{\lambda_2}\lambda_2+O(2),
 	\end{equation*}
-	where we have defined,
+	with 
 	\begin{subequations}
 		\begin{align}
 		d_{r_2}&=\int_{-\infty}^{\infty}(\nabla H(\gamma_{c,2}(t)))^T\cdot G(\gamma_{c,2}(t))dt,\\
 		d_{\lambda_2}&=\int_{-\infty}^{\infty}(\nabla H(\gamma_{c,2}(t)))^T\cdot (0,-1)^T,
 		\end{align}
 	\end{subequations}
-	and our matrix $ G(\gamma_{c,2}(t)) $ in Section \ref{sec:dynamics-in-texorpdfstringk1k1} with $ \gamma_{c,2} $ as our critical trajectory. 
+	where the matrix $ G(\gamma_{c,2}(t)) $ is as defined in Section \ref{sec:dynamics-in-texorpdfstringk1k1} and $ \gamma_{c,2} $ is the trajectory associated with the singular canard. 
 \end{prop}
-Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of our domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. We can calculate these explicitly for the the \vdp system by using Equations \ref{eq: const of motion}, \ref{eq: gamma c2} and $ G(x_2,y_2)=(-\frac{x_2^3}{3},0)^T $. Consequently we have,
+Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of the domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. We can calculate these explicitly for the the \vdp system by using Equations \ref{eq: const of motion}, \ref{eq: gamma c2} and $ G(x_2,y_2)=(-\frac{x_2^3}{3},0)^T $. Consequently we have,
 
 \begin{align*}
 d_{r_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((-\frac{x_2^3}{3},0)^T\right)\bigg|_{\gamma_{c,2}} \text{dt}\notag\\
@@ -384,14 +391,45 @@ noting $ \nabla(H(\gamma_{c,2}(t)))= \exp(1-\frac{t^2}{2})\left[-1,\frac{1}{2}\r
 \begin{equation}
 d_{r_2}=	\frac{e}{16}\int_{-\infty}^{\infty}e^{-\frac{T^2}{2}}dt=\frac{e\sqrt{2\pi}}{16}<\infty,
 \end{equation}
-where we note that we have made use of the Guassian Integral \citep{GausIntegral} to show finiteness. We then apply an analogous approach to $d_{\lambda_2} $ \st, 
+where we note that we have made use of the Guassian Integral \citep{GausIntegral} and $d_{r_2}$ is finite. We then apply an analogous approach to $d_{\lambda_2} $ \st, 
 \begin{align}
 d_{\lambda_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((0,-1)^T\right)\bigg|_{\gamma_{c,2}} \text{dt}\notag\\
 &=-\frac{e}{2}\int_{-\infty}^{\infty} e^{-t^2}dt=-\frac{e\sqrt{2\pi}}{2}<0,
 \end{align}
-where we have used the same techniques as above where we note that $ d_{\lambda_2} $ is also finite. Combining the above yields that our distance function is,
+where we have used the same techniques as above and we can conclude that $ d_{\lambda_2} $ is also finite. Combining the above yields that the distance function is,
 \begin{equation}
 D_c(r_2,\lambda_2)=\frac{e\sqrt{2\pi}}{16}r_2-\frac{e\sqrt{2\pi}}{2}\lambda_2+O(2),
 \end{equation}  
-whereby we have that the manifolds in the \vdp system split for $ \lambda_2\neq\frac{r_2}{8} $ otherwise our branches are connected, as shown in the prior simulations. If the manifold splits then we would find that the manifold is similar to Figure \ref{fig: splitting} whereby the flow will either jump off fracture - see Figure \ref{fig: vdp flow diagram e} - or the flow will be trapped in the canard region and then be repelled back to the attracting manifold, as we see with our connected system - Figure \ref{fig: 4 canard }. 
+whereby we have that the manifolds in the \vdp system split for $ \lambda_2\neq\frac{r_2}{8} $. Otherwise the attracting and repelling branches are connected and the maximal canard exists. If the manifold splits then we would find that the manifold is similar to Figure \ref{fig: splitting} whereby the flow will either jump off fracture - see Figure \ref{fig: vdp flow diagram e} - or the flow will be trapped in the canard region and then be repelled back to the attracting manifold, as we see with our connected system - Figure \ref{fig: 4 canard }. 
+The presence of either of these cases depends on how the manifold breaks.
+This describes the global dynamics for the region close to $\lambda =0$, $\lambda=2$.
+Therefore, we are now in the position to have a description of the full dynamics of the two dimensional Van der Pol System for all parameter regimes of $\lambda$.
+Since the canard solutions are restricted to an exponentially small region around the fold points, we now move on to three dimensional fast-slow systems, in which canards are more common occurences.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
