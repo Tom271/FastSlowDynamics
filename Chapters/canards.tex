@@ -103,7 +103,7 @@ Now similarly to Section \ref{sec: VDP Blowup}, we consider a transformations of
 x=\bar{r}\bar{x}, \ y=\bar{r}^2y, \ \epsilon=\bar{r}^2\bar{\epsilon}, \ \lambda=\bar{r}\bar{\lambda}.
 \end{equation}
 Now that we have established these transformation, the charts $K_1$ and $K_2$ can be introduced,  but it is not necessary to consider the third chart, $K_3$. Since the attracting slow manifold connects to the repelling slow manifold, the flow will `bend back' from $K_2$ into $K_1$ instead of leaving the neighbourhood $U$ in the direction of the fast flow, which was described by $K_3$ in Section \ref{sec: VDP Blowup}. 
-The trajectory stays close to $S^r$ after passing the fold point. This is very counter-intuitive, the trajectory stays close to a very repelling branch.
+The trajectory stays close to $S^r$ after passing the fold point. This is very counter-intuitive, the trajectory stays close to a repelling branch.
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=8cm, height=6cm]{Images/vdPhopf-Moment-bendback}
@@ -134,22 +134,21 @@ for $y_2 >0$.
 We are now in the position to begin with the analysis in the charts, and will first consider chart $K_2$, since, as in Section \ref{sec: VDP Blowup}, $K_2$ holds the most information. 
 
 \subsubsection{Dynamics in \texorpdfstring{$K_2$}{K2}}
-%<<<<<<< HEAD
-We start by noting that we are considering our invariant plane at $r_2=0$ which will significantly simplify our system for $K_2$. Further we should note that we are taking a transformation in time, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$, as well as in our coordinates. Then if we substitute our time transformation and Equation  \ref{eq: coordinate K2} into our system of Equations \ref{eq: canard system} we find, 
-\begin{subequations}
-	\begin{align}
-	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2h_1+r^2_2x^2_2h_2,\notag\\
-	\implies x'_2&=-y_2+x_2^2-r_2G_2(x_2,y_2), \label{eq k2 x trans}\\
-	%     \end{aligned}
-	% \end{equation*}
-	% \begin{equation}
-	%     \begin{aligned}
-	r^3_2y_2'-3r_2^2y_2r_2'&=r^2_2(r_2x_2h_4-r_2\lambda_2h_5),\notag\\
-	\implies y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2), \label{eq: K2 y trans}
-	\end{align}
-	\label{eq: reduced canard k2}
-\end{subequations}
-\noindent where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$.  Notice that we have included an additional term in Equation \ref{eq: reduced canard k2} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. Then combing this yields our complete system
+Equivalently to Section \ref{sec: VDP Blowup}, we rescale time such that, $\od{r}{t_2}=\od{t}{t_2}\od{r}{t}=\frac{1}{r_2}\od{r_2}{t}$. Then if we substitute the time transformation and Equation  \ref{eq: coordinate K2} into system \ref{eq: canard system} we find, 
+%\begin{subequations}
+%	\begin{align}
+%	r_2^2x_2' - r_2x_2r_2'&=-r_2^2y_2h_1+r^2_2x^2_2h_2,\notag\\
+%	\implies x'_2&=-y_2+x_2^2-r_2G_2(x_2,y_2), \label{eq k2 x trans}\\
+%	%     \end{aligned}
+%	% \end{equation*}
+%	% \begin{equation}
+%	%     \begin{aligned}
+%	r^3_2y_2'-3r_2^2y_2r_2'&=r^2_2(r_2x_2h_4-r_2\lambda_2h_5),\notag\\
+%	\implies y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2), \label{eq: K2 y trans}
+%	\end{align}
+%	\label{eq: reduced canard k2}
+%\end{subequations}
+%\noindent where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$.  Notice that we have included an additional term in Equation \ref{eq: reduced canard k2} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. Then combining this yields our complete system
 \begin{subequations}
 	\begin{align}
 	x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\tag{\ref{eq k2 x trans}}\\
@@ -157,7 +156,7 @@ We start by noting that we are considering our invariant plane at $r_2=0$ which 
 	\tag{\ref{eq: K2 y trans}}
 	\end{align}
 \end{subequations}
-recalling that $r_2'=\lambda_2'=0$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each equations by, $e^{2y_2}e^{-2y _2}=1$, and define sections of each equation as partial derivatives of $H$ \st, 
+where $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each equations by, $e^{2y_2}e^{-2y _2}=1$, and define sections of each equation as partial derivatives of $H$ \st, 
 \begin{align}
 x_2' &=e^{2y_2}e^{-2y_2}( -y_2 +x_2^2 ) =e^{2y_2}\pd{H}{y_2}(x_2,y_2) \\
 y_2' &= - e^{2y_2}e^{-2y_2}(-  x_2)=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
@@ -184,18 +183,18 @@ Then, the final expression is:
 H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c\\
 &= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c. \label{eq: const of motion}
 \end{align}
-Note that without loss of generality we can choose $c=0$ because we are interested in the level curves of $H$ and $H=h$. Now that we have shown how the constant of motion is constructed we will consider our reduced system, that we have an equilibrium at the origin, implying that $H(x_2,y_2)=h$. Considering the reduced system (Equation \ref{eq: reduced canard k2}) we have from $ H(x_2,y_2)=0 $ that,
+Note that without loss of generality we can choose $c=0$ because we are interested in the level curves of $H(x_2,y_2)=h$. The reduced system has an equilibrium of center type at the origin. Around this point, the level curves of $H=h$ for $h \in (0,\frac{1}{4})$ define periodic trajectories orbiting the equilibrium. When $h\leq0$, the solutions are unbounded. When $h=0$, we have that $y_2-x_2^2+\frac{1}{2}=0$ and therefore,
 \begin{subequations}
 	\begin{align}
-	x_2'&=\frac{1}{2}\ \	\implies x_2=\frac{t_2}{2}+A, \label{canard: trajectory x}\\
+	x_2'&=\frac{1}{2}\ \	\implies x_2=\frac{t_2}{2}+B, \label{canard: trajectory x}\\
 	y_2'&=\frac{t_2}{2}\ \implies y_2=\frac{t_2^2}{4}-\frac{1}{2}, \label{canard: trajectory y}
 	\end{align}
 \end{subequations} 
-where we have directly integrated Equation \ref{canard: trajectory x} with respect to our time ($ t_2 $). However, we note that we are able to choose $ A=0 $, as we are considering an autonomous (time-invariant) system. Then for Equation \ref{canard: trajectory y} we are able to rearrange the constant of motion at zero to give, $ y_2=x_2^2-\frac{1}{2} $. Clearly from this analysis we are then able to define our trajectories in terms of $ \gamma_{c,2} $, 
+where we have directly integrated Equation \ref{canard: trajectory x} with respect to the rescaled time $ t_2 $. However, we note that we are able to choose $B=0 $, as we are considering an autonomous (time-invariant) system. Using \ref{canard: trajectory x} and \ref{canard: trajectory y} we are then able to define $ \gamma_{c,2} $ as, 
 \begin{equation}
 \gamma_{c,2}(t_2)=(x_{c,2}(t_2),y_{c,2}(t_2))=\left(\frac{t_2}{2},\frac{t^2_2}{4}-\frac{1}{2}\right).   \label{eq: gamma c2}
 \end{equation}
-Now that we have established that we must have a flow on our second chart, then there must also exist transition maps. Therefore this now enables us to consider the first chart in the following section.
+This is the candidate trajectory in $K_2$ that perturbs to a maximal canard trajectory. Now that we have established that we must have a flow on the second chart, there must also exist transition maps. Therefore this now enables us to consider the first chart in the following section.
 
 
 \subsubsection{Dynamics in \texorpdfstring{$K_1$}{K1}}\label{sec:dynamics-in-texorpdfstringk1k1}
@@ -203,11 +202,11 @@ For $K_1$ we follow a similar approach to the above. We will use the transformat
 \begin{equation}
 x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \tag{\ref{eq: coordiante K1}},
 \end{equation}
-to find the relevant pathways of our flows. Now if we first consider the $r_1$ component, 
+to find the relevant trajectory of our flow, $\gamma_2$ in $K_1$. Now if we first consider the $r_1$ component, 
 \begin{align}
 2r_1^2r_1'=r_1^2\epsilon(r_1x_1-r_1\lambda_1), \label{canard: r1}
 \end{align}
-where we define $F=F(x,y,\epsilon,\lambda)=x_1-\lambda_1+O(r_1(r_1+\lambda_1)$. Next we consider $x=r_1x_1$,
+Define $F=F(x_1,y_1,\epsilon_1,\lambda_1)=x_1-\lambda_1$. Next we consider $x=r_1x_1$,
 \begin{align*}
 r_1r_1'x_1+r_1^2x_1'&=-r_1^2+r_1^2x_1^2,\\
 x_1'&=-1+x_1^2-\frac{x_1r_1'}{r_1},
