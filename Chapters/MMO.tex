@@ -4,24 +4,19 @@ Before returning to the case of the folded node, a few technical terms are intro
 This section is based on work done in the review paper by \citep{MMO} unless indicated otherwise.
 The concept that we need to introduce is mixed mode oscillations.
 
-\begin{definition}{Mixed Mode Oscillations}[\citealp{kuehn}][\citealp{MMO}]
+\begin{definition}{Mixed Mode Oscillations \citealp{MMO}}}\\
 	A mixed mode oscillation is an orbit $\gamma$, which traces out small amplitude oscillations (SAOs) as well as large amplitude oscillations (LAOs).
-	The SAOs and LAOs are clearly separated in the time series and their reoccurence can be periodic.
-	The signiture of an MMO is expressed as $L_1^{s_1}L_2^{s_2}...$, indicating that $L$ number of LAOs are followed by $s$ SAOs.
+	The SAOs and LAOs are clearly separated in the time series and their recurrence can be periodic.
+	The signature of an MMO is expressed as $L_1^{s_1}L_2^{s_2}...$, indicating that $L$ number of LAOs are followed by $s$ SAOs.
 \end{definition}
-MMOs can be due to different mechanisms in the fast-slow system. They can be present due to a folded node singularity or a singular Hopf bifurcation, amongst others.
-We can now return to the example of the folded node and state some important results which give rise to MMOs for systems with folded node singularities.
+MMOs can be due to different mechanisms in the fast-slow system. They can be present due to a folded node singularity or a singular Hopf bifurcation, amongst others. We can now return to the example of the folded node and state some important results which give rise to MMOs for systems with folded node singularities.
 
 \subsection{The Folded Node}
 We have analysed the local behaviour of system (\ref{normalform2}) around the region close to the folded node.
 However, this does not provide the full analysis of the system, since the global behaviour of the trajectories that undergo the SAOs in the folded node region is not captured by the local analysis.
-Generally, there are no global return mechanisms present in system (\ref{normalform2}) and a trajectory that approaches the folded region from $x \to - \infty$ undergoes a number of SAOs, according to where it enters the fold region in $z$ space, before leaving to $x \to  \infty$. Then there are no global return mechanisms present and the trajectory does not undergo a large amplitude oscillation.
-\\
-\\
-However, there are certain criteria that indicate the existence of a global return mechanism and therefore that MMOs can be observed.
-There are two theorems related to this issue, which are stated below.
+Generally, there are no global return mechanisms present in system (\ref{normalform2}) and a trajectory that approaches the folded region from $x = - \infty$ undergoes a number of SAOs, according to where it enters the fold region in $z$ space, before leaving towards infinity. Then there are no global return mechanisms present and the trajectory does not undergo a large amplitude oscillation. However, there are certain criteria that indicate the existence of a global return mechanism and therefore that MMOs can be observed. There are two theorems related to this issue, which are stated below.
 
-\begin{theorem}[\textbf{Generic $1^{k+1}$ MMOs}][\citealp{MMO}] \label{MMOsigk1}
+\begin{theorem}[\textbf{Generic $1^{k+1}$ MMOs} \citealp{MMO}] \label{MMOsigk1}
 Consider system (\ref{somegenericthreedim}) with the following assumptions:
 \begin{enumerate}
 \item Assume that $ 0 < \epsilon \ll 1$ is sufficiently small, $\epsilon^{1/2} \ll \mu$, and $k \in \mathbf{N}$ is such that $2k + 1 < \mu^{-1} < 2k + 3$.
