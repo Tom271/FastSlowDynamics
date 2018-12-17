@@ -5,8 +5,7 @@
 	\label{fig: Canard Point}
 \end{figure}\newpage
 
-We have now found the global dynamics for the Van der Pol system with $\epsilon >0$ for $\lambda =1$. It is now of interest to investigate whether changing $\lambda$ causes a qualitative change in the dynamics of the Van der Pol system.
-Considering the Van der Pol System with $\lambda \neq 1$,
+We have now found the global dynamics for the Van der Pol system with $\epsilon >0$ for $\lambda =1$. It is now of interest to investigate whether changing $\lambda$ causes a qualitative change in the dynamics of the Van der Pol system. Considering the Van der Pol System with $\lambda \neq 1$,
 
 \begin{equation}
 \begin{aligned}
@@ -15,20 +14,22 @@ Considering the Van der Pol System with $\lambda \neq 1$,
 \end{aligned}
 \label{eq: canard system}
 \end{equation}
-Since the nullcline $\dot{y}=0 \Rightarrow x=\lambda$ depends on $\lambda$, varying $\lambda$ corresponds to a shift of the nullcline along the S shaped  the equilibrium of the system along the critical manifold $S$ by varying the parameter $\lambda$.
+Since the nullcline $\dot{y}=0 \Rightarrow x=\lambda$ depends on $\lambda$, varying $\lambda$ corresponds to a shift of the nullcline along the S shaped curve. Numerical experiments show that solutions to the full system are either relaxation oscillations when the equilibrium lies between the fold points. That is, when it is on the repelling branch. When the equilibrium lies on the attracting branch, all trajectories converge to this point (when $\lambda>2$ or $\lambda<0$). Naturally, there must be a change of stability when $\lambda=0$ and when $\lambda=2$. In this section we aim to explain the nature of this shift in stability and its effect on the global dynamics rigorously. Figure +++REF++ gives an initial idea of the behaviour when $\lambda$ is close to 0. We will restrict attention to this point as the case for $\lambda=2$ is entirely analogous. Trajectories that pass close to this fold point are called canards, more rigorous definitions are given below.\\
+ 
+++++SIMULATION OF SMALL LAMBDA++++
 
-In this section, the dynamics in system \ref{eq: canard system} is analysed. In order to do so, we need the definition of a canard.
-\begin{definition}{\textbf{ Canard}}[\citealp{Kuehn}]
+\begin{definition}{\textbf{Canard} \citealp{Kuehn}}\\
 A trajectory of a fast-slow system is called a canard if it stays within $O(\epsilon)$ close to the repelling branch $S^r$ of the slow manifold $S$, for some time of $O(1)$ on the slow time scale $\tau = \epsilon t$.
 \end{definition}
 Furthermore, the following definition turns out to be useful as well:
-\begin{definition}{\textbf{Maximal Canard}}[\citealp{Kuehn}] \label{maxcanard}
+\begin{definition}{\textbf{Maximal Canard} \citealp{Kuehn}}\\ \label{maxcanard}
 The trajectory passing through the intersection of $S^a$ and $S^r$ is called a maximal canard. 
 \end{definition}
-\begin{definition}{\textbf{Singular Canard}}
+\begin{definition}{\textbf{Singular Canard} \citealp{Kuehn}}
+	Trajectories of the slow flow lying in the attracting and repelling parts of the critical manifold are called singular canards.
 \end{definition}
-The intuition of the canard problem close to a fold point is given in Figure \ref{fig: Canard Point}.
-Equivalently to the analysis of the fold point in Section \ref{sec:the-van-der-pol-equation}, some nondegeneracy conditions are defined. These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$. The fact that $g_x(0,0,0) \neq 0$ guarantees the existence of transversal intersection of the two nullclines, which is crucial in order to conclude persistence of the dynamics later on \citep{kuehn}. 
+We expect singular canards in the reduced system to perturb to maximal canards in the full system. The intuition of the canard problem close to a fold point is given in Figure \ref{fig: Canard Point}.
+Equivalently to the analysis of the fold point in Section \ref{VDPfolds}, some nondegeneracy conditions are defined. These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$. The fact that $g_x(0,0,0) \neq 0$ guarantees the existence of transversal intersection of the two nullclines, which is crucial in order to conclude persistence of the dynamics later on \citep{kuehn}. 
 The nondegeneracy and transversality conditions for the canard case are  \citep{krupa2001},
 \begin{equation}
 f(0,0,0,0)=0, \ \pd{}{x}f(0,0,0,0)=0, \ g(0,0,0,0)=0, \label{eq: canard sing condition}
@@ -372,37 +373,31 @@ Continuing on from the singular Hopf bifurcation we might find that the canard p
 	where we have defined,
 	\begin{subequations}
 		\begin{align}
-		d_{r_2}&=\int_{-\infty}^{\infty}\text{grad}H(\gamma_{c,2}(t))^T\cdot G(\gamma_{c,2}(t))dt,\\
-		d_{\lambda_2}&=\int_{-\infty}^{\infty}\text{grad}H(\gamma_{c,2}(t))^T\cdot (0,-1)^T,
+		d_{r_2}&=\int_{-\infty}^{\infty}(\nabla H(\gamma_{c,2}(t)))^T\cdot G(\gamma_{c,2}(t))dt,\\
+		d_{\lambda_2}&=\int_{-\infty}^{\infty}(\nabla H(\gamma_{c,2}(t)))^T\cdot (0,-1)^T,
 		\end{align}
 	\end{subequations}
 	and our matrix $ G(\gamma_{c,2}(t)) $ in Section \ref{sec:dynamics-in-texorpdfstringk1k1} with $ \gamma_{c,2} $ as our critical trajectory. 
 \end{prop}
-Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of our domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. We can calculate these explicitly for the the \vdp system by using Equations \ref{eq: const of motion}, \ref{eq: gamma c2} and $ G(x_2,y_2)=(-\frac{x_2^3}{3},0)^T $ \st we have,
+Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of our domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. We can calculate these explicitly for the the \vdp system by using Equations \ref{eq: const of motion}, \ref{eq: gamma c2} and $ G(x_2,y_2)=(-\frac{x_2^3}{3},0)^T $. Consequently we have,
 
-	\begin{align*}
-		d_{r_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((-\frac{x_2^3}{3},0)^T\right)\bigg|_{\gamma_{c,2}} \text{dt}\notag\\
+\begin{align*}
+d_{r_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((-\frac{x_2^3}{3},0)^T\right)\bigg|_{\gamma_{c,2}} \text{dt}\notag\\
 %	&=\int_{-\infty}^{\infty}\left(-\frac{\exp\left(-\frac{t^2}{2}+1\right)}{2}.\frac{\exp\left(-\frac{t^2}{2}+1\right)}{2}\left(\frac{t^2}{4}-\frac{1}{2}-\frac{t}{2}\right)\right)
-		&=-\frac{e}{16}\int_{-\infty}^{\infty}t^4e^{-\frac{T^2}{2}}dt,
-	\end{align*}
-
-noting $ \nabla(H)= $
-Now the task is to show that $ d_{r_2} $ is finite, we do this by using integration by parts to find,
+&=-\frac{e}{16}\int_{-\infty}^{\infty}t^4e^{-\frac{T^2}{2}}dt,
+\end{align*}
+noting $ \nabla(H(\gamma_{c,2}(t)))= \exp(1-\frac{t^2}{2})\left[-1,\frac{1}{2}\right]$. Now the task is to show that $ d_{r_2} $ is finite, we do this by using integration by parts to find,
 \begin{equation}
 d_{r_2}=	\frac{e}{16}\int_{-\infty}^{\infty}e^{-\frac{T^2}{2}}dt=\frac{e\sqrt{2\pi}}{16}<\infty,
 \end{equation}
 where we note that we have made use of the Guassian Integral \citep{GausIntegral} to show finiteness. We then apply an analogous approach to $d_{\lambda_2} $ \st, 
 \begin{align}
-		d_{\lambda_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((0,-1)^T\right)\bigg|_{\gamma_{c,2}} \text{dt}\notag\\
-		&=-\frac{e}{2}\int_{-\infty}^{\infty} e^{-t^2}dt=-\frac{e\sqrt{2\pi}}{2}<0,
+d_{\lambda_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((0,-1)^T\right)\bigg|_{\gamma_{c,2}} \text{dt}\notag\\
+&=-\frac{e}{2}\int_{-\infty}^{\infty} e^{-t^2}dt=-\frac{e\sqrt{2\pi}}{2}<0,
 \end{align}
 where we have used the same techniques as above where we note that $ d_{\lambda_2} $ is also finite. Combining the above yields that our distance function is,
 \begin{equation}
-	D_c(r_2,\lambda_2)=\frac{e\sqrt{2\pi}}{16}r_2-\frac{e\sqrt{2\pi}}{2}\lambda_2+O(2),
+D_c(r_2,\lambda_2)=\frac{e\sqrt{2\pi}}{16}r_2-\frac{e\sqrt{2\pi}}{2}\lambda_2+O(2),
 \end{equation}  
 whereby we have that the manifolds in the \vdp system split for $ \lambda_2\neq\frac{r_2}{8} $ otherwise our branches are connected, as shown in the prior simulations. If the manifold splits then we would find that the manifold is similar to Figure \ref{fig: splitting} whereby the flow will either jump off fracture - see Figure \ref{fig: vdp flow diagram e} - or the flow will be trapped in the canard region and then be repelled back to the attracting manifold, as we see with our connected system - Figure \ref{fig: 4 canard }. 
-
-
-
-
 
