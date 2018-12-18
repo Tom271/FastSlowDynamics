@@ -71,7 +71,7 @@ Now that these conditions have been defined we can consider, equivalent to the a
 \end{aligned}
 \label{eq: extended canard system}
 \end{equation}
-Now, for the remainder of the section, we apply the method of \citet{krupa2001} to the Van der Pol System. The canonical form for \ref{eq: canard system} is,
+Now, for the remainder of the section, we apply the method of \citet{krupa2001} to the Van der Pol System. The canonical form for (\ref{eq: canard system}) is,
 \begin{equation} \label{canardysy2var}
 	\begin{aligned}
 		x'&=-yh_1(x,y,\epsilon,\lambda)+x^2h_2(x,y,\epsilon,\lambda) + \epsilon h_3(x,y,\lambda,\epsilon)\\
@@ -93,7 +93,7 @@ Furthermore, we can define the quantity,
 \begin{align*}
 A=-a_2+3a_3-(2a_4+2a_5)=-1,
 \end{align*}
-which is important in the following analysis, in particular for $A \neq 0$ \citep{krupa2001}. 
+which is important in the following analysis \citep{krupa2001}. 
 Similar to the procedure in Section \ref{sec: VDP Blowup}, sections of the dynamical system can be defined, in order to monitor the in- and outgoing trajectories. In this case we are interested in two sections of the neighbourhood $U$, defined as in Section \ref{sec: VDP Blowup}, that monitor $S^a$ and $S^r$ close to the fold point.
 Let $ \Delta_a = \{ (x,\rho^2), x \in  I_a \}$ and $\Delta_r= \{ (x,\rho^2), x \in  I_r \}$, where $I_a,I_r$ are intervals on the real line and $\rho$ is sufficiently small.
 Futhermore, define $q_a$ to be the point on $\Delta_a$ that belongs to the attracting branch $S^a$, while $q_r$ is equivalently defined as the point on $\Delta_r$ that corresponds to $S^r$. Finally, we are in the position to define the transition map $\pi: \Delta^a \to \Delta^r$, compare to Section \ref{sec: VDP Blowup}.
@@ -135,7 +135,7 @@ The trajectory stays close to $S^r$ after passing the fold point. This is very c
 Again, equivalently to the procedure in Section \ref{sec: VDP Blowup}, we can define the coordinate transformation for the charts. Note, that in contrast to the generic Blow-Up in Section \ref{sec: VDP Blowup}, the coordinate system is now in $\mathbf{R}^4$, and not in $\mathbf{R}^3$. In chart $K_1$, $y_1=1$, while in $K_2$, $\epsilon_1=1$ and then:
 \begin{subequations}
 	\begin{align}
-	&x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \label{eq: coordiante K1}\\ 
+	&x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \label{eq: coordiante K1},\\ 
 	&x=r_2x_2, \ y=r_2^2y_2, \ \epsilon=r^2_2, \ \lambda=r_2\lambda_2 \label{eq: coordinate K2}.
 	\end{align}
 \end{subequations}
@@ -180,7 +180,7 @@ Equivalently to Section \ref{sec: VDP Blowup}, we rescale time such that, $\od{r
 \end{subequations}
 where $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ the system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each equations by, $e^{2y_2}e^{-2y _2}=1$, and define sections of each equation as partial derivatives of $H$ such that, 
 \begin{align}
-x_2' &=e^{2y_2}e^{-2y_2}( -y_2 +x_2^2 ) =e^{2y_2}\pd{H}{y_2}(x_2,y_2) \\
+x_2' &=e^{2y_2}e^{-2y_2}( -y_2 +x_2^2 ) =e^{2y_2}\pd{H}{y_2}(x_2,y_2), \\
 y_2' &= - e^{2y_2}e^{-2y_2}(-  x_2)=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
 \end{align}
 Then we integrate $ \pd{H}{x_2}(x_2,y_2) = -e^{-2y_2} x_2  $ to give,
@@ -200,19 +200,20 @@ Finally we integrate $C'(y)$ in order to find an explicit expression for $H$,
 C(y) = \int - y_2 e^{-2y_2} dy = \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + const,
 \end{align*}
 using integration by parts.
-Then, the final expression is:
+Then, the final expression is,
 \begin{align}
-H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c\\
+H(x_2,y_2)&=- \frac{1}{2} x^2 e^{-2y_2} + \frac{1}{2} y_2 e^{-2y_2} + \frac{1}{2} e^{-2y_2} + c,\\
 &= \frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right) +c. \label{eq: const of motion}
 \end{align}
-Note that without loss of generality we can choose $c=0$ because we are interested in the level curves of $H(x_2,y_2)=h$. The reduced system has an equilibrium of center type at the origin. Around this point, the level curves of $H=h$ for $h \in (0,\frac{1}{4})$ define periodic trajectories orbiting the equilibrium. When $h\leq0$, the solutions are unbounded. When $h=0$, we have that $y_2-x_2^2+\frac{1}{2}=0$ and therefore,
+Note that without loss of generality we can choose $c=0$ because we are interested in the level curves of $H(x_2,y_2)=h$. The reduced system has an equilibrium of center type at the origin. Around this point, the level curves of $H=h$ for $h \in (0,\frac{1}{4})$ define periodic trajectories orbiting the equilibrium, which will perturb to small amplitude oscillations in the full system. When $h\leq0$, the solutions are unbounded. When $h=0$, we have that $y_2-x_2^2+\frac{1}{2}=0$ and therefore,
 \begin{subequations}
 	\begin{align}
 	x_2'&=\frac{1}{2}\ \	\implies x_2=\frac{t_2}{2}+B, \label{canard: trajectory x}\\
 	y_2'&=\frac{t_2}{2}\ \implies y_2=\frac{t_2^2}{4}-\frac{1}{2}, \label{canard: trajectory y}
 	\end{align}
+	\label{canard: trajectory xy}
 \end{subequations} 
-where we have directly integrated Equation( \ref{canard: trajectory x}) with respect to the rescaled time $ t_2 $. However, we note that we are able to choose $B=0 $, as we are considering an autonomous (time-invariant) system. Using Equations (\ref{canard: trajectory x}) and (\ref{canard: trajectory y}) we are then able to define $ \gamma_{c,2} $ as, 
+where we have directly integrated Equation (\ref{canard: trajectory xy}) with respect to the rescaled time $ t_2 $. However, we note that we are able to choose $B=0 $, as we are considering an autonomous (time-invariant) system. Using Equations (\ref{canard: trajectory x}) and (\ref{canard: trajectory y}) we are then able to define $ \gamma_{c,2} $ as, 
 \begin{equation}
 \gamma_{c,2}(t_2)=(x_{c,2}(t_2),y_{c,2}(t_2))=\left(\frac{t_2}{2},\frac{t^2_2}{4}-\frac{1}{2}\right).   \label{eq: gamma c2}
 \end{equation}
@@ -246,7 +247,7 @@ The last transformation is for the new coordinate $\lambda=r_1\lambda$, noting t
 \begin{equation}
 \lambda'_1=-\frac{\lambda_1\epsilon_1F}{2}, 
 \end{equation}
-which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k1}. Now if we combine the above we find that the transformed system is of the following form,
+which is a trivial rearrangement as seen in Equation (\ref{canard: epsilon k1}). Now if we combine the above we find that the transformed system is of the following form,
 \begin{subequations}
 	\begin{align}
 	r_1'&=\frac{\epsilon}{2}r_1F, \\ \notag
@@ -266,11 +267,11 @@ J-\sigma I= \begin{bmatrix}
 0 & 0 & 0 & -\sigma
 \end{bmatrix},
 \end{equation}
-which has three zero eigenvalues and one non-zero eigenvalue $\sigma=\pm 2$.This further emphasises that the equilibrium point is non-hyperbolic. 
-The dynamics of $K_1$ is very similar to the analysis of $K_1$ in the generic fold case. The center manifold can be applied in order to conclude the persistence of the dynamics for $\epsilon >0$.
+which has three zero eigenvalues and two non-zero eigenvalue $\sigma=\pm 2$. This further emphasises that the equilibrium point is non-hyperbolic. 
+The dynamics of $K_1$ is very similar to the analysis of $K_1$ in the generic fold case. The Center Manifold Theorem can be applied in order to conclude the persistence of the dynamics for $\epsilon >0$.
 
 \subsection{Full Solution}
-The analysis of the charts $K_1$ and $K_2$ provided enough hyperbolicity in order to conclude persistence of the special orbit $\gamma$ for $\epsilon >0$. The orbit $\gamma$ connects the attracting and repelling branch of $S$ at $p_a$ and $p_r$. This can be onserved in Figure \ref{canardsolloc}, which shows the full local dynamics at the fold point.
+The analysis of the charts $K_1$ and $K_2$ provided enough hyperbolicity in order to conclude persistence of the special orbit $\gamma$ for $\epsilon >0$. The orbit $\gamma$ connects the attracting and repelling branch of $S$ at $p_a$ and $p_r$. This can be conserved in Figure \ref{canardsolloc}, which shows the full local dynamics at the fold point.
 \begin{figure}[h!]\centering
 	\includegraphics[height=8cm,width=10cm]{Images/pres-cancard}
 	\caption{Full dynamics at the fold point in the canard case \citep{krupa2001}.}
@@ -334,7 +335,7 @@ The eigenvalues of the system are $ \sigma=0 $ and $ \sigma=\frac{2x-x^2\pm\sqrt
 	\caption{The trajectories associated with the canards case of the \vdp system.}
 	\label{fig: 4 canard }
 \end{figure}\newpage
-From Figure \ref{fig: 4 canard } we can see the progression of the flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then in Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. These small amplitude oscillations are the pertubation of the closed orbits due to the constant of motion found in the singular limit in chart 2.  It can be seen that the trajectories follow the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch - Figure \ref{fig:timing4}. For increasing values of $\lambda$, the canard sycles get larger and trajectories that follow the repelling branch are either repelled towards the left or the right - Figure \ref{fig: hopf growth}. The canards jumping off the repelling branch to the right are called canards with head because of the shape they trace out.
+From Figure \ref{fig: 4 canard } we can see the progression of the flow over the system. From Figure \ref{fig:timing1} we see that the flow starts at an initial condition of $ (x,y)=(1,1) $ and travels along the fast flow towards the attracting branch. Then in Figure \ref{fig:timing2} the flow has hit the attracting branch, where it then follows along the slow flow towards the fold point at $ (x,y)=(0,0) $, which is described by Figure \ref{fig:timing3}. Then from Figures \ref{fig:timing3} and \ref{fig:timing4} we can observe the Hopf bifurcation. These small amplitude oscillations are the pertubation of the closed orbits due to the constant of motion found in the singular limit in chart 2.  It can be seen that the trajectories follow the repelling branch (see Figure \ref{fig: Canard Point}) until the flow is sufficiently far from the fold point where it will then repel towards the attracting branch - Figure \ref{fig:timing4}. For increasing values of $\lambda$, the canard cycles get larger and trajectories that follow the repelling branch are either repelled towards the left or the right - Figure \ref{fig: hopf growth}. The canards jumping off the repelling branch to the right are called canards with head because of the shape they trace out.
 The question whether trajectories jump off to the left or to the right is answered by investigating the separation of the manifolds.
 
 
@@ -355,26 +356,26 @@ The maximal canard connects the attacting and repelling branches of the slow man
 	with 
 	\begin{subequations}
 		\begin{align}
-		d_{r_2}&=\int_{-\infty}^{\infty}(\nabla H(\gamma_{c,2}(t)))^T\cdot G(\gamma_{c,2}(t))dt,\\
-		d_{\lambda_2}&=\int_{-\infty}^{\infty}(\nabla H(\gamma_{c,2}(t)))^T\cdot (0,-1)^T,
+		d_{r_2}&=\int_{-\infty}^{\infty}(\nabla H(\gamma_{c,2}(t)))^T\cdot G(\gamma_{c,2}(t))\dif t,\\
+		d_{\lambda_2}&=\int_{-\infty}^{\infty}(\nabla H(\gamma_{c,2}(t)))^T\cdot (0,-1)^T \dif t,
 		\end{align}
 	\end{subequations}
 	where the matrix $ G(\gamma_{c,2}(t)) $ is as defined in Section \ref{sec:dynamics-in-texorpdfstringk1k1} and $ \gamma_{c,2} $ is the trajectory associated with the singular canard. 
 \end{prop}
-Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between our branches if the canard falls outside of the domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. We can calculate these explicitly for the the \vdp system by using Equations \ref{eq: const of motion}, \ref{eq: gamma c2} and $ G(x_2,y_2)=(-\frac{x_2^3}{3},0)^T $. Consequently we have,
+Then, following the proof provided by \citet{krupa2001}, we find that we will have a split occurring between the branches if the canard falls outside of the domain of order $ O(e^{-\frac{c}{\epsilon}}) $ \st $ D_c(r_2,\lambda_2)\neq 0 $. We can calculate these explicitly for the the \vdp system by using Equations \ref{eq: const of motion}, \ref{eq: gamma c2} and $ G(x_2,y_2)=(-\frac{x_2^3}{3},0)^T $. Consequently we have,
 
 \begin{align*}
-d_{r_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((-\frac{x_2^3}{3},0)^T\right)\bigg|_{\gamma_{c,2}} dt,\notag\\
-&=-\frac{e}{16}\int_{-\infty}^{\infty}t^4e^{-\frac{T^2}{2}}dt,
+d_{r_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((-\frac{x_2^3}{3},0)^T\right)\bigg|_{\gamma_{c,2}} \dif t,\notag\\
+&=-\frac{e}{16}\int_{-\infty}^{\infty}t^4e^{-\frac{T^2}{2}}\dif dt,
 \end{align*}
 noting $ \nabla(H(\gamma_{c,2}(t)))= \exp(1-\frac{t^2}{2})\left[-1,\frac{1}{2}\right]$. Now the task is to show that $ d_{r_2} $ is finite, we do this by using integration by parts to find,
 \begin{equation}
-d_{r_2}=	\frac{e}{16}\int_{-\infty}^{\infty}e^{-\frac{T^2}{2}}dt=\frac{e\sqrt{2\pi}}{16}<\infty,
+d_{r_2}=	\frac{e}{16}\int_{-\infty}^{\infty}e^{-\frac{T^2}{2}}\dif t=\frac{e\sqrt{2\pi}}{16}<\infty,
 \end{equation}
 where we note that we have made use of the Gaussian Integral \citep{GausIntegral} and $d_{r_2}$ is finite. We then apply an analogous approach to $d_{\lambda_2} $ \st, 
 \begin{align}
-d_{\lambda_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((0,-1)^T\right)\bigg|_{\gamma_{c,2}} dt, \notag\\
-&=-\frac{e}{2}\int_{-\infty}^{\infty} e^{-t^2}dt=-\frac{e\sqrt{2\pi}}{2}<0,
+d_{\lambda_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((0,-1)^T\right)\bigg|_{\gamma_{c,2}} \dif t, \notag\\
+&=-\frac{e}{2}\int_{-\infty}^{\infty} e^{-t^2}\dif t=-\frac{e\sqrt{2\pi}}{2}<0,
 \end{align}
 where we have used the same techniques as above and we can conclude that $ d_{\lambda_2} $ is also finite. Combining the above yields that the distance function is,
 \begin{equation}
