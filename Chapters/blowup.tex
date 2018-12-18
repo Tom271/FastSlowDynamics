@@ -55,7 +55,7 @@ The charts are defined by setting each of the variables of the extended system t
 	\end{align}
 \end{subequations}
 where $ (x_i,r_i,\epsilon_i)\in\mathbf{R}^3 $ for $ i=1,2,3 $, and the equations correspond to the charts in numerical order \citep{krupa2001}. 
-With this setup, we can consider the dynamics on the individual charts, and then join the gathered information into a global view on the dynamics in $U$. We start with $K_2$,  because it holds the most information and the flow is analysed more readily than in the other two charts. The remaining question is how the transition between the three charts and the connection to the global dynamics is made after finishing the individual analysis. This is done via a coordinate change, derived by using Equations \ref{ sys: K1K2K3} and \ref{sys: blow up trans}, and the results are summarised in the following lemma:
+With this setup, we can consider the dynamics on the individual charts, and then join the gathered information into a global view on the dynamics in $U$. We start with $K_2$,  because it holds the most information and the flow is analysed more readily than in the other two charts. The remaining question is how the transition between the three charts and the connection to the global dynamics is made after finishing the individual analysis. This is done via a coordinate change, derived by using Equations (\ref{ sys: K1K2K3}) and (\ref{sys: blow up trans}), and the results are summarised in the following lemma:
 \begin{lemma} \label{coord. change}
 Let $\kappa_{12}$ denote the change of coordinates from $K_1$ to $K_2$. Then $\kappa_{12}$ is given by \\
 \begin{equation*}
@@ -286,14 +286,14 @@ y_3 \\
 \end{pmatrix} .
 \end{align*}
 As the matrix is upper triangular, its eigenvalues are trivially  $\lbrace 1,-2,-3\rbrace$ with corresponding eigenvectors $\lbrace (1,0,0),(0,1,0),(0,1,1)\rbrace$. This presents an issue as there is additive resonance that is $\lambda_2-(\lambda_1+\lambda_3)=0$.  This means the Poincar\'e-Dulac theorem does not hold and the vector field is not linearisable, there is no smooth transformation between the nonlinear and linear flow. Despite this, progress can still be made as the form of the equations allow a near identity transformation and yields the lowest order approximation to the flow. %Note that $q_{out}$ is also  a hyperbolic equilibrium of the system.  +++Mention $\bar{M}_a$, the locally invariant perturbation of the center manifold $M_a$? Passes near the delicate equilibrium point $q_{out}$ so behaviour very much depends on how we pass this point. +++\\
-The special orbit, $\gamma_2$, can be mapped into this chart using the change of coordinates $\kappa_{23}$ of Equation \ref{eq:kappa23}.
-$$\gamma_3=\kappa_{23}(\gamma_2)$$
-In fact, $\gamma_3$ lies in the plane $r_3=0$ and converges to $q_{out}$ as $\epsilon \to 0$. To find the flow in a neighbourhood of $q_{out}$ we use sections similar to those introduced in $K_2$.
+The special orbit, $\gamma_2$, can be mapped into this chart using the change of coordinates $\kappa_{23}$ of Equation \ref{eq:kappa23},
+$$\gamma_3=\kappa_{23}(\gamma_2).$$
+In fact, $\gamma_3$ lies in the plane $r_3=0$ and converges to $q_{out}$ as $\epsilon \to 0$. To find the flow in a neighbourhood of $q_{out}$ we use sections similar to those introduced in $K_2$,
 \begin{align*} \Sigma_3^{in} =\lbrace(r_3,y_3,\epsilon_3) &: r_3\in[0,\rho], y_3 \in [-\beta_3,\beta_3], \epsilon_3=\delta\rbrace,\\
-\Sigma_3^{out} =\lbrace(r_3,y_3,\epsilon_3) &: r_3=\rho, y_3 \in [-\beta_3,\beta_3], \epsilon_3\in[0,\delta]\rbrace
+\Sigma_3^{out} =\lbrace(r_3,y_3,\epsilon_3) &: r_3=\rho, y_3 \in [-\beta_3,\beta_3], \epsilon_3\in[0,\delta]\rbrace.
 \end{align*}
 
-We now wish to find the transition map $\Pi_3$ between these two charts. That is, given that the trajectory enters somewhere in $\Sigma_3^{in}$, how will it behave until it reaches $\Sigma_3^{out}$? To do this, the system \ref{sys:K3blowup} will be studied after some simplification. The system is in fact equivalent to the Riccati equation. Observe that $F(r_3,y_3,\epsilon_3)\big|_{q_{out}} = 1-y_3 + O(r_3)\big|_{q_{out}} \approx 1 $. Thus dividing (\ref{sys:K3blowup}) through by $F$ yields
+We now wish to find the transition map $\Pi_3$ between these two charts. That is, given that the trajectory enters somewhere in $\Sigma_3^{in}$, how will it behave until it reaches $\Sigma_3^{out}$? To do this, the system \ref{sys:K3blowup} will be studied after some simplification. The system is in fact equivalent to the Riccati equation. Observe that $F(r_3,y_3,\epsilon_3)\big|_{q_{out}} = 1-y_3 + O(r_3)\big|_{q_{out}} \approx 1 $. Thus dividing (\ref{sys:K3blowup}) through by $F$ yields,
 \begin{subequations}
 	\begin{align}
 	\dot{r}_3&=r_3,\\
@@ -302,10 +302,10 @@ We now wish to find the transition map $\Pi_3$ between these two charts. That is
 	\end{align}
 	\label{eq:K3ricc}
 \end{subequations}
-In the invariant plane $r_3=0$, the system becomes the Riccati equation (compare with Equation (\ref{Riccati})) transformed into the chart $K_3$ and with a rescaling of time.
+In the invariant plane $r_3=0$, the system becomes the Riccati equation (compare with Equation (\ref{Riccati})) transformed into the chart $K_3$ and with a rescaling of time,
 \begin{align*}
-y'_3 &= -2y_3-\frac{\epsilon_3}{1-y_3}\\
-\epsilon'_3 &= -3\epsilon_3
+y'_3 &= -2y_3-\frac{\epsilon_3}{1-y_3},\\
+\epsilon'_3 &= -3\epsilon_3.
 \end{align*}
 This system has eigenvalues $\lbrace -2,-3\rbrace$ and the issue of additive resonance has been avoided so we are able to linearise the system using a near-identity transformation. This transformation allows the elimination of awkward higher order terms (in this case, $\frac{1}{1-y_3}$). Let
 $$y_3=\psi(\tilde{y}_3,\epsilon_3)=\tilde{y}_3+O(\tilde{y}_3\epsilon_3).$$
@@ -317,38 +317,38 @@ Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions
 	\rho \\ 
 	\Pi_{32}(r_3,y_3,\delta) \\ 
 	\left(\frac{r_3}{\rho}\right)^3\delta
-	\end{pmatrix} $$ 
-	where $$\Pi_{32}(r_3,y_3,\delta)=\left(\bar{\psi}(y_3,\delta)-\delta\right)\left(\frac{r_3}{\rho}\right)^2 + O(r^3_3\ln r_3)$$
+	\end{pmatrix}, $$ 
+	where $$\Pi_{32}(r_3,y_3,\delta)=\left(\bar{\psi}(y_3,\delta)-\delta\right)\left(\frac{r_3}{\rho}\right)^2 + O(r^3_3\ln r_3).$$
 \end{prop}
 \begin{proof}
-	We will use the near-identity transformation to find the passage time $T$ and thus the values of $r_3,y_3,\epsilon_3$ at this time. For brevity, the subscripts will be omitted for the remainder of this proof. Under the near-identity transformation, system (\ref{eq:K3ricc}) becomes
+	We will use the near-identity transformation to find the passage time $T$ and thus the values of $r_3,y_3,\epsilon_3$ at this time. For brevity, the subscripts will be omitted for the remainder of this proof. Under the near-identity transformation, system (\ref{eq:K3ricc}) becomes,
 	\begin{subequations}
 		\begin{align}
 		\dot{r} &= r,\label{sys:K3riccNIr}\\
-		\dot{\tilde{y}}&=-2\tilde{y}+\epsilon+r\epsilon H(r,\tilde{y},\epsilon)\label{sys:K3riccNIy}\\
-		\dot{\epsilon} &= -3\epsilon
+		\dot{\tilde{y}}&=-2\tilde{y}+\epsilon+r\epsilon H(r,\tilde{y},\epsilon)\label{sys:K3riccNIy},\\
+		\dot{\epsilon} &= -3\epsilon.
 		\label{sys:K3riccNIeps}
 		\end{align}
 	\end{subequations}
 	Let the subscript $i$ denote the value of a variable at its entry into the chart, and likewise $o$ for out. Then $(r_i,y_i,\epsilon_i)\in \Sigma^{in}$, and $(r_o,y_o,\epsilon_o)\in \Sigma^{out}$. Thus 
 	$$\begin{array}{c c c}
-	r(0)=r_i & &r(T)=r_o=\rho\\
-	y(0)=y_i & &y(T)=y_o\\
-	\epsilon(0)=\epsilon_i=\delta& & \epsilon(T)=\epsilon_o
+	r(0)=r_i, & &r(T)=r_o=\rho,\\
+	y(0)=y_i, & &y(T)=y_o,\\
+	\epsilon(0)=\epsilon_i=\delta,& & \epsilon(T)=\epsilon_o.
 	\end{array}
 	$$
 	We wish to construct an equation for the out variables $(T,\tilde{y}_o,\epsilon_o)$ in terms of the in variables $ (r_i,\tilde{y}_i) $, that is the transition map. The $r$ and $\epsilon$ equations are easily solved,
 	\begin{align}
-	r&=r_ie^t \\
-	\epsilon&=\delta e^{-3t}
+	r&=r_ie^t, \\
+	\epsilon&=\delta e^{-3t}.
 	\end{align}
 	Then using $r(T)=\rho$, 
 	$$r(T)=\rho=r_ie^{-t} \implies T=\ln\left(\frac{\rho}{r_i}\right).$$
 	
-	For the equation in $y$, a little more work is required. We introduce a new coordinate $z$ as follows, $\tilde{y}=e^{-2t}(\tilde{y}_i-\delta+z)+\delta  e^{-3t}$. Upon first sight, this seems unlikely to be of any use. However, it turns out that this transformation is ideal as it allows many terms to be removed. First rearrange for $z$ and differentiate with respect to $t$.
+	For the equation in $y$, a little more work is required. We introduce a new coordinate $z$ as follows, $\tilde{y}=e^{-2t}(\tilde{y}_i-\delta+z)+\delta  e^{-3t}$. Upon first sight, this seems unlikely to be of any use. However, it turns out that this transformation is ideal as it allows many terms to be removed. First rearrange for $z$ and differentiate with respect to $t$,
 	\begin{align*}
-	&z=e^{2t} (\tilde{y}-\delta e^{-3t})-\tilde{y}_i+\delta\\
-	&\od{z}{t}= 2e^{2t}\tilde{y}+e^{2t}\dot{\tilde{y}}+\delta e^{-t}
+	&z=e^{2t} (\tilde{y}-\delta e^{-3t})-\tilde{y}_i+\delta,\\
+	&\od{z}{t}= 2e^{2t}\tilde{y}+e^{2t}\dot{\tilde{y}}+\delta e^{-t}.
 	\end{align*}
 	Substitute $\dot{\tilde{y}}$ from Equation (\ref{sys:K3riccNIy}) and cancel terms, 
 	\begin{align*}
@@ -357,17 +357,17 @@ Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions
 	&=e^{2t}r\epsilon  H(r,\tilde{y},\epsilon).
 	\end{align*}
 	This final equality follows from the explicit solutions in $r$ and $\epsilon$ above. These equations also show that $r\epsilon e^{2t} = r_i\delta e^{-2t}e^{2t}$. Finally,
-	$$\dot{z} = r_iH^z(\,r_i,\tilde{y}_i,t)$$
+	$$\dot{z} = r_iH^z(\,r_i,\tilde{y}_i,t),$$
 	where $H^z$ is the same as $H$ but under the transformation from $z$, i.e. $H^z(\,r_i,\tilde{y}_i,t) = \delta H(r_ie^t,e^{-2t}(\tilde{y}_i-\delta+z)+\delta e^{-3t}, \delta e^{-3t})$. This has not affected the expression for the passage time $T$. Hence $z(T)=r_iO(T)=O(r_i\ln (\frac{\rho}{r_i}))$
 	Using the initial definition of $z$, we recover an expression for $\tilde{y}(T)$.
 	\begin{align*}
-	\tilde{y}(T)&=e^{-2T}\left(\tilde{y}_i-\delta+O\left(r_i\ln\left(\frac{\rho}{r_i}\right)\right)\right)+\delta e^{-3T}\\
-	&=(\tilde{y}_i-\delta)e^{-2\ln\frac{\rho}{r_i}}+e^{-2\ln\frac{\rho}{r_i}}O\left(r_i\ln\frac{\rho}{r_i}\right)+\delta \frac{r_i^3}{\rho^3}\\
-	&=(\tilde{y}_i-\delta)\frac{r_i^2}{\rho^2}+O\left(\frac{r_i^3}{\rho^2}\ln\frac{\rho}{r_i}\right)
+	\tilde{y}(T)&=e^{-2T}\left(\tilde{y}_i-\delta+O\left(r_i\ln\left(\frac{\rho}{r_i}\right)\right)\right)+\delta e^{-3T},\\
+	&=(\tilde{y}_i-\delta)e^{-2\ln\frac{\rho}{r_i}}+e^{-2\ln\frac{\rho}{r_i}}O\left(r_i\ln\frac{\rho}{r_i}\right)+\delta \frac{r_i^3}{\rho^3},\\
+	&=(\tilde{y}_i-\delta)\frac{r_i^2}{\rho^2}+O\left(\frac{r_i^3}{\rho^2}\ln\frac{\rho}{r_i}\right).
 	\end{align*}
-	We now have an expression for each of the out variables in terms of the initial conditions, albeit under a near-identity transformation. All that remains is to undo this transformation using the inverse map $\tilde{\psi}$.	\begin{align*}
-	\Pi_{32}(r_3,y_3,\delta) &= \psi \left( \left( \tilde{\psi}(y_3,\delta)-\delta\right)\left(\frac{r_3}{\rho}\right)^2 + O(r_3^3\ln r_3), \left(\frac{r_3}{\rho}\right)^3\delta\right)\\
-	&=(\tilde{\psi}(y_3,\delta)-\delta)\left( \frac{r_3}{\rho}\right)^2 +O(r_3^3\ln r_3)
+	We now have an expression for each of the out variables in terms of the initial conditions, albeit under a near-identity transformation. All that remains is to undo this transformation using the inverse map $\tilde{\psi}$,	\begin{align*}
+	\Pi_{32}(r_3,y_3,\delta) &= \psi \left( \left( \tilde{\psi}(y_3,\delta)-\delta\right)\left(\frac{r_3}{\rho}\right)^2 + O(r_3^3\ln r_3), \left(\frac{r_3}{\rho}\right)^3\delta\right),\\
+	&=(\tilde{\psi}(y_3,\delta)-\delta)\left( \frac{r_3}{\rho}\right)^2 +O(r_3^3\ln r_3).
 	\end{align*}
 	The result then follows by expressing $r_3$ and $\epsilon_3$ as functions of the out variables, that is $r_3(T)=\rho$ and $\epsilon_3(T)=\delta\left(\frac{r_3}{\rho}\right)^3$.
 \end{proof}
@@ -383,7 +383,7 @@ Let $\Pi: \Sigma^{in}_1 \to \Sigma^{out}_3$ be the full transition map of the Bl
 \Pi := \Pi_3 \circ \kappa_{23} \circ \Pi_2 \circ \kappa_{12} \circ \Pi_1,
 \end{align*}
 where $\kappa$ is the change of coordinates defined in Lemma \ref{coord. change} and $\Pi_1, \Pi_2, \Pi_3$ are the transition maps in each chart.
-Finally, reversing the blow up transformation gives the full transition map $\pi$ and therefore there exists a trajectory $\gamma$ in the blow down vector field connecting slow and fast flow.
+Finally, reversing the blow up transformation gives the full transition map $\pi$ and therefore there exists a trajectory $\gamma$ in the blown down vector field connecting slow and fast flow.
 With this analysis at hand we are now able to describe the full dynamics of the Van der Pol system when $\epsilon>0$ by analysing the singular limit $\epsilon \to 0$. The full result is visualised in Figure \ref{fig: full solution fold}.
 %\begin{figure}[h!]\centering
 %		\begin{subfigure}[t]{0.45\textwidth}
