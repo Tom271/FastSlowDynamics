@@ -3,9 +3,9 @@
 	\includegraphics[height=5cm,width=8cm]{Canard_Point.png}
 	\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$.}
 	\label{fig: Canard Point}
-\end{figure}\newpage
+\end{figure}
 
-We have now found the global dynamics for the Van der Pol system with $\epsilon >0$ for $\lambda =1$. It is now of interest to investigate whether changing $\lambda$ causes a qualitative change in the dynamics of the Van der Pol system. Considering the Van der Pol System with $\lambda \neq 1$,
+We have now found the global dynamics for the Van der Pol system with $\epsilon >0$ for $\lambda =1$. It is now of interest to investigate whether changing $\lambda$ causes a qualitative change in the dynamics of the Van der Pol system. Consider the Van der Pol System with $\lambda \neq 1$,
 
 \begin{equation}
 \begin{aligned}
@@ -14,18 +14,18 @@ We have now found the global dynamics for the Van der Pol system with $\epsilon 
 \end{aligned}
 \label{eq: canard system}
 \end{equation}
-Since the nullcline $\dot{y}=0 \Rightarrow x=\lambda$ depends on $\lambda$, varying $\lambda$ corresponds to a shift of the nullcline along the S shaped curve. Numerical experiments show that solutions to the full system are either relaxation oscillations when the equilibrium lies between the fold points. That is, when it is on the repelling branch. When the equilibrium lies on the attracting branch, all trajectories converge to this point (when $\lambda>2$ or $\lambda<0$). Naturally, there must be a change of stability when $\lambda=0$ and when $\lambda=2$. In this section we aim to explain the nature of this shift in stability and its effect on the global dynamics rigorously. Figure +++REF++ gives an initial idea of the behaviour when $\lambda$ is close to 0. We will restrict attention to this point as the case for $\lambda=2$ is entirely analogous. Trajectories that pass close to this fold point are called canards, more rigorous definitions are given below.\\
+Since the nullcline $\dot{y}=0 \Rightarrow x=\lambda$ depends on $\lambda$, varying $\lambda$ corresponds to a shift of the equilibrium along the S shaped curve. Numerical experiments show that solutions to the full system are either relaxation oscillations when the equilibrium lies between the fold points. That is, when it is on the repelling branch. When the equilibrium lies on the attracting branch, all trajectories converge to this point (when $\lambda>2$ or $\lambda<0$). Naturally, there must be a change of stability when $\lambda=0$ and when $\lambda=2$. In this section we aim to explain the nature of this shift in stability and its effect on the global dynamics rigorously. Figure \textbf{+++REF++} gives an initial idea of the behaviour when $\lambda$ is close to 0. We will restrict attention to this point as the case for $\lambda=2$ is entirely analogous. Trajectories that pass close to this fold point are called canards, more rigorous definitions are given below.\\
  
-++++SIMULATION OF SMALL LAMBDA++++
+\textbf{++++SIMULATION OF SMALL LAMBDA++++}
 
-\begin{definition}{\textbf{Canard} \citealp{Kuehn}}\\
+\begin{definition}[\textbf{Canard} \citep{Kuehn}]
 A trajectory of a fast-slow system is called a canard if it stays within $O(\epsilon)$ close to the repelling branch $S^r$ of the slow manifold $S$, for some time of $O(1)$ on the slow time scale $\tau = \epsilon t$.
 \end{definition}
 Furthermore, the following definition turns out to be useful as well:
-\begin{definition}{\textbf{Maximal Canard} \citealp{Kuehn}}\\ \label{maxcanard}
+\begin{definition}[\textbf{Maximal Canard} \citep{Kuehn}] \label{maxcanard}
 The trajectory passing through the intersection of $S^a$ and $S^r$ is called a maximal canard. 
 \end{definition}
-\begin{definition}{\textbf{Singular Canard} \citealp{Kuehn}}
+\begin{definition}[\textbf{Singular Canard} \citep{Kuehn}]
 	Trajectories of the slow flow lying in the attracting and repelling parts of the critical manifold are called singular canards.
 \end{definition}
 We expect singular canards in the reduced system to perturb to maximal canards in the full system. We follow a similar process as to when $\lambda=1$. First, some nondegeneracy conditions are required. These are, as before, applied at the fold point $(0,0)$. Note that in contrast to the nondegeneracy conditions in (\ref{NonDeg}), the transversality condition $g(0,0,0) \neq 0$ is not satisfied. Therefore higher order conditions on $g$ have to be employed, in particular these are nonzero derivatives of $g$ with respect to $x$ and $\lambda$. The fact that $g_x(0,0,0) \neq 0$ guarantees the existence of transversal intersection of the two nullclines, which is crucial in order to conclude persistence of the dynamics. The constraint on the derivative of $g$ with respect to $\lambda$ ensures that the nullcline passes through the fold point with nonzero speed \citep{Kuehn}. The nondegeneracy and transversality conditions for the canard case are  \citep{krupa2001},
@@ -48,7 +48,7 @@ Now that these conditions have been defined we can consider, equivalent to the a
 \end{aligned}
 \label{eq: extended canard system}
 \end{equation}
-Now, for the remainder of the section, we apply the method of \citet{krupa2001} to the Van der Pol System. The canonical form for \ref{eq: canard system} is:
+Now, for the remainder of the section, we apply the method of \citet{krupa2001} to the Van der Pol System. The canonical form for \ref{eq: canard system} is,
 \begin{equation} \label{canardysy2var}
 	\begin{aligned}
 		x'&=-yh_1(x,y,\epsilon,\lambda)+x^2h_2(x,y,\epsilon,\lambda) + \epsilon h_3(x,y,\lambda,\epsilon)\\
@@ -66,7 +66,7 @@ a_3=\pd{}{x}h_2(0,0,0,0)=-\frac{1}{3},\\
 a_4&=\pd{}{x}h_4(0,0,0,0)=0,\ \ \
 a_5=h_6(0,0,0,0)=0.
 \end{align*}
-Furthermore, we can define the quantity:
+Furthermore, we can define the quantity,
 \begin{align*}
 A=-a_2+3a_3-(2a_4+2a_5)=-1,
 \end{align*}
@@ -75,19 +75,18 @@ Similar to the procedure in Section \ref{sec: VDP Blowup}, sections of the dynam
 Let $ \Delta_a = \{ (x,\rho^2), x \in  I_a \}$ and $\Delta_r= \{ (x,\rho^2), x \in  I_r \}$, where $I_a,I_r$ are intervals on the real line and $\rho$ is sufficiently small.
 Futhermore, define $q_a$ to be the point on $\Delta_a$ that belongs to the attracting branch $S^a$, while $q_r$ is equivalently defined as the point on $\Delta_r$ that corresponds to $S^r$. Finally, we are in the position to define the transition map $\pi: \Delta^a \to \Delta^r$, compare to Section \ref{sec: VDP Blowup}.
 Following this, \citet{krupa2001} discuss the existence of a critical value for $\lambda$ (denoted $\lambda_c$), where the two branches $S_r$ and $S_a$ must connect in a smooth fashion.  
-The transition map $\pi$ has to map the point $q_a$ to $q_r$, if the branches are connected, and the trajectory passing through the fold point is called the maximal canard, see Definition \ref{maxcanard}.
+The transition map $\pi$ has to map the point $p_a$ to $p_r$, if the branches are connected, and the trajectory passing through the fold point is called the maximal canard, see Definition \ref{maxcanard}.
 The theorem below describes the technical details involved, and some of the results are derived by the following analysis.
 \begin{theorem}[\cite{krupa2001}]
 	Assume that system (3.1) satisfies the defining non-degeneracy conditions (Equations \ref{eq: canard sing condition} and \ref{eq: canard non-d condition}) of a canard point. Assume that the maximal solution of the reduced problem connects $ S_a $ to $ S_r $. Then there exists $ \epsilon_0 > 0 $ and a smooth function $\lambda_c(\sqrt{\epsilon})$ defined on $ [0, \epsilon_0] $ such that for $\epsilon \in (0, \epsilon_0)$ the following assertions hold:
 	\begin{itemize}
-		\item $ \pi(q_{a,\epsilon})=q_{r,\epsilon} $ iff $ \lambda=\lambda_c(\sqrt{\epsilon}) $.\\
+		\item $ \pi(q_{a,\epsilon})=q_{r,\epsilon} $ iff $ \lambda=\lambda_c(\sqrt{\epsilon}) $.
 		\item The function $ \lambda_c $ has the expansion
 		 \begin{equation*}
 			\lambda_c(\sqrt{\epsilon})=-\epsilon\left(\frac{a_1+a_5}{2}+\frac{A}{8}\right)+O\left(\epsilon^\frac{3}{2}\right).
-			\end{equation*}
+   		 \end{equation*}
 			\item The transition map $\pi$ is defined only for $\lambda$ in an interval around $ \lambda_c(\sqrt{\epsilon}) $ of width $ O(\exp(-\frac{c}{\epsilon})) $ fo some $ c>0 $.
-			$$ \pd{}{\lambda}(\pi(q_{a,\epsilon})-q_{r,\epsilon})|_{\lambda=\lambda_c(\sqrt{\epsilon})}>0  $$
-		
+			$$ \pd{}{\lambda}(\pi(q_{a,\epsilon})-q_{r,\epsilon})\bigg|_{\lambda=\lambda_c(\sqrt{\epsilon})}>0  $$
 	\end{itemize}
 \label{Theorem 3.1}
 \end{theorem}
@@ -103,7 +102,7 @@ Now similarly to Section \ref{sec: VDP Blowup}, we consider a transformations of
 x=\bar{r}\bar{x}, \ y=\bar{r}^2y, \ \epsilon=\bar{r}^2\bar{\epsilon}, \ \lambda=\bar{r}\bar{\lambda}.
 \end{equation}
 Now that we have established these transformation, the charts $K_1$ and $K_2$ can be introduced,  but it is not necessary to consider the third chart, $K_3$. Since the attracting slow manifold connects to the repelling slow manifold, the flow will `bend back' from $K_2$ into $K_1$ instead of leaving the neighbourhood $U$ in the direction of the fast flow, which was described by $K_3$ in Section \ref{sec: VDP Blowup}. 
-The trajectory stays close to $S^r$ after passing the fold point. This is very counter-intuitive, the trajectory stays close to a repelling branch.
+The trajectory stays close to $S^r$ after passing the fold point. This is very counter-intuitive as the trajectory stays close to a repelling branch.
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=8cm, height=6cm]{Images/vdPhopf-Moment-bendback}
@@ -151,12 +150,12 @@ Equivalently to Section \ref{sec: VDP Blowup}, we rescale time such that, $\od{r
 %\noindent where we note that $h_j=h_j(x,y,\epsilon,\lambda)$ for $j=1,2,3,4,5$.  Notice that we have included an additional term in Equation \ref{eq: reduced canard k2} - we define $G_2(x_2,y_2)$ in the following way, $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. The reason we also define this vector is to aide in the Melnikov computations which we will see later. Then combining this yields our complete system
 \begin{subequations}
 	\begin{align}
-	x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\tag{\ref{eq k2 x trans}}\\
+	x'_2&=-y_2+x_2^2-r_2G_1(x_2,y_2) =-y_2+x_2^2-r_2\left(-\frac{x^3_2}{3} \right) ,\label{eq k2 x trans}\\
 	y_2'&=x_2-\lambda_2+r_2G_2(x_2,y_2)= x_2-\lambda_2, %\label{eq: K2 y trans}
-	\tag{\ref{eq: K2 y trans}}
+	\label{eq: K2 y trans}
 	\end{align}
 \end{subequations}
-where $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ our system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each equations by, $e^{2y_2}e^{-2y _2}=1$, and define sections of each equation as partial derivatives of $H$ \st, 
+where $G(x_2,y_2)=(G_1(x_1,y_1),G_2(x_2,y_2))^T=(-\frac{x^3_2}{3},0)^T$. Moreover, \citet{krupa2001} discusses that for this chart we have an interesting result. They note that at $r_2=\lambda_2=0$ the system is integrable which allows us to define a constant of motion $H(x_2,y_2)=\frac{1}{2}\exp{(-2y_2)}\left(y_2-x^2_2+\frac{1}{2}\right)$. For clarity we will first proceed with deriving this equation of motion. Firstly, multiply each equations by, $e^{2y_2}e^{-2y _2}=1$, and define sections of each equation as partial derivatives of $H$ such that, 
 \begin{align}
 x_2' &=e^{2y_2}e^{-2y_2}( -y_2 +x_2^2 ) =e^{2y_2}\pd{H}{y_2}(x_2,y_2) \\
 y_2' &= - e^{2y_2}e^{-2y_2}(-  x_2)=-e^{2y_2}\pd{H}{x_2}(x_2,y_2).
@@ -190,7 +189,7 @@ Note that without loss of generality we can choose $c=0$ because we are interest
 	y_2'&=\frac{t_2}{2}\ \implies y_2=\frac{t_2^2}{4}-\frac{1}{2}, \label{canard: trajectory y}
 	\end{align}
 \end{subequations} 
-where we have directly integrated Equation \ref{canard: trajectory x} with respect to the rescaled time $ t_2 $. However, we note that we are able to choose $B=0 $, as we are considering an autonomous (time-invariant) system. Using \ref{canard: trajectory x} and \ref{canard: trajectory y} we are then able to define $ \gamma_{c,2} $ as, 
+where we have directly integrated Equation( \ref{canard: trajectory x}) with respect to the rescaled time $ t_2 $. However, we note that we are able to choose $B=0 $, as we are considering an autonomous (time-invariant) system. Using Equations (\ref{canard: trajectory x}) and (\ref{canard: trajectory y}) we are then able to define $ \gamma_{c,2} $ as, 
 \begin{equation}
 \gamma_{c,2}(t_2)=(x_{c,2}(t_2),y_{c,2}(t_2))=\left(\frac{t_2}{2},\frac{t^2_2}{4}-\frac{1}{2}\right).   \label{eq: gamma c2}
 \end{equation}
@@ -204,19 +203,19 @@ x=r_1x_1, \ y=r_1^2, \ \epsilon=r_1^2\epsilon_1, \ \lambda=r_1\lambda_1 \tag{\re
 \end{equation}
 to find the relevant trajectory $\gamma_1$ corresponding to $\gamma_2$ in $K_2$. Now if we first consider the $r_1$ component, 
 \begin{align}
-2r_1^2r_1'=r_1^2\epsilon_1(r_1x_1-r_1\lambda_1),\\ \label{canard: r1}
+2r_1^2r_1'=r_1^2\epsilon_1(r_1x_1-r_1\lambda_1),\notag\\ \label{canard: r1}
 \Rightarrow r_1' = \frac{1}{2} \epsilon_1r_1 (x_1 - \lambda_1) = \frac{1}{2} \epsilon_1r_1F,
 \end{align}
 where $F=F(x_1,y_1,\epsilon_1,\lambda_1)=x_1-\lambda_1$. Next we consider $x=r_1x_1$,
 \begin{align*}
 r_1r_1'x_1+r_1^2x_1'&=-r_1^2+r_1^2x_1^2,\\
-x_1'&=-1+x_1^2-\frac{x_1r_1'}{r_1},
+\implies x_1'&=-1+x_1^2-\frac{x_1r_1'}{r_1},
 \end{align*}
 and substituting in the expression for $r_1'$ results in,
 \begin{align}
 x_1'=-1+x_1^2-\frac{x_1}{r_1}\left(\frac{r_1\epsilon_1F}{2}\right). \label{eq: canard x1}
 \end{align}
-We now consider $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use equation (\ref{canard: r1}) to simplify to,
+We now consider $\epsilon=\epsilon_1r_1^2$ and noting $\epsilon'=0$. Then we have, $r_1^3\epsilon'=-2r_1^2\epsilon_1r_1'$, where we can use Equation (\ref{canard: r1}) to simplify to,
 \begin{align}
 \epsilon'=-\epsilon_1^2F. \label{canard: epsilon k1}
 \end{align}
@@ -227,7 +226,7 @@ The last transformation is for the new coordinate $\lambda=r_1\lambda$, noting t
 which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k1}. Now if we combine the above we find that the transformed system is of the following form,
 \begin{subequations}
 	\begin{align}
-	r_1'&=\frac{\epsilon}{2}r_1F \\ \notag
+	r_1'&=\frac{\epsilon}{2}r_1F, \\ \notag
 	% \label{canard: r1}
 	x_1'&=-1+x_1^2-\frac{x_1\epsilon_1F}{2},\\
 	\epsilon'&=-\epsilon_1^2F,\\ \notag
@@ -235,7 +234,7 @@ which is a trivial rearrangement as seen in Equation \ref{canard: epsilon k1}. N
 	\end{align}
 	\label{canard: system of equations}
 \end{subequations}
-From this system we are now able to make some deductions. We first can observe that the hyperplanes are along the $r_1=\epsilon_1=\lambda_1=0$ which intersect in the invariant line at $l_1=\{(x_1,0,0,0): x_1\in\mathbb{R}\}$ \citep{krupa2001}. As \citet{krupa2001} discusses, the equilibria are located at the end of both branches - Figure \ref{fig: Canard Point} - which are found at $p_a=(-1,0,0,0) \ \text{and} \ p_r=(1,0,0,0)$ \citep{krupa2001}. We can find the eigenvalues of equation (\ref{canard: system of equations}) for the invariant planes. We find that, 
+From this system we are now able to make some deductions. We first can observe that the hyperplanes are along the $r_1=\epsilon_1=\lambda_1=0$ which intersect in the invariant line at $l_1=\{(x_1,0,0,0): x_1\in\mathbb{R}\}$ \citep{krupa2001}. As \citet{krupa2001} discusses, the equilibria are located at the end of both branches - Figure \ref{fig: Canard Point} - which are found at $p_a=(-1,0,0,0) \ \text{and} \ p_r=(1,0,0,0)$. We can find the eigenvalues of equation (\ref{canard: system of equations}) for the invariant planes. We find that, 
 \begin{equation}
 J-\sigma I= \begin{bmatrix}
 2x-\sigma & 0 & 0 & 0  \\
@@ -244,7 +243,7 @@ J-\sigma I= \begin{bmatrix}
 0 & 0 & 0 & -\sigma
 \end{bmatrix},
 \end{equation}
-which has three zero eigenvalues and one non-zero eigenvalue $\sigma=\pm 2$.This further empahsises that our equilibrium point is non-hyperbolic. 
+which has three zero eigenvalues and one non-zero eigenvalue $\sigma=\pm 2$.This further emphasises that the equilibrium point is non-hyperbolic. 
 The dynamics of $K_1$ is very similar to the analysis of $K_1$ in the generic fold case. The center manifold can be applied in order to conclude the persistence of the dynamics for $\epsilon >0$.
 
 \subsection{Full Solution}
@@ -270,8 +269,7 @@ A-\sigma I=\begin{bmatrix}
 %\end{bmatrix}.
 %\end{equation}
 %\textbf{Then our eigenvalues are, $ \sigma=(2-x)x \ \text{and} \ \sigma=0 $, noting that we have an upper triangular matrix. Then we can note that we have a complex eignevalue which causes a Hopf bifurcation, as shown below:}%wrong maths
-The eigenvalues of the system are $ \sigma=0 $ and $ \sigma=\frac{2x-x^2\pm\sqrt{(x^2-2x)^2-4\epsilon}}{2} $. Then we consider the values at the equilibrium, $ x=\lambda $, to find that we have a Hopf Bifurcation when $ 4\epsilon>(x^2-2x)^2 $ or when $ \lambda=2 \ \text{or} \ 0 $. The Hopf bifurcation is not a surprising occurence since it represents a change in stability of an equilibrium. Since the equilibrium of the reduced system changes from stable to relaxation oscillations at the fold points, some bifurcation can be expected at those point.
-
+The eigenvalues of the system are $ \sigma=0 $ and $ \sigma=\frac{2x-x^2\pm\sqrt{(x^2-2x)^2-4\epsilon}}{2} $. Then we consider the values at the equilibrium, $ x=\lambda $, to find that we have a Hopf Bifurcation when $ 4\epsilon>(x^2-2x)^2 $ or when $ \lambda=2 \ \text{or} \ 0 $. The Hopf bifurcation is not a surprising occurrence since it represents a change in stability of an equilibrium. Since the equilibrium of the reduced system changes from stable to relaxation oscillations at the fold points, some bifurcation can be expected at those point.
  This then leads to the following trajectories within the flow - Figure \ref{fig: 4 canard }.
 
 \begin{figure}[h!]
@@ -302,7 +300,7 @@ The eigenvalues of the system are $ \sigma=0 $ and $ \sigma=\frac{2x-x^2\pm\sqrt
 	\end{subfigure}\vspace{1cm}
 	\begin{subfigure}[t]{0.45\textwidth}\centering
 		\includegraphics[width=.8\linewidth, height=6cm]{Code/behaviourswitch-pres}
-		\caption{Growth of the Hopf bifrucation leading to the formation of a Canard explosion.}
+		\caption{Growth of the Hopf bifurcation leading to the formation of a Canard explosion.}
 		\label{fig: hopf growth}
 	\end{subfigure}
 	\caption{The trajectories associated with the canards case of the \vdp system.}
@@ -345,14 +343,14 @@ From Figure \ref{fig: 4 canard } we can see the progression of our flow over the
 %\begin{equation}
 %\dot{y}=\lambda-x+\bar{\nu} y,
 %\end{equation}
-%where $ \nu $ is of order $ O(\epsilon) $, thus small. We can immediately see that when $ \bar{\nu}=0 $ that we have our orignal flow at our equilbrium but we are now able to perturb our flow over a small domain, which are described in Figures \ref{fig: Hopf}. We can also see how our system behaves when our $ \nu $ is of larger order than $ O(\epsilon) $,
+%where $ \nu $ is of order $ O(\epsilon) $, thus small. We can immediately see that when $ \bar{\nu}=0 $ that we have our orignal flow at our equilibrium but we are now able to perturb our flow over a small domain, which are described in Figures \ref{fig: Hopf}. We can also see how our system behaves when our $ \nu $ is of larger order than $ O(\epsilon) $,
 %
 %\begin{figure}[h]\centering
 %	\includegraphics[height=6cm,width=10cm]{Images/CanardPointcircle}
 %	\caption{The flow within our canard system \citep{krupa2001}.}
 %	\label{fig: canard flow circle}
 %\end{figure}\newpage
-%where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $, our solution traverses through our equilbrium into our fast flow as we would expect in our original system.
+%where it is clear that our Hopf bifurcation is the periodic solution in the centre of Figure \ref{fig: canard flow circle} but we can see that below our special flow $ \bar{\gamma_c} $, our solution traverses through our equilibrium into our fast flow as we would expect in our original system.
 
 %\newpage
 
@@ -391,7 +389,7 @@ noting $ \nabla(H(\gamma_{c,2}(t)))= \exp(1-\frac{t^2}{2})\left[-1,\frac{1}{2}\r
 \begin{equation}
 d_{r_2}=	\frac{e}{16}\int_{-\infty}^{\infty}e^{-\frac{T^2}{2}}dt=\frac{e\sqrt{2\pi}}{16}<\infty,
 \end{equation}
-where we note that we have made use of the Guassian Integral \citep{GausIntegral} and $d_{r_2}$ is finite. We then apply an analogous approach to $d_{\lambda_2} $ \st, 
+where we note that we have made use of the Gaussian Integral \citep{GausIntegral} and $d_{r_2}$ is finite. We then apply an analogous approach to $d_{\lambda_2} $ \st, 
 \begin{align}
 d_{\lambda_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((0,-1)^T\right)\bigg|_{\gamma_{c,2}} \text{dt}\notag\\
 &=-\frac{e}{2}\int_{-\infty}^{\infty} e^{-t^2}dt=-\frac{e\sqrt{2\pi}}{2}<0,
@@ -404,7 +402,7 @@ whereby we have that the manifolds in the \vdp system split for $ \lambda_2\neq\
 The presence of either of these cases depends on how the manifold breaks.
 This describes the global dynamics for the region close to $\lambda =0$, $\lambda=2$.
 Therefore, we are now in the position to have a description of the full dynamics of the two dimensional Van der Pol System for all parameter regimes of $\lambda$.
-Since the canard solutions are restricted to an exponentially small region around the fold points, we now move on to three dimensional fast-slow systems, in which canards are more common occurences.
+Since the canard solutions are restricted to an exponentially small region around the fold points, we now move on to three dimensional fast-slow systems, in which canards are more common occurrences.
 
 
 

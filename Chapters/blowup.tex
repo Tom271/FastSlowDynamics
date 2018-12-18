@@ -180,17 +180,17 @@ The coordinate transformation (\ref{sys: K1}) is applied to the extended system 
 \frac{dr_1^2}{dt_1}\frac{dt_1}{dt}= 2r_1^2r_1' = r_1^3 \epsilon_1 (-1 +r_1 x_1),\\
 \frac{d(r_1^3 \epsilon_1)}{dt_1}\frac{dt_1}{dt}= (3r_1^2\epsilon_1 + r_1^3 \epsilon_1') r_1 = 0.
 \end{align*}
-Dividing through by $\frac{dt_1}{dt}=r_1$ and replacing the expressions for $\epsilon_1'$ and $r_1'$ with their expressions in terms of the variables, results in the full system in terms of $K_1$. Note that the equation for $\epsilon'$ is found by rearranging the third equation above. 
+Dividing through by $\frac{dt_1}{dt}=r_1$ and replacing the expressions for $\epsilon_1'$ and $r_1'$, results in the full system in terms of $K_1$. Note that the equation for $\epsilon'$ is found by rearranging the third equation above \st,
 \begin{align*}
-x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 + \left( - \frac{1}{2} \epsilon_1 x_1^2r_1 - \frac{1}{3} x_1^3 \right)\\
-r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + r_1 x_1)\\
+x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 + \left( - \frac{1}{2} \epsilon_1 x_1^2r_1 - \frac{1}{3} x_1^3 \right),\\
+r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + r_1 x_1),\\
 \epsilon_1' &= \frac{3}{2} \epsilon_1^2 ( 1- r_1x_1),
 \end{align*}
-and grouping terms in $r_1$ results in the standard form:
+and grouping terms in $r_1$ results in the standard form,
 \begin{equation}
 \begin{aligned} \label{K1systemfull}
-x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 +O(r_1)\\
-r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + O(r_1))\\
+x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 +O(r_1),\\
+r_1' &= \frac{1}{2} r_1 \epsilon_1( -1 + O(r_1)),\\
 \epsilon_1' &= \frac{3}{2} \epsilon_1^2 ( 1- O(r_1)).
 \end{aligned}
 \end{equation}
@@ -211,28 +211,27 @@ The following analysis is displayed in Figure \ref{fig:k1chart}, illustrating th
 \end{figure}\newpage
 
 
-The invariant line, satisfying $r_1=0$ and $\epsilon_1=0$ is given by $l_1= -1 +x^2$. From this it is easily deduced that the two equilibrium points are where $l_1=0$, which is at $x=\pm1$. Therefore, the points $p_a$ and $p_r$ are defined as $p_a= (-1,0,0)$ and $p_r=(1,0,0)$. The flow on $l_1$ is attracted to $p^a$ and repelled by $p^r$, which is easily observed from the form $l_1$ takes or from a formal stability analysis of the one dimensional system. The eigenvalues of $l_1$ are found  by considering $l'_1 - \lambda = 2x - \lambda= 0 $ which gives that $\lambda = \pm 2$ at the respective equilibria. Then we expect the behaviour of the flow on the two invariant planes to be influenced by the two equilibria and the dynamics on $l_1$.
-Consider the plane $\epsilon_1=0$. The system (Equation \ref{K1systemfull}) becomes
+The invariant line satisfying $r_1=0$ and $\epsilon_1=0$ is given by $l_1= -1 +x^2$. From this it is easily deduced that the two equilibrium points are where $l_1=0$, which is at $x=\pm1$. Therefore, the points $p_a$ and $p_r$ are defined as $p_a= (-1,0,0)$ and $p_r=(1,0,0)$. The flow on $l_1$ is attracted to $p^a$ and repelled by $p^r$, which is easily observed from the form $l_1$ takes or from a formal stability analysis of the one dimensional system. The eigenvalues of $l_1$ are found  by considering $l'_1 - \sigma = 2x - \sigma= 0 $ which gives that $\sigma = \pm 2$ at the respective equilibria. Then we expect the behaviour of the flow on the two invariant planes to be influenced by the two equilibria and the dynamics on $l_1$.
+Consider the plane $\epsilon_1=0$. The System (\ref{K1systemfull}) becomes
 \begin{equation}
 \begin{aligned} \label{epsilon0sys}
-x_1' &= -1 +x_1^2 - \left( \frac{1}{3}r_1x_1^3 \right)\\
+x_1' &= -1 +x_1^2 - \left( \frac{1}{3}r_1x_1^3 \right),\\
 r_1' &= 0.
 \end{aligned}
 \end{equation}
-This system has equilibria at $x= \pm1$, for $r_1=0$, as before, however, for each constant value of $r_1$, we get a different equilibrium of the system (\ref{epsilon0sys}). This forms a curve of equilibria, which can be recognised as $S^a_1$ connected to $p_a$ and $S^r_1$ connected to $p_r$, of the critical manifold, transformed into $K_1$ - this follows from the Implicit Function Theorem, see Figure \ref{fig: chart 2 fig}. The additional eigenvalue, corresponding to the $r_1$ equation, is $\lambda=0$. However, at each of the equilibria of this system, and specifically at $p_a$ and $p_r$ we have normal hyperbolicity, due to the coordinate transformation in $K_1$.% ++ go over this. +++
-Next we consider the dynamics on the invariant plane $r_1=0$.
-The system (Equation \ref{K1systemfull}) becomes: 
+This system has equilibria at $x= \pm1$, for $r_1=0$, as before. However, for each constant value of $r_1$, we get a different equilibrium of the system (\ref{epsilon0sys}). This forms a curve of equilibria, which can be recognised as $S^a_1$ connected to $p_a$ and $S^r_1$ connected to $p_r$, of the critical manifold transformed into $K_1$ - this follows from the Implicit Function Theorem, see Figure \ref{fig: chart 2 fig}. The additional eigenvalue, corresponding to the $r_1$ equation, is $\lambda=0$. However, at each of the equilibria of this system, and specifically at $p_a$ and $p_r$ we have normal hyperbolicity, due to the coordinate transformation in $K_1$. Next we consider the dynamics on the invariant plane $r_1=0$.
+The System (\ref{K1systemfull}) becomes, 
 \begin{equation}
 \begin{aligned}
-x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1 \\
+x_1' &= -1 +x^2 + \frac{1}{2} x_1 \epsilon_1, \\
 \epsilon_1' &= \frac{3}{2} \epsilon_1^2 .
 \end{aligned}
 \end{equation}
 Again, $x= \pm 1$ are equilibria of the system, and an additional zero eigenvalue is gained due to the $\epsilon$ equation. It can be concluded that one dimensional centre manifolds exist, called $N_{a,1}$ and $N_{r,1}$, that are invariant, but not manifolds of equilibria like $S^a$ and $S^r$ in the $\epsilon=0$ plane. The dynamics on these manifolds are determined mainly by the value of $\epsilon$, since the change in the $\epsilon$ direction is much stronger than the change in the $x$ direction. Therefore, on $N_{a,1}$ and $N_{r,1}$ the flow moves in the $\epsilon$ direction with increasing epsilon.
 In order to draw conclusions on the persistence of the dynamics in the full system, sections in the space are defined to monitor incoming and outgoing trajectories.
-Firstly, let the region considered be such that
+Firstly, define
 $D_1:= \{ (x_1,y_1,\epsilon_1): x_1 \in \mathbf{R}, 0, \leq r_1 \leq \rho, 0, \leq\epsilon_1 \leq \delta\}$.
-Then the relevant sections for the candidate trajectory $\gamma$ are
+Then the relevant sections for the candidate trajectory $\gamma$ are,
 \begin{align*}
 \Sigma^{in}_1 := \{ (x_1,r_1, \epsilon_1) \in D_1 : r_1 = \rho \}, \\
 \Sigma^{out}_1 := \{ (x_1,r_1, \epsilon_1) \in D_1 : \epsilon_1=\delta \}.
@@ -244,21 +243,21 @@ Therefore, the trajectory $\gamma_1$ satisfies:
 (x_1, 0, \epsilon_1) = \left(x_2 \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right) \right)^{-1/2}, 0, \left(x_2^2 + \frac{1}{2x_2} + O\left(\frac{1}{x_2^4} \right)\right)^{-3/2} \right).
 \end{align*}
 Note that $s(x_2)$ as $x_2 \to - \infty$ is employed, since we consider the left continuation of $\gamma_2$.
-Furthermore, as is intuitively clear from Figure \ref{fig: Ricatti Sol}, and can be shown by analysing the form of $\gamma_1$, the trajectory $\gamma_1$ converges to $p_a$ in backward time, which is exactly as expected.
+Furthermore, as is intuitively clear from Figure \ref{fig: Ricatti Sol}, and can be shown by analysing the form of $\gamma_1$, the trajectory $\gamma_1$ converges to $p_a$ in backward time, as expected.
 This establishes the link between the slow flow on $S^a$ and the flow on $K_2$, if we consider the following proposition, which sums up the findings in $K_1$ and employs center manifold theory in order to establish persistence in the full system.
 \begin{prop}[\citealp{krupa2001}]
 For $\rho, \delta$ sufficiently small the following assertions hold for the system \ref{K1systemfull}:
 \begin{enumerate}
 \item There exists an attracting two-dimensional $C^k$- center manifold $M_{a,1}$ at $p_a$ which contains the line of equilibria $S_1^a$ and the center manifold $N_{a,1}$. In $D_1$ the manifold $M_{a,1}$ is given as a graph $x_1=h_a(r_1,\epsilon_1)$. The branch of $N_{a,1}$ in $r_1=0, \epsilon_1>0$ is unique.
 \item There exists a repelling two-dimensional $C^k$- center manifold $M_{r,1}$ at $p_r$ which contains the line of equilibria $S_1^r$ and the center manifold $N_{r,1}$. In $D_1$ the manifold $M_{r,1}$ is given as a graph $x_1=h_r(r_1,\epsilon_1)$. The branch of $N_{r,1}$ in $r_1=0, \epsilon_1>0$ is not unique.
-\item There exists a stable invariant foliation $F^s$ which base $M_{a,1}$ and one-dimensional fibres. For any $c>-2$ there exists a choice of positive $\rho$ and $\delta$ such that the contraction along $F^s$ during a time interval $[0,T]$ is stronger than $e^{cT}$.
-\item There exists an unstable invariant foliation $F^u$ which base $M_{r,1}$ and one-dimensional fibres. For any $c>-2$ there exists a choice of positive $\rho$ and $\delta$ such that the expansion along $F^u$ during a time interval $[0,T]$ is stronger than $e^{cT}$.
+\item There exists a stable invariant foliation $F^s$ with base $M_{a,1}$ and one-dimensional fibres. For any $c>-2$ there exists a choice of positive $\rho$ and $\delta$ such that the contraction along $F^s$ during a time interval $[0,T]$ is stronger than $e^{cT}$.
+\item There exists an unstable invariant foliation $F^u$ with base $M_{r,1}$ and one-dimensional fibres. For any $c>-2$ there exists a choice of positive $\rho$ and $\delta$ such that the expansion along $F^u$ during a time interval $[0,T]$ is stronger than $e^{cT}$.
 \item The unique branch $N_{a,1}$ in $r_1=0, \epsilon_1>0$ is equal to $\gamma_1:= \kappa^{-1}_{12}(\gamma_2)$ wherever $\kappa^{-1}_{12}(\gamma_2)$ is defined, i.e. along the part of $\gamma_2$ corresponding to $y_2>0$.
 \end{enumerate}
 \end{prop}
  
-In order to find the lower bound on the contraction rate along $F^s$, the transition time $T$  has to be found, i.e. the time the trajectory takes to travel from a point $p= (x_1, \rho, \epsilon_1)  \in \Sigma^{in}_1$ to a point in $\Pi_1(p)=( x_1, r_1, \delta) \in \Sigma^{out}_1$. This is done by integrating the $\epsilon$ equation of system (\ref{K1systemfull}), which is a separable ODE with respect to $t_1$.
-This then results in 
+In order to find the lower bound on the contraction rate along $F^s$, the transition time $T$  has to be found, that is the time the trajectory takes to travel from a point $p= (x_1, \rho, \epsilon_1)  \in \Sigma^{in}_1$ to a point in $\Pi_1(p)=( x_1, r_1, \delta) \in \Sigma^{out}_1$. This is done by integrating the $\epsilon$ equation of system (\ref{K1systemfull}), which is a separable ODE with respect to $t_1$.
+This then results in, 
 \begin{align*}
 T= \frac{2}{3} \left(\frac{1}{\epsilon_1} - \frac{1}{\delta} \right) \left( 1 + O(\rho) \right),
 \end{align*}
@@ -283,17 +282,17 @@ For $\rho, \delta$ and $\beta_1$ sufficiently small, the transition map $\Pi_1: 
 \end{prop}
 
 \subsection{Dynamics in \texorpdfstring{$K_3$}{K3}}\label{sec:dynamics-in-texorpdfstringk3k3}
-The final chart to study the behaviour of is $K_3$. This chart covers the trajectory as it leaves the fold point at $q_{out}$. The other charts could not do this as $q_{out}$ is close to infinity in both $K_1$ and $K_3$ (cf. Figure \ref{fig:chartDiagram}). Similarly to $K_1$ and $K_2$, the system can be analysed using the blow-up transformation (\ref{sys:K3}).
+Next we study the behaviou of $ K_3 $. This chart covers the trajectory as it leaves the fold point at $q_{out}$. The other charts could not do this as $q_{out}$ is close to infinity in both $K_1$ and $K_3$ (cf. Figure \ref{fig:chartDiagram}). Similarly to $K_1$ and $K_2$, the system can be analysed using the blow-up transformation (\ref{sys:K3}),
 \begin{subequations}
 	\begin{align}
-	\od{r_3}{t_3}&=r_3F(r_3,y_3,\epsilon_3) \\
-	\od{y_3}{t_3}&=\epsilon_3(r_3-1)-2y_3F(r_3,y_3,\epsilon_3)\\
-	\od{\epsilon_3}{t_3}&=-3\epsilon_3F(r_3,y_3,\epsilon_3)
+	\od{r_3}{t_3}&=r_3F(r_3,y_3,\epsilon_3), \\
+	\od{y_3}{t_3}&=\epsilon_3(r_3-1)-2y_3F(r_3,y_3,\epsilon_3),\\
+	\od{\epsilon_3}{t_3}&=-3\epsilon_3F(r_3,y_3,\epsilon_3),
 	\end{align}
 	\label{sys:K3blowup}
 \end{subequations}
 where $F(r_3,y_3,\epsilon_3)=\left(1-y_3-\frac{r_3}{3}\right)$. Note that as $\epsilon_3$ and $r_3$ appear as a factor in their respective derivatives, the planes $\epsilon_3=0$ and $r_3=0$ are invariant and, by extension, so is the $y_3$ axis.
-The aim is to continue the special trajectory found in the other two charts and to find the transition map in and out of this chart. We will then be able to construct a phase portrait for the whole space by combining the dynamics in each chart. Linearising the system about $(0,0,0)=q_{out}$ gives 
+The aim is to continue the special trajectory found in the other two charts and to find the transition map in and out of this chart. We will then be able to construct a phase portrait for the whole space by combining the dynamics in each chart. Linearising the system about $(0,0,0)=q_{out}$ gives, 
 
 \begin{align*}
 \begin{pmatrix}\dot{r}_3\\\dot{y}_3\\\dot{\epsilon}_3\end{pmatrix}= \begin{pmatrix}
@@ -304,13 +303,12 @@ The aim is to continue the special trajectory found in the other two charts and 
 r_3 \\ 
 y_3 \\ 
 \epsilon_3
-\end{pmatrix} 
+\end{pmatrix} .
 \end{align*}
-As the matrix is upper triangular, its eigenvalues are trivially  $\lbrace 1,-2,-3\rbrace$ with corresponding eigenvectors $\lbrace (1,0,0),(0,1,0),(0,1,1)\rbrace$. This presents an issue as there is additive resonance i.e. $\lambda_2-(\lambda_1+\lambda_3)=0$.  This means the Poincar\'e-Dulac theorem does not hold and the vector field is not linearisable, there is no smooth transformation between the nonlinear and linear flow. Despite this, progress can still be made as the form of the equations allow a near identity transformation and yields the lowest order approximation to the flow. %Note that $q_{out}$ is also  a hyperbolic equilibrium of the system.  +++Mention $\bar{M}_a$, the locally invariant perturbation of the center manifold $M_a$? Passes near the delicate equilibrium point $q_{out}$ so behaviour very much depends on how we pass this point. +++\\
+As the matrix is upper triangular, its eigenvalues are trivially  $\lbrace 1,-2,-3\rbrace$ with corresponding eigenvectors $\lbrace (1,0,0),(0,1,0),(0,1,1)\rbrace$. This presents an issue as there is additive resonance that is $\lambda_2-(\lambda_1+\lambda_3)=0$.  This means the Poincar\'e-Dulac theorem does not hold and the vector field is not linearisable, there is no smooth transformation between the nonlinear and linear flow. Despite this, progress can still be made as the form of the equations allow a near identity transformation and yields the lowest order approximation to the flow. %Note that $q_{out}$ is also  a hyperbolic equilibrium of the system.  +++Mention $\bar{M}_a$, the locally invariant perturbation of the center manifold $M_a$? Passes near the delicate equilibrium point $q_{out}$ so behaviour very much depends on how we pass this point. +++\\
 The special orbit, $\gamma_2$, can be mapped into this chart using the change of coordinates $\kappa_{23}$ of Equation \ref{eq:kappa23}.
 $$\gamma_3=\kappa_{23}(\gamma_2)$$
 In fact, $\gamma_3$ lies in the plane $r_3=0$ and converges to $q_{out}$ as $\epsilon \to 0$. To find the flow in a neighbourhood of $q_{out}$ we use sections similar to those introduced in $K_2$.
-
 \begin{align*} \Sigma_3^{in} =\lbrace(r_3,y_3,\epsilon_3) &: r_3\in[0,\rho], y_3 \in [-\beta_3,\beta_3], \epsilon_3=\delta\rbrace,\\
 \Sigma_3^{out} =\lbrace(r_3,y_3,\epsilon_3) &: r_3=\rho, y_3 \in [-\beta_3,\beta_3], \epsilon_3\in[0,\delta]\rbrace
 \end{align*}
@@ -318,14 +316,13 @@ In fact, $\gamma_3$ lies in the plane $r_3=0$ and converges to $q_{out}$ as $\ep
 We now wish to find the transition map $\Pi_3$ between these two charts. That is, given that the trajectory enters somewhere in $\Sigma_3^{in}$, how will it behave until it reaches $\Sigma_3^{out}$? To do this, the system \ref{sys:K3blowup} will be studied after some simplification. The system is in fact equivalent to the Riccati equation. Observe that $F(r_3,y_3,\epsilon_3)\big|_{q_{out}} = 1-y_3 + O(r_3)\big|_{q_{out}} \approx 1 $. Thus dividing (\ref{sys:K3blowup}) through by $F$ yields
 \begin{subequations}
 	\begin{align}
-	\dot{r}_3&=r_3\\
-	\dot{y}_3&=-2y_3 - \frac{\epsilon_3}{1-y_3}+r_3\epsilon_3 G(r_3,y_3,\epsilon_3)\\
-	\dot{\epsilon}_3 &= -3\epsilon_3
+	\dot{r}_3&=r_3,\\
+	\dot{y}_3&=-2y_3 - \frac{\epsilon_3}{1-y_3}+r_3\epsilon_3 G(r_3,y_3,\epsilon_3),\\
+	\dot{\epsilon}_3 &= -3\epsilon_3.
 	\end{align}
 	\label{eq:K3ricc}
 \end{subequations}
-
-In the invariant plane $r_3=0$, the system becomes the Riccati equation (cf. (\ref{Riccati})) transformed into the chart $K_3$ and with a rescaling of time.
+In the invariant plane $r_3=0$, the system becomes the Riccati equation (compare with Equation (\ref{Riccati})) transformed into the chart $K_3$ and with a rescaling of time.
 \begin{align*}
 y'_3 &= -2y_3-\frac{\epsilon_3}{1-y_3}\\
 \epsilon'_3 &= -3\epsilon_3
@@ -336,7 +333,7 @@ Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions
 
 \begin{prop}[\citealt{krupa2001}]
 	The transition map $\Pi_3$ for the transformed $K_3$ system (\ref{sys:K3blowup}) is
-	$$ \Pi_s(r_3,y_3,\delta) = \begin{pmatrix}
+	$$ \Pi_3(r_3,y_3,\delta) = \begin{pmatrix}
 	\rho \\ 
 	\Pi_{32}(r_3,y_3,\delta) \\ 
 	\left(\frac{r_3}{\rho}\right)^3\delta
@@ -360,27 +357,28 @@ Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions
 	\epsilon(0)=\epsilon_i=\delta& & \epsilon(T)=\epsilon_o
 	\end{array}
 	$$
-	We wish to construct an equation for the out variables $(T,\tilde{y}_o,\epsilon_o)$ in terms of the in variables $ (r_i,\tilde{y}_i) $, that is the transition map. The $r$ and $\epsilon$ equations are easily solved:
+	We wish to construct an equation for the out variables $(T,\tilde{y}_o,\epsilon_o)$ in terms of the in variables $ (r_i,\tilde{y}_i) $, that is the transition map. The $r$ and $\epsilon$ equations are easily solved,
 	\begin{align}
-	r&=r_ie^t &&\epsilon=\delta e^{-3t}
+	r&=r_ie^t \\
+	\epsilon&=\delta e^{-3t}
 	\end{align}
 	Then using $r(T)=\rho$, 
-	$$r(T)=\rho=r_ie^-t \implies T=\ln\left(\frac{\rho}{r_i}\right).$$
+	$$r(T)=\rho=r_ie^{-t} \implies T=\ln\left(\frac{\rho}{r_i}\right).$$
 	
 	For the equation in $y$, a little more work is required. We introduce a new coordinate $z$ as follows, $\tilde{y}=e^{-2t}(\tilde{y}_i-\delta+z)+\delta  e^{-3t}$. Upon first sight, this seems unlikely to be of any use. However, it turns out that this transformation is ideal as it allows many terms to be removed. First rearrange for $z$ and differentiate with respect to $t$.
 	\begin{align*}
 	&z=e^{2t} (\tilde{y}-\delta e^{-3t})-\tilde{y}_i+\delta\\
 	&\od{z}{t}= 2e^{2t}\tilde{y}+e^{2t}\dot{\tilde{y}}+\delta e^{-t}
 	\end{align*}
-	Substitute $\dot{\tilde{y}}$ from Equation (\ref{sys:K3riccNIy}) and cancel terms. 
+	Substitute $\dot{\tilde{y}}$ from Equation (\ref{sys:K3riccNIy}) and cancel terms, 
 	\begin{align*}
-	&=e^{2t}(-\epsilon+r\epsilon H(r,\tilde{y},\epsilon))+\delta e^{-t}\\
-	&=-\epsilon e^{2t}+e^{2t}r\epsilon  H(r,\tilde{y},\epsilon) + \delta e^{-t}\\
-	&=e^{2t}r\epsilon  H(r,\tilde{y},\epsilon)
+	&=e^{2t}(-\epsilon+r\epsilon H(r,\tilde{y},\epsilon))+\delta e^{-t},\\
+	&=-\epsilon e^{2t}+e^{2t}r\epsilon  H(r,\tilde{y},\epsilon) + \delta e^{-t},\\
+	&=e^{2t}r\epsilon  H(r,\tilde{y},\epsilon).
 	\end{align*}
 	This final equality follows from the explicit solutions in $r$ and $\epsilon$ above. These equations also show that $r\epsilon e^{2t} = r_i\delta e^{-2t}e^{2t}$. Finally,
 	$$\dot{z} = r_iH^z(\,r_i,\tilde{y}_i,t)$$
-	where $H^z$ is the same as $H$ but under the transformation from $z$, i.e. $H^z(\,r_i,\tilde{y}_i,t) = \delta H(r_ie^t,e^{-2t}(\tilde{y}_i-\delta+z)+\delta e^{-3t}, \delta e^{-3t})$. This has not affected the expression for the passage time $T$. +++Uniform boundedness of H implies?+++ Hence $z(T)=r_iO(T)=O(r_i\ln (\frac{\rho}{r_i}))$
+	where $H^z$ is the same as $H$ but under the transformation from $z$, i.e. $H^z(\,r_i,\tilde{y}_i,t) = \delta H(r_ie^t,e^{-2t}(\tilde{y}_i-\delta+z)+\delta e^{-3t}, \delta e^{-3t})$. This has not affected the expression for the passage time $T$. Hence $z(T)=r_iO(T)=O(r_i\ln (\frac{\rho}{r_i}))$
 	Using the initial definition of $z$, we recover an expression for $\tilde{y}(T)$.
 	\begin{align*}
 	\tilde{y}(T)&=e^{-2T}\left(\tilde{y}_i-\delta+O\left(r_i\ln\left(\frac{\rho}{r_i}\right)\right)\right)+\delta e^{-3T}\\
@@ -389,7 +387,7 @@ Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions
 	\end{align*}
 	We now have an expression for each of the out variables in terms of the initial conditions, albeit under a near-identity transformation. All that remains is to undo this transformation using the inverse map $\tilde{\psi}$.
 	
-	+++Undo transformation, explain $r$ and $\epsilon$ coordinates in prop. ThenDONE!+++
+\textbf{+++Undo transformation, explain $r$ and $\epsilon$ coordinates in prop. ThenDONE!+++}
 \end{proof}
 
 \subsection{The Full Solution}
@@ -398,7 +396,7 @@ The special trajectory $\gamma$ has been traced through all charts and in chart 
 These transition points can also be seen in the case of singular canards, which are treated in the following section.
 The remaining issue is the transition of this special trajectory through the charts in order to have a solution of the full system. 
 This is equivalent to finding the transition map $\pi$ from Theorem \ref{transition map theorem}.
-Let $\Pi: \Sigma^{in}_1 \to \Sigma^{out}_3$ be the full transition map of the Blow-Up Transformation. Then it satisfies
+Let $\Pi: \Sigma^{in}_1 \to \Sigma^{out}_3$ be the full transition map of the Blow-Up transformation. Then it satisfies
 \begin{align*}
 \Pi := \Pi_3 \circ \kappa_{23} \circ \Pi_2 \circ \kappa_{12} \circ \Pi_1,
 \end{align*}
@@ -406,36 +404,42 @@ where $\kappa$ is the change of coordinates defined in Lemma \ref{coord. change}
 Finally, reversing the blow up transformation gives the full transition map $\pi$ and therefore there exists a trajectory $\gamma$ in the blow down vector field connecting slow and fast flow.
 With this analysis at hand we are now able to describe the full dynamics of the Van der Pol system when $\epsilon>0$ by analysing the singular limit $\epsilon \to 0$. 
 
-The full result is visualised in Figure \ref{fig: vdp flow diagram}.
-\begin{figure}[h!]\centering
-		\begin{subfigure}[t]{0.45\textwidth}
-			\centering
-			\includegraphics[width=.8\linewidth]{vdPe001-Moment-normal}
-			\caption{The flow on the \vdp for a small $ \epsilon $.} \label{fig: vdp normal}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}[t]{0.45\textwidth}
-			\centering
-			\includegraphics[width=.8\linewidth]{vdPe02-Moment-big-e}
-			\caption{The flow on the \vdp for a larger $ \epsilon $.} \label{fig: vdp e.2}
-		\end{subfigure}
-		
-%		\vspace{1cm}
+The full result is visualised in Figure \ref{fig: full solution fold}.
+%\begin{figure}[h!]\centering
 %		\begin{subfigure}[t]{0.45\textwidth}
 %			\centering
-%			\includegraphics[width=.8\linewidth]{vdPhopf-Moment-3.jpg}
-%			\caption{The flow as it intersects with the fold point.} \label{fig:timing3}
+%			\includegraphics[width=.8\linewidth]{vdPe001-Moment-normal}
+%			\caption{The flow on the \vdp for a small $ \epsilon $.} \label{fig: vdp normal}
 %		\end{subfigure}
 %		\hfill
-%		\begin{subfigure}[t]{0.45\textwidth}\centering
-%			% just an empty subfigure to shift C below A
-%			\includegraphics[width=.8\linewidth]{vdPhopf-Moment-4.jpg}
-%			\caption{The Hopf bifurcation due to the canard point.}\label{fig:timing4}
+%		\begin{subfigure}[t]{0.45\textwidth}
+%			\centering
+%			\includegraphics[width=.8\linewidth]{vdPe02-Moment-big-e}
+%			\caption{The flow on the \vdp for a larger $ \epsilon $.} \label{fig: vdp e.2}
 %		\end{subfigure}
-	\caption{Flow on the \vdp system.}
-	\label{fig: vdp flow diagram e}
+%		
+%%		\vspace{1cm}
+%%		\begin{subfigure}[t]{0.45\textwidth}
+%%			\centering
+%%			\includegraphics[width=.8\linewidth]{vdPhopf-Moment-3.jpg}
+%%			\caption{The flow as it intersects with the fold point.} \label{fig:timing3}
+%%		\end{subfigure}
+%%		\hfill
+%%		\begin{subfigure}[t]{0.45\textwidth}\centering
+%%			% just an empty subfigure to shift C below A
+%%			\includegraphics[width=.8\linewidth]{vdPhopf-Moment-4.jpg}
+%%			\caption{The Hopf bifurcation due to the canard point.}\label{fig:timing4}
+%%		\end{subfigure}
+%	\caption{Flow on the \vdp system.}
+%	\label{fig: vdp flow diagram e}
+%\end{figure}
+%++++ weave out +++++++++
+
+\begin{figure}[h!]\centering
+	\includegraphics[height=9cm,width=11cm]{Images/blow-up}
+	\caption{The full solution associated with the flow on the fold point.}
+	\label{fig: full solution fold}
 \end{figure}
-++++ weave out +++++++++
 
 
 
