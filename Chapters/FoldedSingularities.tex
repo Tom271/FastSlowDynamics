@@ -9,7 +9,7 @@ This means that while in two dimensional systems canards only occur within an ex
 \dot{z}&=g_2(x,y,z,y,\epsilon),
 \end{cases}\label{eq: fs singularity system}
 \end{equation}
-which fits the original form of the fast-slow system (\ref{SlowS}), with $n=1,m=2$ \citep{MMO}.
+which is the original form of the fast-slow system (\ref{SlowS}), with $n=1,m=2$ \citep{MMO}.
 The analysis is of a similar structure as for the two dimensional case.\\
 
 We can identify the points that will cause complication for the analysis of the system by considering the nondegeneracy conditions, as in the two dimensional case. Here, the extended version is
@@ -40,7 +40,7 @@ The criterion we need is the fact that a folded singularity coincides with an eq
 \end{cases}\label{eq: fs singularity systemeps0}
 \end{equation}
 
-Now, taking the total derivative of $f$ results in
+Now, taking the total derivative of $f$ results in,
 \begin{align*}
 0 = \od{f}{t} =\dot{y}\pd{f}{y}+\dot{z}\pd{f}{z} + \dot{x}\pd{f}{x}.
 \end{align*}
@@ -49,8 +49,8 @@ Then, rearranging for the term including $\dot{x}$ and noting that $ y'=g_1 $ an
 -\dot{x}\pd{f}{x} = g_1 \pd{f}{y}+ g_2\pd{f}{z}.
 \end{align*}
 
-This is almost of the desired form, however, we cannot divide by $-\pd{f}{x}$ to get an expression for $\dot{x}$, since $\pd{f}{x}(p^*)=0$, from the nondegeneracy condition.
-Therefore, as in the two dimensional case, we apply a rescaling of time in terms of $-\pd{f}{x}$, such that:
+This is almost of the desired form, however, we cannot divide by $-\pd{f}{x}$ to get an expression for $\dot{x}$, since $\pd{f}{x}(p_*)=0$, from the nondegeneracy condition.
+Therefore, as in the two dimensional case, we apply a rescaling of time in terms of $-\pd{f}{x}$, such that
 \begin{equation} \label{somegenericthreedim}
 \begin{cases}
 \dot{x}&=g_1\pd{f}{y}+g_2\pd{f}{z},\\
@@ -63,7 +63,7 @@ This is the desingularised reduced system, and its equilibrium satisfies
 \begin{align*}
 l(p^*)= g_1(p_*,\lambda,0)\pd{}{y}f(p_*,\lambda,0)+g_2(p_*,\lambda,0)\pd{}{z}f(p_*,\lambda,0)=0.
 \end{align*}
-This is where the so called transversality condition $l(p^*) \neq 0$ fails \citep{Kuehn}. This condition means that the desingularised flow is not tangent to the fold curve at $p_*$.
+This is where the so called transversality condition $l(p_*) \neq 0$ fails \citep{Kuehn}. This condition means that the desingularised flow is not tangent to the fold curve at $p_*$.
 The next step is to consider the nature of the folded singularity. This was not as relevant in the two dimensional system, however, in the three dimensional case, the type of equilibrium the reduced system possesses determines the type and number of canards that can be observed in the full system.
 Therefore, we consider the three dimensional Jacobian,
 \begin{equation}
@@ -74,20 +74,20 @@ J=\begin{bmatrix}
 \end{bmatrix}.
 \end{equation}
 
-The resulting three eigenvalues, $ \sigma_i $ for $ i=1,2,3 $ determine the stability of the folded singularity \citep{MMO}. \Wlg we can choose $ \sigma_3=0 $ because at least one of the eigenvalues must be zero to account for the folded singularity.
-The other two eigenvalues can be defined as the weak and strong eigenvalues, corresponding to the weak and strong canards, introduced below. This classification of the eigenvalues is done as follows: $ |\sigma_1|>|\sigma_2| \iff |\sigma_s|>|\sigma_w| $, meaning that the eigenvalue with the largest modulus is called the strong and visa versa. %i.e. the greater eigenvalue, in modulus, is defined as the strong eigenvalue and vice versa.
+The resulting three eigenvalues, $ \sigma_i $ for $ i=1,2,3 $ determine the stability of the folded singularity \citep{MMO}. \Wlg we can choose $ \sigma_3=0 $, because at least one of the eigenvalues must be zero to account for the folded singularity.
+The other two eigenvalues can be defined as the weak and strong eigenvalues, corresponding to the weak and strong canards, introduced below. This classification of the eigenvalues is done as follows: $ |\sigma_1|>|\sigma_2| \iff |\sigma_s|>|\sigma_w| $, meaning that the eigenvalue with the largest modulus is called the strong eigenvalue and vice versa. %i.e. the greater eigenvalue, in modulus, is defined as the strong eigenvalue and vice versa.
 We define the eigenvalue ratio $\mu:= \frac{\sigma_w}{\sigma_s}$. We can infer from standard stability theory that the folded singularity can have three types of stability, classified as follows \citep{MMO},
 \begin{equation}
 \begin{cases}
 Saddle \ \sigma_1\sigma_2<0: \sigma_i\in\R,\\
 Node \ \sigma_1\sigma_2>0: \sigma_i\in\R,\\
-Focus \ \sigma_1\sigma_2>0: \Im(\sigma_i)\neq 0.
+Focus \ \sigma_1\sigma_2>0: \mathrm{Im}(\sigma_i)\neq 0.
 \end{cases}
 \end{equation}
 
 \begin{figure}[h!]\centering
 	\includegraphics[height=12cm,width=12cm]{Images/foldednodesetc}
-	\caption{Phase portraits around the singularities of our three dimensional system where they are a) a folded saddle and b) folded node. Corresponding desingularised flowas are shown in c) and d) \citep{MMO}.}
+	\caption{Phase portraits around the singularities of our three dimensional system where they are a) a folded saddle and b) folded node. Corresponding desingularised flows are shown in c) and d) \citep{MMO}.}
 	\label{fig: folded singularities}
 \end{figure}\newpage%arrows switch as we have reversed time
 Two of the three types of equilibria are illustrated in Figure \ref{fig: folded singularities}, where the effect of the desingularisation is displayed as well. The scaling by $-\pd{f}{x}$
@@ -119,7 +119,7 @@ These mechanisms are best understood in the case of a folded node, which is stud
 
 
 \subsection{The Folded Node}
-In this section the occurence of canards and small amplitude oscillations (SAOs) due to a folded node of the reduced system is discussed. For a full presentation of canards in three dimensions for a folded node, see Canards in $ R^3 $ by  \citet{wechselberger2005}.
+In this section the occurence of canards and small amplitude oscillations (SAOs) due to a folded node of the reduced system is discussed. For a full presentation of canards in three dimensions for a folded node, see \textit{Canards in $ \mathbf{R}^3 $} by  \citet{wechselberger2005}.
 The folded node singularity is an equilibrium of the reduced system. Note that it is only defined on $S$, the critical manifold and not the full system. There is no global equilibrium for the normal form introduced below.
 The normal form considered for analysis of the folded node singularity is,
 \begin{align}\label{normalform2}
@@ -127,20 +127,20 @@ The normal form considered for analysis of the folded node singularity is,
 \dot{y} &=- z -(\mu +1)x, \\
 \dot{z} &= \frac{1}{2} \mu, \notag
 \end{align}
-where $\mu$ is the eigenvalue ratio. Note here that the reason that no global equilibrium exists is because system (\ref{normalform2}) can only have an equilibrium if $\dot{z} =0$. This would imply that $\mu=0$. However, as the classification of folded singularities has shown, since $\sigma_1 \sigma_2 >0$,  $\mu \neq 0$ for the folded node.
+where $\mu$ is the eigenvalue ratio. Note here that the reason that no global equilibrium exists is because System (\ref{normalform2}) can only have an equilibrium if $\dot{z} =0$. This would imply that $\mu=0$. However, as the classification of folded singularities has shown, since $\sigma_1 \sigma_2 >0$,  $\mu \neq 0$ for the folded node.
 It is now of interest to verify the location of the folded singularity at the origin, and therefore derive the reduced system as well as the eigenvalues for the reduced problem.
 This is a simple application of the theory introduced earlier in this section.
 Consider equation (\ref{normalform2}) and define $\dot{x}:=f$ as before. When $\epsilon \to 0$ in system (\ref{normalform2}), it follows that $f= y-x^2 =0$, and therefore the critical manifold is defined as $S:= \{ (x,y,z) : y=x^2\}$, which is a folded two dimensional plane.
-Now that $f$ is defined explicitly, we can check the nondegeneracy conditions for a folded singularity, as presented in (\ref{eq: non-degeneracy 3d system}) and get the following results:
+Now that $f$ is defined explicitly, we can check the nondegeneracy conditions for a folded singularity, as presented in (\ref{eq: non-degeneracy 3d system}) and get the following results,
 \begin{align*}
-f(x,y,z,,\mu, \epsilon) &= 0\\
-\implies y&=x^2\\
+f(x,y,z,,\mu, \epsilon) &= 0,\\
+\implies y&=x^2,\\
 \\
-\frac{\partial f}{\partial x} (x,y,z,\mu,\epsilon) &= 2x = 0\\
-\implies x&=0 \\
-\implies y&=0 \\
+\frac{\partial f}{\partial x} (x,y,z,\mu,\epsilon) &= 2x = 0,\\
+\implies x&=0, \\
+\implies y&=0, \\
 \\
-\frac{\partial^2 f}{\partial x^2}(x,y,z,\mu,\epsilon) & = 2 \neq 0\\
+\frac{\partial^2 f}{\partial x^2}(x,y,z,\mu,\epsilon) & = 2 \neq 0,\\
 \\
 D_{(y,z)}f&= (1,0) \textrm{ full rank one}.
 \end{align*}
@@ -172,12 +172,12 @@ However it can be noted that the equation for $y$ can be omitted, since the chan
 &\dot{x} = -(\mu+1)x - z,\\
 &\dot{z} = x \mu. \notag
 \end{align}
-Now, following the theory for folded singularities, the folded node has to satisfy the condition $l(0,0,z)=0$ \st,
+Now, following the theory for folded singularities, the folded node has to satisfy the condition $l(0,0,z)=0$, such that
 \begin{align*}
 &l(0,0,z)= -(\mu+1)x - z=0 |_{(0,0,z)},\\
 &\Rightarrow z=0.
 \end{align*}
-This leads us to the conclusion that the folded singularity, defined on the slow manifold for $\epsilon \to 0$ and located on the fold line $L=(0,0,z)$, is given by $(0,0,0)$, as expected. Note that in this case only one equilibrium of the reduced system exists, which is not generally the global case.
+This leads us to the conclusion that the folded singularity, defined on the slow manifold for $\epsilon \to 0$ and located on the fold line $L=(0,0,z)$, is given by $(0,0,0)$, as expected. Note that in this case only one equilibrium of the reduced system exists, which is not necessarily the case.
 The next step of the analysis is to verify that the folded singularity at the origin is indeed a folded node.
 As discussed in the beginning of Section \ref{sec: threedimfolds}, the classification of the singularities is determined by the eigenvalues of the reduced system. Therefore, the next step is calculating these eigenvalues.
 The Jacobian of the reduced system (\ref{twovarxzred}) is
@@ -198,18 +198,19 @@ Since $\mu$ is the eigenvalue ratio and satisfies $0< \mu < 1$, we can conclude 
 %\end{align*}
 and the folded singularity is in fact a folded node. Note that if we had tried to find the eigenvalues for the full three dimensional reduced system (\ref{fullredsysformmo}) instead, an additional eigenvalue $\sigma_3=0$ would have occurred. This is the eigenvalue that corresponds to the loss of hyperbolicity at the folded node, which is expected for singular points.\\
 
-In order to analyse the folded node, the system (\ref{normalform2}) is transformed using the blow up transformation $u= \epsilon^{1/2}\bar{x}, v=\epsilon \bar{y}, w= \epsilon^{1/2} \bar{z}$ and $ \tau_1 = \epsilon^{1/2} \bar{t}$.
+In order to analyse the folded node, the system (\ref{normalform2}) is transformed using the blow up transformation $u= \epsilon^{1/2}\bar{x},\ \  v=\epsilon \bar{y}, \ \ w= \epsilon^{1/2} \bar{z}$ and $ \tau_1 = \epsilon^{1/2} \bar{t}$.
 Then, in a neighbourhood $U$ of the folded node the system is represented by,
 \begin{align*}
 \dot{\bar{x}}= \bar{y} - \bar{x}^2,\\
 \dot{\bar{y}}=\bar{z} - \bar{x}, \\
-\dot{\bar{z}}= - \nu.
+\dot{\bar{z}}= - \nu,
 \end{align*}
+where $\nu$ satisfies $\nu = \frac{\mu}{2(1+\mu)^2}$.
 In the following analysis, the bars will be omitted for convenience.
-One important realisation is that the phase portraits for the rescaled system is topologically equivalent to the original normal form. Therefore, the mapping of solutions  found in the blown up system to the original system is straightforward.\\
+One important realisation is that the phase portraits for the rescaled system are topologically equivalent to the original normal form. Therefore, the mapping of solutions  found in the blown up system to the original system is straightforward.\\
 
-All the information needed to describe the dynamics near the fold point is now derived and therefore the next step in the analysis is the description of the SAOs. The SAOs in the folded node case are canard trajectories that follow a certain pattern. These patterns are, as discussed in Theorem \ref{thm: canards in R3}, found by considering the eigenvalue ratio $\mu$.
-In the case of the folded node, $\mu$ satisfies $2k+1 < \mu^{-1} < 2k +3 $. Solving for $k \in \mathbf{N}$ gives that $k$ is the number of secondary canards $\xi_i$, where $i \in 1,...,k$, in the system - stated in Theorem \ref{thm: canards in R3}. Furthermore, $k$ corresponds to the number of twists the primary canard $\gamma_s$ is performing around $\gamma_w$. A twist corresponds to a $180^{\circ}$ rotation, see \citet{Kuehn}. It is important to note that $\mu^{-1} \notin \mathbf{N}$ in order to conclude the number of secondary canards. If $\mu^{-1} \in \mathbf{N}$, bifurcations occur and the number of secondary canards changes. For a full analysis of this phenomenon refer to \citet{wechselberger2005}.\\
+All the information needed to describe the dynamics near the fold point is now derived and therefore the next step in the analysis is the description of the small amplitude oscillations (SAOs). The SAOs in the folded node case are canard trajectories that follow a certain pattern. These patterns are, as discussed in Theorem \ref{thm: canards in R3}, found by considering the eigenvalue ratio $\mu$.
+In the case of the folded node, $\mu$ satisfies $2k+1 < \mu^{-1} < 2k +3 $. Solving for $k \in \mathbf{N}$ gives that $k$ is the number of secondary canards $\xi_i$, where $i \in 1,...,k$, in the system - stated in Theorem \ref{thm: canards in R3}. Furthermore, $k$ corresponds to the number of twists the primary canard $\gamma_s$ is performing around $\gamma_w$. A twist corresponds to a $180^{\circ}$ rotation, see \citet{Kuehn}. In order to derive the number of secondary canards, $\mu^{-1} \notin \mathbf{N}$ has to be satisfied. If $\mu^{-1} \in \mathbf{N}$, bifurcations occur and the number of secondary canards changes. For a full analysis of this phenomenon refer to \citet{wechselberger2005}.\\
 
 These canards are trajectories that are entering the so called funnel region of the fold and contracted along the direction of $S^a$. This funnel region lies between the fold line $L$ and the strong singular canard. It is represented by the grey shaded region in Figure \ref{fig: folded singularities}.
 For decreasing values of $\epsilon$, the funnel becomes narrower and for $\epsilon \to 0$, all other canards converge to the strong singular canard.
@@ -217,7 +218,7 @@ The number of SAOs an incoming trajectory undergoes depends on where the traject
 The interval in which the primary strong canard lies is significantly larger than the other intervals, so the secondary canards close to it will have a higher amplitude while the number of SAOs is smaller. As the number of SAOs increases, the amplitude of oscillations get smaller and are not readily visible.
 The result about the width of the intervals is summed up in the following theorem.
 
-\begin{theorem}[\textbf{Width of Rotational Sectors}\citealp{MMO}]
+\begin{theorem}[\textbf{Width of Rotational Sectors} \citep{MMO}]
 Consider system (\ref{somegenericthreedim}) and assume it has a folded-node singularity. At an $O(1)$ distance from the fold curve, all secondary canards are in an $O(\epsilon^{(1- \mu)/2)})$ neighbourhood of the primary strong canard. Hence, the width of the  rotational sectors $I_i, 1 \leq i \leq k$, is $O(\epsilon^{(1- \mu)/2)})$ and the width of sector $I_{k+1}$ is $O(1)$.
 \end{theorem}
 
@@ -248,7 +249,7 @@ Consider system (\ref{somegenericthreedim}) and assume it has a folded-node sing
 		\caption{Rotational Sectors for $\mu \approx 0.0557$.}
 		\label{fig: MMo2pic} 
 	\end{subfigure}
-\caption{Folded node and Rotational Sectors for $\mu \approx 0.0557$ \citep{MMO}.}
+\caption{Local dynamics around the folded node for $\mu \approx 0.0557$ \citep{MMO}.}
 \end{figure}\newpage
 
 

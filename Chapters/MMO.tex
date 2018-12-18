@@ -4,7 +4,7 @@ Before returning to the case of the folded node, a few technical terms are intro
 This section is based on work done in the review paper by \citet{MMO} unless indicated otherwise.
 The first concept that we need to introduce is mixed mode oscillations (MMOs).
 
-\begin{definition}{Mixed Mode Oscillations \citealp{MMO}}\\
+\begin{definition}{\textbf{Mixed Mode Oscillations} \citep{MMO}}\\
 	A mixed mode oscillation is an orbit $\gamma$, which traces out small amplitude oscillations (SAOs) as well as large amplitude oscillations (LAOs).
 	The SAOs and LAOs are clearly separated in the time series and their recurrence can be periodic.
 	The signature of an MMO is expressed as $L_1^{s_1}L_2^{s_2}...$, indicating that $L$ number of LAOs are followed by $s$ SAOs.
@@ -16,7 +16,7 @@ We have analysed the local behaviour of system (\ref{normalform2}) around the re
 However, this does not provide the full analysis of the system, since the global behaviour of the trajectories that undergo the SAOs in the folded node region is not captured by the local analysis.
 Generally, there are no global return mechanisms present in system (\ref{normalform2}) and a trajectory that approaches the folded region from $x = - \infty$ undergoes a number of SAOs, according to where it enters the fold region in $z$ space, before leaving towards infinity. Then there are no global return mechanisms present and the trajectory does not undergo a large amplitude oscillation. However, there are certain criteria that indicate the existence of a global return mechanism and therefore that MMOs can be observed. There are two theorems related to this issue, which are stated below.
 
-\begin{theorem}[\textbf{Generic $1^{k+1}$ MMOs} \citealp{MMO}] \label{MMOsigk1}
+\begin{theorem}[\textbf{Generic $1^{k+1}$ MMOs} \citet{MMO}] \label{MMOsigk1}
 Consider system (\ref{somegenericthreedim}) with the following assumptions:
 \begin{enumerate}
 \item Assume that $ 0 < \epsilon \ll 1$ is sufficiently small, $\epsilon^{1/2} \ll \mu$, and $k \in \mathbf{N}$ is such that $2k + 1 < \mu^{-1} < 2k + 3$.
@@ -28,7 +28,7 @@ Consider system (\ref{somegenericthreedim}) with the following assumptions:
 Then there exists a stable MMO with signature $1^{k+1}$.
 \end{theorem}
 
-\begin{theorem}[\textbf{Stable MMOs with signature $1^i$} \citealp{MMO}] \label{theoremsigni}
+\begin{theorem}[\textbf{Stable MMOs with signature $1^i$} \citet{MMO}] \label{theoremsigni}
 Suppose system (\ref{somegenericthreedim}) satisfies assumptions 1. - 4. of Theorem \ref{MMOsigk1} and, the following additional assumption:
 \begin{itemize}
 \item For $\delta = 0$, the global return point is on the singular strong canard $\bar{\gamma}_s$ and as $\delta$ passes through zero the return point crosses $\bar{\gamma}_s$ with nonzero speed.
@@ -50,8 +50,8 @@ To illustrate this, one of these cases is briefly introduced in the next section
 \subsection{Singular Hopf Bifurcation}
 
 If the folded singularity is of saddle node type, as introduced in Section \ref{sec: threedimfolds}, there is further classification possible.
-There exists the saddle node of type 1, in which the folded singularity coincides with the equilibrium of the desingularised reduced system, which is not the equilibrium of the full system. However, when the parameters of the system coincide in such a way that an equilibrium of the full system and a fold point coincide, then the folded saddle node is said to be of type 2. If a saddle-node type 2 occurs for a specific parameter regime, then a singular Hopf bifurcation arises at $O(\epsilon)$ distance from the equilibrium, and is defined as follows:
-\begin{definition}{\textbf{Singular Hopf Bifurcation} \citealp{strogatz2007nonlinear}}\\
+There exists the saddle node of type 1, in which the folded singularity coincides with the equilibrium of the desingularised reduced system, which is not the equilibrium of the full system. However, when the parameters of the system coincide in such a way that an equilibrium of the full system and a fold point coincide, then the folded saddle node is said to be of type 2. If a saddle-node of  type 2 occurs for a specific parameter regime, then a singular Hopf bifurcation arises at $O(\epsilon)$ distance from the equilibrium, and is defined as follows:
+\begin{definition}{\textbf{Singular Hopf Bifurcation} \citet{strogatz2007nonlinear}}\\
 A singular Hopf bifurcation occurs at a certain parameter regime in the system which is $O(\epsilon)$ away from a saddle-node of type 2. There, the eigenvalues of the system cross the imaginary axis, therefore they have a zero real part. Then small oscillations, called limit cycles occur in the system. There are two types of singular Hopf bifurcation. A supercritical Hopf bifurcation occurs when a stable limit cycle arises from an unstable equilibrium point, while a subcritical Hopf bifurcation causes unstable limit cycles to appear around a stable equilibrium.
 \end{definition}
 
