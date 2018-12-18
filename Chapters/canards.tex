@@ -1,7 +1,7 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[height=5cm,width=8cm]{Canard_Point.png}
-	\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$.}
+	\caption{The reduced flow where a) $\lambda=0$ and b) $\lambda>0$ \citep{krupa2001}.}
 	\label{fig: Canard Point}
 \end{figure}
 
@@ -39,7 +39,7 @@ Since the nullcline $\dot{y}=0 \Rightarrow x=\lambda$ depends on $\lambda$, vary
 	\end{subfigure}
 	\caption[Example trajectories for varying $\lambda$]{Example trajectories for varying $\lambda$. Note the small amplitude oscillations when $\lambda=0$. }
 	\label{fig:varLambda}
-\end{figure}
+\end{figure}\newpage
 
 \begin{definition}[\textbf{Canard} \citep{Kuehn}]
 A trajectory of a fast-slow system is called a canard if it stays within $O(\epsilon)$ close to the repelling branch $S^r$ of the slow manifold $S$, for some time of $O(1)$ on the slow time scale $\tau = \epsilon t$.
@@ -273,7 +273,7 @@ The dynamics of $K_1$ is very similar to the analysis of $K_1$ in the generic fo
 \subsection{Local Solution}
 The analysis of the charts $K_1$ and $K_2$ provided enough hyperbolicity in order to conclude persistence of the special orbit $\gamma$ for $\epsilon >0$. The orbit $\gamma$ connects the attracting and repelling branch of $S$ at $p_a$ and $p_r$. This can be conserved in Figure \ref{canardsolloc}, which shows the full local dynamics at the fold point.
 \begin{figure}[h!]\centering
-	\includegraphics[height=8cm,width=10cm]{Images/pres-cancard}
+	\includegraphics[height=8cm,width=12cm]{Images/pres-cancard}
 	\caption{Full dynamics at the fold point in the canard case \citep{krupa2001}.}
 	\label{canardsolloc}
 \end{figure}
@@ -346,7 +346,8 @@ The question whether trajectories jump off to the left or to the right is answer
 	\label{fig: splitting}
 \end{figure}%\newpage
 %\textbf{Discuss splitting on the manifold}
-The maximal canard connects the attacting and repelling branches of the slow manifold as shown in Figure \ref{fig: splitting}, where the trajectory is denoted by $\gamma_c$. However, for other values of $\lambda$ than the critical value, the attracting and repelling branches are no longer connected, as show in Figure \ref{fig: splitting}. To measure the distance between the manifolds we will apply a Melnikov Computation - see  \citet{krupa2001} for direct use. To discover whether we have a splitting between the attracting and repelling branches we need to consider the $ y $ coordinates in the second chart \st $ y_{a,2}(0)-y_{r,2}(0) $ is a distance function, which can be written as $ D_c(r_2,\lambda_2)=H(0,y_{a,2}(0))-H(0,y_{r,2}(0)) $. Note that $ \pd{}{y_2}H(0,y_2)\neq 0 $ \citep{krupa2001}. From here we can use the following proposition,
+The maximal canard connects the attacting and repelling branches of the slow manifold as shown in Figure \ref{fig: splitting}, where the trajectory is denoted by $\gamma_c$. However, for other values of $\lambda$ than the critical value, the attracting and repelling branches are no longer connected, as show in Figure \ref{fig: splitting}. To measure the distance between the manifolds we will apply a Melnikov Computation - see  \citet{krupa2001} for direct use. To discover whether we have a splitting between the attracting and repelling branches we need to consider the $ y $ coordinates in the second chart \st $ y_{a,2}(0)-y_{r,2}(0) $ is a distance function, which can be written as $ D_c(r_2,\lambda_2)=H(0,y_{a,2}(0))-H(0,y_{r,2}(0)) $. Note that $ \pd{}{y_2}H(0,y_2)\neq 0 $ \citep{krupa2001}. From here we can use the following proposition,\\
+
 \begin{prop}
 	[\citealp{krupa2001}]
 	For a small enough $ \rho $ and $ \mu $ the distance function has the expansion
@@ -366,11 +367,11 @@ Then, following the proof provided by \citet{krupa2001}, we find that we will ha
 
 \begin{align*}
 d_{r_2}&=\int_{-\infty}^{\infty} \nabla\left(\frac{1}{2}e^{-2y_2}\left(y_2-x^2_2+\frac{1}{2}\right)\right)^T\cdot\left((-\frac{x_2^3}{3},0)^T\right)\bigg|_{\gamma_{c,2}} \dif t,\notag\\
-&=-\frac{e}{16}\int_{-\infty}^{\infty}t^4e^{-\frac{T^2}{2}}\dif dt,
+&=-\frac{e}{16}\int_{-\infty}^{\infty}t^4e^{-\frac{t^2}{2}}\dif t,
 \end{align*}
 noting $ \nabla(H(\gamma_{c,2}(t)))= \exp(1-\frac{t^2}{2})\left[-1,\frac{1}{2}\right]$. Now the task is to show that $ d_{r_2} $ is finite, we do this by using integration by parts to find,
 \begin{equation}
-d_{r_2}=	\frac{e}{16}\int_{-\infty}^{\infty}e^{-\frac{T^2}{2}}\dif t=\frac{e\sqrt{2\pi}}{16}<\infty,
+d_{r_2}=	\frac{e}{16}\int_{-\infty}^{\infty}e^{-\frac{t^2}{2}}\dif t=\frac{e\sqrt{2\pi}}{16}<\infty,
 \end{equation}
 where we note that we have made use of the Gaussian Integral \citep{GausIntegral} and $d_{r_2}$ is finite. We then apply an analogous approach to $d_{\lambda_2} $ \st, 
 \begin{align}
