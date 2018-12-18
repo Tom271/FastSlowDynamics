@@ -1,22 +1,15 @@
-%++++Rename chapter: 'The Blow-Up Method'++++++++
-\subsubsection{Extended System} \label{sec: extended sys blowup}
-++++ weave in +++++++++
-The canonical system (Equation \ref{eq: canonical}) is then extended to three dimensions by considering $\epsilon'=0$. 
+The canonical system Equation (\ref{eq: canonical}) is extended to three dimensions by considering $\epsilon'=0$, 
 \begin{equation} \label{extended FS}
 \begin{aligned}
-&x'=-y+x^2+h(x) \\
-&y'=\epsilon(x-1)\\
+&x'=-y+x^2+h(x), \\
+&y'=\epsilon(x-1),\\
 &\epsilon'=0.
 \end{aligned}
 \end{equation}
 
-
-
-
-In order to apply the Blow-Up Method to the fold point at the origin, we focus on a neighbourhood $U$ around the fold point $(0,0)$. 
-The neigbourhood $U$ is small enough, such that $g(x,y, \epsilon) \neq 0$ in $U$, and we can define sections in $U$, as follows:
+In order to apply the Blow-Up Method to the fold point at the origin, we focus on a neighbourhood $U$ around the fold point $(0,0)$. The neighbourhood $U$ is small enough such that $g(x,y, \epsilon) \neq 0$ in $U$, and we can define sections in $U$ as follows,
 \begin{align*}
-&\Delta ^{in} = \{ (x, \rho^2), x \in I \} \\
+&\Delta ^{in} = \{ (x, \rho^2), x \in I \}, \\
 &\Delta ^{out} = \{ (\rho, y), y \in \mathbf{R} \},
 \end{align*}
 where $I \subset \mathbf{R}$. Now $\Delta^{in}$ is transverse to $S^a$, while $\Delta^{out}$ is transverse to the fast flow. This enables us to monitor the incoming trajectories from the attracting branch of $S$ and the trajectories leaving $U$ in the direction of the fast flow.
@@ -25,34 +18,32 @@ The following theorem describes the behaviour of the flow under $\pi$.
 % and a sketch of the proof will be given at the end of this section: ++++last statement not precise+++
 
 \begin{theorem}[\citealp{krupa2001}] \label{transition map theorem}
-Under the assumptions made in this section, there exists $ \epsilon_0 >0$ such that the following assertions hold for $\epsilon \in (0, \epsilon_0]$:\\
-1. The manifold $S_\epsilon^a$ passes through $\Delta^{out}$ at a point $(\rho, h(\epsilon))$, where $h(\epsilon) = O(\epsilon^{2/3})$.\\
-2. The transition map $\pi$ is a contraction with contraction rate $O(e^{-c/\epsilon})$, where $c$ is a positive constant.
+Under the assumptions made in this section, there exists $ \epsilon_0 >0$ such that the following assertions hold for $\epsilon \in (0, \epsilon_0]$:\begin{enumerate}
+\item  The manifold $S_\epsilon^a$ passes through $\Delta^{out}$ at a point $(\rho, h(\epsilon))$, where $h(\epsilon) = O(\epsilon^{2/3})$.
+\item The transition map $\pi$ is a contraction with contraction rate $O(e^{-c/\epsilon})$, where $c$ is a positive constant.
+\end{enumerate}
 \end{theorem}
-This means that the trajectories that enter $U$ through $\Delta^{in}$, will be funneled into a smaller section of $\Delta^{out}$ and therefore we are guaranteed to observe the trajectories that enter through $\Delta^{in}$ in $\Delta^{out}$. Now we are in the position to describe the method of Blow-Up Transformations in the neighbourhood $U$.
+This means that the trajectories that enter $U$ through $\Delta^{in}$, will be funnelled into a smaller section of $\Delta^{out}$ and therefore we are guaranteed to observe the trajectories that enter through $\Delta^{in}$ in $\Delta^{out}$. Now we are in the position to describe the method of Blow-Up transformations in the neighbourhood $U$.
 
 \subsection{Coordinate Transformation and Charts} \label{sec:transform blowup}
-We first need to transform the extended system (\ref{extended FS}) with respect to the time variable and the space variables. This coordinate transformation is called the Blow-Up Transformation because the degenerate fold point $(0,0)$ is regarded as a sphere of radius $r=0$. By rescaling the space variables with respect to different weights of $r$,
-\begin{subequations}
+We first need to transform the Extended System (\ref{extended FS}) with respect to the time variable and the space variables. This coordinate transformation is called the Blow-Up transformation because the degenerate fold point $(0,0)$ is regarded as a sphere of radius $r=0$. By rescaling the space variables with respect to different weights of $r$,\begin{subequations}
     \begin{align}
         &x=\Bar{r}\Bar{x}  \label{sys: blow up trans x}\\
         &y=\Bar{r}^2\Bar{y} \label{sys: blow up trans y}\\ 
         &\epsilon=\bar{r}^3\bar{\epsilon} \label{sys: blow up trans z},
     \end{align}  
     \label{sys: blow up trans}
-\end{subequations}
-we find that we are able to carry out further analysis, as will follow.
+\end{subequations} we find that we are able to carry out further analysis, as will follow.
 %+++++ If time and space permit, an analysis of the space B and coordinate map would be good... p.291 krupa++++
 %A reasonable question to consider is why do we note consider spherical polar coordinates. The reasoning behind this is because we are looking to maximise our computational efficiency so we will proceed in cartesian coordinates.
-Instead of analysing the sphere in spherical polar coordinates, which might seem the most obvious choice of method,  the rest of this analysis is done using charts, described below (see \citet{needam} for the construction of charts on a sphere). This method turns out to be a more natural choice for this problem and maximises computational efficiency.
+Instead of analysing the sphere in spherical polar coordinates, which might seem the most obvious choice we use charts, described below (see \citet{needam} for the construction of charts on a sphere). This method turns out to be a more natural choice for this problem and simplifies calculations.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[height=5cm,width=7cm]{Images/charts-ball}
 	\caption{Three charts mapping different sections of our blow up \citep{krupa2001}.}
 	\label{fig:chartDiagram}
 \end{figure}
-In terms of the blown up fold point, a sphere denoted by $B$, charts are projections of regions of $B$ onto a two dimensional plane. 
-We introduce three charts $ K_1,K_2,$ and $K_3 $. Chart $K_2$ is the two dimensional projection covering the upper half plane of $B$. However, as points on the equator of $B$ are approached on $K_1$, the point tends to infinity. These regions however, are of immense interest, since they are points of incoming and outgoing trajectories. As a consequence, charts $K_1$ and $K_3$ are introduced, covering the regions of interest on the equator of the fold point. 
+In terms of the blown up fold point, a sphere of radius zero denoted by $B$, charts are projections of regions of $B$ onto a two dimensional plane. We introduce three charts $ K_1,K_2,$ and $K_3 $. Chart $K_2$ is the two dimensional projection covering the upper half plane of $B$. However, as points on the equator of $B$ are approached on $K_1$, the point tends to infinity. These regions however, are of immense interest, since they are points of incoming and outgoing trajectories. As a consequence, charts $K_1$ and $K_3$ are introduced, covering the regions of interest on the equator of the fold point. 
 %This is represented in Figure ++++++ (blow up figure)++
 %The points that are relevant to the analysis of the dynamics are shown in Figure (+++insert figure 2.2 p,293+++++). (More description potentially)
 The charts are defined by setting each of the variables of the extended system to $1$ in turn, giving $ \bar{y}=1, \ \bar{\epsilon}=1, \ \bar{x}=1 $. Substituting these into Equations (\ref{sys: blow up trans x}), (\ref{sys: blow up trans y}) and (\ref{sys: blow up trans z}) respectively gives, 
@@ -64,10 +55,7 @@ The charts are defined by setting each of the variables of the extended system t
 	\end{align}
 \end{subequations}
 where $ (x_i,r_i,\epsilon_i)\in\mathbf{R}^3 $ for $ i=1,2,3 $, and the equations correspond to the charts in numerical order \citep{krupa2001}. 
-With this setup, we can consider the individual charts in turn, analyse the dynamics on the individual charts, and then join the gathered information into a global view on the dynamics in $U$.
-We start with $K_2$,  because it holds the most information and the flow is the analysed more readily than in the other two charts. 
-The remaining question is how the transition between the three charts and the connection to the global dynamics is made after finishing the individual analysis.
-This is done via a coordinate change, derived by using Equations \ref{ sys: K1K2K3} and \ref{sys: blow up trans}, and the results are summarised in the following Lemma:
+With this setup, we can consider the dynamics on the individual charts, and then join the gathered information into a global view on the dynamics in $U$. We start with $K_2$,  because it holds the most information and the flow is analysed more readily than in the other two charts. The remaining question is how the transition between the three charts and the connection to the global dynamics is made after finishing the individual analysis. This is done via a coordinate change, derived by using Equations \ref{ sys: K1K2K3} and \ref{sys: blow up trans}, and the results are summarised in the following lemma:
 \begin{lemma} \label{coord. change}
 Let $\kappa_{12}$ denote the change of coordinates from $K_1$ to $K_2$. Then $\kappa_{12}$ is given by \\
 \begin{equation*}
@@ -91,15 +79,14 @@ x_2 = \epsilon_3^{-1/3}, y_2 = y_3\epsilon_3^{-2/3}, r_2= r_3 \epsilon_3^{1/3},
 for $\epsilon_3>0$.
 \end{lemma}
 
-Furthermore, transition maps $\Pi_i, i \in 1,2,3$  are defined in each section, describing how the trajectories coming in and out of each chart. These are combined in the final part of this section to give the proof of Theorem \ref{transition map theorem}, and to relate the results of the blow up method back to the original transition map $\pi$.
-\newpage
+Furthermore, transition maps $\Pi_i, i \in 1,2,3$  are defined in each section, describing how the trajectories coming in and out of each chart. These are combined in the final part of this section to give the proof of Theorem \ref{transition map theorem}, and to relate the results of the Blow Up Method back to the original transition map $\pi$.
 \subsection{Dynamics in \texorpdfstring{$K_2$}{K2}} \label{sec: VDP K2}
 \begin{figure}[h!]\centering
 	\includegraphics[height=4cm,width=6cm]{Images/Dynamics_in_Chart_2}
 	\caption{Phase portrait for chart 2 \citep{krupa2001}.}
 	\label{fig: chart 2 fig}
 \end{figure}
-To be able to consider chart $ K_2$, the transformation presented in Equation \ref{sys: K2} is applied to the extended system (\ref{extended FS}). Furthrmore,a time rescaling ($ t_2=r_2t $) is applied to desingularise the system. This results in:
+To be able to consider chart $ K_2$, the transformation presented in Equation (\ref{sys: K2}) is applied to the Extended System (\ref{extended FS}). Furthermore, a time rescaling ($ t_2=r_2t $) is applied to desingularise the system. This results in,
 \begin{equation}
 	\begin{aligned}
 		&\od{}{t}(r_2x_2)=r_2^2\od{x_2}{t}=-y_2+x_2^2-\dfrac{x_2^3r_2}{3},\\
@@ -122,15 +109,13 @@ Then, considering $r_2=0$ and neglecting the $O(r_2)$ terms results in,
 		&y'_2=-1,\\
 	\end{aligned}
 \end{equation}
-which are the well known Riccati equations- see \citet{Riccati}.
-Some known results about the Riccati equations can be summarised as follows:
-
+which are the well known Riccati equations -- see \citet{Riccati}. Some known results about the Riccati equations can be summarised as follows:
 
 \begin{prop}[\citealp{krupa2001}]\label{Riccati Prop} 
 The Riccatti equation (\ref{Riccati}) has the following properties:
 \begin{enumerate}
 \item Every orbit has a horizontal asymptote $y=y_r$, where $y_r$ depends on the orbit such that $x \to \infty$ as $y$ approaches $y_r$ from above.
-\item There exists a unique orbit $\gamma_2$, which can be parameterized as $(x,s(x)), x \in \mathbf{R}$ and is asymptotic to the left branch of the parabola $x^2 - y = 0$, for $x \to - \infty$. The orbit $\gamma_2$ has a horizontal asymptote $y= - \Omega_0 <0$, such that $x \to \infty$ as $y$ approaches $-\Omega_0$ from above.
+\item There exists a unique orbit $\gamma_2$, which can be parameterised as $(x,s(x)), x \in \mathbf{R}$ and is asymptotic to the left branch of the parabola $x^2 - y = 0$, for $x \to - \infty$. The orbit $\gamma_2$ has a horizontal asymptote $y= - \Omega_0 <0$, such that $x \to \infty$ as $y$ approaches $-\Omega_0$ from above.
 \item The function $s(x)$ has the asymptotic expansions
 \begin{align*}
 s(x) &= x^2 + \frac{1}{2x} + O\left( \frac{1}{x^4} \right), x \to -\infty,\\
@@ -141,8 +126,7 @@ s(x) &= -\Omega_0 + \frac{1}{x} + O\left( \frac{1}{x^3} \right), x \to \infty.
 \end{enumerate}
 \end{prop}
 
-The solutions to the Riccati equations, described in Proposition \ref{Riccati Prop}, are displayed in Figure. Note that the equation $x^2 - y=0$ is locally the critical manifold $S$ close to the fold point.%+++a bit wavy argument+++
-The orbit $\gamma_2$, corresponds to the global trajectory $\gamma$, of the full system, which is the candidate trajectory connecting the slow flow on $S^a$ entering $U$ through $p_a$ to the fast fibres, exiting $U$ through $q_{out}$ - described by Figure \ref{fig: Ricatti Sol}. 
+The solutions to the Riccati equations, described in Proposition \ref{Riccati Prop}, are displayed in Figure \ref{fig: Ricatti Sol}. Note that the equation $x^2 - y=0$ is locally the critical manifold $S$ close to the fold point. The orbit $\gamma_2$ corresponds to the global trajectory $\gamma$, of the full system, which is the candidate trajectory connecting the slow flow on $S^a$ entering $U$ through $p_a$ to the fast fibres, exiting $U$ through $q_{out}$ -- described by Figure \ref{fig: Ricatti Sol}. 
 \begin{figure}[h!]\centering
 	\includegraphics[height=6cm,width=6cm]{Images/Dynamics_in_K2}
 	\caption{Ricatti solution for chart 2 \citep{krupa2001}.}
@@ -154,19 +138,16 @@ This leads to the conclusion that if we can connect $\gamma_2$ to $p_a$  through
 This motivates the analysis of $K_1$ and $K_3$.
 In order to connect the dynamics on $K_2$ to that on the other charts, we need to define local inflow and outflow sections, similar to $\Delta^{in}$ and $\Delta^{out}$ in the full system.
 Then we can follow trajectories that get mapped by $\Pi_2$, again analogous to $\pi$ in the full system, from a section $\Sigma^{in}_2$ to $\Sigma^{out}_2$.
-The section are defined as follows. For $\delta>0$, we have:
+The section are defined as follows. For $\delta>0$, we have,
 \begin{align*}
 \Sigma^{in}_2= \{ (x_2,y_2,r_2): y_2= \delta^{-2/3} \},\\
 \Sigma^{out}_2 = \{ (x_2,y_2,r_2): x_2 = \delta^{-1/3} \}.
 \end{align*}
-Then the transition map $\Pi_2$ can be defined and the results are summarised as follows:
+The transition map $\Pi_2$ can then be defined and the results are summarised as follows:
 \begin{prop}[\citealp{krupa2001}]
 The transition map $\Pi_2$ has the following properties:
 \begin{enumerate}
-\item
-\begin{align*}
-\Pi_2(q_0)= (\delta^{-1/3}, - \Omega_0 + \delta^{1/3} + O(\delta), 0)
-\end{align*}
+\item $ \Pi_2(q_0)= (\delta^{-1/3}, - \Omega_0 + \delta^{1/3} + O(\delta), 0)$
 \item A neighbourhood of $q_0$ is mapped diffeomorphically onto a neighbourhood of $\Pi_2(q_0)$.
 \end{enumerate}
 \end{prop}
@@ -176,9 +157,9 @@ This is sufficient information to now consider the dynamics on $K_1$.
 \subsection{Dynamics in \texorpdfstring{$K_1$}{K1}}\label{sec:dynamics-in-texorpdfstringk1k1} 
 The coordinate transformation (\ref{sys: K1}) is applied to the extended system (\ref{extended FS}), 
 \begin{align*}
-\frac{d(r_1x_1)}{dt_1} \frac{dt_1}{dt} = -r_1^2 + r_1^2x_1^2 - \frac{1}{3}r_1^3x_1^3,\\
-\frac{dr_1^2}{dt_1}\frac{dt_1}{dt}= 2r_1^2r_1' = r_1^3 \epsilon_1 (-1 +r_1 x_1),\\
-\frac{d(r_1^3 \epsilon_1)}{dt_1}\frac{dt_1}{dt}= (3r_1^2\epsilon_1 + r_1^3 \epsilon_1') r_1 = 0.
+\frac{\dif (r_1x_1)}{\dif t_1} \frac{\dif t_1}{\dif t} = -r_1^2 + r_1^2x_1^2 - \frac{1}{3}r_1^3x_1^3,\\
+\frac{\dif r_1^2}{\dif t_1}\frac{\dif t_1}{\dif t}= 2r_1^2r_1' = r_1^3 \epsilon_1 (-1 +r_1 x_1),\\
+\frac{\dif (r_1^3 \epsilon_1)}{\dif t_1}\frac{\dif t_1}{\dif t}= (3r_1^2\epsilon_1 + r_1^3 \epsilon_1') r_1 = 0.
 \end{align*}
 Dividing through by $\frac{dt_1}{dt}=r_1$ and replacing the expressions for $\epsilon_1'$ and $r_1'$, results in the full system in terms of $K_1$. Note that the equation for $\epsilon'$ is found by rearranging the third equation above \st,
 \begin{align*}

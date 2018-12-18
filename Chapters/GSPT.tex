@@ -40,33 +40,31 @@ A normally hyperbolic submanifold can be classified according to its stability p
 Now combining the above we can state Fenichel's Theorem.
 
 \begin{theorem}[\textbf{Fenichel's Theorem} \citep{MMO}] \label{Fenichel}	
-	Suppose $M=M_0$ is a compact, normally hyperbolic submanifold  (possibly with boundary) of the critical manifold $S$ Equation \ref{CriticalS} 	and  that $f, g \in C^r, r < \infty $. Then for $\epsilon >0$, sufficiently small, the following holds:\\
+	Suppose $M=M_0$ is a compact, normally hyperbolic submanifold  (possibly with boundary) of the critical manifold $S$ Equation \ref{CriticalS} 	and  that $f, g \in C^r, r < \infty $. Then for $\epsilon >0$, sufficiently small, the following holds:
 	\begin{itemize} 	
 	\item[(F1)] There exists a locally invariant manifold $M_{\epsilon}$, diffeomorphic to  $M_0$. Local invariance means that $M_{\epsilon}$ can have boundaries through which trajectories enter or leave.
 	\item[(F2)]  $M_{\epsilon}$ has a Hausdorff distance of $O(\epsilon)$ from $M_0$.
 	\item[(F3) ] The flow on $M_{\epsilon}$  converges to the slow flow as $\epsilon \to 0$.
-	\item[(F4)]  $M_{\epsilon}$ is $C^r$- smooth.
+	\item[(F4)]  $M_{\epsilon}$ is $C^r$-smooth.
 	\item[(F5)]  $M_{\epsilon}$ is normally hyperbolic and has the same stability properties with respect to the fast variables as $M_0$ (attracting, repelling or saddle type).
 	\item[(F6)]  $M_{\epsilon}$ is usually not unique. In regions that remain at a fixed distance from the boundary of  $M_{\epsilon}$, all manifolds satisfying (F1)-(F5) lie at a Hausdorff distance $O(e^{-K/\epsilon})$ from each other for some $K>0$ with $K=O(1)$.
 	The normally hyperbolic manifold $M_0$ has associated local stable and unstable manifolds
 	\begin{align*}
-	W^s(M_0) =\cup_{p \in M_0} W^s(p) \textrm{\ \ and\ \ } W^u(M_0) =\cup_{p \in M_0} W^u(p),
+	W^s(M_0) =\bigcup_{p \in M_0} W^s(p) \textrm{\ \ and\ \ } W^u(M_0) =\bigcup_{p \in M_0} W^u(p),
 	\end{align*}
-	where  $W^s(p)$ and $W^u(p)$ are the local stable and unstable manifolds of $p$ as a hyperbolic equilibrium of the layer equations, respectively. These manifolds also persist for $\epsilon > 0$, sufficiently small: there exist locally stable and unstable manifolds $W^s(M_\epsilon)$ and $W^u(M_\epsilon)$, respectviely, for which conclusions (F1) - (F6) hold if we replace $M_\epsilon$ and $M_0$ by  $W^s(M_\epsilon)$ and $W^s(M_0)$ (or similarly by  $W^u(M_\epsilon)$ and $W^u(M_0)$).
+	where  $W^s(p)$ and $W^u(p)$ are the local stable and unstable manifolds of $p$ as a hyperbolic equilibrium of the layer equations, respectively. These manifolds also persist for $\epsilon > 0$, sufficiently small. There exist locally stable and unstable manifolds $W^s(M_\epsilon)$ and $W^u(M_\epsilon)$, respectively, for which conclusions (F1)-(F6) hold if we replace $M_\epsilon$ and $M_0$ by  $W^s(M_\epsilon)$ and $W^s(M_0)$ (or similarly by  $W^u(M_\epsilon)$ and $W^u(M_0)$).
 	\end{itemize}
 \end{theorem} 
 Fenichel's Theorem establishes that the submanifold, $M_0$, of the critical manifold, $S_0$, persists as slow manifold $M_\epsilon$ as $\epsilon >0$, given it is compact and normally hyperbolic. The theorem furthermore establishes that the stable and unstable manifolds persist as well as the individual fibres, namely $W^s(p)$ and $W^u(p)$, that are associated to each base point $p \in M_0$.
-Therefore, under the assumptions of the theorem, the flow of the Fast-Slow system remains $O(\epsilon)$ close to the flow of the system in the singular limit $\epsilon \to 0$.\\
+Therefore, under the assumptions of the theorem, the flow of the fast-slow system remains $O(\epsilon)$ close to the flow of the system in the singular limit $\epsilon \to 0$.\\
 
 The importance of this result lies in the fact that the behaviour of the full system can be analysed by looking at the system in the singular limit instead. The main assumption that has to be satisfied in order to apply Theorem \ref{Fenichel} is normal hyperbolicity. The points where this assumption fails is discussed in the following section.
 
-
 \subsection{Fold Points}\label{sec:singularitiesandfoldpoints}
-One of the requirements of Fenichel's Theorem is normal hyperbolicity \citep{Kuehn}. However, Fast-Slow systems can display singular points where normal hyperbolicity is no longer given and therefore the conclusions of Theorem \ref{Fenichel} no longer. These singularities are points where trajectories can jump between fast and slow flow. The singularities in the setting of Fast-Slow systems are points $(x_0,y_0)$ on the critical manifold $S_0$, for which the Jacobian has one or more eigenvalue with zero real part. Comparing this with Definition \ref{NormHyp} shows that this is a negation of normal hyperbolicity. The simplest of those singularities are called fold points, which is defined as follows:
+One of the requirements of Fenichel's Theorem is normal hyperbolicity. However, fast-slow systems can display singular points where normal hyperbolicity is no longer given and therefore the conclusions of Theorem \ref{Fenichel} no longer hold. These singularities are points where trajectories can jump between fast and slow flow. The singularities in the setting of fast-slow systems are points $(x_0,y_0)$ on the critical manifold $S_0$, for which the Jacobian has one or more eigenvalue with zero real part. Comparing this with Definition \ref{NormHyp} shows that this is a negation of normal hyperbolicity. The simplest of those singularities are called fold points,
 \begin{definition}{\textbf{Fold Point}} \label{FoldDef} \\
 	A fold point $(x_0,y_0) \in S_0$ is a point where the Jacobian $ \frac{\partial f}{\partial x}(x_0,y_0, \lambda, 0)$ has only one eigenvalue with zero real part.
 \end{definition}
-%At the fold point, the system (Equation \ref{FastS0}) undergoes a saddle-node bifurcation. (+++explain?++++)
 Moreover we say that the fold point is non-degenerate if it satisfies the non-degeneracy assumptions,
 \begin{align} \label{NonDeg}
 \begin{cases}
@@ -74,50 +72,37 @@ Moreover we say that the fold point is non-degenerate if it satisfies the non-de
 \frac{\partial f}{\partial y}(x_0,y_0, \lambda, 0) \neq 0.
 \end{cases}
 \end{align}
-Furthermore, if $(x_0,y_0)$ satisfies the transversality condition $g(x_0,y_0, \lambda, 0) \neq 0$, then it is called a generic fold point.
-For these generic folds there exists a theorem that states that the slow flow on $S_\epsilon$ near $(x_0,y_0)$ has either positive or negative sign, implying that no equilibria of the slow flow are close to $(x_0,y_0)$. Therefore, for generic fold points no canards will be observed, which is a relevant observation for Section \ref{sec:canard-points}. First, we must find the fold points in the system.\\
+Furthermore, if $(x_0,y_0)$ satisfies the transversality condition $g(x_0,y_0, \lambda, 0) \neq 0$, then it is called a generic fold point. For these generic folds the slow flow on $S_\epsilon$ near $(x_0,y_0)$ has either positive or negative sign, implying that no equilibria of the slow flow are close to $(x_0,y_0)$. Therefore, for generic fold points no canards will be observed, which is a relevant observation for Section \ref{sec:canard-points}. First, we must find the fold points in the system.\\
 \subsection{The Van der Pol System: GSPT and Fold Points}\label{VDPfolds}
-The aim is to establish normal hyperbolicity of the reduced system in order to conclude that the manifold $S_0$ perturbs to a manifold $S_\epsilon$. Since Theorem \ref{Fenichel} concludes the persistence of the stable and unstable manifolds of $S$ as well, we do not need to consider the normal hyperbolicity of the layer problem separately. 
-
-In order to analyse the system (\ref{SlowS0}), we note from the previous analysis that the expression for $\dot{x}$ is dependent on the expression for $\dot{y}$. Therefore, it suffices to consider a one dimensional Jacobian,
+The aim is to establish normal hyperbolicity of the reduced system in order to conclude that the manifold $S_0$ perturbs to a manifold $S_\epsilon$. Since Theorem \ref{Fenichel} concludes the persistence of the stable and unstable manifolds of $S$ as well, we do not need to consider the normal hyperbolicity of the layer problem separately. In order to analyse the System (\ref{SlowS0}), we note from the previous analysis that the expression for $\dot{x}$ is dependent on the expression for $\dot{y}$. Therefore, it suffices to consider a one dimensional Jacobian,
 \begin{align*}
 J= \frac{\partial f}{\partial x} = 2x - x^2.
 \end{align*}
-Then the eigenvalues corresponding to this are $\sigma = x(2-x)$. These are zero at $x=0$ and $x=2$. At these points normal hyperbolicity is lost and Theorem \ref{Fenichel} cannot be applied.
-Therefore, the critical manifold has to be divided as follows:
+Then the eigenvalues corresponding to this are $\sigma = x(2-x)$. These $\sigma$ are zero at $x=0$ and $x=2$. At these points normal hyperbolicity is lost and Theorem \ref{Fenichel} cannot be applied. Therefore, the critical manifold has to be divided as follows,
 \begin{align*}
-S^a &=\bigg \lbrace (x,y): y = x^2-\frac{x^3}{3}, x< 0 \bigg \rbrace \cup \bigg \lbrace (x,y): y = x^2-\frac{x^3}{3}, x>2 \bigg\rbrace \\
+S^a &=\bigg \lbrace (x,y): y = x^2-\frac{x^3}{3}, x< 0 \bigg \rbrace \cup \bigg \lbrace (x,y): y = x^2-\frac{x^3}{3}, x>2 \bigg\rbrace, \\
 S^r &= \bigg\lbrace (x,y): y = x^2-\frac{x^3}{3}, 0< x< 2 \bigg\rbrace,
 \end{align*}
 such that $S^a \cup S^r \cup \{0\} \cup \{2\} = S$.
-The manifolds $S^a_0$ and $S^r_0$ are normally hyperbolic everywhere and  Theorem \ref{Fenichel} (Fenichel's) can be applied in order to conclude the persistence of the manifold as slow manifolds $S^a_\epsilon$ and $S^r_\epsilon$. At the points $x=0$ and $x=2$ the normal hyperbolicity is not given, since the eigenvalue associated to $S$ is zero at these points.
-
-The next step of the analysis is to classify the nonhyperbolic points and conclude that they are generic folds.
-The points of interest are $(x_0^1,y_0^1)=(0,0)$ and $(x_0^2,y_0^2)=\left(2,\dfrac{4}{3}\right)$. By Definition \ref{FoldDef}, there is only one eigenvalue with zero real part at $(x_0,y_0)$.
-These points are nondegenerate if the non-degeneracy assumptions (Equation \ref{NonDeg}) hold:
+The manifolds $S^a_0$ and $S^r_0$ are normally hyperbolic everywhere and  Fenichel's Theorem \ref{Fenichel} can be applied in order to conclude the persistence of the manifold as slow manifolds $S^a_\epsilon$ and $S^r_\epsilon$. At the points $x=0$ and $x=2$ the normal hyperbolicity is not given, since the eigenvalue associated to $S$ is zero at these points. The next step of the analysis is to classify the nonhyperbolic points and conclude that they are generic folds. The points of interest are $(x_0^1,y_0^1)=(0,0)$ and $(x_0^2,y_0^2)=\left(2,\dfrac{4}{3}\right)$. By Definition \ref{FoldDef}, there is only one eigenvalue with zero real part at $(x_0,y_0)$. These points are nondegenerate if the non-degeneracy assumptions (Equation \ref{NonDeg}) hold,
 \begin{align*}
-\begin{cases}
-\frac{ \partial ^2 f}{ \partial x^2} (x_0^1,y_0^1, 0) = 2-2 x_0^+ = 2 \neq 0 \\
-\frac{\partial f}{\partial y}(x_0^1,y_0^1, 0) = -1 \neq 0,
-\end{cases}
+\frac{ \partial ^2 f}{ \partial x^2} (x_0^1,y_0^1, 0) &= 2-2 x_0^+ = 2 \neq 0, \\
+\frac{\partial f}{\partial y}(x_0^1,y_0^1, 0) &= -1 \neq 0,
+
 \end{align*}
 and equivalently for the other fold point
 \begin{align*}
-\begin{cases}
-\frac{ \partial ^2 f}{ \partial x^2} (x_0^2,y_0^2,0) = -2 x_0^2 =4\neq 0 \\
-\frac{\partial f}{\partial y}(x_0^2,y_0^2, 0) = -1 \neq 0.
-\end{cases}
+\frac{ \partial ^2 f}{ \partial x^2} (x_0^2,y_0^2,0) &= -2 x_0^2 =4\neq 0, \\
+\frac{\partial f}{\partial y}(x_0^2,y_0^2, 0) &= -1 \neq 0.
 \end{align*}
-Therefore, the two fold points are non-degenerate.
-Futhermore, it can be checked if a fold point is generic. It then has to satisfy the transversality condition $g(x_0,y_0,0) \neq 0$.
-The two fold points considered here are generic, since 
+Therefore, the two fold points are non-degenerate. Furthermore, it can be checked if a fold point is generic. It then has to satisfy the transversality condition $g(x_0,y_0,0) \neq 0$.
+The two fold points considered here are generic, since, 
 \begin{align*}
-g(x_0^1,y_0^1,0)= -1\neq 0 \\
+g(x_0^1,y_0^1,0)= -1\neq 0, \\
 g(x_0^2,y_0^2,0)= 1 \neq 0.
 \end{align*}
-Note that systems containing non-generic folds or other types of singularities can display different types of periodic orbits.
-\\
-\\
+Note that systems containing non-generic folds or other types of singularities can display different behaviour.\\
+
 In the analysis of the reduced system it became apparent that the fold points are singularities of the reduced flow on $S_0$, and therefore the dynamics in the singular limit cannot be determined. Furthermore, Fenichel Theory does not apply at the folds because normal hyperbolicity breaks down at these points, as discussed above. Therefore, even if the dynamics around the folds in the singular limit were known, no conclusions could be drawn for the perturbed system with $S_\epsilon$.
 Alternative methods have to be employed to describe the dynamics on the fold points in the singular limit and furthermore to be able to conclude the dynamics of the full system at the fold points from this analysis.
 The method considered for analysis is called the Blow-Up Method.
