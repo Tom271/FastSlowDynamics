@@ -21,7 +21,7 @@ close all
         nully=-nullx.^3/3.+nullx.^2;
         null2y=nullx;
         fig=figure(1);
-        subplot(1,2,1)
+        %subplot(1,2,1)
         set(gcf,'color','white')    
         %'units','normalized','outerposition',[0 0 1 1],
         
@@ -74,14 +74,14 @@ close all
 %         
     end
     if(tPlot==1)
-        subplot(1,2,2)
+        figure(2)
+        %subplot(1,2,2)
         set(gcf,'color','white')
         grid on
         plot(t,x(:,1),t,x(:,2))
         %title('Time Plot of the vdP Oscillator')
         xlabel("Time")
     end
-
 end
 
 function vdp =vdp(t,x,epsilon,lambda)

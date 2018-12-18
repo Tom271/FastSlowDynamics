@@ -14,9 +14,32 @@ We have now found the global dynamics for the Van der Pol system with $\epsilon 
 \end{aligned}
 \label{eq: canard system}
 \end{equation}
-Since the nullcline $\dot{y}=0 \Rightarrow x=\lambda$ depends on $\lambda$, varying $\lambda$ corresponds to a shift of the equilibrium along the S shaped curve. Numerical experiments show that solutions to the full system are either relaxation oscillations when the equilibrium lies between the fold points. That is, when it is on the repelling branch. When the equilibrium lies on the attracting branch, all trajectories converge to this point (when $\lambda>2$ or $\lambda<0$). Naturally, there must be a change of stability when $\lambda=0$ and when $\lambda=2$. In this section we aim to explain the nature of this shift in stability and its effect on the global dynamics rigorously. Figure \textbf{+++REF++} gives an initial idea of the behaviour when $\lambda$ is close to 0. We will restrict attention to this point as the case for $\lambda=2$ is entirely analogous. Trajectories that pass close to this fold point are called canards, more rigorous definitions are given below.\\
+Since the nullcline $\dot{y}=0 \Rightarrow x=\lambda$ depends on $\lambda$, varying $\lambda$ corresponds to a shift of the equilibrium along the S shaped curve. Numerical experiments show that solutions to the full system are either relaxation oscillations when the equilibrium lies between the fold points. That is, when it is on the repelling branch. When the equilibrium lies on the attracting branch, all trajectories converge to this point (when $\lambda>2$ or $\lambda<0$). Naturally, there must be a change of stability when $\lambda=0$ and when $\lambda=2$. In this section we aim to explain the nature of this shift in stability and its effect on the global dynamics rigorously. Figure \ref{fig:varLambda} gives an initial idea of the behaviour when $\lambda$ is close to 0. We will restrict attention to this point as the case for $\lambda=2$ is entirely analogous. Trajectories that pass close to this fold point are called canards, more rigorous definitions are given below.\\
  
-\textbf{++++SIMULATION OF SMALL LAMBDA++++}
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.33\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{VDPlambdaneg05}
+		\caption{$\lambda=-0.5$}
+		\label{}
+	\end{subfigure}
+	\hfill
+		\begin{subfigure}[t]{0.32\textwidth}
+		\includegraphics[width=\linewidth]{VDPlambda0}
+		\caption{$\lambda=0$}
+		\label{} 
+	\end{subfigure}
+\hfill
+	\begin{subfigure}[t]{0.33\textwidth}
+		\includegraphics[width=\linewidth]{VDPlambdapos05}
+		\caption{$\lambda=0.5$}
+		\label{} 
+	\end{subfigure}
+	\caption{Example trajectories for varying $\lambda$. Note the small amplitude oscillations when $\lambda=0$. }
+	\label{fig:varLambda}
+\end{figure}
 
 \begin{definition}[\textbf{Canard} \citep{Kuehn}]
 A trajectory of a fast-slow system is called a canard if it stays within $O(\epsilon)$ close to the repelling branch $S^r$ of the slow manifold $S$, for some time of $O(1)$ on the slow time scale $\tau = \epsilon t$.
@@ -299,7 +322,7 @@ The eigenvalues of the system are $ \sigma=0 $ and $ \sigma=\frac{2x-x^2\pm\sqrt
 		\caption{The Hopf bifurcation due to the canard point.}\label{fig:timing4}
 	\end{subfigure}\vspace{1cm}
 	\begin{subfigure}[t]{0.45\textwidth}\centering
-		\includegraphics[width=.8\linewidth, height=6cm]{Code/behaviourswitch-pres}
+		\includegraphics[width=.9\linewidth, height=6cm]{VDPcanard}
 		\caption{Growth of the Hopf bifurcation leading to the formation of a Canard explosion.}
 		\label{fig: hopf growth}
 	\end{subfigure}
