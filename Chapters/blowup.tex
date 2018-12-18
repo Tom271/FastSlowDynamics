@@ -274,7 +274,6 @@ Next we study the behaviou of $ K_3 $. This chart covers the trajectory as it le
 \end{subequations}
 where $F(r_3,y_3,\epsilon_3)=\left(1-y_3-\frac{r_3}{3}\right)$. Note that as $\epsilon_3$ and $r_3$ appear as a factor in their respective derivatives, the planes $\epsilon_3=0$ and $r_3=0$ are invariant and, by extension, so is the $y_3$ axis.
 The aim is to continue the special trajectory found in the other two charts and to find the transition map in and out of this chart. We will then be able to construct a phase portrait for the whole space by combining the dynamics in each chart. Linearising the system about $(0,0,0)=q_{out}$ gives, 
-
 \begin{align*}
 \begin{pmatrix}\dot{r}_3\\\dot{y}_3\\\dot{\epsilon}_3\end{pmatrix}= \begin{pmatrix}
 1 & 0 & 0 \\ 
@@ -366,13 +365,15 @@ Let $\tilde{\psi}$ denote the inverse transformation and both be $C^k$ functions
 	&=(\tilde{y}_i-\delta)e^{-2\ln\frac{\rho}{r_i}}+e^{-2\ln\frac{\rho}{r_i}}O\left(r_i\ln\frac{\rho}{r_i}\right)+\delta \frac{r_i^3}{\rho^3}\\
 	&=(\tilde{y}_i-\delta)\frac{r_i^2}{\rho^2}+O\left(\frac{r_i^3}{\rho^2}\ln\frac{\rho}{r_i}\right)
 	\end{align*}
-	We now have an expression for each of the out variables in terms of the initial conditions, albeit under a near-identity transformation. All that remains is to undo this transformation using the inverse map $\tilde{\psi}$.
-	
-\textbf{+++Undo transformation, explain $r$ and $\epsilon$ coordinates in prop. ThenDONE!+++}
+	We now have an expression for each of the out variables in terms of the initial conditions, albeit under a near-identity transformation. All that remains is to undo this transformation using the inverse map $\tilde{\psi}$.	\begin{align*}
+	\Pi_{32}(r_3,y_3,\delta) &= \psi \left( \left( \tilde{\psi}(y_3,\delta)-\delta\right)\left(\frac{r_3}{\rho}\right)^2 + O(r_3^3\ln r_3), \left(\frac{r_3}{\rho}\right)^3\delta\right)\\
+	&=(\tilde{\psi}(y_3,\delta)-\delta)\left( \frac{r_3}{\rho}\right)^2 +O(r_3^3\ln r_3)
+	\end{align*}
+	The result then follows by expressing $r_3$ and $\epsilon_3$ as functions of the out variables, that is $r_3(T)=\rho$ and $\epsilon_3(T)=\delta\left(\frac{r_3}{\rho}\right)^3$.
 \end{proof}
 
 \subsection{The Full Solution}
-The analysis of the three charts, discussed in the Sections \ref{sec: VDP K2}-\ref{sec:dynamics-in-texorpdfstringk3k3}, provided a descripition of the dynamics on each of the charts, as well as theory to conclude the persistence of the dynamics in the full system.
+The analysis of the three charts, discussed in the Sections \ref{sec: VDP K2}-\ref{sec:dynamics-in-texorpdfstringk3k3}, provided a description of the dynamics on each of the charts, as well as theory to conclude the persistence of the dynamics in the full system.
 The special trajectory $\gamma$ has been traced through all charts and in chart 1 it has been linked to the slow flow of $S^a$, while in chart 3 the connection to the fast flow has been made. Therefore, the fold point is indeed a jump point, or transition point, which connects the slow and fast dynamic.
 These transition points can also be seen in the case of singular canards, which are treated in the following section.
 The remaining issue is the transition of this special trajectory through the charts in order to have a solution of the full system. 
@@ -383,9 +384,7 @@ Let $\Pi: \Sigma^{in}_1 \to \Sigma^{out}_3$ be the full transition map of the Bl
 \end{align*}
 where $\kappa$ is the change of coordinates defined in Lemma \ref{coord. change} and $\Pi_1, \Pi_2, \Pi_3$ are the transition maps in each chart.
 Finally, reversing the blow up transformation gives the full transition map $\pi$ and therefore there exists a trajectory $\gamma$ in the blow down vector field connecting slow and fast flow.
-With this analysis at hand we are now able to describe the full dynamics of the Van der Pol system when $\epsilon>0$ by analysing the singular limit $\epsilon \to 0$. 
-
-The full result is visualised in Figure \ref{fig: full solution fold}.
+With this analysis at hand we are now able to describe the full dynamics of the Van der Pol system when $\epsilon>0$ by analysing the singular limit $\epsilon \to 0$. The full result is visualised in Figure \ref{fig: full solution fold}.
 %\begin{figure}[h!]\centering
 %		\begin{subfigure}[t]{0.45\textwidth}
 %			\centering
