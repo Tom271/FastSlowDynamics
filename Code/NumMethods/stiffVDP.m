@@ -2,35 +2,36 @@
 %%to a specifc place in my direcory. Change the file path and it shoudl be
 %%fine. 
 close all; clear all;
-epsilon=0.0000001;
+epsilon=0.000001;
+%epsilon=logspace(-2,0,7);
 initialData=[1,1];
 tSpan=50000000;
 lambda=1;
  %Exercise 10.1.3 - apply modEuler and RK4 and ODE15s to FS test problem
 
 opts=odeset('Stats','on');
+for j=1:length(epsilon)
+    tic
+    sprintf('ode45')
+    [ode45t,ode45z]=ode45(@(t,x) vdp(t,x,epsilon(j),lambda), [0 tSpan], initialData,opts);
+    toc
 
-tic
-sprintf('ode45')
-[ode45t,ode45z]=ode45(@(t,x) vdp(t,x,epsilon,lambda), [0 tSpan], initialData,opts);
-toc
+    tic
+    sprintf('ode23t')
+    [ode23bt,ode23bz]=ode23t(@(t,x) vdp(t,x,epsilon(j),lambda), [0 tSpan], initialData,opts);
+    toc
 
-tic
-sprintf('ode23t')
-[ode23bt,ode23bz]=ode23t(@(t,x) vdp(t,x,epsilon,lambda), [0 tSpan], initialData,opts);
-toc
-
-tic
-sprintf('ode23s')
-[ode23t,ode23z]=ode23s(@(t,x) vdp(t,x,epsilon,lambda), [0 tSpan], initialData,opts);
-toc
+    tic
+    sprintf('ode23s')
+    [ode23t,ode23z]=ode23s(@(t,x) vdp(t,x,epsilon(j),lambda), [0 tSpan], initialData,opts);
+    toc
 
 
-tic
-sprintf('ode15s')
-[ode15t,ode15z]=ode15s(@(t,x) vdp(t,x,epsilon,lambda), [0 tSpan], initialData,opts);
-toc
-
+    tic
+    sprintf('ode15s')
+    [ode15t,ode15z]=ode15s(@(t,x) vdp(t,x,epsilon(j),lambda), [0 tSpan], initialData,opts);
+    toc
+end
 
 figure(1);
 set(gcf,'color','white')   

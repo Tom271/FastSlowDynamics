@@ -1,5 +1,5 @@
 
-Many figures in this document? were produced using MATLAB, for example: fig +++++++. In this appendix, we will give a brief tutorial on their production. Fast-slow systems like the ones studied here are a classic example of \emph{stiff} ODEs\footnote{Indeed, the MATLAB documentation for its stiff solver, \texttt{ode15s}, uses the Van Der Pol equation as it's example.}. 
+In this appendix, we will give a brief tutorial on the use of MATLAB to produce plots like those seen in the project. Fast-slow systems like the ones studied here are a classic example of \emph{stiff} ODEs\footnote{Indeed, the MATLAB documentation for its stiff solver, \texttt{ode15s}, uses the Van Der Pol equation as it's example.}. 
 \begin{definition}[Stiffness Ratio]
 	Consider $\dot{x} = F(x)$ where $x\in \mathbf{R}^n, F\in C^r(\mathbf{R}^n,\mathbf{R}^n)$. Let 
 	$$ x' = Ax,\quad A\in \mathbf{R}^{n \times n}  $$
@@ -45,26 +45,43 @@ Let's look at the use of these various methods on the simplest fast-slow system.
 		\end{cases}\label{eq:test}\end{equation}
 This system has an easy analytic solution, $x(t) = x_0\exp(-t/\epsilon), y(t)=y_0 \exp(-t)$. For this reason it is a useful test system with which to analyse the convergence of numerical schemes. The stiffness ratio for this system is
 $$ \mu =\frac{\max_j(\mathrm{Re}(\lambda_j))}{\min_j(\mathrm{Re}(\lambda_j))}= \frac{1}{\epsilon} $$
-The time separation, $\epsilon \ll 1$ and so this system is very stiff. We thus expect explicit solvers to perform poorly. +++Explain about convergence here? Would be nice to do for modEuler and RK4 too+++.\\
-The lack of stability of these algorithms in practice, even for very simple systems, clearly necessitates the introduction of alternative methods.
+The time separation, $\epsilon \ll 1$ and so this system is very stiff. We thus expect explicit solvers to perform poorly. The lack of stability of these algorithms in practice, even for very simple systems, clearly necessitates the introduction of alternative methods.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{TestEqSim}
+	\includegraphics[height=0.4\linewidth]{TestEqSim}
 	\caption[Numerical Stability Comparison]{Comparison of stability of different numerical schemes applied to Equation \ref{eq:test}. Blue solid line indicates analytic solution, dashed red indicates numeric solution using the scheme given in the plot title. Note the varying scales on the axes.}
-	
+	\label{fig:numstab}
 \end{figure}
 
 \subsection{Stiff Solvers}
+MATLAB offers a number of solutions to this problem. It has four inbuilt stiff solvers: \texttt{ode15s,ode23t,ode23s ode23tb}. Here we look at the first three and compare them with the standard \texttt{ode45}. These use a variety of methods to outperform the standard RK4 method. In Figure \ref{fig:numstab}, \texttt{ode45} would have obtained the solution to a similar accuracy. This is because if the error is outside of a predefined tolerance, it repeats the step with a smaller step size. Although the solution is the same the cost here is in computational efficiency. This is true for all the stiff solvers, as Figure \ref{fig:stiffts} shows. It is worth resting each stiff solver on the problem at hand to find the most efficient solver. This will depend on the form of the problem and the method each solver implements. Table (\ref{tab:stiffcomparison}) gives some statistics for the efficiency of each solver when applied to an incredibly stiff Van der Pol system (\ref{eq: canonical}) with $\epsilon=1\times10^{-6}$ and $\lambda=1$. Despite \texttt{ode45}'s accuracy, we can see it pales in comparison to any of the stiff solvers. The table shows \texttt{ode23s} to be the quickest, although it does evaluate the function many times it rarely fails a step. For this reason, this algorithm was chosen to produce the figures throughout this report. This however is still not the optimal method of computation. More complex  solutions to boundary value problems can be created on each of the branches before being joined together to create a full image.\\
+
+
+
+The MATLAB code used to produce the figures in this report is available on line at \url{https://github.com/Tom271/FastSlowDynamics/tree/master/Code}.
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline 
+		\textbf{Algorithm} & \texttt{ode45} & \texttt{ode15s} & \texttt{ode23t} & \texttt{ode23s} \\ 
+		\hline 
+		Successful Steps & $2.6971\times 10^7$ & 5727 & 6186 & 6506 \\ 
+		\hline 
+		Failed Attempts & $6.41547\times 10^6$ & 2529 & 2103 & 1105 \\ 
+		\hline 
+		Function Evaluations & $2.00319\times 10^8$ & 19391 & 22437 & 34752 \\ 
+		\hline 
+		Elapsed Time $(s)$ & 250.957128 & 1.021033 & 2.250413 & 0.579021 \\ 
+		\hline 
+	\end{tabular} 
+\caption{Comparison of MATLAB's stiff solvers applied to the Van der Pol system (\ref{eq: canonical})}
+\label{tab:stiffcomparison}
+\end{table}
+
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{stiffVDP.pdf}
-	\caption[Stiff Solvers]{Comparison of stiff solvers for VDP. +++Note all get correct trajectory, what about speed?+++.}
-	
+	\includegraphics[height=0.4\linewidth]{stiffVDP.pdf}
+	\caption[Stiff Solvers]{Comparison of stiff solvers for VDP for $\epsilon=1\times 10^{-6}, \lambda=1$. All solvers obtain the correct solution.}
+	\label{fig:stiffts}
 \end{figure}
-
-+++\texttt{ode15s,ode23t,ode23s} use, comparison of speed with \texttt{ode45}. Note difference between RK4.+++
-
-
-
-		Test on RK4, mod-Euler and \texttt{ode15s}? Intro BDF? Check sec8 MMO.
-
