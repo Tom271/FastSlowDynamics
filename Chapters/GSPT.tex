@@ -1,28 +1,24 @@
-In this section the singular limit is analysed by considering the reduced dynamics of the fast-slow system and identify the points where the dynamics of the singular system, $\epsilon \to 0$, is not known.
-Moving on from that problem, the standard theory, called Geomentric Singular Pertubation Theory, for concluding the persistence of the singular dymanics for the full system is introduced. Following this, the points where this theory does not hold are established.
+In this section the singular limit is analysed by considering the reduced dynamics of the fast-slow system when $\lambda=1$ and identifying the points where the dynamics of the singular system, $\epsilon \to 0$, is not known. Moving on from that problem, the standard theory, called Geometric Singular Perturbation Theory, for concluding the persistence of the singular dynamics for the full system is introduced. Following this, the points where this theory does not hold are established.
 
 \subsection{Reduced Dynamics}
 In order to determine the reduced dynamics on the critical manifold $S$, we consider the reduced problem (\ref{SlowS0}). 
 
-Rearranging the first equation, $f=0$, of system \ref{SlowS0}, the cubic function  $ \phi(x) = y = x^2-\dfrac{x^3}{3}$ can be defined.
-Then using the chain rule, we can express the change in $x$ using the second Equation of \ref{SlowS0} as,
+Rearranging the first equation, $f=0$, of System \ref{SlowS0}, define $\phi$ as the cubic $ \phi(x) = x^2-\dfrac{x^3}{3}$ can be defined. Then using the chain rule, we can express the change in $x$ using the second equation of (\ref{SlowS0}) as,
 \begin{equation}
 \phi_x(x)\dot{x}=g(x,\phi(x),0).
 \label{eq: general reduced}
 \end{equation}
 Rearranging this gives an expression for the dynamics in $x$ on $S$.
-We find that $\phi(x)=x^2-\dfrac{x^3}{3}$, where the derivative \wrt $x$ gives $\phi_x(x)=2x-x^2$.
-Therefore Equation \ref{eq: general reduced} becomes 
+The derivative \wrt $x$ gives $\phi_x(x)=2x-x^2$, therefore Equation \ref{eq: general reduced} becomes, 
 \begin{align*}
 \dot{x} = \frac{g(x,\phi(x),0)}{ \phi_x(x)} = \frac{ x-1}{2x-x^2} =\frac{ x-1}{x(2-x)}.
 \end{align*}
 The reduced dynamics are singular at $x=0$ and $x=2$. Therefore, no conclusions about the dynamics of $x$ can be made at the jump points in this system. \\ 
 
-The dynamics in the layer problem (\ref{FastS0}) are simpler. In this system, the manifold $S$ contains all the equilibrium points. Whatever the initial data, the position moves horizontally towards $S$ at which point it stops. The issue of reconciling the reduced and layer problems is considered using geometric singular perturbation theory (GSPT) below, along with conditions for the persistence of the dynamics under perturbation in $\epsilon$. However, this will not cover the singularities. The reasoning for this is given later on in this section. The blow up method is employed in Section \ref{sec: VDP Blowup} to address the singularities, as well as the problems encountered when trying to apply GSPT. 
+The dynamics in the layer problem (\ref{FastS0}) are simpler. In this system, the manifold $S$ contains all the equilibria. Whatever the initial data, the position moves horizontally towards $S$ at which point it stops. The issue of reconciling the reduced and layer problems is considered using geometric singular perturbation theory (GSPT) below, along with conditions for the persistence of the dynamics under perturbation in $\epsilon$. However, this will not cover the singularities. The reasoning for this is given later on in this section. The blow up method is employed in Section \ref{sec: VDP Blowup} to address the singularities, as well as the problems encountered when trying to apply GSPT. 
 
-\subsection{Geometric Singular Pertubation Theory}	
-The main question GSPT aims to answer is the following: under what conditions can it be concluded that the dynamics on the critical manifold $S=S_0$, persist as an invariant manifold $S_{\epsilon}$ under a small perturbation $0<\epsilon\ll 1$? In higher than 2 dimensions the idea of transversality of the flow of the stable and unstable manifolds is essential for analysis, while in 2 dimensions this is rather trivial \citep{MMO}. The main contribution to GSPT comes from \citet{Fenichel}  and his three theorems can be summed up in one, according to \citep{MMO}.
-However, before stating the theorem, some formal definitions are needed.
+\subsection{Geometric Singular Perturbation Theory}	
+The main question GSPT aims to answer is the following: under what conditions can it be concluded that the dynamics on the critical manifold $S=S_0$, persist as an invariant manifold $S_{\epsilon}$ under a small perturbation $0<\epsilon\ll 1$? The main contribution to GSPT comes from \citet{Fenichel}  and his three theorems can be summed up in one, according to \citet{MMO}. However, before stating the theorem, some formal definitions are needed.
 
 \begin{definition}{\textbf{Normal Hyperbolicity \citep{firstpaper}}} \label{NormHyp}
 	\\
