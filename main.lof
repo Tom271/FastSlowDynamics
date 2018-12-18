@@ -1,0 +1,21 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Examples of fast-slow systems in nature.}}{2}{figure.caption.3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Van der Pol Dynamics with $\epsilon =1$}}{3}{figure.caption.4}
+\contentsline {figure}{\numberline {3}{\ignorespaces Van der Pol Dynamics with $\epsilon =0.01$}}{3}{figure.caption.5}
+\contentsline {figure}{\numberline {4}{\ignorespaces Three charts mapping different sections of our blow up \citep {krupa2001}.\relax }}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Phase portrait for chart 2 \citep {krupa2001}.\relax }}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Ricatti solution for chart 2 \citep {krupa2001}.\relax }}{13}{figure.caption.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces Dynamics in chart 1 \citep {krupa2001}\relax }}{14}{figure.caption.9}
+\contentsline {figure}{\numberline {8}{\ignorespaces The full solution associated with the flow on the fold point.\relax }}{21}{figure.caption.10}
+\contentsline {figure}{\numberline {9}{\ignorespaces The reduced flow where a) $\lambda =0$ and b) $\lambda >0$.\relax }}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {10}{\ignorespaces Example trajectories for varying $\lambda $}}{22}{figure.caption.12}
+\contentsline {figure}{\numberline {11}{\ignorespaces The Van der Pol system for the canard case.\relax }}{25}{figure.caption.13}
+\contentsline {figure}{\numberline {12}{\ignorespaces Full dynamics at the fold point in the canard case \citep {krupa2001}.\relax }}{29}{figure.caption.15}
+\contentsline {figure}{\numberline {13}{\ignorespaces The trajectories associated with the canards case of the Van der Pol system.\relax }}{31}{figure.caption.16}
+\contentsline {figure}{\numberline {14}{\ignorespaces Separation of $ M_a $ and $ M_r $ \citep {Kuehn}.\relax }}{32}{figure.caption.17}
+\contentsline {figure}{\numberline {15}{\ignorespaces Three dimensional Van der Pol \citep {3D-VdP}.\relax }}{35}{figure.caption.18}
+\contentsline {figure}{\numberline {16}{\ignorespaces Phase portraits around singularities}}{37}{figure.caption.19}
+\contentsline {figure}{\numberline {17}{\ignorespaces The branches of a spiral \citep {Spiral}.\relax }}{37}{figure.caption.20}
+\contentsline {figure}{\numberline {18}{\ignorespaces Local dynamics around the folded node for $\mu \approx 0.0557$ \citep {MMO}.\relax }}{42}{figure.caption.21}
+\contentsline {figure}{\numberline {19}{\ignorespaces Orbits associated with mixed mode oscillations \citep {MMO}.\relax }}{46}{figure.caption.22}
+\contentsline {figure}{\numberline {20}{\ignorespaces Numerical Stability Comparison}}{51}{figure.caption.23}
+\contentsline {figure}{\numberline {21}{\ignorespaces Stiff Solvers}}{52}{figure.caption.25}
